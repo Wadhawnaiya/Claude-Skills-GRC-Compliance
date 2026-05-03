@@ -549,7 +549,7 @@ layout: null
     <span><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" style="height:1em;width:auto;vertical-align:middle;border-radius:2px;"> CCPA/CPRA</span>
   </div>
   <div class="badges">
-    <img src="https://img.shields.io/badge/Release-v0.7.0-brightgreen.svg" alt="Release v0.7.0" />
+    <img src="https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg" alt="Release v0.8.0" />
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License" />
     <img src="https://img.shields.io/badge/Skills-18-green.svg" alt="18 Skills" />
     <img src="https://img.shields.io/badge/Built%20with-Claude-orange.svg" alt="Built with Claude" />
@@ -1665,13 +1665,34 @@ layout: null
   <section class="tab-panel" id="tab-releases" role="tabpanel">
 
     <h2>Release Notes</h2>
-    <p>Full changelog for all public releases. Latest release: <strong>v0.7.0</strong>.</p>
+    <p>Full changelog for all public releases. Latest release: <strong>v0.8.0</strong>.</p>
+
+    <!-- v0.8.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="tag">v0.8.0</span>
+        <span class="latest">Latest</span>
+        <span class="date">May 3, 2026</span>
+      </div>
+      <div class="release-body">
+        <h4>🌐 GitHub Pages — UX Improvements</h4>
+        <ul>
+          <li><span class="release-badge badge-new">New</span> <strong>Collapsible skill cards</strong> — all 18 skill cards are now accordion-style; ISO 27001 is expanded by default; remaining cards collapse to just their title for a much cleaner page on first load</li>
+          <li><span class="release-badge badge-new">New</span> <strong>📰 GRC Framework Updates tab</strong> — monthly regulatory and standards digest covering all 18 frameworks; May 2026 edition live now, with April 2026 archived in a collapsible section; updated monthly going forward</li>
+          <li><span class="release-badge badge-improve">Improved</span> <strong>Skill toggle button</strong> — more prominent: solid blue background when expanded, light blue when collapsed; larger click target with chevron rotation</li>
+          <li><span class="release-badge badge-improve">Improved</span> <strong>Table zebra striping</strong> — even rows now use <code>#eef2f7</code> for better contrast and row-scanning readability</li>
+        </ul>
+        <h4>🐛 Bug Fixes</h4>
+        <ul>
+          <li><span class="release-badge badge-fix">Fix</span> <strong>ISM plugin installation failure</strong> — <code>marketplace.json</code> was missing the required <code>"source"</code> field for the ISM plugin entry, causing a validation error on install; fixed</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- v0.7.0 -->
     <div class="release">
       <div class="release-header">
         <span class="tag">v0.7.0</span>
-        <span class="latest">Latest</span>
         <span class="date">April 28, 2026</span>
       </div>
       <div class="release-body">
