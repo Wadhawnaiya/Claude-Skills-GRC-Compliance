@@ -85,7 +85,7 @@ These skills are designed for professionals who work on information security, pr
 
 ## The Skills
 
-### 1. 🔐 ISO 27001
+### 1. <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27001
 
 **File:** `ISO 27001 - Claude Skill/iso27001.skill`
 
@@ -103,7 +103,7 @@ The ISO 27001 skill turns Claude into an expert ISO 27001 Lead Auditor and ISMS 
 
 ---
 
-### 2. ✅ SOC 2
+### 2. <img src="assets/Logos/soc2.jpeg" alt="SOC 2" height="20" style="vertical-align:middle;object-fit:contain;"> SOC 2
 
 **File:** `SOC 2 - Claude Skill/soc2.skill`
 
@@ -121,7 +121,7 @@ The SOC 2 skill turns Claude into an expert SOC 2 compliance advisor grounded in
 
 ---
 
-### 3. 🏛️ FedRAMP
+### 3. <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP
 
 **File:** `FedRamp - Claude Skill/fedramp.skill`
 
@@ -156,7 +156,7 @@ The GDPR skill turns Claude into an expert GDPR compliance assistant that bridge
 
 ---
 
-### 5. 🏥 HIPAA
+### 5. <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA
 
 **File:** `HIPAA - Claude Skill/hipaa-compliance.skill`
 
@@ -173,7 +173,7 @@ The HIPAA skill turns Claude into a knowledgeable HIPAA compliance advisor cover
 
 ---
 
-### 6. 🛡️ NIST CSF
+### 6. <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" height="20" style="vertical-align:middle;object-fit:contain;"> NIST CSF
 
 **File:** `NIST Cybersecurity framework - Claude Skill/NIST Cybersecurity.skill`
 
@@ -192,7 +192,7 @@ The NIST CSF skill turns Claude into an expert NIST Cybersecurity Framework advi
 
 ---
 
-### 7. 💳 PCI DSS
+### 7. <img src="assets/Logos/pci-dss.png" alt="PCI DSS" height="20" style="vertical-align:middle;object-fit:contain;"> PCI DSS
 
 **File:** `PCI Compliance - Claude Skill/PCI-Compliance.skill`
 
@@ -232,7 +232,7 @@ The TSA Cybersecurity skill turns Claude into an expert TSA cybersecurity direct
 
 ---
 
-### 9. 🤖 ISO 42001 AI Management System
+### 9. <img src="assets/Logos/iso42001.webp" alt="ISO 42001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 42001 AI Management System
 
 **File:** `ISO 42001 - Claude Skill/ISO-42001.skill`
 
@@ -252,7 +252,7 @@ The ISO 42001 skill turns Claude into an expert **ISO/IEC 42001:2023** AI Manage
 
 ---
 
-### 10. 🔒 ISO 27701 Privacy Information Management
+### 10. <img src="assets/Logos/iso27701.png" alt="ISO 27701" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27701 Privacy Information Management
 
 **File:** `ISO 27701 - Claude Skill/iso27701.skill`
 
@@ -271,7 +271,7 @@ The ISO 27701 skill turns Claude into an expert **ISO/IEC 27701:2025** Privacy I
 
 ---
 
-### 11. 🏦 DORA Digital Operational Resilience
+### 11. <img src="assets/Logos/dora.png" alt="DORA" height="20" style="vertical-align:middle;object-fit:contain;"> DORA Digital Operational Resilience
 
 **File:** `DORA - Claude Skill/dora.skill`
 
@@ -315,7 +315,7 @@ The DPDPA skill turns Claude into an expert advisor on India's **Digital Persona
 
 ---
 
-### 13. 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification
+### 13. <img src="assets/Logos/cmmc.png" alt="CMMC" height="20" style="vertical-align:middle;object-fit:contain;"> CMMC 2.0 Cybersecurity Maturity Model Certification
 
 **File:** `CMMC - Claude Skill/cmmc.skill`
 
@@ -433,7 +433,7 @@ The CCPA/CPRA skill turns Claude into an expert advisor on **California's compre
 
 ---
 
-### 19. 🔫 ITAR — International Traffic in Arms Regulations
+### 19. <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR — International Traffic in Arms Regulations
 
 **File:** `ITAR - Claude Skill/itar.skill`
 
@@ -588,13 +588,13 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
 
    | Framework | Download |
    |-----------|----------|
-   | 🔐 ISO 27001 | [iso27001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
-   | ✅ SOC 2 | [soc2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
-   | 🏛️ FedRAMP | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
+   | <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27001 | [iso27001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
+   | <img src="assets/Logos/soc2.jpeg" alt="SOC 2" height="20" style="vertical-align:middle;object-fit:contain;"> SOC 2 | [soc2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
+   | <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
    | 🇪🇺 GDPR | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
-   | 🏥 HIPAA | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
-   | 🛡️ NIST CSF | [NIST Cybersecurity.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
-   | 💳 PCI DSS | [PCI-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
+   | <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
+   | <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" height="20" style="vertical-align:middle;object-fit:contain;"> NIST CSF | [NIST Cybersecurity.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
+   | <img src="assets/Logos/pci-dss.png" alt="PCI DSS" height="20" style="vertical-align:middle;object-fit:contain;"> PCI DSS | [PCI-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
    | 🚨 TSA Cybersecurity | [TSA-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/TSA%20Compliance%20-%20Claude%20Skill/TSA-Compliance.skill) |
    | 🤖 ISO 42001 AI Management System | [ISO-42001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2042001%20-%20Claude%20Skill/ISO-42001.skill) |
    | 🔒 ISO 27701 Privacy Information Management | [iso27701.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027701%20-%20Claude%20Skill/iso27701.skill) |
@@ -606,7 +606,7 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
    | 🇦🇺 Australian Information Security Manual (ISM) | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
    | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
    | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
-   | 🔫 ITAR — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
+   | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
