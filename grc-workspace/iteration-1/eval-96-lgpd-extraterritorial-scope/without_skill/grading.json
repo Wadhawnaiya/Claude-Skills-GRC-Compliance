@@ -1,0 +1,33 @@
+{
+  "eval_id": 96,
+  "config": "without_skill",
+  "expectations": [
+    {
+      "text": "Confirms LGPD applies extraterritorially under Art. 3 to companies offering services to individuals in Brazil",
+      "passed": true,
+      "evidence": "Response states: 'Article 3 establishes that the law applies to any data processing operation, regardless of where the controller or processor is headquartered' and identifies Art. 3, II ('The processing activity aims to offer goods or services to individuals located in Brazil') as the primary trigger."
+    },
+    {
+      "text": "Identifies CPF as personal data requiring protection under LGPD",
+      "passed": true,
+      "evidence": "Response classifies 'CPF (Cadastro de Pessoas Físicas) | Personal data (Art. 5, I) | National taxpayer ID — highly sensitive identifier' and notes it 'requires particular care, a clear legal basis, and robust security controls.'"
+    },
+    {
+      "text": "Maps contract performance (Art. 7, V) as legal basis for core service delivery",
+      "passed": true,
+      "evidence": "Section 2.1 states 'Contract Performance (Art. 7, V)...Applies to: Name, email, CPF (for account creation, billing, and identity verification), and purchase history...This is likely your primary legal basis for core service delivery.'"
+    },
+    {
+      "text": "Identifies consent (Art. 7, I) as required for marketing communications",
+      "passed": true,
+      "evidence": "Section 2.3 states 'Consent (Art. 7, I)...Applies to: Marketing emails, behavioral analytics, sharing data with third-party advertising partners, profiling.'"
+    },
+    {
+      "text": "Mentions DPO appointment obligation (Art. 41) and international transfer requirements (Arts. 33-36)",
+      "passed": true,
+      "evidence": "Section 3.1 covers 'Appoint a Data Protection Officer (DPO) — Encarregado, Article 41' and Section 3.3 covers 'International Data Transfers...Article 33 of LGPD restricts international transfers' including a table of permissible mechanisms."
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

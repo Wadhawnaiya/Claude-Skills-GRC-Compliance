@@ -1,0 +1,33 @@
+{
+  "eval_id": 100,
+  "config": "without_skill",
+  "expectations": [
+    {
+      "text": "Confirms no ANPD adequacy decision exists for the US under Art. 34",
+      "passed": true,
+      "evidence": "Response states: 'Since the United States does not have an adequacy decision from Brazil's data protection authority (ANPD), transfers to US-based parent company servers require reliance on one of the alternative legal mechanisms.' The absence of adequacy is clearly confirmed."
+    },
+    {
+      "text": "Identifies specific/standard contractual clauses (Art. 35) as a primary available mechanism",
+      "passed": true,
+      "evidence": "Response identifies both 'Standard Contractual Clauses (SCCs) — Article 33, II(a)' and 'Specific Contractual Clauses — Article 33, II(b)' as primary mechanisms. The implementation roadmap ranks them 1st and 2nd in priority for the transfer scenario."
+    },
+    {
+      "text": "Covers binding corporate rules (BCRs) under Art. 35, I as an option",
+      "passed": true,
+      "evidence": "Section 3 covers 'Global Corporate Policy (Binding Corporate Rules equivalent) — Article 33, III' with full implementation steps including drafting, ANPD approval process, and leveraging existing GDPR BCRs."
+    },
+    {
+      "text": "Mentions specific data subject consent (Art. 33, VIII) as a supplementary mechanism",
+      "passed": true,
+      "evidence": "Section 4 covers 'Specific Consent of the Data Subject — Article 33, VIII' and notes: 'Consent is not suitable as the primary mechanism for large-scale or operationally essential transfers because it can be withdrawn at any time.'"
+    },
+    {
+      "text": "Notes ANPD has not yet published standard contractual clauses and advises on practical implementation steps",
+      "passed": true,
+      "evidence": "Response states: 'As of 2025, the ANPD has been developing and refining its own SCC template (distinct from EU SCCs). Monitor ANPD publications for the final approved version.' The step-by-step implementation plan provides practical guidance including data mapping, DTA drafting, privacy notice updates, and security alignment."
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

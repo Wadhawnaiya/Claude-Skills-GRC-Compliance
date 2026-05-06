@@ -1,0 +1,33 @@
+{
+  "eval_id": 100,
+  "config": "with_skill",
+  "expectations": [
+    {
+      "text": "Confirms no ANPD adequacy decision exists for the US under Art. 34",
+      "passed": true,
+      "evidence": "Response states: 'An adequacy decision — where ANPD formally recognises that the destination country provides a level of protection equivalent to LGPD — is the simplest route, but the United States does not currently benefit from any such decision. As of 2025–2026, ANPD has not published a list of adequate countries.'"
+    },
+    {
+      "text": "Identifies specific/standard contractual clauses (Art. 35) as a primary available mechanism",
+      "passed": true,
+      "evidence": "Section 2, Mechanism 1 identifies 'Standard or Specific Contractual Clauses (Art. 33 combined with Art. 35)' as the primary mechanism, labeled 'Recommended as: Primary mechanism for intragroup transfers to the US parent.'"
+    },
+    {
+      "text": "Covers binding corporate rules (BCRs) under Art. 35, I as an option",
+      "passed": true,
+      "evidence": "Section 2, Mechanism 2 covers 'Binding Corporate Rules (BCRs) (Art. 33 combined with Art. 35, I)' with full implementation steps, labeled 'Recommended as: Medium-term strategic mechanism.'"
+    },
+    {
+      "text": "Mentions specific data subject consent (Art. 33, VIII) as a supplementary mechanism",
+      "passed": true,
+      "evidence": "Section 2, Mechanism 3 covers 'Specific Consent of the Data Subject (Art. 33, VIII)' and notes: 'Recommended as: Supplementary mechanism only, particularly for transfers that are genuinely optional from the customer's perspective. Not recommended as sole mechanism for bulk customer data transfers.'"
+    },
+    {
+      "text": "Notes ANPD has not yet published standard contractual clauses and advises on practical implementation steps",
+      "passed": true,
+      "evidence": "Response explicitly states: 'ANPD has not yet published standard contractual clauses (SCCs) equivalent to the EU's SCCs. Organisations must therefore use specific contractual clauses — bespoke contract provisions drafted to satisfy Art. 35 requirements.' Sections 4 and the implementation checklist provide detailed practical steps."
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

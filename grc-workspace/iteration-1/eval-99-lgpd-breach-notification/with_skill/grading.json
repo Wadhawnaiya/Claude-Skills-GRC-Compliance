@@ -1,0 +1,33 @@
+{
+  "eval_id": 99,
+  "config": "with_skill",
+  "expectations": [
+    {
+      "text": "Cites Art. 48 LGPD as the breach notification obligation",
+      "passed": true,
+      "evidence": "Response states: 'Primary Legal Basis: Art. 48, LGPD + ANPD Resolution CD/ANPD No. 15/2024' and later: 'Art. 48 requires that controllers notify both the ANPD and affected data subjects of security incidents that may cause relevant risk or harm.'"
+    },
+    {
+      "text": "Specifies 3 working days for preliminary ANPD notification (ANPD Resolution No. 15/2024), distinguishing from GDPR 72-hour rule",
+      "passed": true,
+      "evidence": "Response states: 'Preliminary notification to ANPD — within 3 working days of awareness (ANPD Resolution CD/ANPD No. 15/2024)' and explicitly distinguishes: 'Note: LGPD uses 3 working days not 72 calendar hours (unlike GDPR).'"
+    },
+    {
+      "text": "Mentions 20 working days for full incident report to ANPD",
+      "passed": true,
+      "evidence": "Response states: 'Full incident report to ANPD — within 20 working days of confirmation' and reiterates in Section 4: 'Within 20 working days of confirming the incident, submit a comprehensive report to ANPD (Art. 48).'"
+    },
+    {
+      "text": "Covers required notification content: nature of data, number of subjects affected, measures taken",
+      "passed": true,
+      "evidence": "Section 3 provides a table with all required content including 'Nature of affected data | Names, email addresses, encrypted passwords', 'Number of affected data subjects | 50,000 Brazilian customers', and 'Measures taken or planned | Containment actions, password reset enforcement...'"
+    },
+    {
+      "text": "Addresses whether data subjects must be notified and recommends password reset as immediate action",
+      "passed": true,
+      "evidence": "Response states: 'Notification to affected data subjects — where high risk of harm exists (concurrent with or following ANPD notification).' Section 5 recommends: 'Immediately invalidate all sessions and force password resets for affected accounts.'"
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

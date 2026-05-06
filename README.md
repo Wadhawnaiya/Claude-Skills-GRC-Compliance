@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, and ITAR (International Traffic in Arms Regulations) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), and Brazil's LGPD (Lei Geral de Proteção de Dados) — powered by Claude Skills.
 
-Benchmarked across 95 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **82%** across 475 total assertions.
+Benchmarked across 100 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 500 total assertions.
 
 [![Release: v0.8.0](https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg)](../../releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 19](https://img.shields.io/badge/Skills-19-green.svg)](#the-skills)
+[![Skills: 20](https://img.shields.io/badge/Skills-20-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -35,6 +35,7 @@ Benchmarked across 95 test cases (5 per framework) using the eval framework — 
   - [EU NIS2 Directive](#-eu-nis2-directive)
   - [CCPA/CPRA California Privacy](#-ccpacpra-california-privacy)
   - [ITAR — International Traffic in Arms Regulations](#-itar--international-traffic-in-arms-regulations)
+  - [LGPD — Brazil's General Data Protection Law](#-lgpd--brazils-general-data-protection-law)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -449,6 +450,26 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
 - Manages **violations and voluntary disclosures** — walks through the VSD process under 22 CFR § 127.12, penalty exposure (civil up to $1.369M/violation, criminal up to $1M/20 years), mitigating and aggravating factors, and corrective action planning
 
 **Trigger phrases:** `ITAR`, `International Traffic in Arms Regulations`, `USML`, `United States Munitions List`, `DDTC`, `defense export`, `deemed export`, `TAA`, `technical assistance agreement`, `MLA`, `manufacturing license agreement`, `DSP-5`, `DSP-73`, `ITAR registration`, `ITAR violation`, `voluntary disclosure ITAR`, `ITAR vs EAR`, `commodity jurisdiction`, `defense article`, `defense service`, `ITAR compliance`, `technology control plan`, `Empowered Official`
+---
+
+### 20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD — Brazil's General Data Protection Law
+
+**File:** `LGPD - Claude Skill/lgpd.skill`
+
+The LGPD skill turns Claude into an expert advisor on **Brazil's Lei Geral de Proteção de Dados Pessoais (Law 13,709/2018)**, the comprehensive Brazilian data protection law enforced by the **ANPD (Autoridade Nacional de Proteção de Dados)**. LGPD applies extraterritorially to any organisation processing personal data of individuals located in Brazil.
+
+- Analyses **extraterritorial scope** (Art. 3) — determines whether LGPD applies to your organisation regardless of country of establishment
+- Maps **legal bases for processing** (Art. 7 — 10 bases for regular data; Art. 11 — stricter bases for sensitive data including health, biometric, racial origin)
+- Drafts **LGPD-compliant privacy notices** (Art. 9) and **consent mechanisms** (Art. 8) covering all mandatory elements
+- Guides **data subject rights fulfilment** (Arts. 17–22) — access, correction, deletion, portability, consent revocation, automated decision review — with 15-day response workflows
+- Advises on **DPO/Encarregado appointment** (Art. 41) — mandatory publication requirements and ANPD Resolution No. 2/2022 SME exemptions
+- Produces **DPIA/RIPD templates** (Art. 38) for high-risk processing and **RoPA (Records of Processing Activities)** structures (Art. 37)
+- Guides **ANPD breach notification** (Art. 48 + ANPD Resolution No. 15/2024) — 3 working-day preliminary notification and 20 working-day full report requirements
+- Analyses **international transfer mechanisms** (Arts. 33–36) for countries without ANPD adequacy decisions (including the US)
+- Calculates **penalty exposure** (Art. 52) — fines up to 2% of Brazilian revenue, maximum R$50 million per violation
+- Provides **LGPD vs. GDPR comparison** — key differences in legal bases, DPO obligations, breach timelines, and fine structures
+
+**Trigger phrases:** `LGPD`, `Brazil data protection`, `Lei Geral de Proteção de Dados`, `ANPD`, `Brazilian privacy law`, `LGPD compliance`, `LGPD gap assessment`, `Encarregado`, `RIPD`, `LGPD legal basis`, `LGPD data subject rights`, `Brazil data breach`, `ANPD notification`, `LGPD vs GDPR`, `Brazil personal data`, `LGPD penalty`, `Brazil privacy policy`
 
 ---
 
@@ -607,6 +628,7 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
    | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
    | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
    | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
+   | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD — Brazil's General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -626,7 +648,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -637,13 +659,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **90 realistic test cases** were run across all 18 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **100 realistic test cases** were run across all 20 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **95%** | **428 / 450** |
-| Without skills (baseline Claude) | 80% | 362 / 450 |
-| **Delta** | **+15 points** | **+66 assertions** |
+| **With GRC Skills installed** | **96%** | **478 / 500** |
+| Without skills (baseline Claude) | 81% | 407 / 500 |
+| **Delta** | **+15 points** | **+71 assertions** |
 
 ### Per-Skill Results
 
@@ -668,6 +690,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | NIS2 | 5 | **96%** | 80% | +16% | Energy company EE/IE classification; SaaS provider Art. 21 obligations; Ransomware Art. 23 reporting workflow; ISO 27001 vs NIS2 gap analysis; DORA lex specialis interaction |
 | CCPA/CPRA | 5 | **100%** | 96% | +4% | E-commerce threshold analysis; Combined right-to-know and delete workflow; Ad tech sale vs sharing classification; GDPR-to-CCPA gap analysis; SPI classification for mobile app |
 | ITAR | 5 | **100%** | 100% | 0% | USML jurisdiction analysis for military laptops; Deemed export for German engineer; DSP-73 temporary export for trade show; Violation and VSD process; TAA mandatory clauses for India |
+| LGPD | 5 | **100%** | 80% | +20% | Extraterritorial scope for US SaaS with Brazilian customers; Data deletion request across CRM/email/analytics; Sensitive health data marketing restrictions; Breach notification timelines (3 working days vs GDPR 72h); International transfer mechanisms to the US |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

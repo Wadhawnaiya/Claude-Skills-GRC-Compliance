@@ -1,0 +1,12 @@
+{
+  "eval_id": 96,
+  "eval_name": "lgpd-extraterritorial-scope",
+  "prompt": "We are a US SaaS company with Brazilian customers. Our app collects name, email, CPF, and purchase history. Do we need to comply with LGPD? Which legal bases apply to our processing?",
+  "assertions": [
+    "Confirms LGPD applies extraterritorially under Art. 3 to companies offering services to individuals in Brazil",
+    "Identifies CPF as personal data requiring protection under LGPD",
+    "Maps contract performance (Art. 7, V) as legal basis for core service delivery",
+    "Identifies consent (Art. 7, I) as required for marketing communications",
+    "Mentions DPO appointment obligation (Art. 41) and international transfer requirements (Arts. 33-36)"
+  ]
+}

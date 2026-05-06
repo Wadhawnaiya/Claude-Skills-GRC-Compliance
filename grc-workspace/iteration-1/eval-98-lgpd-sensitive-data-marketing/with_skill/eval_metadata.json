@@ -1,0 +1,12 @@
+{
+  "eval_id": 98,
+  "eval_name": "lgpd-sensitive-data-marketing",
+  "prompt": "Our fintech startup in S\u00e3o Paulo processes customers health insurance data and credit scores. We want to use this data for marketing personalised financial products. Is this allowed under LGPD? What legal bases and safeguards apply?",
+  "assertions": [
+    "Correctly classifies health insurance data as sensitive personal data under Art. 5, II requiring Art. 11 basis",
+    "States that legitimate interest is prohibited for sensitive data processing",
+    "Identifies express specific consent (Art. 11, I) as the only viable basis for marketing use of health data",
+    "Addresses credit scores as regular personal data with broader Art. 7 bases available",
+    "Recommends RIPD/DPIA (Art. 38) and mentions non-discrimination principle (Art. 6, IX)"
+  ]
+}

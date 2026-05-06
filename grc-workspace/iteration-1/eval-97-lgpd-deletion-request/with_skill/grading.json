@@ -1,0 +1,33 @@
+{
+  "eval_id": 97,
+  "config": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies Art. 18, VI (deletion of consent-based data) and/or Art. 18, IV (unnecessary data deletion) as applicable rights",
+      "passed": true,
+      "evidence": "Response identifies both: 'Deletion of unnecessary, excessive, or non-compliant data | Art. 18, IV' and 'Deletion of consent-based data | Art. 18, VI' in the opening rights table."
+    },
+    {
+      "text": "Specifies 15-day response timeframe for data access/full report under Art. 19",
+      "passed": true,
+      "evidence": "Response states: 'Provided within 15 days for a full written response (Art. 19, §3º), or immediately for a simplified response' and includes it in the timeline table: 'Respond in writing to data subject | DPO | Within 15 days (Art. 19, §3º).'"
+    },
+    {
+      "text": "Notes Art. 16 retention exceptions (legal obligation, litigation, research) that may override deletion",
+      "passed": true,
+      "evidence": "Section 4e provides a full table of Art. 16 exceptions including compliance with legal/regulatory obligation (Art. 16, I), transfer to third parties (Art. 16, II), anonymised data for exclusive controller use (Art. 16, III), and exercise of rights in judicial proceedings (Art. 16, IV)."
+    },
+    {
+      "text": "Covers processor obligations under Art. 39 to instruct CRM/email/analytics vendors to delete",
+      "passed": true,
+      "evidence": "Section 'Processor Accountability (Art. 39 and Art. 42)' explicitly states: 'controllers remain responsible for the actions of their processors' and enumerates vendor contract requirements. The CRM, email platform, and analytics tool sections each note the obligation to instruct processors under Art. 39."
+    },
+    {
+      "text": "Mentions accountability/logging requirement and data subject's right to complain to ANPD if refused",
+      "passed": true,
+      "evidence": "Response states: 'Log the request immediately. Record the date, channel, requestor identity...LGPD requires controllers to demonstrate accountability (Art. 6, X; Art. 47).' And: 'Your response letter should include...Notice of their right to file a complaint with the ANPD if they are dissatisfied with the handling of their request (Art. 18; Art. 22).'"
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

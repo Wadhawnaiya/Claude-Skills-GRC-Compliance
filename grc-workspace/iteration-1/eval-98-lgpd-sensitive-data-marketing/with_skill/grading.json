@@ -1,0 +1,33 @@
+{
+  "eval_id": 98,
+  "config": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly classifies health insurance data as sensitive personal data under Art. 5, II requiring Art. 11 basis",
+      "passed": true,
+      "evidence": "Response states: 'Under Art. 5, II of the LGPD, sensitive personal data includes data concerning a person's health. Health insurance data falls squarely within this definition' and explains this triggers the stricter Art. 11 regime."
+    },
+    {
+      "text": "States that legitimate interest is prohibited for sensitive data processing",
+      "passed": true,
+      "evidence": "Response explicitly states: 'Art. 10 and Art. 11 expressly prohibit the use of legitimate interest as a basis for processing sensitive personal data. Unlike regular data, there is no balancing test available to justify health data processing for commercial marketing.'"
+    },
+    {
+      "text": "Identifies express specific consent (Art. 11, I) as the only viable basis for marketing use of health data",
+      "passed": true,
+      "evidence": "Response states: 'The only plausible legal basis is express and specific consent under Art. 11, I. Any other approach would constitute unlawful processing.' The Art. 11 table confirms this is the only applicable basis for marketing."
+    },
+    {
+      "text": "Addresses credit scores as regular personal data with broader Art. 7 bases available",
+      "passed": true,
+      "evidence": "Section 1.2 states: 'Credit scores are personal data under Art. 5, I...Unless the credit score is derived from...health data, it is treated as regular personal data governed by Art. 7.' Section 2.2 maps available Art. 7 bases including consent, legitimate interest, credit protection, and contract."
+    },
+    {
+      "text": "Recommends RIPD/DPIA (Art. 38) and mentions non-discrimination principle (Art. 6, IX)",
+      "passed": true,
+      "evidence": "Section 4.1 states: 'conduct a Relatório de Impacto à Proteção de Dados Pessoais (RIPD/DPIA)...The RIPD must be completed before the processing begins.' Section 4.4 states: 'The LGPD expressly prohibits processing that enables unlawful discriminatory outcomes...would violate this principle (Art. 6, IX).'"
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

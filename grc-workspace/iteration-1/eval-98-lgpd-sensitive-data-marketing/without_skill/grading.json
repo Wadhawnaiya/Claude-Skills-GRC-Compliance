@@ -1,0 +1,33 @@
+{
+  "eval_id": 98,
+  "config": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly classifies health insurance data as sensitive personal data under Art. 5, II requiring Art. 11 basis",
+      "passed": true,
+      "evidence": "Response states: 'Under LGPD Art. 5, II, health data is expressly listed as sensitive personal data (dado pessoal sensível). Health insurance data...falls squarely within this category' and explains Art. 11 provides 'a closed and exhaustive list of legal bases.'"
+    },
+    {
+      "text": "States that legitimate interest is prohibited for sensitive data processing",
+      "passed": false,
+      "evidence": "Response does not explicitly state that legitimate interest is prohibited for sensitive data. It only states Art. 11 provides a closed list of bases and notes LI is not among them. The affirmative prohibition on using LI for sensitive data is never directly stated, unlike the with_skill response which explicitly cites Art. 10 and Art. 11 as prohibiting it."
+    },
+    {
+      "text": "Identifies express specific consent (Art. 11, I) as the only viable basis for marketing use of health data",
+      "passed": true,
+      "evidence": "Response states: 'The only realistically available legal basis for using health insurance data for marketing is explicit consent (Art. 11, I). All other bases do not cover marketing activities.'"
+    },
+    {
+      "text": "Addresses credit scores as regular personal data with broader Art. 7 bases available",
+      "passed": true,
+      "evidence": "Section 2.2 states: 'Credit scores are treated as ordinary personal data under LGPD (not sensitive)' and Section 3.3 maps available Art. 7 bases including consent, legitimate interests, legal obligation, and contract performance."
+    },
+    {
+      "text": "Recommends RIPD/DPIA (Art. 38) and mentions non-discrimination principle (Art. 6, IX)",
+      "passed": true,
+      "evidence": "Section 5.5 states: 'ANPD guidance and Art. 38 contemplate that controllers processing sensitive data...should conduct impact assessments (relatório de impacto à proteção de dados pessoais — RIPD).' Section 5.2 covers 'Non-Discrimination (Art. 6, IX and Art. 21)' including prohibition on discriminatory profiling."
+    }
+  ],
+  "score": 4,
+  "max_score": 5
+}

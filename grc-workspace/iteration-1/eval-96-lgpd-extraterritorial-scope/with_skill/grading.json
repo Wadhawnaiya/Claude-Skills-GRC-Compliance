@@ -1,0 +1,33 @@
+{
+  "eval_id": 96,
+  "config": "with_skill",
+  "expectations": [
+    {
+      "text": "Confirms LGPD applies extraterritorially under Art. 3 to companies offering services to individuals in Brazil",
+      "passed": true,
+      "evidence": "Response explicitly states: 'LGPD's territorial scope is defined in Art. 3, which expressly extends the law beyond Brazil's borders' and identifies Art. 3, II as the trigger: 'Purpose is to offer or provide goods or services to individuals located in Brazil — Yes, you actively serve Brazilian customers.'"
+    },
+    {
+      "text": "Identifies CPF as personal data requiring protection under LGPD",
+      "passed": true,
+      "evidence": "Response classifies 'CPF (Cadastro de Pessoas Físicas) | Regular personal data (Art. 5, I)' and adds: 'the ANPD has treated CPF data breaches with heightened concern in enforcement actions, given the severe harm that CPF exposure causes to Brazilian individuals.'"
+    },
+    {
+      "text": "Maps contract performance (Art. 7, V) as legal basis for core service delivery",
+      "passed": true,
+      "evidence": "Response dedicates a full section to 'Contract — Art. 7, V (Primary Basis for Core Service Delivery)' and maps it to account creation, service delivery, billing, and purchase history in the legal basis table."
+    },
+    {
+      "text": "Identifies consent (Art. 7, I) as required for marketing communications",
+      "passed": true,
+      "evidence": "Response states 'Marketing emails | Art. 7, I — Consent | — | Consent mandatory; must be freely given' in the mapping table, and in section B: 'Marketing communications and promotional emails' require consent."
+    },
+    {
+      "text": "Mentions DPO appointment obligation (Art. 41) and international transfer requirements (Arts. 33-36)",
+      "passed": true,
+      "evidence": "Response includes dedicated sections '4.2 DPO Appointment — Art. 41' and '4.4 International Data Transfers — Arts. 33–36' with full detail on both obligations."
+    }
+  ],
+  "score": 5,
+  "max_score": 5
+}

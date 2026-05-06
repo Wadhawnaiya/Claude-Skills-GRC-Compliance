@@ -1,0 +1,33 @@
+{
+  "eval_id": 97,
+  "config": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies Art. 18, VI (deletion of consent-based data) and/or Art. 18, IV (unnecessary data deletion) as applicable rights",
+      "passed": true,
+      "evidence": "Response identifies both: 'Art. 18, IV — Deletion of unnecessary or excessive data: The data subject may request deletion of personal data that is unnecessary, excessive, or processed in non-compliance with LGPD' and 'Art. 18, VI — Deletion of data processed with consent.'"
+    },
+    {
+      "text": "Specifies 15-day response timeframe for data access/full report under Art. 19",
+      "passed": false,
+      "evidence": "Response mentions 15 days as a benchmark ('Many Brazilian DPOs adopt a 15-day target') but does not cite Art. 19 as the source. Instead cites Art. 18, §5 for the obligation to respond. Art. 19 is not referenced in the response."
+    },
+    {
+      "text": "Notes Art. 16 retention exceptions (legal obligation, litigation, research) that may override deletion",
+      "passed": true,
+      "evidence": "Section 4 covers all Art. 16 exceptions: Art. 16, I (legal/regulatory obligation), Art. 16, II (transfer to third party under ANPD rules), Art. 16, III (anonymised data for sole controller use), and Art. 16, IV (fraud prevention and data subject security)."
+    },
+    {
+      "text": "Covers processor obligations under Art. 39 to instruct CRM/email/analytics vendors to delete",
+      "passed": false,
+      "evidence": "Response discusses instructing sub-processors to delete under Art. 18, §7 ('the controller must communicate the deletion request to all entities with whom data was shared') but does not cite Art. 39. The specific processor obligation article (Art. 39) is absent from the response."
+    },
+    {
+      "text": "Mentions accountability/logging requirement and data subject's right to complain to ANPD if refused",
+      "passed": false,
+      "evidence": "Response covers accountability and logging under Art. 6, X and Art. 37 ('Maintain: A log of the deletion request'). However, the right to file a complaint with the ANPD if the request is refused is not mentioned anywhere in the response."
+    }
+  ],
+  "score": 3,
+  "max_score": 5
+}

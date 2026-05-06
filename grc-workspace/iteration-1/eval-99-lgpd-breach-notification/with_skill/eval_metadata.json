@@ -1,0 +1,12 @@
+{
+  "eval_id": 99,
+  "eval_name": "lgpd-breach-notification",
+  "prompt": "We discovered a database breach exposing 50,000 Brazilian customers names, emails, and encrypted passwords. What are our LGPD notification obligations and what should we do in the next 72 hours?",
+  "assertions": [
+    "Cites Art. 48 LGPD as the breach notification obligation",
+    "Specifies 3 working days for preliminary ANPD notification (ANPD Resolution No. 15/2024), distinguishing from GDPR 72-hour rule",
+    "Mentions 20 working days for full incident report to ANPD",
+    "Covers required notification content: nature of data, number of subjects affected, measures taken",
+    "Addresses whether data subjects must be notified and recommends password reset as immediate action"
+  ]
+}

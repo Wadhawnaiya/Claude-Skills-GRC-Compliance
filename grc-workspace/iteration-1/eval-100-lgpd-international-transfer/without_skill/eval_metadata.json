@@ -1,0 +1,12 @@
+{
+  "eval_id": 100,
+  "eval_name": "lgpd-international-transfer",
+  "prompt": "We are expanding our Brazilian operations and want to transfer customer data to our parent company servers in the United States. The US has no LGPD adequacy decision. What transfer mechanisms are available and what do we need to implement?",
+  "assertions": [
+    "Confirms no ANPD adequacy decision exists for the US under Art. 34",
+    "Identifies specific/standard contractual clauses (Art. 35) as a primary available mechanism",
+    "Covers binding corporate rules (BCRs) under Art. 35, I as an option",
+    "Mentions specific data subject consent (Art. 33, VIII) as a supplementary mechanism",
+    "Notes ANPD has not yet published standard contractual clauses and advises on practical implementation steps"
+  ]
+}

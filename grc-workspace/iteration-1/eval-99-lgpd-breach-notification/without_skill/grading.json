@@ -1,0 +1,33 @@
+{
+  "eval_id": 99,
+  "config": "without_skill",
+  "expectations": [
+    {
+      "text": "Cites Art. 48 LGPD as the breach notification obligation",
+      "passed": true,
+      "evidence": "Response states: 'Article 48 of the LGPD requires that the data controller communicate to the ANPD and to affected data subjects the occurrence of a security incident that may create risk or relevant harm to the data subjects.'"
+    },
+    {
+      "text": "Specifies 3 working days for preliminary ANPD notification (ANPD Resolution No. 15/2024), distinguishing from GDPR 72-hour rule",
+      "passed": false,
+      "evidence": "Response incorrectly states: '72 hours for preliminary notification to the ANPD (same standard as GDPR, and explicitly aligned by ANPD guidance).' This conflates the LGPD standard with GDPR rather than distinguishing them. The correct LGPD standard under ANPD Resolution No. 15/2024 is 3 working days, not 72 hours."
+    },
+    {
+      "text": "Mentions 20 working days for full incident report to ANPD",
+      "passed": false,
+      "evidence": "Response states a 30-day follow-up deadline: 'A more complete follow-up report is expected within 30 days' and the checklist lists 'Submit complete incident report to ANPD' under 'Within 30 days.' The correct deadline under ANPD Resolution No. 15/2024 is 20 working days, not 30 days."
+    },
+    {
+      "text": "Covers required notification content: nature of data, number of subjects affected, measures taken",
+      "passed": true,
+      "evidence": "Response lists required notification content including 'Description of the nature of the affected personal data', 'Categories and approximate number of affected data subjects', 'Measures taken or proposed to mitigate the effects', and 'Description of the likely consequences of the incident.'"
+    },
+    {
+      "text": "Addresses whether data subjects must be notified and recommends password reset as immediate action",
+      "passed": true,
+      "evidence": "Response states: 'Affected Data Subjects — Must be notified when the incident may cause significant harm, within a reasonable timeframe.' The 48–72 hour checklist includes: 'Force password resets for all affected accounts, even though passwords were encrypted.'"
+    }
+  ],
+  "score": 3,
+  "max_score": 5
+}

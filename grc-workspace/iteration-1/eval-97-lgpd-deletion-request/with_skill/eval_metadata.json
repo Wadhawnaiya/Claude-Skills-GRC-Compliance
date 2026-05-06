@@ -1,0 +1,12 @@
+{
+  "eval_id": 97,
+  "eval_name": "lgpd-deletion-request",
+  "prompt": "A Brazilian user emailed us requesting deletion of all their personal data. We store their data in our CRM, email platform, and analytics tool. How do we handle this under LGPD?",
+  "assertions": [
+    "Identifies Art. 18, VI (deletion of consent-based data) and/or Art. 18, IV (unnecessary data deletion) as applicable rights",
+    "Specifies 15-day response timeframe for data access/full report under Art. 19",
+    "Notes Art. 16 retention exceptions (legal obligation, litigation, research) that may override deletion",
+    "Covers processor obligations under Art. 39 to instruct CRM/email/analytics vendors to delete",
+    "Mentions accountability/logging requirement and data subject's right to complain to ANPD if refused"
+  ]
+}

@@ -1356,6 +1356,36 @@
         }
       ],
       "files": []
+    },
+    {
+      "id": 96,
+      "prompt": "We are a US SaaS company with Brazilian customers. Our app collects name, email, CPF, and purchase history. Do we need to comply with LGPD? Which legal bases apply to our processing?",
+      "expected_output": "Confirms LGPD applies extraterritorially (Art. 3) because data subjects are in Brazil. Maps legal bases: contract (Art. 7, V) for purchase/service delivery; legitimate interest or consent for marketing; legal obligation for fiscal records. Notes CPF is personal data requiring protection. Recommends privacy notice update and DPO assessment.",
+      "files": []
+    },
+    {
+      "id": 97,
+      "prompt": "A Brazilian user emailed us requesting deletion of all their personal data. We store their data in our CRM, email platform, and analytics tool. How do we handle this under LGPD?",
+      "expected_output": "Identifies this as Art. 18, VI (deletion of consent-based data) and possibly Art. 18, IV (deletion of unnecessary data). Explains controller must respond without undue delay. Covers: identity verification, data location across systems, checking retention exceptions (Art. 16 \u2014 legal obligation, legitimate interest for defence, public health, research). Provides step-by-step DSR workflow and logging requirement.",
+      "files": []
+    },
+    {
+      "id": 98,
+      "prompt": "Our fintech startup in S\u00e3o Paulo processes customers health insurance data and credit scores. We want to use this data for marketing personalised financial products. Is this allowed under LGPD? What legal bases and safeguards apply?",
+      "expected_output": "Flags health data as sensitive (Art. 5, II) requiring Art. 11 basis \u2014 express specific consent or narrow exceptions. Credit scores are regular personal data (Art. 7, X for credit protection). Marketing use of health data without express consent is unlawful. Must separate consents. Recommends RIPD/DPIA for high-risk profiling. Notes prohibition on discriminatory use (Art. 6, IX).",
+      "files": []
+    },
+    {
+      "id": 99,
+      "prompt": "We discovered a database breach exposing 50,000 Brazilian customers names, emails, and encrypted passwords. What are our LGPD notification obligations and what should we do in the next 72 hours?",
+      "expected_output": "Explains ANPD Resolution 15/2024 requires preliminary notification within 3 working days (not 72 hours \u2014 distinguishes from GDPR). Outlines preliminary notification content (Art. 48): nature of data, number affected, measures taken. 20 working days for full report. Assesses whether to notify data subjects based on relevant risk. Covers containment steps, evidence preservation, and internal incident log.",
+      "files": []
+    },
+    {
+      "id": 100,
+      "prompt": "We are expanding our Brazilian operations and want to transfer customer data to our parent company servers in the United States. The US has no LGPD adequacy decision. What transfer mechanisms are available and what do we need to implement?",
+      "expected_output": "Explains ANPD has not issued US adequacy decision (Art. 34). Available mechanisms: standard contractual clauses (Art. 35 \u2014 note ANPD has not published standard clauses yet so specific clauses must ensure adequate protection); binding corporate rules (Art. 35, I); specific data subject consent for the transfer (Art. 33, VIII); ANPD case-by-case authorisation (Art. 33, IX). Recommends BCRs or specific contractual clauses for intragroup transfer. Notes ongoing ANPD regulatory development.",
+      "files": []
     }
   ]
 }
