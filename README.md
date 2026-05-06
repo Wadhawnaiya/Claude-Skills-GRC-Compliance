@@ -450,6 +450,7 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
 - Manages **violations and voluntary disclosures** — walks through the VSD process under 22 CFR § 127.12, penalty exposure (civil up to $1.369M/violation, criminal up to $1M/20 years), mitigating and aggravating factors, and corrective action planning
 
 **Trigger phrases:** `ITAR`, `International Traffic in Arms Regulations`, `USML`, `United States Munitions List`, `DDTC`, `defense export`, `deemed export`, `TAA`, `technical assistance agreement`, `MLA`, `manufacturing license agreement`, `DSP-5`, `DSP-73`, `ITAR registration`, `ITAR violation`, `voluntary disclosure ITAR`, `ITAR vs EAR`, `commodity jurisdiction`, `defense article`, `defense service`, `ITAR compliance`, `technology control plan`, `Empowered Official`
+
 ---
 
 ### 20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law
