@@ -122,7 +122,7 @@ The SOC 2 skill turns Claude into an expert SOC 2 compliance advisor grounded in
 
 ---
 
-### 3. <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP
+### 3. <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP [US]
 
 **File:** `FedRamp - Claude Skill/fedramp.skill`
 
@@ -140,7 +140,7 @@ The FedRAMP skill turns Claude into a knowledgeable FedRAMP advisor covering the
 
 ---
 
-### 4. 🇪🇺 GDPR
+### 4. 🇪🇺 GDPR [EU]
 
 **File:** `GDPR - Claude Skill/gdpr-compliance.skill`
 
@@ -157,7 +157,7 @@ The GDPR skill turns Claude into an expert GDPR compliance assistant that bridge
 
 ---
 
-### 5. <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA
+### 5. <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA [US]
 
 **File:** `HIPAA - Claude Skill/hipaa-compliance.skill`
 
@@ -212,7 +212,7 @@ The PCI DSS skill turns Claude into an expert PCI DSS compliance advisor coverin
 
 ---
 
-### 8. 🚨 TSA Cybersecurity
+### 8. 🚨 TSA Cybersecurity [US]
 
 **File:** `TSA Compliance - Claude Skill/TSA-Compliance.skill`
 
@@ -272,7 +272,7 @@ The ISO 27701 skill turns Claude into an expert **ISO/IEC 27701:2025** Privacy I
 
 ---
 
-### 11. <img src="assets/Logos/dora.png" alt="DORA" height="20" style="vertical-align:middle;object-fit:contain;"> DORA Digital Operational Resilience
+### 11. <img src="assets/Logos/dora.png" alt="DORA" height="20" style="vertical-align:middle;object-fit:contain;"> DORA [EU] — Digital Operational Resilience
 
 **File:** `DORA - Claude Skill/dora.skill`
 
@@ -294,7 +294,7 @@ The DORA skill turns Claude into an expert advisor on **Regulation (EU) 2022/255
 
 ---
 
-### 12. 🇮🇳 DPDPA India Digital Personal Data Protection
+### 12. 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act
 
 **File:** `DPDPA - Claude Skill/dpdpa.skill`
 
@@ -316,7 +316,7 @@ The DPDPA skill turns Claude into an expert advisor on India's **Digital Persona
 
 ---
 
-### 13. <img src="assets/Logos/cmmc.png" alt="CMMC" height="20" style="vertical-align:middle;object-fit:contain;"> CMMC 2.0 Cybersecurity Maturity Model Certification
+### 13. <img src="assets/Logos/cmmc.png" alt="CMMC" height="20" style="vertical-align:middle;object-fit:contain;"> CMMC 2.0 [US] — Cybersecurity Maturity Model Certification
 
 **File:** `CMMC - Claude Skill/cmmc.skill`
 
@@ -375,7 +375,7 @@ The SWIFT CSP skill turns Claude into an expert advisor on the **SWIFT Customer 
 
 ---
 
-### 16. 🇦🇺 Australian Information Security Manual (ISM)
+### 16. 🇦🇺 ISM [Australia] — Australian Information Security Manual
 
 **File:** `ISM - Claude Skill/ism.skill`
 
@@ -395,7 +395,7 @@ The ISM skill turns Claude into an expert advisor on the **Australian Informatio
 
 ---
 
-### 17. 🇪🇺 EU NIS2 Directive
+### 17. 🇪🇺 NIS2 [EU] Directive
 
 **File:** `NIS2 - Claude Skill/nis2.skill`
 
@@ -415,7 +415,7 @@ The NIS2 skill turns Claude into an expert advisor on the **EU NIS2 Directive (D
 
 ---
 
-### 18. <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA California Privacy
+### 18. <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA [California] Privacy
 
 **File:** `CCPA - Claude Skill/ccpa.skill`
 
@@ -434,7 +434,7 @@ The CCPA/CPRA skill turns Claude into an expert advisor on **California's compre
 
 ---
 
-### 19. <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR — International Traffic in Arms Regulations
+### 19. <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations
 
 **File:** `ITAR - Claude Skill/itar.skill`
 
@@ -452,7 +452,7 @@ The ITAR skill turns Claude into an expert advisor on **US defense export contro
 **Trigger phrases:** `ITAR`, `International Traffic in Arms Regulations`, `USML`, `United States Munitions List`, `DDTC`, `defense export`, `deemed export`, `TAA`, `technical assistance agreement`, `MLA`, `manufacturing license agreement`, `DSP-5`, `DSP-73`, `ITAR registration`, `ITAR violation`, `voluntary disclosure ITAR`, `ITAR vs EAR`, `commodity jurisdiction`, `defense article`, `defense service`, `ITAR compliance`, `technology control plan`, `Empowered Official`
 ---
 
-### 20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD — Brazil's General Data Protection Law
+### 20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law
 
 **File:** `LGPD - Claude Skill/lgpd.skill`
 
@@ -611,24 +611,24 @@ The LGPD skill turns Claude into an expert advisor on **Brazil's Lei Geral de Pr
    |-----------|----------|
    | <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27001 | [iso27001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
    | <img src="assets/Logos/soc2.jpeg" alt="SOC 2" height="20" style="vertical-align:middle;object-fit:contain;"> SOC 2 | [soc2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
-   | <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
-   | 🇪🇺 GDPR | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
-   | <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
+   | <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP [US] | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
+   | 🇪🇺 GDPR [EU] | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
+   | <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA [US] | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
    | <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" height="20" style="vertical-align:middle;object-fit:contain;"> NIST CSF | [NIST Cybersecurity.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
    | <img src="assets/Logos/pci-dss.png" alt="PCI DSS" height="20" style="vertical-align:middle;object-fit:contain;"> PCI DSS | [PCI-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
-   | 🚨 TSA Cybersecurity | [TSA-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/TSA%20Compliance%20-%20Claude%20Skill/TSA-Compliance.skill) |
+   | 🚨 TSA Cybersecurity [US] | [TSA-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/TSA%20Compliance%20-%20Claude%20Skill/TSA-Compliance.skill) |
    | 🤖 ISO 42001 AI Management System | [ISO-42001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2042001%20-%20Claude%20Skill/ISO-42001.skill) |
    | 🔒 ISO 27701 Privacy Information Management | [iso27701.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027701%20-%20Claude%20Skill/iso27701.skill) |
    | 🏦 DORA Digital Operational Resilience | [dora.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DORA%20-%20Claude%20Skill/dora.skill) |
-   | 🇮🇳 DPDPA India Digital Personal Data Protection | [dpdpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
+   | 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act | [dpdpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
    | 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification | [cmmc.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CMMC%20-%20Claude%20Skill/cmmc.skill) |
    | 🤖 NIST AI Risk Management Framework | [nist-ai-rmf.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20AI%20RMF%20-%20Claude%20Skill/nist-ai-rmf.skill) |
    | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
-   | 🇦🇺 Australian Information Security Manual (ISM) | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
-   | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
-   | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
-   | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
-   | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD — Brazil's General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
+   | 🇦🇺 ISM [Australia] — Australian Information Security Manual | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
+   | 🇪🇺 NIS2 [EU] Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
+   | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA [California] Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
+   | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
+   | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -673,24 +673,24 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 |-------|-----------|-----------|---------|-------|-----------------|
 | ISO 27001 | 5 | **100%** | 84% | +16% | Gap assessment; Policy drafting; 2013→2022 transition; Risk assessment; Management review CAP |
 | SOC 2 | 5 | **100%** | 84% | +16% | Type 1 vs 2; CC controls checklist; Availability criteria; Access control policy; Audit exception response |
-| FedRAMP | 5 | **84%** | 76% | +8% | Authorization pathways; Impact levels; FedRAMP 20x; System boundary; POA&M remediation timelines |
-| GDPR | 5 | **88%** | 88% | +0% | US company checklist; Article 28 DPA; Subject access request; Cookie consent; 72-hour breach notification |
-| HIPAA | 5 | **92%** | 88% | +4% | Covered entity analysis; BAA template; Encryption (addressable vs required); Risk analysis; Workforce violation |
+| FedRAMP [US] | 5 | **84%** | 76% | +8% | Authorization pathways; Impact levels; FedRAMP 20x; System boundary; POA&M remediation timelines |
+| GDPR [EU] | 5 | **88%** | 88% | +0% | US company checklist; Article 28 DPA; Subject access request; Cookie consent; 72-hour breach notification |
+| HIPAA [US] | 5 | **92%** | 88% | +4% | Covered entity analysis; BAA template; Encryption (addressable vs required); Risk analysis; Workforce violation |
 | NIST CSF | 5 | **96%** | 84% | +12% | CSF 2.0 overview; Ransomware recovery plan; Profile creation; Control mapping; Board reporting |
 | PCI DSS | 5 | **92%** | 88% | +4% | SAQ type selection; Req 3 stored data (v4.0); Breach obligations; Penetration testing; Tokenization scope |
-| TSA Cybersecurity | 5 | **100%** | 96% | +4% | Pipeline directive requirements; CIRP elements; OT/IT segmentation; Airport applicability; TSA vs CIRCIA |
+| TSA Cybersecurity [US] | 5 | **100%** | 96% | +4% | Pipeline directive requirements; CIRP elements; OT/IT segmentation; Airport applicability; TSA vs CIRCIA |
 | ISO 42001 | 5 | **92%** | 80% | +12% | AIMS applicability; Key requirements; AI-specific risks; Third-party LLM management; AI ethics controls |
 | ISO 27701 | 5 | **100%** | 80% | +20% | Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence |
-| DORA | 5 | **88%** | 72% | +16% | Five pillars; ICT incident reporting timelines; TLPT requirements; Third-party contracts; DORA vs EBA |
-| DPDPA | 5 | **96%** | 80% | +16% | Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations |
-| CMMC 2.0 | 5 | **100%** | 100% | +0% | Level determination; SPRS scoring; CUI scoping; SSP structure; C3PAO assessment readiness |
+| DORA [EU] | 5 | **88%** | 72% | +16% | Five pillars; ICT incident reporting timelines; TLPT requirements; Third-party contracts; DORA vs EBA |
+| DPDPA [India] | 5 | **96%** | 80% | +16% | Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations |
+| CMMC 2.0 [US] | 5 | **100%** | 100% | +0% | Level determination; SPRS scoring; CUI scoping; SSP structure; C3PAO assessment readiness |
 | NIST AI RMF | 5 | **92%** | 76% | +16% | Four functions overview; Hiring AI risk assessment; Credit scoring risk register; EU AI Act mapping; GOVERN gap assessment |
 | SWIFT CSP | 5 | **100%** | 48% | +52% | Architecture scoping (A1/A2/A3/A4/B); MFA hardware token requirement; CSCF v2025 gap assessment; KYC-SA attestation process; Incident response obligations |
-| ISM | 5 | **96%** | 52% | +44% | OS control scoping and authorisation; IRAP assessment preparation; Chapter 13 system hardening; Essential Eight to ISM mapping; Supply chain cloud provider obligations |
-| NIS2 | 5 | **96%** | 80% | +16% | Energy company EE/IE classification; SaaS provider Art. 21 obligations; Ransomware Art. 23 reporting workflow; ISO 27001 vs NIS2 gap analysis; DORA lex specialis interaction |
-| CCPA/CPRA | 5 | **100%** | 96% | +4% | E-commerce threshold analysis; Combined right-to-know and delete workflow; Ad tech sale vs sharing classification; GDPR-to-CCPA gap analysis; SPI classification for mobile app |
-| ITAR | 5 | **100%** | 100% | 0% | USML jurisdiction analysis for military laptops; Deemed export for German engineer; DSP-73 temporary export for trade show; Violation and VSD process; TAA mandatory clauses for India |
-| LGPD | 5 | **100%** | 80% | +20% | Extraterritorial scope for US SaaS with Brazilian customers; Data deletion request across CRM/email/analytics; Sensitive health data marketing restrictions; Breach notification timelines (3 working days vs GDPR 72h); International transfer mechanisms to the US |
+| ISM [Australia] | 5 | **96%** | 52% | +44% | OS control scoping and authorisation; IRAP assessment preparation; Chapter 13 system hardening; Essential Eight to ISM mapping; Supply chain cloud provider obligations |
+| NIS2 [EU] | 5 | **96%** | 80% | +16% | Energy company EE/IE classification; SaaS provider Art. 21 obligations; Ransomware Art. 23 reporting workflow; ISO 27001 vs NIS2 gap analysis; DORA lex specialis interaction |
+| CCPA/CPRA [California] | 5 | **100%** | 96% | +4% | E-commerce threshold analysis; Combined right-to-know and delete workflow; Ad tech sale vs sharing classification; GDPR-to-CCPA gap analysis; SPI classification for mobile app |
+| ITAR [US] | 5 | **100%** | 100% | 0% | USML jurisdiction analysis for military laptops; Deemed export for German engineer; DSP-73 temporary export for trade show; Violation and VSD process; TAA mandatory clauses for India |
+| LGPD [Brazil] | 5 | **100%** | 80% | +20% | Extraterritorial scope for US SaaS with Brazilian customers; Data deletion request across CRM/email/analytics; Sensitive health data marketing restrictions; Breach notification timelines (3 working days vs GDPR 72h); International transfer mechanisms to the US |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 
