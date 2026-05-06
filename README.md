@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, and CCPA/CPRA California Privacy — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, and ITAR (International Traffic in Arms Regulations) — powered by Claude Skills.
 
-Benchmarked across 90 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **80%** across 450 total assertions.
+Benchmarked across 95 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **82%** across 475 total assertions.
 
 [![Release: v0.8.0](https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg)](../../releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 18](https://img.shields.io/badge/Skills-18-green.svg)](#the-skills)
+[![Skills: 19](https://img.shields.io/badge/Skills-19-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -34,6 +34,7 @@ Benchmarked across 90 test cases (5 per framework) using the eval framework — 
   - [Australian Information Security Manual (ISM)](#-australian-information-security-manual-ism)
   - [EU NIS2 Directive](#-eu-nis2-directive)
   - [CCPA/CPRA California Privacy](#-ccpacpra-california-privacy)
+  - [ITAR — International Traffic in Arms Regulations](#-itar--international-traffic-in-arms-regulations)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -432,6 +433,25 @@ The CCPA/CPRA skill turns Claude into an expert advisor on **California's compre
 
 ---
 
+### 19. 🔫 ITAR — International Traffic in Arms Regulations
+
+**File:** `ITAR - Claude Skill/itar.skill`
+
+The ITAR skill turns Claude into an expert advisor on **US defense export controls under 22 CFR Parts 120–130**, administered by the Directorate of Defense Trade Controls (DDTC) at the US State Department. ITAR controls the export, re-export, and transfer of defense articles, defense services, and related technical data enumerated on the United States Munitions List (USML).
+
+**What it does:**
+- Performs **USML jurisdiction analysis** — applies the enumeration test and specially designed test (22 CFR § 120.41) to determine whether an item falls under ITAR or EAR, and guides Commodity Jurisdiction (CJ) requests for ambiguous cases
+- Guides **DDTC registration** under 22 CFR Part 122 — who must register, DS-2032 submission, annual fees, renewal timelines, and Empowered Official (EO) designation
+- Advises on **export licensing** — DSP-5 (permanent export), DSP-73 (temporary export), DSP-94 (temporary import), application requirements via D-Trade, licence conditions, Congressional notification thresholds
+- Drafts and reviews **Technical Assistance Agreements (TAA)** and **Manufacturing License Agreements (MLA)** under 22 CFR Part 124, including all mandatory clauses: retransfer prohibition, US government rights, audit rights, and 5-year record retention
+- Advises on **deemed exports** — foreign national access to ITAR-controlled technical data inside the US is treated as an export to their home country; covers Technology Control Plans (TCP), screening requirements, and access segregation
+- Guides **brokering compliance** under 22 CFR Part 129 — registration, prior approval requirements, and annual reporting obligations
+- Manages **violations and voluntary disclosures** — walks through the VSD process under 22 CFR § 127.12, penalty exposure (civil up to $1.369M/violation, criminal up to $1M/20 years), mitigating and aggravating factors, and corrective action planning
+
+**Trigger phrases:** `ITAR`, `International Traffic in Arms Regulations`, `USML`, `United States Munitions List`, `DDTC`, `defense export`, `deemed export`, `TAA`, `technical assistance agreement`, `MLA`, `manufacturing license agreement`, `DSP-5`, `DSP-73`, `ITAR registration`, `ITAR violation`, `voluntary disclosure ITAR`, `ITAR vs EAR`, `commodity jurisdiction`, `defense article`, `defense service`, `ITAR compliance`, `technology control plan`, `Empowered Official`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -586,6 +606,7 @@ The CCPA/CPRA skill turns Claude into an expert advisor on **California's compre
    | 🇦🇺 Australian Information Security Manual (ISM) | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
    | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
    | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
+   | 🔫 ITAR — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -605,7 +626,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -646,6 +667,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | ISM | 5 | **96%** | 52% | +44% | OS control scoping and authorisation; IRAP assessment preparation; Chapter 13 system hardening; Essential Eight to ISM mapping; Supply chain cloud provider obligations |
 | NIS2 | 5 | **96%** | 80% | +16% | Energy company EE/IE classification; SaaS provider Art. 21 obligations; Ransomware Art. 23 reporting workflow; ISO 27001 vs NIS2 gap analysis; DORA lex specialis interaction |
 | CCPA/CPRA | 5 | **100%** | 96% | +4% | E-commerce threshold analysis; Combined right-to-know and delete workflow; Ad tech sale vs sharing classification; GDPR-to-CCPA gap analysis; SPI classification for mobile app |
+| ITAR | 5 | **100%** | 100% | 0% | USML jurisdiction analysis for military laptops; Deemed export for German engineer; DSP-73 temporary export for trade show; Violation and VSD process; TAA mandatory clauses for India |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

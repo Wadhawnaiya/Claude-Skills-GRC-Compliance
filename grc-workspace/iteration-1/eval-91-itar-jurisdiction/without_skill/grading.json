@@ -1,0 +1,33 @@
+{
+  "eval_id": 91,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Explains the USML enumeration test and specially designed test (22 CFR 120.41)",
+      "passed": true,
+      "evidence": "Step 2 covers USML category analysis and 'The Specially Designed Standard' under 22 C.F.R. § 120.41 with two-part test and factors."
+    },
+    {
+      "text": "References relevant USML categories (Cat XI military electronics, or Cat VIII if airborne)",
+      "passed": true,
+      "evidence": "Explicitly identifies Category XI (Military Electronics) as primary; also references Cat XIII(b), XV, XVII in a table. Cat VIII is not mentioned."
+    },
+    {
+      "text": "Explains DDTC registration requirement under 22 CFR 122.1 for manufacturers of defense articles",
+      "passed": true,
+      "evidence": "Step 5 states 'Under 22 C.F.R. § 122.1, any person or company that manufactures defense articles...must register with DDTC before engaging in those activities.'"
+    },
+    {
+      "text": "Mentions Commodity Jurisdiction (CJ) as the path to get an official DDTC determination",
+      "passed": true,
+      "evidence": "Step 4 describes CJ under 22 C.F.R. § 120.4 as Option B for formal determination, with full process description."
+    },
+    {
+      "text": "Cites specific CFR sections (22 CFR Parts 120-122) in the response",
+      "passed": true,
+      "evidence": "Multiple CFR citations including 22 C.F.R. Parts 120-130, § 120.41, § 120.4, § 121.1 Cat XI, § 122.1; also references 22 U.S.C. § 2778."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

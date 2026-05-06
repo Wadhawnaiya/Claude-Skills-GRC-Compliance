@@ -1,0 +1,33 @@
+{
+  "eval_id": 94,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Immediately recommends Voluntary Self-Disclosure (VSD) under 22 CFR 127.12 as the primary course of action",
+      "passed": true,
+      "evidence": "Section 2 is titled 'File a Voluntary Self-Disclosure (VSD) — 22 CFR § 127.12' and is presented as action item #2 immediately after preserving records, with explicit statement 'Voluntary Self-Disclosure is the single most important step you can take.'"
+    },
+    {
+      "text": "Explains the VSD process: initial notification, internal investigation, final report",
+      "passed": true,
+      "evidence": "VSD Process covers Stage 1 (Initial Notification within ~30 days), Stage 2 (Internal Investigation 30-90 days), Stage 3 (Final VSD Report within ~60-90 days), and Stage 4 (DDTC Review)."
+    },
+    {
+      "text": "Quantifies civil penalty exposure (up to $1.369M per violation) and criminal exposure (up to $1M fine / 20 years)",
+      "passed": true,
+      "evidence": "Penalty Exposure section states civil penalties 'Up to $1,369,000 per violation' and criminal penalties 'Up to $1,000,000 fine per violation' and 'Up to 20 years imprisonment per violation.'"
+    },
+    {
+      "text": "Identifies VSD and cooperation as the strongest mitigating factors",
+      "passed": true,
+      "evidence": "Mitigating Factors section lists 'Voluntary self-disclosure — the most important factor; file promptly' and 'Full cooperation with DDTC's investigation' at the top."
+    },
+    {
+      "text": "Advises preserving all relevant records and placing a litigation hold immediately",
+      "passed": true,
+      "evidence": "Immediate action #1 is titled 'Place a Litigation Hold on All Relevant Records' before anything else, covering emails, drawings, communications, and access logs."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

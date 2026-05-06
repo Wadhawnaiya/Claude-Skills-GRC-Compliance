@@ -1,0 +1,33 @@
+{
+  "eval_id": 95,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies TAA under 22 CFR Part 124 as the correct instrument for sharing technical data",
+      "passed": true,
+      "evidence": "Section 1 states 'requires a Technical Assistance Agreement (TAA) under 22 CFR § 124.1' and explicitly explains why TAA (not DSP-5 or MLA) is the mandatory instrument for technical data/services."
+    },
+    {
+      "text": "Lists mandatory TAA clauses: retransfer prohibition, US government rights, audit rights, 5-year record retention",
+      "passed": true,
+      "evidence": "Section 3 (Mandatory TAA Clauses, 22 CFR § 124.9) explicitly covers: Retransfer Prohibition (3.3), US Government Rights (3.4), Audit Rights (3.5), and Record-Keeping 5-Year Retention (3.6)."
+    },
+    {
+      "text": "Explains D-Trade portal submission and 30-60 day DDTC approval timeline",
+      "passed": true,
+      "evidence": "Step 3 in Section 5 states 'Submit via D-Trade Portal (dtrade.state.gov)' and Step 4 states 'Standard processing time: 30–60 days for most TAAs.'"
+    },
+    {
+      "text": "Notes that certain defense articles may require Congressional notification for significant transfers",
+      "passed": true,
+      "evidence": "Section 4 (Congressional Notification Requirement) explains 22 USC § 2776 thresholds, SME designation for missile guidance systems, and the 15/30-day congressional review period."
+    },
+    {
+      "text": "Mentions India-specific considerations: India is a major defence partner but not treaty-exempt; licence required",
+      "passed": true,
+      "evidence": "Section 2 explicitly states India is a 'Major Defence Partner' but 'not a treaty partner under the Australia-UK-US Defence Trade Cooperation Treaties' and 'A full DDTC-approved TAA is required.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

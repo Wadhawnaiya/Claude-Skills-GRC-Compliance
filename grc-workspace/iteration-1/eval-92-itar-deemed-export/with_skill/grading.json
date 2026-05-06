@@ -1,0 +1,33 @@
+{
+  "eval_id": 92,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies this as a deemed export situation under 22 CFR 120.50",
+      "passed": true,
+      "evidence": "Section 1 heading is 'Recognize This as a Deemed Export Situation' and cites 22 CFR § 120.50 directly."
+    },
+    {
+      "text": "States that a TAA or individual licence may be required before access is granted",
+      "passed": true,
+      "evidence": "Section 2 explicitly states a TAA (22 CFR § 124.1) or Individual Export License (DSP-5/Part 125) must be obtained before the engineer accesses any ITAR-controlled data."
+    },
+    {
+      "text": "Explains Technology Control Plan (TCP) requirements for foreign visitor access",
+      "passed": true,
+      "evidence": "Section 4 is entirely dedicated to 'Technology Control Plan (TCP) — Visitor Procedures' covering physical access, IT controls, visitor logs, and staff briefings."
+    },
+    {
+      "text": "Mentions screening against DDTC debarred parties list and OFAC SDN list",
+      "passed": true,
+      "evidence": "Section 3 explicitly lists 'DDTC Debarred Parties List (22 CFR § 127.7)' and 'OFAC Specially Designated Nationals (SDN) List' as required screening."
+    },
+    {
+      "text": "Clarifies that German citizenship (not work visa status) determines export destination for deemed export purposes",
+      "passed": true,
+      "evidence": "Section 1 states 'the deemed export determination is based on the engineer's nationality (German citizenship), not their work visa type, work authorization status, or length of stay.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

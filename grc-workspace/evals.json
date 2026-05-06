@@ -979,7 +979,7 @@
       "prompt": "Run a SWIFT CSCF v2025 gap assessment for our organisation. Here is our current state: SWIFT zone exists but is on a shared VLAN with other internal systems. We patch critical vulnerabilities within 30 days. We use software OTP for operator MFA. SWIFT logs are collected but not reviewed and retention is only 6 months. We have a general IT incident response plan but nothing SWIFT-specific. Operators use named individual accounts. Rate each relevant control and give us a prioritised remediation plan.",
       "expected_output": "A structured gap assessment table with RAG status for each control based on the described state, plus a prioritised remediation roadmap identifying the highest-risk gaps first.",
       "assertions": [
-        "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems — network segregation is a hard requirement",
+        "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems \u2014 network segregation is a hard requirement",
         "Rates Control 2.2 as red because 30-day patching exceeds the CSCF v2025 critical patch SLA of 3 days",
         "Rates Control 4.2 as red because software OTP does not meet the hardware token requirement",
         "Rates Control 6.4 as red or amber due to 6-month log retention (minimum is 1 year) and logs not being actively reviewed",
@@ -991,7 +991,7 @@
       "id": 74,
       "skill": "swift-csp",
       "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
-      "prompt": "We need to submit our annual KYC-SA attestation by July 31. Walk us through the complete attestation process — what we need to prepare, who can act as our independent assessor, how to complete the KYC-SA form, and what happens to our attestation once submitted. We are an A1 architecture bank.",
+      "prompt": "We need to submit our annual KYC-SA attestation by July 31. Walk us through the complete attestation process \u2014 what we need to prepare, who can act as our independent assessor, how to complete the KYC-SA form, and what happens to our attestation once submitted. We are an A1 architecture bank.",
       "expected_output": "A complete step-by-step KYC-SA attestation guide covering evidence preparation, assessor qualification criteria, submission process, and post-submission counterparty visibility.",
       "assertions": [
         "Describes the KYC-SA portal on swift.com/myswift as the submission mechanism",
@@ -1041,7 +1041,7 @@
       "assertions": [
         "Lists SSP, network architecture diagrams, asset register, and risk register as required IRAP artefacts",
         "States IRAP assessors must be listed on the ASD IRAP Assessors Register and be independent of the system",
-        "Explains post-assessment pathway: IRAP report → POA&M to address findings → Authorising Official reviews residual risk → ATO sign-off",
+        "Explains post-assessment pathway: IRAP report \u2192 POA&M to address findings \u2192 Authorising Official reviews residual risk \u2192 ATO sign-off",
         "States that re-assessment is required every 24 months or after significant change",
         "Mentions that PROTECTED systems must implement NC + OS + P controls and that the IRAP scope covers all applicable controls for the classification level"
       ],
@@ -1067,10 +1067,10 @@
       "skill": "ism",
       "skill_path": "plugins/ism/skills/ism/SKILL.md",
       "prompt": "Our organisation is required to achieve Essential Eight Maturity Level 2 by the end of this financial year. How does the Essential Eight relate to the broader ISM? Which ISM chapters and control areas does each of the eight strategies map to, and what does ML2 require us to implement for each strategy?",
-      "expected_output": "Clear explanation of the Essential Eight as a prioritised ISM subset, mapping of each of the eight strategies to their ISM chapters, and ML2 implementation requirements for each strategy — covering application control, patching, macro settings, app hardening, admin privilege restriction, OS patching, MFA, and backups.",
+      "expected_output": "Clear explanation of the Essential Eight as a prioritised ISM subset, mapping of each of the eight strategies to their ISM chapters, and ML2 implementation requirements for each strategy \u2014 covering application control, patching, macro settings, app hardening, admin privilege restriction, OS patching, MFA, and backups.",
       "assertions": [
-        "Explains that the Essential Eight is a prioritised subset of ISM controls, not a separate standard — Essential Eight compliance does not equal full ISM compliance",
-        "Maps each of the 8 strategies to their primary ISM chapters (e.g., patch applications and OS → Ch. 14 System Management; MFA → Ch. 6/9/19; application control → Ch. 13 System Hardening)",
+        "Explains that the Essential Eight is a prioritised subset of ISM controls, not a separate standard \u2014 Essential Eight compliance does not equal full ISM compliance",
+        "Maps each of the 8 strategies to their primary ISM chapters (e.g., patch applications and OS \u2192 Ch. 14 System Management; MFA \u2192 Ch. 6/9/19; application control \u2192 Ch. 13 System Hardening)",
         "Describes ML2 as requiring controls to be 'mostly aligned and addressing sophisticated threats', and distinguishes it from ML1 and ML3",
         "Covers MFA requirement at ML2: MFA for all remote access and privileged accounts",
         "States that ASD publishes an Essential Eight to ISM control mapping document"
@@ -1087,7 +1087,7 @@
         "Confirms that private sector organisations providing ICT services to Australian government agencies are required to comply with the ISM under their contract",
         "States that cloud service providers must be assessed using ASD Cloud Security Guidance and the ISM Chapter 3 (Procurement and Outsourcing) requirements apply",
         "Identifies key chapters for cloud providers: Ch. 13 (hardening), Ch. 14 (patch/change management), Ch. 15 (logging/monitoring), Ch. 19 (networking/segmentation), Ch. 20 (cryptography)",
-        "Explains that IRAP assessment may be required by the contracting agency for the cloud service — especially if handling PROTECTED information — even for private sector providers",
+        "Explains that IRAP assessment may be required by the contracting agency for the cloud service \u2014 especially if handling PROTECTED information \u2014 even for private sector providers",
         "Mentions the SSP as a document the cloud provider may need to produce or contribute to"
       ],
       "files": []
@@ -1096,11 +1096,11 @@
       "id": 81,
       "skill": "nis2",
       "skill_path": "plugins/nis2/skills/nis2/SKILL.md",
-      "prompt": "We are a mid-size European energy company with 200 employees and €50M annual turnover, operating electricity distribution networks in Germany. Do we fall under the NIS2 Directive? If so, as what type of entity, and what are our key obligations?",
-      "expected_output": "Confirms the company is in scope as an Essential Entity under Annex I (energy sector — electricity), explains size threshold confirmation (medium+ entity), outlines Art. 20 governance obligations, Art. 21 ten measures, Art. 23 incident reporting timelines, and Art. 32 proactive supervision. Mention penalty exposure up to €10M or 2% global turnover.",
+      "prompt": "We are a mid-size European energy company with 200 employees and \u20ac50M annual turnover, operating electricity distribution networks in Germany. Do we fall under the NIS2 Directive? If so, as what type of entity, and what are our key obligations?",
+      "expected_output": "Confirms the company is in scope as an Essential Entity under Annex I (energy sector \u2014 electricity), explains size threshold confirmation (medium+ entity), outlines Art. 20 governance obligations, Art. 21 ten measures, Art. 23 incident reporting timelines, and Art. 32 proactive supervision. Mention penalty exposure up to \u20ac10M or 2% global turnover.",
       "assertions": [
         "Correctly classifies the energy company as an Essential Entity (EE) under NIS2 Annex I (energy sector, electricity sub-sector)",
-        "Confirms the entity meets size thresholds (≥50 employees OR ≥€10M turnover) making it automatically in scope",
+        "Confirms the entity meets size thresholds (\u226550 employees OR \u2265\u20ac10M turnover) making it automatically in scope",
         "Explains Art. 20 governance obligation: management body approval, training, and potential personal liability",
         "Lists all 10 Art. 21 cybersecurity risk management measures or explicitly covers the key ones (incident handling, BCP, supply chain, MFA, cryptography)",
         "States Art. 23 incident reporting timelines: 24-hour early warning, 72-hour notification, 1-month final report to CSIRT/competent authority"
@@ -1111,11 +1111,11 @@
       "id": 82,
       "skill": "nis2",
       "skill_path": "plugins/nis2/skills/nis2/SKILL.md",
-      "prompt": "Our SaaS company provides B2B cloud-based HR software. We have 75 employees and €15M annual revenue. A customer just told us we need to be NIS2 compliant. Are we directly subject to NIS2, and if so what do we need to do to comply with Article 21?",
+      "prompt": "Our SaaS company provides B2B cloud-based HR software. We have 75 employees and \u20ac15M annual revenue. A customer just told us we need to be NIS2 compliant. Are we directly subject to NIS2, and if so what do we need to do to comply with Article 21?",
       "expected_output": "Determines whether a B2B SaaS/cloud provider falls in scope (likely Annex II digital providers or Annex I ICT service management B2B). Explains the 10 Art. 21 measures with practical implementation steps for a SaaS company. Covers incident reporting obligations and supply chain security. Clarifies direct vs indirect NIS2 obligations.",
       "assertions": [
         "Identifies that a B2B cloud SaaS provider may fall under NIS2 as a managed service provider (MSP) / ICT service management (B2B) under Annex I, or as a cloud computing service provider under Annex II digital providers",
-        "Confirms size threshold is met (75 employees ≥ 50; €15M ≥ €10M) making the entity in scope",
+        "Confirms size threshold is met (75 employees \u2265 50; \u20ac15M \u2265 \u20ac10M) making the entity in scope",
         "Explains all 10 Art. 21 measures or provides detailed practical guidance on the most relevant ones for a SaaS company (incident handling, secure SDLC, supply chain, MFA)",
         "Addresses Art. 23 incident reporting obligations and explains what constitutes a significant incident for a cloud/SaaS provider",
         "Differentiates between direct NIS2 obligations and being included as a supplier in a customer's NIS2 supply chain risk assessment (Art. 21(2)(d) / Art. 26)"
@@ -1174,7 +1174,7 @@
       "prompt": "We are a US-based e-commerce company with $30M annual revenue. We collect personal information from about 80,000 California customers per year. Are we subject to CCPA/CPRA? If so, what are our core obligations?",
       "expected_output": "Confirms the company is subject to CCPA/CPRA because it meets the $25M revenue threshold (even though it does not meet the 100K consumer threshold). Outlines core obligations: privacy notice at collection, comprehensive privacy policy, consumer rights program (know, delete, correct, opt-out, non-discrimination), service provider contracts, and opt-out mechanisms.",
       "assertions": [
-        "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold",
+        "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold \u2014 even though it falls short of the 100,000 consumer/household threshold",
         "Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability",
         "Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)",
         "Explains the 'Do Not Sell or Share My Personal Information' opt-out link requirement and GPC signal obligation",
@@ -1189,7 +1189,7 @@
       "prompt": "A California resident has submitted a request to know exactly what personal information we hold about them, and also wants it all deleted. Walk me through how to handle both requests, including identity verification and any exceptions we can invoke.",
       "expected_output": "Step-by-step workflow for handling a combined right-to-know and right-to-delete request: intake, identity verification (2-point match), search across all PI systems, apply exceptions (e.g., completing transactions, legal obligations, security), respond within 45 days, direct service providers to delete, confirm to consumer.",
       "assertions": [
-        "Explains that the business must verify the consumer's identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests",
+        "Explains that the business must verify the consumer's identity before disclosing or deleting PI \u2014 matching at least two data points already held by the business for standard requests",
         "States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer",
         "Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)",
         "States that upon deletion the business must also direct its service providers and contractors to delete the consumer's PI",
@@ -1207,7 +1207,7 @@
         "Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes 'sharing' under CPRA even if no money changes hands",
         "Explains that the same arrangement could also be a 'sale' under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)",
         "States the business must add a 'Do Not Sell or Share My Personal Information' link and must honor Global Privacy Control (GPC) signals as valid opt-outs",
-        "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed",
+        "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose \u2014 and service provider contracts must be reviewed",
         "Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers"
       ],
       "files": []
@@ -1222,8 +1222,8 @@
         "States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA",
         "Identifies CCPA/CPRA-specific additions needed: 'Do Not Sell or Share My Personal Information' link + GPC signal compliance, and 'Limit the Use of My Sensitive Personal Information' link (CPRA)",
         "Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing",
-        "Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR's six legal bases",
-        "Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements"
+        "Notes that CCPA/CPRA has no lawful basis requirement for general PI processing \u2014 businesses can collect PI without one of GDPR's six legal bases",
+        "Highlights the CCPA/CPRA private right of action for data breaches ($100\u2013$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements"
       ],
       "files": []
     },
@@ -1237,8 +1237,123 @@
         "Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification",
         "Explains the CPRA obligation to offer a 'Limit the Use of My Sensitive Personal Information' link/mechanism (on homepage or via a combined opt-out page)",
         "States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)",
-        "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity",
-        "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy"
+        "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use \u2014 and that the app must clearly document which permitted use applies to each SPI processing activity",
+        "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose \u2014 in both the at-collection notice and the privacy policy"
+      ],
+      "files": []
+    },
+    {
+      "id": 91,
+      "prompt": "Our company makes ruggedized laptop computers for military use. Are we subject to ITAR? Do we need to register with DDTC? Walk me through how to determine if our product is on the USML.",
+      "expected_output": "Structured jurisdiction analysis: USML enumeration test, specially designed test (22 CFR 120.41), USML Cat XI/VIII references, DDTC registration requirement if USML applies, Commodity Jurisdiction process if ambiguous.",
+      "assertions": [
+        {
+          "text": "Explains the USML enumeration test and specially designed test (22 CFR 120.41)"
+        },
+        {
+          "text": "References relevant USML categories (Cat XI military electronics, or Cat VIII if airborne)"
+        },
+        {
+          "text": "Explains DDTC registration requirement under 22 CFR 122.1 for manufacturers of defense articles"
+        },
+        {
+          "text": "Mentions Commodity Jurisdiction (CJ) as the path to get an official DDTC determination"
+        },
+        {
+          "text": "Cites specific CFR sections (22 CFR Parts 120-122) in the response"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 92,
+      "prompt": "We have a German engineer visiting our facility for 3 weeks to collaborate on a defense electronics project. The project uses ITAR-controlled technical data. What do we need to do before they arrive?",
+      "expected_output": "Deemed export analysis: foreign national access to ITAR technical data is a deemed export; TAA or individual licence may be required; TCP procedures; screening requirements.",
+      "assertions": [
+        {
+          "text": "Identifies this as a deemed export situation under 22 CFR 120.50"
+        },
+        {
+          "text": "States that a TAA or individual licence may be required before access is granted"
+        },
+        {
+          "text": "Explains Technology Control Plan (TCP) requirements for foreign visitor access"
+        },
+        {
+          "text": "Mentions screening against DDTC debarred parties list and OFAC SDN list"
+        },
+        {
+          "text": "Clarifies that German citizenship (not work visa status) determines export destination for deemed export purposes"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 93,
+      "prompt": "We need to send our night-vision rifle scope (USML Category XII) to a UK distributor for a 6-month trade show circuit across Europe. What license do we need and how do we apply?",
+      "expected_output": "DSP-73 temporary export license guidance; USML Cat XII confirmation; application requirements via D-Trade; conditions on temporary export; return requirements.",
+      "assertions": [
+        {
+          "text": "Correctly identifies DSP-73 as the appropriate temporary export license form"
+        },
+        {
+          "text": "Confirms USML Category XII for night-vision/optical targeting equipment"
+        },
+        {
+          "text": "Explains the D-Trade portal application process"
+        },
+        {
+          "text": "Notes key conditions: items cannot be transferred to foreign ownership and must return by license expiry"
+        },
+        {
+          "text": "Mentions that re-export from UK to other European countries during the show circuit may require DDTC approval"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 94,
+      "prompt": "We discovered that one of our engineers emailed ITAR-controlled technical drawings to a supplier in Taiwan without a license 6 months ago. What should we do? What are the penalties we are exposed to?",
+      "expected_output": "Voluntary Self-Disclosure (VSD) process under 22 CFR 127.12; penalty exposure; immediate steps; investigation guidance; mitigation factors.",
+      "assertions": [
+        {
+          "text": "Immediately recommends Voluntary Self-Disclosure (VSD) under 22 CFR 127.12 as the primary course of action"
+        },
+        {
+          "text": "Explains the VSD process: initial notification, internal investigation, final report"
+        },
+        {
+          "text": "Quantifies civil penalty exposure (up to .369M per violation) and criminal exposure (up to M fine / 20 years)"
+        },
+        {
+          "text": "Identifies VSD and cooperation as the strongest mitigating factors"
+        },
+        {
+          "text": "Advises preserving all relevant records and placing a litigation hold immediately"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 95,
+      "prompt": "We want to enter into a Technical Assistance Agreement (TAA) with a defence manufacturer in India to share our missile guidance system design data. What clauses must the TAA include and how do we get DDTC approval?",
+      "expected_output": "TAA requirements under 22 CFR Part 124; mandatory clauses (retransfer prohibition, US government rights, record-keeping); D-Trade submission; India-specific considerations; approval timeline.",
+      "assertions": [
+        {
+          "text": "Identifies TAA under 22 CFR Part 124 as the correct instrument for sharing technical data"
+        },
+        {
+          "text": "Lists mandatory TAA clauses: retransfer prohibition, US government rights, audit rights, 5-year record retention"
+        },
+        {
+          "text": "Explains D-Trade portal submission and 30-60 day DDTC approval timeline"
+        },
+        {
+          "text": "Notes that missile guidance systems fall under USML Category IV and may require Congressional notification for significant transfers"
+        },
+        {
+          "text": "Mentions India-specific considerations: India is a major defence partner but not treaty-exempt; licence required"
+        }
       ],
       "files": []
     }

@@ -1,0 +1,33 @@
+{
+  "eval_id": 93,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies DSP-73 as the appropriate temporary export license form",
+      "passed": true,
+      "evidence": "Section 'Required License: DSP-73 (Temporary Export)' clearly identifies DSP-73 under 22 CFR § 123.5 as the correct instrument because the item is leaving temporarily and will return."
+    },
+    {
+      "text": "Confirms USML Category XII for night-vision/optical targeting equipment",
+      "passed": true,
+      "evidence": "Opening section 'Classification Confirmation: USML Category XII' explicitly confirms Category XII — Fire Control, Range Finder, Optical and Guidance and Control Equipment with no ambiguity."
+    },
+    {
+      "text": "Explains the D-Trade portal application process",
+      "passed": true,
+      "evidence": "Section 'Application Process — D-Trade Portal' explains submission via dtrade.pmddtc.state.gov with all required fields and 30-60 day processing time."
+    },
+    {
+      "text": "Notes key conditions: items cannot be transferred to foreign ownership and must return by license expiry",
+      "passed": true,
+      "evidence": "Key License Conditions section explicitly covers 'No Transfer to Foreign Ownership' and 'Items Must Return by License Expiry' as numbered conditions."
+    },
+    {
+      "text": "Mentions that re-export from UK to other European countries during the show circuit may require DDTC approval",
+      "passed": true,
+      "evidence": "Section 'Re-Export Across European Countries — DDTC Approval Required' states 'Re-export of ITAR-controlled defense articles from one foreign country to another requires prior DDTC approval (22 CFR § 126.14)' and offers two options."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

@@ -1,0 +1,33 @@
+{
+  "eval_id": 93,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies DSP-73 as the appropriate temporary export license form",
+      "passed": true,
+      "evidence": "Section 'The Correct License: DSP-73 (Temporary Export License)' correctly identifies DSP-73 with a comparison table vs DSP-5."
+    },
+    {
+      "text": "Confirms USML Category XII for night-vision/optical targeting equipment",
+      "passed": true,
+      "evidence": "Step 1 confirms 'USML Category XII(b) — electro-optical and night-vision equipment' and notes Category XII(d) for thermal imaging."
+    },
+    {
+      "text": "Explains the D-Trade portal application process",
+      "passed": true,
+      "evidence": "Step 4 details completing the DSP-73 in D-Trade portal at dtrade.pmddtc.state.gov with all key fields listed."
+    },
+    {
+      "text": "Notes key conditions: items cannot be transferred to foreign ownership and must return by license expiry",
+      "passed": true,
+      "evidence": "'Return of the Item' section states items must return to the US, and throughout the response the temporary nature (no title transfer) is emphasized. DSP-5 needed if sold."
+    },
+    {
+      "text": "Mentions that re-export from UK to other European countries during the show circuit may require DDTC approval",
+      "passed": true,
+      "evidence": "'Re-Export Prohibition' section states 'The UK distributor may not re-export the item to any third country not listed on the DSP-73 without obtaining a separate U.S. re-export authorization.' Step 4 also instructs listing all countries of temporary sojourn."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

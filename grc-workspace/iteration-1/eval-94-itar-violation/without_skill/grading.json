@@ -1,0 +1,33 @@
+{
+  "eval_id": 94,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Immediately recommends Voluntary Self-Disclosure (VSD) under 22 CFR 127.12 as the primary course of action",
+      "passed": true,
+      "evidence": "Step 4 covers VSD under 22 C.F.R. § 127.12 as a 'Critical Decision' with explicit benefits and risks of non-disclosure. However, it is listed as Step 4 rather than the primary first action — litigation hold and counsel come first."
+    },
+    {
+      "text": "Explains the VSD process: initial notification, internal investigation, final report",
+      "passed": true,
+      "evidence": "VSD Process in Step 4 covers: (1) initial notification letter, (2) full disclosure package, and (3) cooperate with DDTC inquiry. The three-stage structure is present though less detailed than ideal."
+    },
+    {
+      "text": "Quantifies civil penalty exposure (up to $1.369M per violation) and criminal exposure (up to $1M fine / 20 years)",
+      "passed": true,
+      "evidence": "Section 3 states criminal: 'Up to 20 years imprisonment and/or up to $1,000,000 in fines per violation' and civil: 'Up to $1,368,136 per violation.'"
+    },
+    {
+      "text": "Identifies VSD and cooperation as the strongest mitigating factors",
+      "passed": true,
+      "evidence": "Section 4 lists 'Voluntary self-disclosure (most significant mitigation)' first in the mitigating factors list, followed by 'Full cooperation with DDTC investigation.'"
+    },
+    {
+      "text": "Advises preserving all relevant records and placing a litigation hold immediately",
+      "passed": true,
+      "evidence": "Step 2 Immediate Steps states 'Preserve all evidence: Do not delete emails, logs, or communications. Issue a litigation hold immediately.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

@@ -1,0 +1,33 @@
+{
+  "eval_id": 92,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies this as a deemed export situation under 22 CFR 120.50",
+      "passed": true,
+      "evidence": "Executive Summary calls out 'deemed export rule' and references 22 C.F.R. Parts 120-130; Step 1 discusses deemed export, though the specific § 120.50 citation is not prominent — it appears in the references table as '22 C.F.R. Part 120: ITAR General Provisions'."
+    },
+    {
+      "text": "States that a TAA or individual licence may be required before access is granted",
+      "passed": true,
+      "evidence": "Step 4 covers DSP-5 and TAA (22 C.F.R. § 124.1) as authorization options required before the engineer arrives."
+    },
+    {
+      "text": "Explains Technology Control Plan (TCP) requirements for foreign visitor access",
+      "passed": true,
+      "evidence": "Step 5d is titled 'Implement an Access Control Plan' covering physical and IT access controls; TCP is mentioned in Step 6 medium-term remediation section."
+    },
+    {
+      "text": "Mentions screening against DDTC debarred parties list and OFAC SDN list",
+      "passed": true,
+      "evidence": "Step 1 lists 'DDTC Debarred Parties List (22 C.F.R. Part 127)' and 'OFAC SDN and Consolidated Sanctions List' as required screening."
+    },
+    {
+      "text": "Clarifies that German citizenship (not work visa status) determines export destination for deemed export purposes",
+      "passed": true,
+      "evidence": "Step 1 states 'Confirm citizenship: A German citizen is a national of Germany' and notes 'Temporary visa holders are foreign nationals' while permanent residents are US persons — the citizenship vs. visa distinction is made, though less explicitly than ideal."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}
