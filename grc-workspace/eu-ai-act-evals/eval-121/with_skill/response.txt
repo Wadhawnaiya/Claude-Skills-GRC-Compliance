@@ -1,0 +1,367 @@
+EU AI ACT COMPLIANCE ANALYSIS: AI-POWERED CV SCREENING AND CANDIDATE RANKING TOOL
+US SaaS Provider — Launch in Germany and France (Q1 2026)
+
+=============================================================================
+STEP 1: SCOPE AND ROLE IDENTIFICATION
+=============================================================================
+
+The EU AI Act (Regulation (EU) 2024/1689) applies on a territorial basis: it covers AI systems placed on the EU market or put into service in the EU, regardless of where the provider is established (Art. 2(1)(a)). As a US company making your CV screening and candidate ranking tool available to European employers in Germany and France, you fall squarely within the Act's territorial scope.
+
+Your roles under the Act (Art. 3):
+
+- YOU are the PROVIDER (Art. 3(3)): You develop the AI system and make it available on the EU market under your own name or trademark. Providers bear the heaviest compliance burden under the Act.
+
+- Your EUROPEAN EMPLOYER CUSTOMERS are DEPLOYERS (Art. 3(4)): They use the AI system under their own authority in a professional context (employment decisions). They carry their own set of obligations under Art. 26, distinct from yours.
+
+- Because you are a non-EU provider, you must appoint an AUTHORISED REPRESENTATIVE established in the EU (Art. 3(5) and Art. 22). This representative must have a written mandate, be established in one of the Member States where you operate (Germany or France), and be registered in the EU AI database on your behalf.
+
+Timeline note: Your Q1 2026 launch date matters significantly. The high-risk system obligations under Annex III (Arts. 8–26, 43–50) apply from 2 August 2026. However, the prohibited practices (Art. 5) have applied since 2 February 2025. You must be fully compliant before making the system available — which for Art. 5 means immediately, and for high-risk obligations means completing your conformity assessment and registration before placing the system on the EU market.
+
+
+=============================================================================
+STEP 2: AI SYSTEM DEFINITION CHECK (Art. 3(1))
+=============================================================================
+
+Your CV screening and candidate ranking tool qualifies as an AI system under Art. 3(1). It is a machine-based system that operates with varying levels of autonomy, infers from inputs (CV data, job requirements, behavioral/skills signals) how to generate outputs (rankings, scores, filter decisions) that affect real environments — specifically, which candidates proceed in a recruitment process.
+
+The system is not a General Purpose AI (GPAI) model (Art. 3(63)) in its own right. It is a task-specific AI system built for a defined purpose (recruitment screening), not trained at scale to perform a wide range of distinct tasks. If your system is built on top of a third-party GPAI model (e.g., a large language model for CV parsing), the GPAI obligations fall on that upstream model's provider — your obligations as a downstream provider building a high-risk application on top of it remain governed by Arts. 9–17. You would, however, need downstream information from that GPAI provider under Art. 53 and Annex XII to meet your own obligations.
+
+
+=============================================================================
+STEP 3: PROHIBITED PRACTICES SCREEN (Art. 5 — applies from 2 Feb 2025)
+=============================================================================
+
+Running through all eight prohibited categories:
+
+Art. 5(1)(a) — Subliminal/manipulative techniques: Your system filters and ranks candidates based on CV data and skills assessment. It does not appear to use subliminal techniques targeting candidates. NOT TRIGGERED — provided your system does not use dark patterns or deceptive interfaces against candidates.
+
+Art. 5(1)(b) — Exploitation of vulnerabilities: Filtering based on skills and predicted fit does not target individuals' vulnerability based on age, disability, or socioeconomic circumstances as such. NOT TRIGGERED — however, monitor that "predicted fit" proxies do not serve as a vehicle for discriminatory scoring that disproportionately impacts vulnerable groups.
+
+Art. 5(1)(c) — Social scoring: Social scoring covers evaluating persons based on social behavior or inferred personal characteristics to produce detrimental treatment in unrelated social contexts. Employment screening within its own context is not social scoring per se. NOT TRIGGERED — but the line blurs if your "predicted fit" model draws on behavior signals from social media, spending patterns, or other life-domain data unrelated to job performance.
+
+Art. 5(1)(d) — Predictive criminal risk assessment: Not applicable. NOT TRIGGERED.
+
+Art. 5(1)(e) — Untargeted facial image scraping: Not applicable. NOT TRIGGERED.
+
+Art. 5(1)(f) — Emotion inference in the workplace or educational institutions: If your system incorporates any emotion recognition or sentiment analysis of candidates during video interviews or interactions, this prohibition applies in the employment context. RISK AREA — audit your system for any emotion inference components. If present, they are prohibited under Art. 5(1)(f) unless the strictly limited medical/safety exception applies (which it will not for candidate screening).
+
+Art. 5(1)(g) — Biometric-based categorization for sensitive attributes: If your system uses biometric data from video interviews or photos to infer race, political opinions, religion, sex life, or sexual orientation of candidates, this is prohibited. RISK AREA — confirm no biometric attribute inference occurs.
+
+Art. 5(1)(h) — Real-time remote biometric identification by law enforcement: Not applicable. NOT TRIGGERED.
+
+CONCLUSION ON PROHIBITED PRACTICES: Your core tool (skills assessment and CV-based ranking) does not trigger the prohibitions, provided it contains no emotion recognition from video interviews, no biometric inference of protected attributes, and no social scoring drawing on life-domain behavioral data. These must be verified by auditing your full feature set.
+
+
+=============================================================================
+STEP 4: RISK TIER DETERMINATION — HIGH RISK (Art. 6 + Annex III, Area 4)
+=============================================================================
+
+Your CV screening and candidate ranking tool is a HIGH-RISK AI SYSTEM under Art. 6(2), specifically Annex III, Area 4(a).
+
+Annex III, Area 4 covers: "Employment, Workers Management, and Access to Self-Employment" and specifically includes at Area 4(a): "recruitment and selection: targeted job advertising, application filtering/screening, candidate evaluation and selection."
+
+Your system directly matches this description. It:
+- Filters job applications (application filtering/screening)
+- Ranks candidates (candidate evaluation and selection)
+- Operates in the context of employment decisions made by European employers
+
+There is no applicable non-high-risk exception under Art. 6(2). The narrow exceptions (narrow procedural task; improving result of previously completed human activity without influencing it; detecting decision-making patterns without replacing human assessment; performing preparatory tasks for Annex III assessments) do not apply because your system actively filters and ranks candidates in a way that directly influences — and, for filtered-out candidates, effectively replaces — human assessment of who progresses.
+
+Critically: Art. 6(3) provides an overriding rule that any Annex III system that profiles natural persons is ALWAYS high-risk regardless of any exceptions. Candidate ranking based on skills and "predicted fit" constitutes profiling of natural persons (Art. 3(52) — automated processing of personal data to evaluate natural persons, including work performance and behavior). This locks in high-risk classification independently.
+
+This is not Path A (Art. 6(1)) — your system is not a safety component of an Annex I sectoral product. It is Path B (Art. 6(2)) — listed in Annex III.
+
+
+=============================================================================
+STEP 5: HIGH-RISK PROVIDER OBLIGATIONS (Arts. 8–17, 43–49)
+=============================================================================
+
+As a provider of a high-risk AI system, the following obligations apply before you place the system on the EU market. For Annex III systems, the compliance deadline is 2 August 2026 — but given your Q1 2026 launch target, you should begin work immediately and plan to have all requirements met before launch.
+
+--- Art. 9 — Risk Management System ---
+
+You must establish, implement, document, and maintain a continuous risk management system throughout your system's entire lifecycle. This is not a one-time exercise.
+
+Required steps:
+1. Identify all known and reasonably foreseeable risks to candidates' fundamental rights (particularly discrimination risks in candidate filtering and ranking), to deploying employers, and to third parties.
+2. Estimate and evaluate risks under all intended uses (screening for multiple job types, industries, seniority levels) and reasonably foreseeable misuse (e.g., employers using the tool for demographic filtering).
+3. Evaluate risks emerging from post-market monitoring data as the system is used in Germany and France.
+4. Adopt risk mitigation measures in priority order: design-based elimination first, then technical/organizational mitigations, then information provision to deployers.
+5. Assess residual risk acceptability and document reasoning.
+
+Specific testing obligation (Art. 9(7)): Before market placement, test the system against pre-defined metrics using representative test data that reflects the diversity of candidates and job contexts in the German and French labor markets.
+
+Discrimination risk is the paramount concern here. CV screening AI has well-documented patterns of discriminating on the basis of gender, age, ethnicity, and other protected characteristics (explicitly protected under German AGG and French Labor Code, and under EU equal treatment Directives). Your risk management system must specifically address:
+- Bias in training data (historical hiring data reflecting past discrimination)
+- Proxy discrimination through features that correlate with protected characteristics (e.g., name, postcode, educational institution)
+- Differential performance rates across demographic groups
+
+--- Art. 10 — Data and Data Governance ---
+
+Your training, validation, and testing datasets must be:
+- Relevant to the intended purpose (CV screening and ranking for the types of roles and sectors your deployers serve)
+- Sufficiently representative of the persons your system will process — this means representative of the German and French candidate populations, including demographic diversity
+- Free of errors where appropriate
+- Complete for the intended purpose
+
+Data governance documentation must cover: design choices, data collection methods, data origins, annotation and labeling procedures, and — critically — bias examination and gap identification.
+
+For Art. 10(5): If you process special-category personal data (GDPR Art. 9 — racial/ethnic origin, health, religion, trade union membership, sexual orientation) for bias detection purposes, strict conditions apply: no adequate alternative, technical/organizational protections in place, minimum necessary access, no third-party transfer, deletion upon completion of bias testing, and documented justification.
+
+Practical note: You almost certainly cannot use historical hiring data from employers' past recruitment as training data without careful auditing — such data typically encodes historical discrimination patterns.
+
+--- Art. 11 — Technical Documentation (Annex IV) ---
+
+Before placing the system on the EU market, you must produce comprehensive technical documentation including:
+- General description: intended purpose (CV screening and candidate ranking), provider identity, system version, interactions with other software
+- Detailed development description: training methodologies, algorithms, design choices, data used
+- Training data description: origin, annotation procedures, design choices
+- Validation and testing: procedures, metrics, performance benchmarks (including fairness/bias metrics), testing datasets
+- Risk management system documentation (Art. 9)
+- Human oversight measures (Art. 14)
+- Changes made to the system over its lifecycle
+- List of harmonised standards applied or alternative conformity solutions
+
+This documentation must be maintained for 10 years from market placement.
+
+--- Art. 12 — Record-Keeping and Automatic Logging ---
+
+Your system must be technically capable of automatically generating event logs throughout its operation. These logs must enable post-deployment reconstruction of circumstances surrounding any identified risk. As provider, you must build in this logging capability.
+
+Your deployer customers (Art. 26(6)) must retain automatically generated logs for a minimum of 6 months. You must provide them with the technical means to do so through your system design and inform them of this obligation in your instructions for use.
+
+--- Art. 13 — Transparency and Instructions for Use to Deployers ---
+
+You must design the system with sufficient transparency that deployers can interpret its outputs and use it appropriately. Your instructions for use must include:
+- Your identity and contact address
+- System characteristics, capabilities, and intended purpose
+- Performance metrics: accuracy levels, robustness, cybersecurity specifications
+- Known or foreseeable circumstances that may lead to risks or unexpected performance degradation (e.g., performance degradation for non-standard CV formats, for under-represented candidate profiles)
+- System performance for specific persons or groups — critically, you must disclose differential performance rates across demographic groups if they exist
+- Input data specifications (CV formats, data types accepted)
+- Information on changes vs. prior versions
+- Description of human oversight measures (Art. 14) and how to implement them
+- Description of logging mechanisms
+
+--- Art. 14 — Human Oversight ---
+
+You must design the system so that deployers (European employers) are able to:
+- Understand the system's capabilities and limitations
+- Recognize automation bias (over-reliance on AI rankings without independent assessment)
+- Correctly interpret AI outputs — including understanding what "predicted fit" means, how confidence scores are derived, and what their limitations are
+- Decide not to use, disregard, override, or reverse the AI's outputs for any individual candidate
+- Intervene through a stop function or similar mechanism
+
+This is a design obligation on you as provider. In practical terms, your user interface must present AI rankings as recommendations, not determinations; must display confidence levels and their meaning; must make it easy for recruiters to review and override individual ranking decisions; and must not nudge deployers toward accepting AI outputs without review.
+
+Deployers bear the Art. 14(4) obligation to assign oversight responsibility to personnel with competence, training, authority, and resources. Your instructions for use should guide them on what competencies are required.
+
+--- Art. 15 — Accuracy, Robustness, and Cybersecurity ---
+
+Accuracy: You must achieve and declare appropriate accuracy levels for your intended purpose. Accuracy must be maintained throughout the system lifecycle. The declared accuracy metrics must appear in your instructions for use. For a CV screening system, relevant metrics include: precision and recall by candidate subgroup; false positive and false negative rates for qualified candidates; and consistency of rankings across equivalent CVs.
+
+Robustness: The system must perform consistently across the full range of inputs (different CV formats, languages — German and French are minimum requirements — industries, and candidate backgrounds). Inconsistent or degraded performance for atypical inputs (non-native speakers, non-standard CV formats, candidates from diverse educational backgrounds) constitutes a robustness failure.
+
+Cybersecurity: Your system must be resilient against data poisoning (contamination of training data), model poisoning, adversarial inputs (manipulated CVs designed to game rankings), and confidentiality attacks. CV data is personal data of job seekers; security failures expose you to concurrent AI Act and GDPR liability.
+
+--- Art. 16 — Full Provider Obligations Checklist ---
+
+Before placing the system on the EU market in Germany and France, you must have completed all 12 items:
+
+1. Ensure system complies with Arts. 9–15 requirements
+2. Display your company name, trademark, and contact address on the system or documentation
+3. Establish and implement a Quality Management System (Art. 17)
+4. Keep technical documentation (Art. 11, Annex IV)
+5. Retain automatically generated logs where under your control
+6. Complete the required conformity assessment (Art. 43) — SELF-ASSESSMENT for Area 4 systems
+7. Draw up the EU Declaration of Conformity (Art. 47)
+8. Affix CE marking (Art. 48)
+9. Register in the EU AI database (Art. 49) before market placement
+10. Take immediate corrective action for non-conforming systems; notify authorities and deployers
+11. Demonstrate conformity upon request of national competent authority
+12. Ensure accessible design where required (Directives 2016/2102, 2019/882)
+
+--- Art. 17 — Quality Management System ---
+
+You must establish and maintain a documented QMS covering 13 required components:
+1. Regulatory compliance strategy including conformity assessment procedures
+2. Design techniques and procedures for controlling and verifying the system
+3. Development quality control procedures
+4. Testing and validation (before, during, and after development)
+5. Technical standards application
+6. Data management (acquisition, labeling, storage, filtering, retention, cleaning)
+7. Risk management per Art. 9
+8. Post-market monitoring per Art. 72
+9. Serious incident reporting procedures per Art. 73
+10. Authority communication procedures for corrective actions and recalls
+11. Record-keeping and documentation with retention periods
+12. Resource management including supply-chain security (including any AI components/APIs you rely on)
+13. Accountability framework — clear responsibility assignment for all above components
+
+The QMS must be proportionate to your organization's size. If you already have an ISO 9001 or ISO 42001 QMS, it can be adapted. ISO 42001:2023 certification would provide strong alignment with the Art. 17 requirements.
+
+
+=============================================================================
+STEP 6: CONFORMITY ASSESSMENT AND CE MARKING (Arts. 43–49)
+=============================================================================
+
+Your system falls under Annex III, Area 4 — which is Points 2–8 of Annex III (employment is Area 4, which is Point 4). For all Annex III Points 2–8 systems, the conformity assessment is SELF-ASSESSMENT ONLY (Art. 43) — no notified body (third-party auditor) is required or available.
+
+Self-assessment path (Annex VI):
+You conduct an internal control procedure assessing your system against all applicable requirements (Arts. 9–15). This is documented in your technical documentation and results in:
+
+1. EU Declaration of Conformity (Art. 47): A formal document signed by you (or your authorised representative) declaring compliance with the AI Act. Must be maintained for 10 years. Must be in machine-readable format and translated into languages required by German and French authorities.
+
+2. CE Marking (Art. 48): After completing the conformity assessment and drawing up the Declaration of Conformity, you affix the CE marking to the system (visible on the product, packaging, or documentation). This cannot be affixed before completion of the conformity assessment.
+
+3. EU AI Database Registration (Art. 49): Before placing on the EU market, you (or your authorised representative) must register the system in the EU AI database maintained by the European Commission. The database becomes operational on 2 August 2026. Registration information includes: provider and representative identity; system description and intended purpose; accuracy and performance data; conformity assessment procedure followed. Note: The EU AI database's operational date aligns with the high-risk obligation compliance date, not your Q1 2026 target. Monitor Commission announcements regarding early registration procedures.
+
+Substantial modifications: If you make substantial modifications to the system post-launch (changes to core ranking algorithms, new capabilities, significant retraining), the conformity assessment must be repeated and the CE marking re-affixed.
+
+
+=============================================================================
+STEP 7: AUTHORISED REPRESENTATIVE REQUIREMENT (Art. 22)
+=============================================================================
+
+As a non-EU provider, you must appoint an Authorised Representative established in Germany or France (or another EU Member State) before placing the system on the EU market. The representative:
+- Must have a written mandate from you
+- Acts on your behalf regarding compliance with the AI Act
+- Is the contact point for EU market surveillance authorities (German Bundesnetzagentur / French Autorité de régulation de la communication audiovisuelle et numérique or designated AI authority)
+- Is registered in the EU AI database
+- Can be held jointly and severally liable in some enforcement contexts
+
+This is a hard prerequisite — you cannot lawfully place the system on the EU market without it.
+
+
+=============================================================================
+STEP 8: DEPLOYER OBLIGATIONS — YOUR CUSTOMER RESPONSIBILITIES (Art. 26)
+=============================================================================
+
+While you bear provider obligations, your European employer customers are deployers and bear separate obligations under Art. 26. You should understand these to inform your contractual arrangements and the guidance you provide in your instructions for use:
+
+1. Use the system in accordance with your instructions for use
+2. Assign human oversight responsibility to personnel with necessary competence and training
+3. Where they control input data: ensure it is relevant and sufficiently representative
+4. Continuously monitor operations; notify you and market surveillance authorities if risks are identified; suspend use where appropriate
+5. Immediately report serious incidents to you, then to market surveillance authorities
+6. Retain automatically generated logs for at least 6 months
+7. Notify workers and worker representatives BEFORE deploying the system in their employment processes (Art. 26(7)) — this is a significant obligation; your deployer customers must inform their works councils (Betriebsrat in Germany, comité social et économique in France) in advance. This has direct implications for enterprise sales timelines.
+8. GDPR compliance: deployers must conduct Data Protection Impact Assessments (DPIAs) under GDPR Art. 35 given the high-risk nature of profiling in employment decisions
+
+Public authority deployers (public sector employers) also have additional registration obligations (Art. 60) and must conduct a Fundamental Rights Impact Assessment (FRIA) under Art. 27 before deployment.
+
+Contractual implication: Your customer agreements should clearly allocate obligations between you as provider and your customers as deployers, confirm their obligations under Art. 26, and include provisions for incident notification and log retention cooperation.
+
+
+=============================================================================
+STEP 9: POST-MARKET MONITORING AND INCIDENT REPORTING (Arts. 72–73)
+=============================================================================
+
+Art. 72 — Post-Market Monitoring:
+You must establish and document a post-market monitoring plan proportionate to your system's risks. For a CV screening system, this means ongoing monitoring of:
+- System accuracy and fairness metrics across the deployed German and French customer base
+- Any differential performance patterns emerging from production data
+- Feedback from deployer customers on unexpected outputs or failures
+- Emerging research on bias in AI recruitment systems
+
+The Commission must publish a standardised template for post-market monitoring plans by 2 February 2026.
+
+Art. 73 — Serious Incident Reporting:
+A serious incident includes any AI system malfunction that directly or indirectly leads to infringement of obligations under Union law protecting fundamental rights. Systematic discrimination against protected groups in candidate filtering is precisely this type of fundamental rights infringement.
+
+If a serious incident occurs:
+- You as provider must report to the market surveillance authority of the Member State where the incident occurred (Bundesnetzagentur for Germany; relevant French authority)
+- Timing: within 15 days for serious incidents (immediately for life-threatening incidents, within 2 days for widespread safety threats)
+- Your deployer customers must immediately notify you upon identifying a serious incident
+
+
+=============================================================================
+STEP 10: GDPR INTERSECTION
+=============================================================================
+
+CV screening involves extensive processing of candidates' personal data (biographical information, skills, education history, employment history, and potentially sensitive data). The AI Act and GDPR apply concurrently.
+
+Key intersections:
+- GDPR Art. 22 (automated decision-making): Candidates have the right not to be subject to solely automated decisions that produce significant legal effects. Automated candidate filtering and rejection decisions trigger Art. 22 unless an exception applies (explicit consent, necessity for contract performance, or EU/national law authorization). Your deployers must implement GDPR Art. 22 safeguards — your instructions for use must guide them on this.
+- GDPR Art. 35 (DPIA): Your deployer customers must conduct DPIAs given the systematic profiling of individuals in employment decisions.
+- GDPR Art. 13/14 (transparency to data subjects): Candidates must be informed that their data is being processed through AI screening — your deployers are the data controllers in this relationship.
+- Data minimization and purpose limitation: The CV data processed must be limited to what is necessary for the stated purpose.
+
+Your data processing agreements with European employers must comply with GDPR Art. 28 (processor obligations) if you process personal data on their behalf.
+
+
+=============================================================================
+COMPLIANCE TIMELINE AND ACTION PLAN
+=============================================================================
+
+IMMEDIATE (already applies — pre-Q1 2026):
+- Audit system for Art. 5 prohibited practices (emotion recognition, biometric inference) — complete before any EU market activity
+- Begin appointment process for EU Authorised Representative in Germany or France
+- Begin work on Risk Management System (Art. 9) and technical documentation (Art. 11)
+
+Q1 2026 (TARGET LAUNCH — note: high-risk obligations formally apply 2 Aug 2026):
+- Complete technical documentation (Annex IV)
+- Complete conformity assessment (self-assessment per Annex VI)
+- Draw up EU Declaration of Conformity (Art. 47)
+- Affix CE marking (Art. 48)
+- Register in EU AI database (Art. 49) — subject to database operational status; monitor Commission announcements
+- Authorised Representative confirmed and mandated
+- Instructions for use finalised and provided to all deployer customers
+- Quality Management System (Art. 17) documented and operational
+- Post-market monitoring plan established
+
+ONGOING (from launch):
+- Post-market monitoring (Art. 72): continuous performance and fairness monitoring
+- Serious incident reporting (Art. 73): notification procedures in place
+- Log retention: ensure deployers are retaining logs per Art. 26(6)
+- Update technical documentation for any substantial system changes
+- Update conformity assessment if substantial modifications made
+
+
+=============================================================================
+PENALTIES FOR NON-COMPLIANCE (Art. 99)
+=============================================================================
+
+The stakes for non-compliance are material:
+
+| Violation | Maximum Fine |
+|-----------|-------------|
+| Prohibited practice violations (Art. 5) | €35,000,000 or 7% of global annual turnover (whichever is higher) |
+| Provider/deployer obligation violations (Arts. 9–17, 26, etc.) | €15,000,000 or 3% of global annual turnover (whichever is higher) |
+| Incorrect/misleading information to authorities | €7,500,000 or 1% of global annual turnover |
+
+For SMEs and startups: the lower of the fixed amount or the percentage applies. Proportionality factors include nature and gravity of violation, company size, intentionality, and cooperation.
+
+Both Germany and France will have national market surveillance authorities with powers to inspect documentation, test datasets, and source code.
+
+
+=============================================================================
+SUMMARY ASSESSMENT
+=============================================================================
+
+DOES THE EU AI ACT APPLY?
+Yes. Without question. Your system meets the AI system definition (Art. 3(1)), you are a provider placing a system on the EU market (Art. 2(1)(a)), and the employment screening function falls directly within Annex III, Area 4(a) — making it a HIGH-RISK AI SYSTEM under Art. 6(2).
+
+WHAT ARE YOUR KEY OBLIGATIONS?
+As provider:
+1. Appoint an EU Authorised Representative (Art. 22) — prerequisite for market access
+2. Build and maintain a Risk Management System (Art. 9) with specific focus on discrimination risks
+3. Ensure rigorous data governance for training/validation datasets (Art. 10)
+4. Produce Annex IV technical documentation (Art. 11)
+5. Build in automatic logging capability (Art. 12)
+6. Provide comprehensive instructions for use to deployer customers (Art. 13)
+7. Design for human oversight — rankings must be overridable, automation bias warnings built in (Art. 14)
+8. Declare and achieve appropriate accuracy, robustness, and cybersecurity standards (Art. 15)
+9. Complete self-assessment conformity assessment (Art. 43, Annex VI)
+10. Draw up EU Declaration of Conformity (Art. 47) and affix CE marking (Art. 48)
+11. Register in EU AI database (Art. 49) before market placement
+12. Establish a Quality Management System (Art. 17)
+13. Implement post-market monitoring (Art. 72) and serious incident reporting procedures (Art. 73)
+
+As to your deployer customers: educate and contractually require them to comply with Art. 26 (including the worker notification obligation under Art. 26(7), which has significant implications for enterprise deals in Germany and France given codetermination rights).
+
+CRITICAL RISK AREAS:
+- Bias and discrimination: This is the central regulatory risk for your system type. The German AGG and French anti-discrimination law overlay EU equal treatment requirements, and systematic discriminatory filtering would constitute both an AI Act serious incident and GDPR/national law violation.
+- Prohibited practice audit: Verify that no emotion recognition or biometric attribute inference is embedded in any product feature (Art. 5(1)(f) and (g)).
+- GDPR Art. 22: Fully automated rejection decisions without human review may violate GDPR — your system must be positioned as a tool for human decision support, not autonomous determination.
+- Worker notification: Your deployer customers in Germany must notify works councils (Betriebsrat) before deployment — this is a hard requirement under both Art. 26(7) of the AI Act and German co-determination law (BetrVG). Factor this into your sales and onboarding timelines.

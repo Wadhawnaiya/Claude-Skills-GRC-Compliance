@@ -1,0 +1,257 @@
+EU AI ACT COMPLIANCE OBLIGATIONS FOR AN E-COMMERCE CHATBOT DEPLOYER
+=====================================================================
+
+SCENARIO SUMMARY
+----------------
+- System: Customer-facing chatbot on an e-commerce website
+- Functions: Answering product questions, processing returns, recommending products based on browsing history
+- Underlying technology: Third-party General Purpose AI (GPAI) model accessed via API
+- Role in the AI value chain: You are the DEPLOYER (not the provider/developer of the underlying AI model)
+
+---
+
+PART 1: UNDERSTANDING YOUR ROLE UNDER THE EU AI ACT
+----------------------------------------------------
+
+The EU AI Act (Regulation (EU) 2024/1689, which entered into force on 1 August 2024, with most provisions applying from 2 August 2026) distinguishes between several actors in the AI value chain:
+
+- PROVIDER: The entity that develops or places an AI system on the market (in your case, the GPAI model vendor, e.g., OpenAI, Anthropic, Google, etc.)
+- DEPLOYER: An entity that uses an AI system under its own authority for a specific purpose (THIS IS YOU — you are integrating the GPAI model into your e-commerce chatbot and deploying it to customers)
+- IMPORTER / DISTRIBUTOR: Not directly relevant here
+
+As the DEPLOYER, your obligations differ from those of the PROVIDER. However, you bear significant responsibilities, particularly around risk management, transparency, and human oversight.
+
+---
+
+PART 2: RISK CLASSIFICATION OF YOUR CHATBOT
+--------------------------------------------
+
+The EU AI Act establishes a tiered risk framework. Correctly classifying your system is the first step.
+
+2.1 Is it a Prohibited AI Practice?
+The chatbot as described does NOT fall under any of the prohibited practices listed in Article 5 (e.g., subliminal manipulation, social scoring, real-time biometric surveillance in public spaces). You are safe on this front.
+
+2.2 Is it High-Risk AI?
+High-risk AI systems are listed in Annex III of the Act. The categories most relevant to e-commerce include:
+- Biometric categorisation systems
+- AI used in employment and workers management
+- AI used for access to essential private services and public services / benefits
+
+A standard e-commerce chatbot handling product queries, returns, and product recommendations does NOT ordinarily fall into the Annex III high-risk categories. The product recommendation engine based on browsing history is a profiling activity but does not constitute a "high-risk" AI system under the Act's current Annex III definitions, as it is not making consequential decisions about access to essential services, creditworthiness, or similar impactful areas.
+
+IMPORTANT CAVEAT: If your chatbot were extended to make credit decisions (e.g., buy-now-pay-later eligibility) or employment screening, the risk classification would change. Stick to the described scope and you are outside the high-risk tier.
+
+CONCLUSION ON RISK TIER: Your chatbot most likely falls into the LIMITED RISK or MINIMAL RISK category.
+
+---
+
+PART 3: TRANSPARENCY OBLIGATIONS (LIMITED RISK — ARTICLES 50 AND 52)
+---------------------------------------------------------------------
+
+Even though your chatbot is not high-risk, it is subject to TRANSPARENCY OBLIGATIONS under Article 50 of the EU AI Act. This is the most immediately actionable set of obligations for you.
+
+3.1 Mandatory AI Disclosure — Article 50(1): THE ANSWER IS YES, YOU MUST DISCLOSE
+
+Article 50(1) states: "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the circumstances or the context of use."
+
+As a DEPLOYER, Article 50(1) also imposes an obligation on you (since you are deploying this system to interact with customers). The disclosure obligation applies to chatbots by design.
+
+Specifically:
+- You MUST inform users they are talking to an AI, not a human
+- This disclosure must be made BEFORE or AT THE START of the interaction, not buried in terms and conditions
+- The disclosure must be clear and intelligible
+- Exception: If it is "obvious from the circumstances" — however, regulators and guidance suggest this exception is narrow; you should not assume obviousness and should always disclose proactively
+
+3.2 What the Disclosure Must Say
+The Act does not mandate a precise form of words, but the disclosure must:
+- Be in plain language
+- Be prominent (not hidden in a footer or FAQ)
+- Clearly indicate the user is interacting with an AI system
+- Ideally, name it as a chatbot or AI assistant
+
+Example compliant disclosure: "Hi! I'm [Brand Name]'s AI assistant. How can I help you today?" or a persistent label such as "AI-Powered Assistant" visible throughout the conversation.
+
+3.3 Prohibition on Impersonating Humans — Article 50(3)
+Article 50(3) prohibits AI systems from impersonating real persons or creating the false impression of being human. Your chatbot must not:
+- Claim to be a human customer service agent
+- Use a human name without clearly indicating it is AI (e.g., "Hi, I'm Sarah" without disclosing Sarah is an AI)
+- Deny being an AI when directly asked by a user
+
+This is one of the strongest obligations in the Act for chatbot operators.
+
+3.4 Emotion Recognition and Biometric Categorisation
+If your chatbot uses any emotion recognition (e.g., sentiment analysis to flag frustrated customers) or biometric categorisation, additional transparency requirements apply under Article 50(3)-(4). These likely do not apply to the described scenario, but review your technical stack carefully.
+
+---
+
+PART 4: OBLIGATIONS SPECIFICALLY FOR DEPLOYERS — ARTICLE 26
+------------------------------------------------------------
+
+Article 26 of the EU AI Act sets out obligations for deployers. Even for a limited-risk or minimal-risk system, the following considerations apply:
+
+4.1 Use in Accordance with Instructions
+You must use the AI system in accordance with the provider's instructions of use (the GPAI model provider's terms of service and usage policies). If the provider has specified permissible use cases, you must not operate outside those use cases.
+
+4.2 Human Oversight
+You must implement appropriate measures to enable human oversight of the AI system's outputs, particularly:
+- Monitoring for harmful, incorrect, or misleading outputs
+- Establishing processes for customers to escalate to a human agent
+- Reviewing chatbot interactions for quality and accuracy
+
+4.3 Data Governance and Logging
+You should maintain logs of interactions to the extent necessary to monitor system behaviour and investigate complaints. This also intersects with GDPR obligations (see Part 7 below).
+
+4.4 Fundamental Rights Impact Assessment (FRIA)
+Article 27 requires deployers of HIGH-RISK AI systems to conduct a Fundamental Rights Impact Assessment (FRIA) before deployment. Since your chatbot is not high-risk, a formal FRIA is not legally required. However, it is best practice to consider potential impacts on consumer rights, privacy, and non-discrimination before launch.
+
+---
+
+PART 5: GPAI MODEL — YOUR RELATIONSHIP WITH THE PROVIDER
+----------------------------------------------------------
+
+Because you are using a third-party GPAI model via API, you need to understand the obligations that flow upstream.
+
+5.1 GPAI Provider Obligations (Not Yours Directly)
+Under Articles 53-55, GPAI providers (the model developers) must:
+- Maintain technical documentation
+- Have a copyright compliance policy
+- Publish a sufficiently detailed summary of training data (for transparency to the public)
+- If the model is "systemic risk" GPAI (very large models, >10^25 FLOPs training compute): additional obligations including adversarial testing, incident reporting, cybersecurity measures
+
+These obligations fall on the GPAI provider (e.g., your API vendor), not on you as the deployer of an application built on top of that model.
+
+5.2 What You Should Do As Deployer Using a GPAI Model
+- Review the GPAI provider's documentation and ensure their model is compliant with the EU AI Act (they should be able to provide assurances or documentation to this effect)
+- Review the provider's Terms of Service — ensure your use case is permitted
+- Ensure you have a contract with the provider that clearly defines their responsibilities under the EU AI Act vs. your responsibilities
+- Obtain and review any model cards, transparency summaries, or capability disclosures the GPAI provider publishes
+
+5.3 Liability Allocation
+The EU AI Act creates a division of liability. If a GPAI provider fails to meet their obligations (e.g., inadequate documentation), liability may rest with them. However, if you deploy the system in a manner that exceeds the provider's specified instructions or in a prohibited context, liability shifts to you.
+
+---
+
+PART 6: PRODUCT RECOMMENDATIONS BASED ON BROWSING HISTORY — PROFILING CONSIDERATIONS
+--------------------------------------------------------------------------------------
+
+The product recommendation feature involves processing browsing history data to personalise recommendations. This is a form of automated profiling. Key considerations:
+
+6.1 Under EU AI Act
+Automated profiling for product recommendations on an e-commerce site does not by itself trigger high-risk classification, as it does not make decisions with significant legal or similarly significant effects on individuals (compare to credit scoring or insurance pricing). However:
+- You must be transparent about this automated personalisation (also required under GDPR — see below)
+- If the recommendation engine were to affect access to pricing, discounts, or services in a discriminatory way, the risk profile could change
+
+6.2 Non-Discrimination
+AI-driven recommendations must not discriminate against users on the basis of protected characteristics (race, gender, religion, etc.) under applicable EU law. While the EU AI Act's non-discrimination provisions are most stringent for high-risk systems, you should ensure your recommendation model is not producing discriminatory outputs.
+
+---
+
+PART 7: INTERSECTION WITH GDPR
+--------------------------------
+
+The EU AI Act does not replace GDPR — both apply simultaneously. For your e-commerce chatbot, GDPR implications include:
+
+7.1 Legal Basis for Processing
+- Browsing history used for recommendations: Typically requires consent (GDPR Article 6(1)(a)) or legitimate interests assessment (Article 6(1)(f)) — but consent is strongly preferred for this type of profiling
+- Conversation logs: May be processed under contract performance or legitimate interests, depending on purpose
+
+7.2 Right to Explanation / Right Not to Be Subject to Automated Decisions
+GDPR Article 22 applies where decisions are made "solely by automated means" and produce "legal or similarly significant effects." Product recommendations on an e-commerce site typically do not reach this threshold, but if the chatbot were used to make decisions about user accounts, credit, or access, Article 22 rights would be triggered.
+
+7.3 Privacy Notice Updates
+Your privacy notice must disclose:
+- That an AI chatbot is used
+- The nature of the personal data processed by the chatbot (conversation content, browsing history)
+- Any third-party GPAI provider that processes personal data (as a data processor)
+- Retention periods for conversation logs
+
+7.4 Data Processing Agreement (DPA)
+You must have a GDPR-compliant Data Processing Agreement (DPA) with your GPAI API provider, since they will process personal data contained in user queries on your behalf (Article 28 GDPR).
+
+---
+
+PART 8: TIMELINE AND APPLICABILITY
+------------------------------------
+
+Key EU AI Act timeline dates:
+- 1 August 2024: Act entered into force
+- 2 February 2025: Prohibited AI practices (Article 5) became applicable
+- 2 August 2025: Obligations for GPAI providers (Articles 53-55) became applicable
+- 2 August 2026: Most remaining obligations, including deployer obligations and transparency obligations (Article 50), become fully applicable
+- 2 August 2027: High-risk AI system obligations for certain legacy systems
+
+For a new deployment in 2026 or beyond, you need to be compliant with Articles 26 and 50 from day one of your launch.
+
+If you are already operating such a chatbot, you should be working toward compliance now, particularly on the transparency/disclosure requirements which are straightforward to implement.
+
+---
+
+PART 9: PRACTICAL COMPLIANCE CHECKLIST FOR YOUR CHATBOT
+--------------------------------------------------------
+
+MUST-DO (Legal Requirements):
+
+[ ] 1. AI DISCLOSURE: Display a clear disclosure at the start of every conversation that the user is interacting with an AI system. Example: "You're chatting with our AI assistant."
+
+[ ] 2. NO HUMAN IMPERSONATION: Ensure the chatbot does not claim or imply it is a human. If given a name (e.g., "Aria"), clearly label it as an AI assistant.
+
+[ ] 3. HONEST RESPONSE TO "ARE YOU AN AI?": Program the chatbot to always acknowledge it is an AI when directly asked. Never deny being an AI.
+
+[ ] 4. USE WITHIN PROVIDER TERMS: Review and comply with the GPAI API provider's acceptable use policy. Ensure your use case (returns processing, recommendations) is permitted.
+
+[ ] 5. HUMAN ESCALATION PATH: Provide users with a clear and accessible way to speak with a human agent. This supports the human oversight requirement.
+
+[ ] 6. DATA PROCESSING AGREEMENT: Execute a GDPR-compliant DPA with your GPAI API provider.
+
+[ ] 7. PRIVACY NOTICE UPDATE: Update your website's privacy notice to disclose the use of AI, the data processed by the chatbot, and the GPAI provider as a processor.
+
+[ ] 8. CONSENT FOR BROWSING HISTORY PROFILING: Ensure you have valid GDPR legal basis (preferably consent) for using browsing history to power recommendations.
+
+SHOULD-DO (Best Practice):
+
+[ ] 9. INTERACTION LOGGING AND MONITORING: Log chatbot interactions for quality assurance and safety monitoring, with appropriate retention limits.
+
+[ ] 10. INTERNAL DOCUMENTATION: Document your AI system, its purpose, the underlying model, and your compliance measures (helpful if ever audited by a national authority).
+
+[ ] 11. BIAS AND FAIRNESS REVIEW: Periodically review recommendation outputs for discriminatory patterns.
+
+[ ] 12. INCIDENT RESPONSE PLAN: Establish a process to handle complaints or incidents involving the chatbot, including escalation to human agents and reporting mechanisms.
+
+[ ] 13. CONTRACTUAL PROTECTIONS: Ensure your contract with the GPAI provider includes EU AI Act compliance warranties and allocates liability appropriately.
+
+[ ] 14. STAFF TRAINING: Train customer service and technical staff on AI Act obligations, how the chatbot works, and how to handle escalations.
+
+---
+
+PART 10: ENFORCEMENT AND PENALTIES
+------------------------------------
+
+The EU AI Act is enforced by national market surveillance authorities (each EU Member State designates one). For deployers:
+- Violations of transparency obligations (Article 50) can result in fines of up to EUR 15,000,000 or 3% of global annual turnover (whichever is higher)
+- Violations of prohibited practices (Article 5) carry fines of up to EUR 35,000,000 or 7% of global annual turnover
+- Supplying incorrect or misleading information to authorities can result in fines of up to EUR 7,500,000 or 1% of global annual turnover
+
+Given the relatively low compliance cost for a limited-risk chatbot (primarily a disclosure notice and process controls), the risk/benefit analysis strongly favours early compliance action.
+
+---
+
+SUMMARY ANSWER TO THE CORE QUESTIONS
+--------------------------------------
+
+Q: What are your EU AI Act obligations as the deployer?
+
+A: As a deployer of a limited-risk AI chatbot, your primary obligations are:
+1. Transparency/disclosure to users (Article 50)
+2. Using the AI within the provider's instructions (Article 26)
+3. Implementing human oversight mechanisms (Article 26)
+4. Reviewing GPAI provider compliance documentation
+
+You do NOT have the extensive obligations of a high-risk AI system deployer (formal conformity assessments, CE marking, registration in EU database, etc.) unless your chatbot's scope expands into high-risk use cases.
+
+Q: Do you need to disclose it is an AI?
+
+A: YES — UNAMBIGUOUSLY. Article 50(1) of the EU AI Act requires that users interacting with an AI chatbot be clearly informed they are interacting with an AI, unless it is obvious from the context. This obligation applies to your chatbot. It is one of the clearest and most straightforward obligations in the Act. You must implement this disclosure before or at the beginning of each interaction, and you must never allow the chatbot to deny being an AI when asked.
+
+---
+
+DISCLAIMER: This analysis reflects the EU AI Act as enacted (Regulation (EU) 2024/1689) and the state of regulatory guidance as of mid-2026. The EU AI Act is supplemented by delegated acts, implementing acts, and guidance from the AI Office that continue to evolve. Always consult qualified legal counsel for advice specific to your organisation's circumstances.

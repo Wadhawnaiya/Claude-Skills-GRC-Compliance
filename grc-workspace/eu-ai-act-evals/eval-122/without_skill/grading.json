@@ -1,0 +1,34 @@
+{
+  "eval_id": 122,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "Identifies Art. 5(1)(d) prohibited AI practice (predictive criminal risk based on profiling) as the primary concern",
+      "passed": false,
+      "evidence": "Response mislabels Art. 5(1)(d) as 'Real-Time Remote Biometric Identification in Public Spaces' (which is actually Art. 5(1)(h)), and conflates article numbers throughout. The predictive criminal assessment prohibition is not correctly attributed to Art. 5(1)(d) as the primary concern."
+    },
+    {
+      "text": "Also identifies Art. 5(1)(c) social scoring risk for the neighbourhood scoring component",
+      "passed": true,
+      "evidence": "Response correctly identifies 'Article 5(1)(c) prohibits AI systems used by public authorities for social scoring' and applies it to the neighbourhood scoring component"
+    },
+    {
+      "text": "Correctly states that 'decision support' framing does not exempt the system from AI Act classification",
+      "passed": true,
+      "evidence": "Response states 'The AI Act applies a functional test, not a vendor label test' and that the 'decision support tool characterisation is legally irrelevant'"
+    },
+    {
+      "text": "States that Art. 5 prohibitions apply from 2 February 2025",
+      "passed": true,
+      "evidence": "Response explicitly states 'The EU AI Act's prohibition provisions (Article 5) became directly applicable on 2 February 2025'"
+    },
+    {
+      "text": "Notes that even if not prohibited, the system would be high-risk under Annex III Area 6 (law enforcement) with full conformity obligations",
+      "passed": true,
+      "evidence": "Response states 'the tool almost certainly qualifies as a HIGH-RISK AI system under Annex III, Category 6 (law enforcement AI)' as an alternate pathway"
+    }
+  ],
+  "passed_count": 4,
+  "total_count": 5,
+  "pass_rate": 0.8
+}

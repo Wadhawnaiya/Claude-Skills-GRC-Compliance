@@ -1,0 +1,34 @@
+{
+  "eval_id": 122,
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Identifies Art. 5(1)(d) prohibited AI practice (predictive criminal risk based on profiling) as the primary concern",
+      "passed": true,
+      "evidence": "Response leads with 'Art. 5(1)(d) — Predictive Criminal Risk Assessment [HIGH PROBABILITY OF PROHIBITION]' as the primary analysis, correctly citing the prohibition on assessing criminal risk based on profiling"
+    },
+    {
+      "text": "Also identifies Art. 5(1)(c) social scoring risk for the neighbourhood scoring component",
+      "passed": true,
+      "evidence": "Response separately identifies 'Art. 5(1)(c) — Social Scoring (SIGNIFICANT risk)' for the neighbourhood-level crime risk scoring, correctly citing the social scoring prohibition"
+    },
+    {
+      "text": "Correctly states that 'decision support' framing does not exempt the system from AI Act classification",
+      "passed": true,
+      "evidence": "Response explicitly states 'The vendor's decision support label has no legal effect. The Act classifies by function, not marketing language'"
+    },
+    {
+      "text": "States that Art. 5 prohibitions apply from 2 February 2025",
+      "passed": true,
+      "evidence": "Response states 'STEP 3: PROHIBITED PRACTICES SCREEN (Art. 5 — applies from 2 February 2025)' and 'Deployment may be unlawful from 2 February 2025 onward'"
+    },
+    {
+      "text": "Notes that even if not prohibited, the system would be high-risk under Annex III Area 6 (law enforcement) with full conformity obligations",
+      "passed": true,
+      "evidence": "Response states 'if not prohibited, it is unambiguously HIGH-RISK under Annex III Area 6 (Law Enforcement), specifically sub-categories 6(d) and 6(e)'"
+    }
+  ],
+  "passed_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

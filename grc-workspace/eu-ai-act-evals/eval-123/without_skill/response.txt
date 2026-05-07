@@ -1,0 +1,376 @@
+EU AI ACT OBLIGATIONS FOR GPAI MODEL PROVIDERS: ANALYSIS FOR A 200B PARAMETER, OPEN-SOURCE LLM
+
+Prepared: May 2026
+Regulation Reference: Regulation (EU) 2024/1689 of the European Parliament and of the Council (the "AI Act"), in force from 1 August 2024; GPAI provisions apply from 2 August 2025.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. PRELIMINARY CLASSIFICATION: ARE YOU A GPAI MODEL PROVIDER?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1.1 Definition of a GPAI Model
+
+Article 3(63) of the AI Act defines a "general-purpose AI model" (GPAI model) as an AI model — including where trained with a large amount of data using self-supervision at scale — that displays significant generality and is capable of performing a wide range of distinct tasks, and which can be integrated into a variety of downstream systems or applications. The definition explicitly captures large language models trained at scale.
+
+Your model — 200 billion parameters, trained on 15 trillion tokens — unambiguously falls within this definition. GPT-class models of this scale are paradigmatic GPAI models.
+
+1.2 Who Is the "Provider"?
+
+Article 3(3) defines a provider as any natural or legal person that develops an AI model (including a GPAI model) and places it on the market or puts it into service under their own name or trademark. Placing a model under an open-source licence constitutes placing it on the market. Accordingly, your organisation is the GPAI model provider for all purposes of Chapter V of the AI Act.
+
+1.3 Geographic Scope
+
+The AI Act applies whenever:
+  (a) the model is placed on the EU market, regardless of where the provider is established; or
+  (b) the output of the model is used in the EU.
+
+Open-source release on platforms such as Hugging Face, GitHub, or similar repositories that are accessible to EU users satisfies condition (a). You are therefore subject to the Regulation irrespective of whether your organisation is domiciled inside or outside the EU.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. THE SYSTEMIC-RISK THRESHOLD AND ITS CONSEQUENCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2.1 The 10^25 FLOP Threshold
+
+Article 51(1) creates a sub-category of GPAI models "with systemic risk." A model is presumed to have systemic risk if the cumulative amount of compute used for its training, measured in floating-point operations (FLOPs), exceeds 10^25 FLOPs.
+
+Your training compute is approximately 3 × 10^24 FLOPs.
+
+This figure is BELOW the 10^25 FLOPs threshold by roughly a factor of three. Accordingly, your model does NOT trigger the automatic presumption of systemic risk under Article 51(1)(a).
+
+2.2 Discretionary Designation by the AI Office
+
+Article 51(1)(b) preserves the power of the European AI Office to designate a model as having systemic risk based on qualitative criteria, even below the compute threshold. Factors the AI Office may consider include:
+  - The number of parameters (200 billion is at the frontier of current publicly available models);
+  - The size of the training dataset (15 trillion tokens is extremely large);
+  - Modalities and capabilities (including capabilities relevant to CBRN risks, cyber-offensive capabilities, or the ability to influence public opinion at scale);
+  - The degree of autonomy and ability to self-replicate;
+  - The breadth of downstream deployment.
+
+A 200B parameter model of this training scale sits materially close to the systemic-risk threshold. The AI Office has stated that it will monitor models near the threshold and may initiate designation procedures on its own initiative or upon notification by the provider. Providers should therefore proactively engage with the AI Office and should not assume that being below 10^25 FLOPs provides permanent immunity from systemic-risk obligations.
+
+2.3 Self-Notification Duty
+
+Under Article 52(1), providers of GPAI models must notify the AI Office before placing the model on the market if they believe, or have reason to believe, that their model may qualify as having systemic risk. Given the proximity to the threshold and the model's scale, legal counsel should assess whether a precautionary notification is warranted.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. BASELINE GPAI MODEL OBLIGATIONS (ALL GPAI PROVIDERS — ARTICLE 53)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Every GPAI model provider, regardless of systemic-risk designation, must comply with the following obligations under Article 53(1). These apply to you in full.
+
+3.1 Technical Documentation (Article 53(1)(a))
+
+You must draw up and keep up-to-date technical documentation before placing the model on the market. The documentation must be sufficient to enable the AI Office to assess compliance and must include, at minimum:
+
+  (i)   A general description of the GPAI model, including its intended purposes, the tasks it can perform, and its capabilities and limitations;
+  (ii)  Information about the training process, including the training methodology, objectives, and key design choices;
+  (iii) Information about the training data, including the type and provenance of training data, data collection and processing procedures, and — critically — a description of how copyright law has been complied with in data sourcing (see Section 4 below);
+  (iv)  The model's architecture and number of parameters;
+  (v)  Information on compute resources used for training (in your case, approximately 3 × 10^24 FLOPs);
+  (vi)  Information on evaluation, testing, and red-teaming conducted;
+  (vii) Known and foreseeable risks, including mitigation measures.
+
+Annex XI to the AI Act specifies the minimum information required. The AI Office is empowered to adopt delegated acts supplementing Annex XI; providers should monitor for updates.
+
+3.2 Information to Downstream Providers (Article 53(1)(b))
+
+You must make available to downstream providers (i.e., persons who build AI systems or products using your model) information and documentation adequate for them to understand the model's capabilities and limitations, so that they can comply with their own obligations under the AI Act. This must include at a minimum:
+
+  - A model card describing the intended use cases, capabilities, and limitations;
+  - Known risks relevant to deployment;
+  - Technical specifications sufficient for integration and safety assessment;
+  - Information about the training data and compute used;
+  - Any evaluations or benchmarks performed.
+
+This information must be made publicly available in machine-readable form (e.g., a structured model card published alongside the weights). The AI Act does not require you to disclose trade secrets, but the level of detail must be sufficient for downstream providers to discharge their own compliance obligations.
+
+3.3 Copyright Compliance Policy (Article 53(1)(c))
+
+You must put in place a policy to comply with EU copyright law, and in particular with the text and data mining (TDM) exception and opt-out mechanism established under Article 4 of Directive (EU) 2019/790 (the Digital Single Market Directive).
+
+This obligation requires you to:
+
+  (a) Implement technical measures to honour opt-out reservations made by rights-holders under Article 4(3) of Directive 2019/790 (i.e., machine-readable opt-outs such as the TDM reservation standard or robots.txt-style declarations);
+  (b) Document your data sourcing methodology and demonstrate that data was either (i) in the public domain, (ii) licensed for TDM purposes, (iii) used under the Article 3 TDM exception for scientific research, or (iv) used under Article 4 for commercial TDM in the absence of a valid opt-out;
+  (c) Maintain records of the data sources used and their copyright status.
+
+Note: This is among the most practically challenging obligations for LLMs trained at scale on web-crawled data. You should conduct a thorough review of your training data sources and document the copyright compliance rationale for each major corpus.
+
+3.4 Summary of Training Data (Article 53(1)(d))
+
+You must publish a sufficiently detailed summary of the content used for training the GPAI model. The AI Office has published guidelines on what constitutes a "sufficiently detailed" summary. At minimum, this typically includes:
+
+  - The broad categories of data sources (e.g., web crawl data, books, code repositories, academic papers, licensed datasets);
+  - The languages represented;
+  - The approximate proportions of each category;
+  - Any notable inclusions or exclusions relevant to model behaviour.
+
+This summary must be made publicly available, for example alongside the model release on a public repository or on your organisation's website. It need not disclose commercially sensitive specifics, but must give downstream users and the public a meaningful understanding of the training corpus.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. OPEN-SOURCE RELEASE: THE FREE AND OPEN-SOURCE EXCEPTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4.1 Scope of the Exception
+
+Article 53(2) provides a partial exemption from obligations under Article 53(1)(b) and (d) — but NOT from (a) and (c) — for providers of GPAI models that are released under a free and open-source licence. The rationale is that open-source release of the weights and technical documentation itself satisfies the transparency objectives underlying those sub-obligations, because downstream users can inspect the model directly.
+
+To qualify, your licence must meet the following conditions:
+  - The parameters (weights) of the model are made publicly available;
+  - The licence allows users to access, use, modify, and distribute the model and its modifications; and
+  - The licence terms do not restrict the use of the model in a way that would prevent compliance with the AI Act by downstream providers.
+
+Common licences such as Apache 2.0, MIT, and the BigScience RAIL licence may qualify, but certain "open-source" licences with restrictive use clauses (e.g., Llama 2's custom licence restricting commercial use above a threshold) may NOT qualify for the exemption. You should obtain legal advice on whether your chosen licence satisfies Article 53(2).
+
+4.2 What the Exception Does and Does NOT Cover
+
+COVERED BY THE EXCEPTION (obligations reduced or removed):
+  - Article 53(1)(b): You are not required to separately provide information to downstream providers beyond what is already publicly available through the open-source release, provided the published documentation is sufficient.
+  - Article 53(1)(d): The public summary of training data may be satisfied by publication of your model card and data documentation alongside the open-source release.
+
+NOT COVERED BY THE EXCEPTION (obligations remain in full):
+  - Article 53(1)(a): You MUST still prepare and maintain full technical documentation for the AI Office. This is a regulatory compliance document, not merely a user-facing one, and must be available for inspection.
+  - Article 53(1)(c): The copyright compliance policy obligation applies in full, regardless of open-source status.
+
+4.3 Systemic-Risk Models: No Open-Source Exemption
+
+If your model were to be designated as having systemic risk (whether now or in the future), the open-source exception under Article 53(2) would NOT apply to the additional systemic-risk obligations under Article 55. Those obligations would apply in full regardless of licensing. This is a critical point for models near the threshold.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. ADDITIONAL OBLIGATIONS IF DESIGNATED AS A SYSTEMIC-RISK GPAI MODEL (ARTICLE 55)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Although your model is currently below the systemic-risk threshold, you should plan for the possibility of designation. The following obligations would apply under Article 55 if your model is designated:
+
+5.1 Adversarial Testing and Red-Teaming
+
+You would be required to perform model evaluations, including adversarial testing (red-teaming), to identify and mitigate systemic risks at EU level. The AI Office is mandated to develop common methodologies and standards for such evaluations in coordination with the European standardisation bodies.
+
+5.2 Incident Reporting
+
+You would be required to report serious incidents and possible corrective actions to the AI Office without undue delay. "Serious incidents" include those resulting in, or risking, significant harm at EU level — for example, large-scale misuse for disinformation, CBRN misuse, or critical infrastructure attacks.
+
+5.3 Cybersecurity Measures
+
+You would be required to implement adequate cybersecurity protection for the model, its training infrastructure, and its weights. For open-source models, this presents particular challenges, since once weights are released, access cannot be revoked.
+
+5.4 Enhanced Technical Documentation
+
+The technical documentation required of systemic-risk providers is more extensive than baseline requirements and must include detailed results of evaluations, red-teaming exercises, and risk mitigation measures.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. CODES OF PRACTICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6.1 Mandatory Participation in Code Development
+
+Article 56 establishes that the AI Office shall facilitate the preparation of Codes of Practice for GPAI providers. GPAI model providers are expected — and in practice will be strongly encouraged — to participate in drafting and adhering to these codes. While formal adherence is described as voluntary, compliance with an applicable code creates a rebuttable presumption of compliance with the corresponding obligations under the AI Act.
+
+As of the knowledge cutoff, the AI Office convened drafting processes beginning in late 2024, with Codes of Practice expected to be finalised by August 2025. Your organisation should monitor and engage with this process.
+
+6.2 Compliance as Default
+
+Pending adoption of formal codes, the AI Office expects GPAI providers to demonstrate good-faith compliance with the spirit of Article 53 requirements. Proactive engagement with the AI Office, transparent publication of model documentation, and participation in voluntary evaluations are advisable.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. RELATIONSHIP WITH DOWNSTREAM PROVIDERS AND DEPLOYERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7.1 Responsibility Allocation
+
+The AI Act distinguishes between:
+  - GPAI model providers (you): responsible for the model's intrinsic characteristics and the obligations in Article 53/55;
+  - Providers of AI systems built on GPAI models (downstream providers): responsible for compliance of the AI system, including conformity assessment for high-risk AI systems under Article 16;
+  - Deployers: responsible for appropriate use in context.
+
+Under Article 25, where a downstream provider builds a high-risk AI system using your GPAI model, they bear primary responsibility for compliance of that system. However, you bear a duty to ensure that the information and documentation you provide is sufficient for them to meet those obligations. Insufficient documentation from you could expose downstream providers to compliance risk and could also expose you to enforcement action.
+
+7.2 Open-Source and Liability
+
+Under Article 53(2), open-source providers benefit from reduced documentation obligations toward downstream providers. However, the licence terms you adopt may affect how courts interpret liability for downstream harms. Licences that disclaim all warranties and limit liability are standard in open-source AI, but they do not displace regulatory obligations under the AI Act. The AI Act imposes public-law obligations on providers regardless of contractual terms.
+
+7.3 Downstream Use in High-Risk AI Systems
+
+If your model is used as a component in a high-risk AI system (e.g., in medical diagnosis, credit scoring, employment, law enforcement contexts listed in Annex III), the downstream provider — not you — is the primary responsible party for the AI system's high-risk compliance. However, you must:
+  (a) Clearly communicate in your model card and documentation the capabilities, limitations, and known risks;
+  (b) Not actively market your model for deployment in high-risk applications without adequate safety guidance; and
+  (c) Provide sufficient technical documentation for downstream conformity assessment.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+8. ENFORCEMENT, SUPERVISION, AND PENALTIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8.1 The AI Office as Primary Supervisor
+
+For GPAI models, the primary supervisory authority is the European AI Office (established within the European Commission). National market surveillance authorities handle AI systems and deployers, but GPAI model-level compliance falls to the AI Office.
+
+8.2 Powers of the AI Office
+
+The AI Office may:
+  - Request technical documentation and access to models for evaluation;
+  - Require providers to conduct and submit evaluations;
+  - Issue decisions requiring compliance;
+  - Impose fines.
+
+8.3 Financial Penalties
+
+Non-compliance with GPAI model obligations exposes providers to administrative fines of up to:
+  - EUR 15,000,000 or 3% of total worldwide annual turnover (whichever is higher) for violations of Article 53 or 55 obligations;
+  - EUR 30,000,000 or 6% of total worldwide annual turnover for providing incorrect, incomplete, or misleading information to the AI Office.
+
+These penalties apply regardless of where the provider is established, provided the model is available in the EU.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+9. INTERACTION WITH OTHER EU LEGAL FRAMEWORKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9.1 GDPR
+
+If your training data or the model's operational use involves personal data of EU individuals, the General Data Protection Regulation (GDPR) applies. Key points:
+  - Training on personal data scraped from the web requires a lawful basis;
+  - Individuals have rights (access, erasure, rectification) that can be difficult to operationalise in large-scale LLMs;
+  - You should conduct a Data Protection Impact Assessment (DPIA) if not already done;
+  - Data minimisation and purpose limitation principles apply.
+
+The intersection of GDPR and LLM training remains an area of active regulatory development, with the Italian, French, and Irish DPAs having all taken positions on LLM data practices.
+
+9.2 EU Copyright Law (DSM Directive)
+
+As noted in Section 3.3, the TDM exception under Article 4 of Directive 2019/790 and the need to honour rights-holder opt-outs is both a copyright law obligation and an AI Act obligation. Non-compliance with the copyright policy requirement under Article 53(1)(c) engages both regulatory (AI Act) and civil (copyright infringement) liability.
+
+9.3 Digital Services Act (DSA)
+
+If your model is accessed via a platform that meets the DSA's definition of a Very Large Online Platform (VLOP) or Very Large Search Engine (VLSE), or if you operate such a platform, the DSA's obligations regarding systemic risks (including AI-generated content and recommendation systems) may apply.
+
+9.4 Product Liability Directive (AI Liability)
+
+The proposed AI Liability Directive (still under negotiation as of the knowledge cutoff) would, if enacted, create a presumption of fault for AI providers in certain civil liability claims where causation is difficult to prove. GPAI model providers could be exposed to liability if their model causes harm that a downstream deployer is unable to remedy.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+10. PRACTICAL COMPLIANCE ROADMAP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The following action items should be completed before or contemporaneously with the model's public release:
+
+BEFORE RELEASE:
+
+1. Technical Documentation (Article 53(1)(a))
+   - Prepare full Annex XI-compliant technical documentation;
+   - Document model architecture, training methodology, compute (3 × 10^24 FLOPs), dataset composition, evaluation results, and known risks;
+   - Establish a process for keeping this documentation current as the model is updated.
+
+2. Copyright Policy (Article 53(1)(c))
+   - Conduct a data provenance audit across all training corpora;
+   - Document the legal basis for each major data source;
+   - Implement and document procedures for honouring TDM opt-outs for future training runs;
+   - Retain records demonstrating copyright compliance.
+
+3. Training Data Summary (Article 53(1)(d))
+   - Draft and publish a public summary of training data categories, languages, and sources;
+   - Ensure this is accessible alongside the model weights.
+
+4. Model Card and Downstream Information (Article 53(1)(b))
+   - Publish a comprehensive model card including: capabilities, limitations, intended and prohibited uses, safety evaluations, and known risks;
+   - Ensure the model card is sufficient for downstream providers to conduct their own compliance assessments.
+
+5. Licence Selection
+   - Confirm that the chosen open-source licence qualifies for the Article 53(2) exemption;
+   - Obtain legal advice on licence terms, particularly regarding commercial use restrictions.
+
+6. AI Office Engagement
+   - Register with the AI Office's GPAI model registry (details expected from delegated acts);
+   - Consider proactive notification given proximity to the systemic-risk threshold;
+   - Participate in Code of Practice development.
+
+7. Safety Evaluations
+   - Conduct pre-release red-teaming and capability evaluations, particularly for:
+     - CBRN (chemical, biological, radiological, nuclear) uplift;
+     - Cybersecurity offensive capabilities;
+     - Large-scale disinformation potential;
+     - Manipulation and deceptive capabilities.
+   - Document and publish evaluation methodology and results (or a summary thereof).
+
+ONGOING (POST-RELEASE):
+
+8. Monitor AI Office Guidance
+   - Track delegated acts supplementing Annex XI and Annex XII;
+   - Monitor for any designation procedures that could elevate the model to systemic-risk status;
+   - Track Code of Practice adoption and update compliance accordingly.
+
+9. Incident Monitoring
+   - Establish mechanisms for receiving reports of misuse or harm from downstream users;
+   - Develop an incident response and reporting protocol aligned with Article 55 requirements (anticipating possible future systemic-risk designation).
+
+10. Documentation Updates
+    - Update technical documentation whenever the model is substantially modified, fine-tuned, or extended;
+    - Maintain version control of all compliance documentation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+11. SUMMARY TABLE: OBLIGATIONS APPLICABLE TO YOUR MODEL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Obligation                              | Legal Basis          | Applies? | Notes
+─────────────────────────────────────── | ──────────────────── | ──────── | ─────────────────────────────────────────
+Technical documentation (Annex XI)      | Art. 53(1)(a)        | YES      | Full obligation; not reduced by OS licence
+Information to downstream providers     | Art. 53(1)(b)        | REDUCED  | Open-source exception applies; model card
+Copyright compliance policy             | Art. 53(1)(c)        | YES      | Full obligation; not reduced by OS licence
+Public training data summary            | Art. 53(1)(d)        | REDUCED  | Satisfied by public publication alongside
+Systemic-risk evaluations (Art. 55(1))  | Art. 55(1)(a)        | NO*      | Unless designated by AI Office
+Incident reporting (Art. 55(1)(b))      | Art. 55(1)(b)        | NO*      | Unless designated by AI Office
+Cybersecurity measures (Art. 55(1)(c))  | Art. 55(1)(c)        | NO*      | Unless designated by AI Office
+Code of Practice adherence              | Art. 56              | YES      | Expected; presumption of compliance
+AI Office registration                  | Delegated acts       | YES      | Details to be confirmed by AI Office
+GDPR compliance                         | GDPR                 | YES      | Separate obligation; DPIA recommended
+TDM opt-out honouring                   | DSM Dir. Art. 4      | YES      | Underpins Art. 53(1)(c) obligation
+
+*Subject to possible future designation by the AI Office.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+12. KEY RISK AREAS AND STRATEGIC CONSIDERATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+12.1 Proximity to Systemic-Risk Threshold
+
+Your 3 × 10^24 FLOPs training compute is approximately one-third of the systemic-risk threshold. This proximity creates regulatory uncertainty. Future training runs, continued pre-training, or the AI Office's interpretation of cumulative compute (including fine-tuning runs) could change your classification. Plan compliance architecture to accommodate rapid escalation to systemic-risk obligations if designation occurs.
+
+12.2 Irrevocability of Open-Source Release
+
+Once model weights are released under an open-source licence, they cannot be "recalled." Any future systemic-risk designation or mandatory safety mitigation (e.g., mandatory access controls or deployment restrictions) would be effectively unenforceable against third parties who have already downloaded the weights. The AI Act does not currently resolve this tension, but the AI Office may issue guidance on obligations for open-source providers post-designation. This represents a significant legal and reputational risk that should be evaluated before release.
+
+12.3 Training Data Copyright Exposure
+
+Large-scale LLM training on web-crawled data carries material copyright infringement risk across multiple jurisdictions. The AI Act's copyright compliance policy requirement under Article 53(1)(c) means this risk is now also a regulatory compliance issue, not merely a civil litigation risk. Thorough data provenance documentation is strongly recommended.
+
+12.4 Capability Evaluations
+
+Even below the systemic-risk threshold, responsible AI governance standards (and Code of Practice expectations) will likely require pre-release capability evaluations for dangerous capabilities. A 200B parameter model trained at this scale may possess emergent capabilities not present in smaller models. Investing in robust red-teaming and third-party evaluation before release reduces both regulatory and reputational risk.
+
+12.5 Interaction with Member State Law
+
+The AI Act is a Regulation and directly applicable in all EU Member States without implementation into national law. However, certain provisions — notably on penalties — allow Member States discretion in specific areas. Some Member States (notably France, Germany, and Spain) are also developing supplementary AI governance frameworks. Monitor national developments alongside the central AI Act regime.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONCLUSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your organisation is clearly a GPAI model provider within the meaning of the EU AI Act and is subject to the baseline obligations of Article 53. The open-source licence reduces — but does not eliminate — your obligations: you retain full duties with respect to technical documentation for the AI Office and copyright compliance policy.
+
+Your model sits below the systemic-risk threshold of 10^25 FLOPs, so the additional obligations of Article 55 do not currently apply. However, the proximity to the threshold warrants careful monitoring and proactive engagement with the AI Office to avoid being caught unprepared by a discretionary designation.
+
+The most operationally demanding obligations are: (a) preparing Annex XI-compliant technical documentation; (b) conducting and documenting a copyright compliance review of your training data; and (c) preparing and publishing a meaningful training data summary and model card. These should be prioritised in your pre-release compliance programme.
+
+Given the complexity of the regulatory landscape and the novelty of many of these obligations, obtaining specialist EU AI regulatory legal advice before release is strongly recommended.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFERENCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act), OJ L, 2024/1689, 12.7.2024.
+- Directive (EU) 2019/790 of the European Parliament and of the Council on copyright and related rights in the Digital Single Market (DSM Directive), OJ L 130, 17.5.2019.
+- Regulation (EU) 2016/679 (General Data Protection Regulation), OJ L 119, 4.5.2016.
+- European AI Office, Guidelines on the definition of a general-purpose AI model (anticipated 2025).
+- European AI Office, GPAI Code of Practice (drafting process initiated 2024; final text anticipated August 2025).
+- AI Act, Annex XI (Technical documentation for GPAI models).
+- AI Act, Annex XII (Information to be provided by GPAI model providers).
+
+Note: This analysis reflects the text of the EU AI Act as enacted and general knowledge of regulatory guidance available as of August 2025. It does not constitute legal advice. Providers should consult qualified EU legal counsel for advice specific to their circumstances.

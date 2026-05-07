@@ -1,0 +1,34 @@
+{
+  "eval_id": 124,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "Correctly identifies the system as high-risk via Annex I Path A (Art. 6(1)) because Regulation 2017/745 (Medical Devices) is listed in Annex I Section A",
+      "passed": false,
+      "evidence": "Response mislabels the classification as 'Annex III, Point 5(a)' (which is actually about public authority benefits assessment) rather than Art. 6(1) / Annex I Path A. While it does note EU MDR is in Annex I of the AI Act, it does not correctly identify Art. 6(1) as the governing provision."
+    },
+    {
+      "text": "Explains that MDR CE marking does NOT automatically satisfy AI Act compliance requirements",
+      "passed": true,
+      "evidence": "Response explicitly states 'the existing CE marking under EU MDR does not fully satisfy EU AI Act requirements' and lists gaps including AI-specific transparency and logging requirements"
+    },
+    {
+      "text": "Explains that AI Act requirements (Arts. 9-17) must be integrated into the existing MDR conformity assessment procedure",
+      "passed": true,
+      "evidence": "Response references 'Article 8(1)' fast-track pathway and the integration mechanism where AI Act requirements are folded into the existing sectoral conformity procedure"
+    },
+    {
+      "text": "States the 2 August 2027 deadline specifically for Annex I safety component systems",
+      "passed": true,
+      "evidence": "Response states 'High-risk Annex I systems (products under harmonisation law): 2 August 2027' in its timeline table, even if the conclusion expresses uncertainty about which deadline applies"
+    },
+    {
+      "text": "Identifies hospital deployer obligations under Art. 26 (instructions compliance, staff competence, monitoring, log retention)",
+      "passed": true,
+      "evidence": "Response has a dedicated 'Deployer Obligations Under Article 26' section covering human oversight, FRIA, log retention, monitoring, and registration in the EU database"
+    }
+  ],
+  "passed_count": 4,
+  "total_count": 5,
+  "pass_rate": 0.8
+}

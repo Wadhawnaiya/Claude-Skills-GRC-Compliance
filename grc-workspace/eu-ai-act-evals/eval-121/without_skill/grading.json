@@ -1,0 +1,34 @@
+{
+  "eval_id": 121,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "Correctly identifies system as high-risk under Annex III Area 4 (recruitment/candidate selection) via Art. 6(2)",
+      "passed": true,
+      "evidence": "Response correctly identifies 'Annex III, Section 4 (Employment AI)' as the applicable high-risk category covering CV filtering and candidate ranking"
+    },
+    {
+      "text": "Lists at least 4 key provider obligations from Arts. 9-17 (e.g., risk management, data governance, human oversight, conformity assessment)",
+      "passed": true,
+      "evidence": "Response lists risk management, data governance, bias auditing, technical documentation, transparency, human oversight, accuracy/robustness, QMS — well over 4"
+    },
+    {
+      "text": "States the 2 August 2026 compliance deadline for Annex III high-risk systems",
+      "passed": true,
+      "evidence": "Response explicitly states 'August 2, 2026. A Q1 2026 launch precedes enforcement'"
+    },
+    {
+      "text": "Mentions CE marking (Art. 48) and EU AI database registration (Art. 49) requirements",
+      "passed": true,
+      "evidence": "Response mentions CE marking and EU database registration as required pre-market steps"
+    },
+    {
+      "text": "Identifies the correct conformity assessment path: self-assessment (Annex VI) for Annex III Area 4 systems (Points 2-8)",
+      "passed": true,
+      "evidence": "Response states 'For employment AI systems, this is typically a self-assessment (you do not need a notified body, unlike some other high-risk categories)'"
+    }
+  ],
+  "passed_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

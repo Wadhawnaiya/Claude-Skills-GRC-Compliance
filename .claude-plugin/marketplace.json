@@ -490,7 +490,7 @@
     {
       "name": "ear",
       "source": "./plugins/ear",
-      "description": "EAR (Export Administration Regulations) compliance advisor — ECCN classification across all 10 CCL categories, EAR99 determination, EAR vs ITAR jurisdiction via Order of Review, licence requirement analysis using the Commerce Country Chart, all 14 licence exceptions (LVS, GBS, CIV, ENC, TMP, GOV, TSU, and more), restricted party screening (Entity List, Denied Persons, Unverified List, OFAC SDN), deemed exports, FDPR, VSD process, and 7-element Export Compliance Programme design. Use for any dual-use export control or BIS compliance question.",
+      "description": "EAR (Export Administration Regulations) compliance advisor \u2014 ECCN classification across all 10 CCL categories, EAR99 determination, EAR vs ITAR jurisdiction via Order of Review, licence requirement analysis using the Commerce Country Chart, all 14 licence exceptions (LVS, GBS, CIV, ENC, TMP, GOV, TSU, and more), restricted party screening (Entity List, Denied Persons, Unverified List, OFAC SDN), deemed exports, FDPR, VSD process, and 7-element Export Compliance Programme design. Use for any dual-use export control or BIS compliance question.",
       "version": "0.8.0",
       "author": {
         "name": "Hemant Naik",
@@ -511,7 +511,7 @@
     {
       "name": "nist-800-53",
       "source": "./plugins/nist-800-53",
-      "description": "NIST SP 800-53 Rev 5 compliance advisor — all 20 control families, Low/Moderate/High baseline selection, FIPS 199/200 categorization, control tailoring, ODVs, overlays, privacy controls (PT family), supply chain (SR family), SSP narrative writing, assessment procedures (SP 800-53A), POA&M management, RMF steps (SP 800-37), continuous monitoring, OSCAL, and mapping to FedRAMP, FISMA, CMMC 2.0, and ISO 27001.",
+      "description": "NIST SP 800-53 Rev 5 compliance advisor \u2014 all 20 control families, Low/Moderate/High baseline selection, FIPS 199/200 categorization, control tailoring, ODVs, overlays, privacy controls (PT family), supply chain (SR family), SSP narrative writing, assessment procedures (SP 800-53A), POA&M management, RMF steps (SP 800-37), continuous monitoring, OSCAL, and mapping to FedRAMP, FISMA, CMMC 2.0, and ISO 27001.",
       "version": "0.8.0",
       "author": {
         "name": "Hemant Naik",
@@ -526,6 +526,27 @@
         "federal-security",
         "security-controls",
         "fedramp",
+        "grc"
+      ]
+    },
+    {
+      "name": "eu-ai-act",
+      "source": "./plugins/eu-ai-act",
+      "description": "EU AI Act (Regulation (EU) 2024/1689) compliance advisor \u2014 risk classification across all four tiers, all 8 prohibited practices (Art. 5), all 8 Annex III high-risk use case areas, provider and deployer obligations (Arts. 9\u201317, 26), GPAI model obligations and systemic risk (Arts. 51\u201355), conformity assessment and CE marking (Arts. 43\u201348), EU AI database registration, limited-risk transparency (Art. 50), governance (AI Office, AI Board), penalties (Art. 99), phase-in timeline, and cross-framework mapping to ISO 42001, NIST AI RMF, and GDPR.",
+      "version": "0.8.0",
+      "author": {
+        "name": "Hemant Naik",
+        "email": "hemant.naik@gmail.com"
+      },
+      "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+      "category": "compliance",
+      "keywords": [
+        "eu-ai-act",
+        "artificial-intelligence",
+        "ai-regulation",
+        "ai-compliance",
+        "gpai",
+        "high-risk-ai",
         "grc"
       ]
     }

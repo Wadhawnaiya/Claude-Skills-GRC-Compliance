@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), and NIST SP 800-53 (Security and Privacy Controls for Federal Systems) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), and EU AI Act (Regulation (EU) 2024/1689) — powered by Claude Skills.
 
-Benchmarked across 120 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 600 total assertions.
+Benchmarked across 125 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **82%** across 625 total assertions.
 
 [![Release: v0.8.0](https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg)](../../releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 24](https://img.shields.io/badge/Skills-24-green.svg)](#the-skills)
+[![Skills: 25](https://img.shields.io/badge/Skills-25-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -40,6 +40,7 @@ Benchmarked across 120 test cases (5 per framework) using the eval framework —
   - [CIS Controls v8 — CIS Top 18 Cyber Hygiene](#-cis-controls-v8--cis-top-18-cyber-hygiene)
   - [EAR — Export Administration Regulations](#-ear--export-administration-regulations)
   - [NIST SP 800-53 — Security and Privacy Controls for Federal Systems](#-nist-sp-800-53--security-and-privacy-controls-for-federal-systems)
+  - [EU AI Act — Regulation (EU) 2024/1689](#-eu-ai-act--regulation-eu-20241689)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -559,6 +560,27 @@ The NIST SP 800-53 skill turns Claude into an expert federal security and privac
 
 ---
 
+### 25. 🤖 EU AI Act — Regulation (EU) 2024/1689
+
+**File:** `EU AI Act - Claude Skill/eu-ai-act.skill`
+
+The EU AI Act skill turns Claude into an expert EU AI Act compliance advisor covering the full **Regulation (EU) 2024/1689** — the world's first comprehensive horizontal AI regulation, in force from 1 August 2024. It serves AI providers, deployers, importers, and authorised representatives operating in or placing AI on the EU market.
+
+**What it does:**
+- **Classifies AI systems** across all four risk tiers — Prohibited (Art. 5), High-Risk (Art. 6 + Annex I/III), Limited Risk (Art. 50), and Minimal/No Risk — using both the Annex I safety component path (Art. 6(1)) and the Annex III listed use case path (Art. 6(2))
+- **Screens for all 8 prohibited practices** (Art. 5, applies from 2 February 2025): subliminal manipulation, vulnerability exploitation, social scoring, predictive criminal assessment, untargeted biometric scraping, workplace/education emotion inference, sensitive-attribute biometric categorisation, and real-time RBI in public spaces by law enforcement
+- **Walks through all 8 Annex III high-risk use case areas**: biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration/border control, and justice/democracy
+- **Covers provider obligations (Arts. 9–17)**: risk management (5-step process), data governance, Annex IV technical documentation, automatic logging, transparency to deployers, human oversight design, accuracy/robustness/cybersecurity, 12-item provider checklist, and 13-component QMS
+- **Covers deployer obligations (Art. 26)**: instructions compliance, staff competence, monitoring, 6-month log retention, worker notification, public authority registration, and GDPR DPIA
+- **Guides conformity assessment and CE marking**: Annex VI self-assessment (Areas 2–8) vs. Annex VII notified body (Area 1 biometrics), EU Declaration of Conformity (Art. 47, 10-year retention), CE marking (Art. 48), EU AI database registration (Arts. 49/60)
+- **Covers GPAI model obligations (Arts. 53–55, from 2 August 2025)**: universal obligations, open-source exception, systemic risk threshold (10²⁵ FLOPs, Art. 51), and systemic risk additional obligations including adversarial testing and AI Office reporting
+- **Maps to peer frameworks**: ISO 42001:2023, NIST AI RMF 1.0, and GDPR — showing where obligations overlap and where dual compliance is required
+- **References penalty exposure (Art. 99)**: €35M/7% for prohibited practices, €15M/3% for provider/deployer violations, €7.5M/1% for misleading authorities
+
+**Trigger phrases:** `EU AI Act`, `AI Act`, `Regulation 2024/1689`, `high-risk AI`, `prohibited AI`, `GPAI model`, `general-purpose AI`, `AI system classification`, `AI conformity assessment`, `CE marking AI`, `EU AI database`, `AI Office`, `AI Board`, `systemic risk AI`, `Art. 5 AI`, `Annex III AI`, `AI provider obligations`, `AI deployer obligations`, `human oversight AI`, `AI risk management`, `Art. 50 transparency`, `chatbot disclosure AI`, `AI Act compliance`, `GPAI obligations`, `open-source AI Act`, `AI Act penalty`, `AI Act timeline`, `AI Act GDPR`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -707,6 +729,11 @@ The NIST SP 800-53 skill turns Claude into an expert federal security and privac
 | Performing a gap analysis between ISO 27001:2022 and FedRAMP Moderate baseline and mapping RMF steps to ATO package | NIST SP 800-53 |
 | Tailoring a Moderate baseline to remove inapplicable controls, set ODVs, and document compensating controls for a legacy system | NIST SP 800-53 |
 | Building a ConMon strategy with monthly vulnerability scan frequencies, annual penetration testing, and POA&M update cadence | NIST SP 800-53 |
+| Classifying an AI-powered CV screening tool for European employers under the EU AI Act — risk tier and provider obligations | EU AI Act |
+| Assessing whether a predictive policing AI tool violates EU AI Act Art. 5 prohibited practices | EU AI Act |
+| Determining GPAI model obligations for an open-source LLM with 3×10²⁴ FLOPs training compute | EU AI Act |
+| Navigating dual regulation for an AI diagnostic imaging tool CE-marked under the EU Medical Devices Regulation | EU AI Act |
+| Understanding Art. 50(1) chatbot disclosure obligations and deployer vs GPAI provider obligations for an e-commerce AI | EU AI Act |
 
 ---
 
@@ -740,6 +767,7 @@ The NIST SP 800-53 skill turns Claude into an expert federal security and privac
    | 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene | [cis-controls.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CIS%20Controls%20-%20Claude%20Skill/cis-controls.skill) |
    | 📦 EAR [US] — Export Administration Regulations | [ear.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EAR%20-%20Claude%20Skill/ear.skill) |
    | 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems | [nist-800-53.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20800-53%20-%20Claude%20Skill/nist-800-53.skill) |
+   | 🤖 EU AI Act — Regulation (EU) 2024/1689 | [eu-ai-act.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20AI%20Act%20-%20Claude%20Skill/eu-ai-act.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -759,7 +787,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills nist-800-53@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills nist-800-53@grc-skills eu-ai-act@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -806,6 +834,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | CIS Controls v8 | 5 | **100%** | 80% | +20% | Implementation Group determination; Gap assessment for SaaS startup; MFA safeguard scoping (IG2); CIS v8 to NIST CSF 2.0 mapping; Vulnerability management programme with remediation SLAs |
 | EAR [US] | 5 | **100%** | 88% | +12% | RF amplifier ECCN classification for Germany export; Deemed export for Chinese/Australian dual national on 5D002; Entity List re-export violation and VSD process; AES-256 software ENC exception for France/India/Brazil; ECP design for semiconductor equipment company |
 | NIST SP 800-53 | 5 | **92%** | 84% | +8% | FIPS 199 categorization for federal HR system; AC-2(3) OTS finding and POA&M documentation; MFA controls and EO 14028 phishing-resistant MFA; SSP narrative for SC-8(1) Transmission Confidentiality; ISO 27001 to FedRAMP gap analysis and RMF steps |
+| EU AI Act | 5 | **100%** | 88% | +12% | CV screening tool high-risk classification under Annex III Area 4; Predictive policing Art. 5 prohibition analysis; Open-source GPAI model obligations with 3×10²⁴ FLOPs; AI diagnostic imaging tool dual MDR/AI Act regulation; E-commerce chatbot Art. 50(1) disclosure obligations |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

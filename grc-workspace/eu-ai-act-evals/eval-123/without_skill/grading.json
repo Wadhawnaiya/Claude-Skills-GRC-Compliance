@@ -1,0 +1,34 @@
+{
+  "eval_id": 123,
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "Correctly classifies the model as a GPAI model under Art. 3(63)",
+      "passed": true,
+      "evidence": "Response correctly identifies the model as a GPAI model citing Art. 3(3) provider definition and discusses GPAI classification criteria"
+    },
+    {
+      "text": "Correctly identifies that 3×10^24 FLOPs is below the 10^25 FLOPs systemic risk threshold in Art. 51",
+      "passed": true,
+      "evidence": "Response states '3 × 10^24 FLOPs, the model is below the Article 51 threshold of 10^25 FLOPs (by ~factor of 3), so the automatic systemic-risk presumption does not apply'"
+    },
+    {
+      "text": "Correctly applies the open-source exception: only copyright compliance policy (Directive 2019/790) and training content summary are required under Art. 53",
+      "passed": false,
+      "evidence": "Response incorrectly states the open-source exception covers Art. 53(1)(b) and (d) but NOT (a) and (c), meaning it still requires full Annex XI technical documentation under (a). The correct exception covers (a) and (b); only (c) copyright policy and (d) training summary are required for open-source providers."
+    },
+    {
+      "text": "Notes that Commission can still designate systemic risk independently of the FLOPs threshold under Art. 51",
+      "passed": true,
+      "evidence": "Response states 'the AI Office retains discretionary designation power' based on other criteria such as capabilities and broad reach"
+    },
+    {
+      "text": "States the 2 August 2025 application date for GPAI obligations",
+      "passed": true,
+      "evidence": "Response explicitly states 'GPAI provisions apply from 2 August 2025' in the regulation reference section"
+    }
+  ],
+  "passed_count": 4,
+  "total_count": 5,
+  "pass_rate": 0.8
+}

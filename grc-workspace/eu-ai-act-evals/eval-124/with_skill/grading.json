@@ -1,0 +1,34 @@
+{
+  "eval_id": 124,
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Correctly identifies the system as high-risk via Annex I Path A (Art. 6(1)) because Regulation 2017/745 (Medical Devices) is listed in Annex I Section A",
+      "passed": true,
+      "evidence": "Response explicitly states 'HIGH-RISK under Art. 6(1) — the Annex I safety component path — STEP 4: RISK TIER DETERMINATION — HIGH-RISK VIA ART. 6(1), ANNEX I PATH' and cites 'Regulation 2017/745 is explicitly listed in Annex I Section A, Item 11'"
+    },
+    {
+      "text": "Explains that MDR CE marking does NOT automatically satisfy AI Act compliance requirements",
+      "passed": true,
+      "evidence": "Response explicitly states 'Does the CE mark cover you? No — but it is integrated, not replaced.' and lists the additional AI Act-specific requirements not covered by MDR CE marking"
+    },
+    {
+      "text": "Explains that AI Act requirements (Arts. 9-17) must be integrated into the existing MDR conformity assessment procedure",
+      "passed": true,
+      "evidence": "Response states 'Article 43(3) integrates the MDR notified body procedure into the AI Act conformity pathway' with specific reference to the integration mechanism"
+    },
+    {
+      "text": "States the 2 August 2027 deadline specifically for Annex I safety component systems",
+      "passed": true,
+      "evidence": "Response explicitly states 'Annex I safety component obligations apply from 2 August 2027 (one year later than Annex III systems)'"
+    },
+    {
+      "text": "Identifies hospital deployer obligations under Art. 26 (instructions compliance, staff competence, monitoring, log retention)",
+      "passed": true,
+      "evidence": "Response details 'Hospital's deployer obligations (Art. 26): Staff training against automation bias, 6-month log retention, continuous monitoring and incident reporting to the vendor and market surveillance authority, GDPR DPIA, FRIA for public bodies'"
+    }
+  ],
+  "passed_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,34 @@
+{
+  "eval_id": 125,
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Correctly classifies the chatbot as limited risk (not high-risk) under Art. 50 — not falling under Annex III",
+      "passed": true,
+      "evidence": "Response explicitly states 'RISK TIER CONCLUSION: Your e-commerce chatbot is LIMITED RISK under Art. 50. It is NOT high-risk. It does not fall into any of the eight Annex III high-risk use case areas'"
+    },
+    {
+      "text": "Correctly states Art. 50(1) disclosure obligation: deployers must inform users they interact with an AI system",
+      "passed": true,
+      "evidence": "Response explicitly cites 'Art. 50(1) — Mandatory AI Disclosure: deployers of chatbots must inform users they are interacting with an AI system' as the primary obligation"
+    },
+    {
+      "text": "Notes that an e-commerce chatbot is not 'obviously AI' to a reasonably well-informed person and therefore disclosure is required",
+      "passed": true,
+      "evidence": "Response states 'Art. 50(1) is unambiguous: A customer chatbot on an e-commerce site does not meet the obvious exception — disclosure is mandatory' and that the 'obvious from context' exception does not apply"
+    },
+    {
+      "text": "Distinguishes deployer obligations (Art. 26, Art. 50) from provider/GPAI provider obligations (Art. 53)",
+      "passed": true,
+      "evidence": "Response explicitly distinguishes: 'No High-Risk Obligations (Arts. 9-17 and 26) do not apply' as deployer vs. 'Your third-party API provider bears GPAI obligations under Arts. 53-55'"
+    },
+    {
+      "text": "States the 2 August 2026 application date for Art. 50 limited-risk transparency requirements",
+      "passed": true,
+      "evidence": "Response explicitly states 'ART. 50(1) — MANDATORY AI DISCLOSURE (applies from 2 August 2026)'"
+    }
+  ],
+  "passed_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,225 @@
+EU AI Act Compliance Analysis: E-Commerce Customer-Facing Chatbot
+Regulation (EU) 2024/1689
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1 — SCOPE AND ROLE IDENTIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You are a DEPLOYER under Art. 3(4): you are using an AI system under your own authority in a professional context (operating an e-commerce business and placing the chatbot in front of customers). You are not developing or placing an AI system on the market under your own name — the underlying GPAI model is developed and placed on the market by your third-party API provider, who holds the role of PROVIDER under Art. 3(3).
+
+This deployer/provider split is critical: the EU AI Act assigns distinct and largely non-overlapping obligation sets to each role. You bear deployer obligations; your third-party GPAI model vendor bears provider and GPAI obligations.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2 — AI SYSTEM AND GPAI CLASSIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your chatbot is an AI system within the meaning of Art. 3(1): it is a machine-based system that infers from inputs (user queries, browsing history) how to generate outputs (product answers, return processing decisions, product recommendations) that affect real environments (customer purchasing behaviour and satisfaction).
+
+The underlying third-party model accessed via API is almost certainly a GPAI model under Art. 3(63) — it is trained on large amounts of data using self-supervision at scale, displays significant generality, and performs a wide range of distinct tasks. The chatbot you build on top of it is a GPAI system under Art. 3(64).
+
+This GPAI classification has compliance implications for your vendor (not for you), which are addressed in Step 7 below.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3 — PROHIBITED PRACTICES SCREEN (Art. 5 — in force from 2 February 2025)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Running through all eight prohibited categories:
+
+Art. 5(1)(a) — Subliminal/manipulative techniques: A standard e-commerce chatbot answering product questions and processing returns does not deploy subliminal techniques. However, the product recommendation function warrants scrutiny. Recommendations based on browsing history that are honest (showing products genuinely relevant to the user's interests) are not manipulative. Recommendations designed to exploit psychological weaknesses, create false urgency, or use hidden persuasion techniques could cross into this prohibition. Ensure your prompting and recommendation logic does not direct the model to use deceptive or manipulative tactics.
+
+Art. 5(1)(b) — Exploitation of vulnerabilities: Not applicable for a standard product chatbot, provided you do not target users based on vulnerability characteristics (age, disability, socioeconomic circumstances).
+
+Art. 5(1)(c) — Social scoring: Not applicable. Your chatbot does not evaluate or classify persons based on social behaviour over time to make consequential decisions in unrelated social contexts.
+
+Art. 5(1)(d) — Predictive criminal risk assessment: Not applicable.
+
+Art. 5(1)(e) — Untargeted facial recognition database creation: Not applicable.
+
+Art. 5(1)(f) — Emotion inference in workplace or educational institutions: Not applicable to a customer-facing e-commerce chatbot.
+
+Art. 5(1)(g) — Biometric categorization for sensitive attributes: Not applicable, provided your chatbot does not process biometric data.
+
+Art. 5(1)(h) — Real-time remote biometric identification: Not applicable.
+
+CONCLUSION: No prohibited practices are engaged, provided you avoid manipulative recommendation techniques. The system may lawfully be deployed in the EU.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4 — RISK TIER DETERMINATION (Art. 6)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+High-Risk Path A (Art. 6(1) — Annex I safety component): Your chatbot is not a safety component of any product covered by harmonised sectoral legislation (machinery, medical devices, civil aviation, etc.). Path A does not apply.
+
+High-Risk Path B (Art. 6(2) — Annex III listed use case): Review of all eight Annex III areas:
+
+- Area 1 (Biometrics): No biometric identification, categorization, or emotion recognition. Not engaged.
+- Area 2 (Critical infrastructure): Not a safety component of road traffic, water, energy, or digital infrastructure management. Not engaged.
+- Area 3 (Education): Not applicable to an e-commerce context.
+- Area 4 (Employment/workers): Not used for recruitment, promotion, termination, or performance evaluation of workers. Not engaged.
+- Area 5 (Essential services — creditworthiness, insurance, benefits): This is the most important area to examine for your chatbot. The chatbot answers questions, processes returns, and makes product recommendations. It does not evaluate creditworthiness (Area 5(b)), assess insurance risk (Area 5(c)), determine eligibility for public assistance (Area 5(a)), or dispatch emergency services (Area 5(d)). Not engaged for standard functions.
+- Area 6 (Law enforcement): Not applicable.
+- Area 7 (Migration/border control): Not applicable.
+- Area 8 (Justice and democratic processes): Not applicable.
+
+IMPORTANT CAVEAT — Art. 6(3) profiling override: If your chatbot's recommendation engine performs "profiling" within the meaning of Art. 3(52) — automated processing of personal data to evaluate natural persons' preferences, behaviour, or economic situation — this warrants legal attention. However, profiling alone does not make a system high-risk under Art. 6(3); it is only an override when the system is already within an Annex III category. Since your chatbot does not fall within any Annex III area, the profiling override does not elevate it to high-risk.
+
+RISK TIER CONCLUSION: Your e-commerce chatbot is LIMITED RISK under Art. 50.
+
+It is NOT high-risk. The primary legal obligation is transparency under Art. 50(1) (chatbot disclosure), with potential additional GDPR obligations given the processing of browsing history and personal data.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5 — YOUR OBLIGATIONS AS DEPLOYER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Because your chatbot is limited-risk (not high-risk), the full Art. 26 deployer obligation regime (which applies only to high-risk systems) does not apply. Your obligations are as follows:
+
+A. ART. 50(1) — MANDATORY AI DISCLOSURE (applies from 2 August 2026)
+
+This is your primary obligation and it is unambiguous.
+
+Art. 50(1) requires that deployers of AI systems intended to interact with natural persons — chatbots — ensure that users are informed they are interacting with an AI system. This disclosure must be made:
+- At the latest at the time of first interaction
+- In a clear and distinguishable manner
+- In a format meeting accessibility standards under Directive 2019/882
+
+The only exception is when it is "obvious to a reasonably well-informed user given the context and circumstances." A customer-facing chatbot on an e-commerce website does NOT meet this standard — not all customers will assume they are speaking with an AI, and the law does not permit that assumption to substitute for actual disclosure. You must disclose.
+
+Practical implementation:
+- Display a clear message at the start of every chat session, such as: "You are chatting with an AI assistant."
+- Do not give the chatbot a name that implies it is a human (e.g., "Hi, I'm Sarah from customer support").
+- The disclosure does not need to reveal which AI model powers the chatbot, only that the user is interacting with an AI system.
+
+B. GDPR — DATA PROTECTION OBLIGATIONS (concurrent, applies now)
+
+Your chatbot processes personal data (browsing history, return requests, purchase history). GDPR applies in full, independently of the AI Act. Key obligations:
+- Art. 13/14 GDPR: Inform users in your privacy notice that their data is processed by an AI system for personalisation purposes, what data is used, the legal basis, and their rights.
+- Art. 6 GDPR: Establish a valid legal basis for processing browsing history for recommendations. Consent (Art. 6(1)(a)) or legitimate interests (Art. 6(1)(f)) are the most likely bases; legitimate interests requires a balancing test.
+- Art. 22 GDPR: If return decisions are made fully automatically without meaningful human review and produce legal or similarly significant effects on customers, Art. 22 may apply, requiring either human review, a right to contest, or explicit consent.
+- Art. 35 GDPR: Consider whether a Data Protection Impact Assessment (DPIA) is required, particularly for large-scale profiling of individuals based on browsing history.
+
+C. VOLUNTARY BEST PRACTICES (no mandatory obligation but strongly recommended)
+
+Even though high-risk obligations (Arts. 9–17, 26) do not apply, the following practices are commercially prudent and may be required by your contractual relationship with your GPAI API vendor:
+- Maintain usage policies consistent with the provider's terms of service
+- Implement input/output monitoring to detect misuse or harmful outputs
+- Establish an escalation path for complex queries or complaints that routes to a human agent
+- Document your risk assessment concluding the system is limited-risk (this is good practice under Art. 6(3) documentation norms and provides a defence if ever challenged)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 6 — CONFORMITY ASSESSMENT AND CE MARKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Conformity assessment (Art. 43), CE marking (Art. 48), and EU AI database registration (Art. 49) are PROVIDER obligations for high-risk systems. Since your chatbot is limited-risk and you are the deployer (not the provider of the underlying model), NONE of these obligations fall on you.
+
+Your third-party GPAI model vendor (the provider) handles these obligations for their model. You should verify in your contract that your vendor confirms their model is compliant with applicable AI Act requirements as they come into force.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 7 — GPAI OBLIGATIONS (your vendor's obligations, not yours — but relevant contractually)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The GPAI obligations under Arts. 51–55 fall on the model PROVIDER (your API vendor), not on you as deployer. However, these obligations matter to you because:
+
+Art. 53 — Universal GPAI obligations (your vendor must comply from 2 August 2025):
+- Produce technical documentation (Annex XI)
+- Make available to downstream system providers (you) information about capabilities and limitations enabling your own compliance — this is the Annex XII downstream information obligation
+- Maintain a copyright compliance policy
+- Publish a training data summary
+
+You should, as a downstream system provider building on the GPAI model via API, request and obtain the Annex XII information from your vendor. This information helps you understand the limitations of the model you are deploying, which is relevant to accurate user communications and responsible use.
+
+Art. 51/55 — Systemic risk GPAI: If your vendor's model was trained on compute exceeding 10²⁵ FLOPs (which major frontier models may meet), it may be subject to additional Art. 55 obligations (model evaluation, adversarial testing, serious incident reporting to the AI Office, cybersecurity). Again, these fall on the vendor. However, you should ask whether your vendor has designated systemic-risk status, as this affects the robustness of their compliance programme and your own supply-chain risk.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 8 — POST-MARKET MONITORING AND INCIDENT REPORTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Formal post-market monitoring (Art. 72) and serious incident reporting to market surveillance authorities (Art. 73) are mandatory only for HIGH-RISK AI system providers. Since your chatbot is limited-risk, these are not mandatory obligations.
+
+However, as a responsible deployer, you should:
+- Monitor chatbot outputs regularly for harmful, inaccurate, or misleading responses
+- Maintain a feedback mechanism for customers to flag problematic interactions
+- If a serious incident does occur (e.g., automated return decisions causing customer harm), your contractual agreement with your vendor should establish notification pathways
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANSWER TO THE DISCLOSURE QUESTION: YES — YOU MUST DISCLOSE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Art. 50(1) is unambiguous: deployers of chatbots (AI systems intended to interact with natural persons) must ensure users are informed they are interacting with an AI system, unless it is obvious from context. A customer chatbot on an e-commerce site does not meet the "obvious" exception — disclosure is mandatory.
+
+The disclosure requirement applies from 2 August 2026.
+
+You do NOT need to:
+- Name the specific model or vendor powering the chatbot
+- Provide technical details about how the AI works
+- Obtain consent for the AI interaction itself (though GDPR consent or legitimate interests applies to the data processing involved)
+
+You DO need to:
+- Clearly state at the start of each chat that the user is speaking with an AI
+- Make this disclosure before the user has provided substantive input
+- Meet accessibility standards in the disclosure format
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMPLIANCE SUMMARY TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Requirement              | Article        | Applies To You? | Applies From    | Action Required
+-------------------------|----------------|-----------------|-----------------|------------------------------------------
+AI disclosure to users   | Art. 50(1)     | YES             | 2 Aug 2026      | Add clear "You are chatting with an AI" message at session start
+Prohibited practices     | Art. 5         | YES             | 2 Feb 2025      | Verify recommendation logic avoids manipulation
+GDPR compliance          | GDPR           | YES             | Now             | Privacy notice, legal basis, DPIA assessment
+Risk management system   | Art. 9         | NO (provider)   | —               | Vendor obligation; request confirmation via contract
+Technical documentation  | Art. 11        | NO (provider)   | —               | Vendor obligation
+Conformity assessment    | Art. 43        | NO (provider)   | —               | Vendor obligation
+CE marking               | Art. 48        | NO (provider)   | —               | Vendor obligation
+EU AI database reg.      | Art. 49        | NO (provider)   | —               | Vendor obligation
+Annex XII info request   | Art. 53        | Indirect        | 2 Aug 2025      | Request capabilities/limitations info from GPAI vendor
+Post-market monitoring   | Art. 72        | NO (mandatory)  | —               | Recommended voluntarily
+Serious incident report  | Art. 73        | NO (mandatory)  | —               | Establish internal escalation and vendor notification process
+Human oversight          | Art. 14        | NO (mandatory)  | —               | Recommended: human escalation path for complex cases
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PENALTIES FOR NON-COMPLIANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Violations of Art. 50 (including failure to disclose AI interaction) are deployer/provider violations falling under Art. 99's second tier: up to €15,000,000 or 3% of total worldwide annual turnover, whichever is higher. For SMEs and startups, the lower of the fixed amount or percentage applies.
+
+Violations of Art. 5 prohibited practices: up to €35,000,000 or 7% of global annual turnover.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KEY IMMEDIATE ACTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NOW (pre-August 2026):
+1. Audit your recommendation logic for any manipulative design patterns that could trigger Art. 5(1)(a) — this prohibition applies from 2 February 2025.
+2. Complete GDPR compliance: update privacy notice to disclose AI-powered personalisation, establish legal basis for browsing history processing, assess DPIA need.
+3. Review your GPAI vendor contract: ensure it requires them to provide Annex XII downstream information by 2 August 2025 and commits them to ongoing AI Act compliance.
+
+BY 2 AUGUST 2026:
+4. Implement Art. 50(1) AI disclosure: display a clear notification at the start of every chat session confirming the user is interacting with an AI system.
+5. Conduct and document a risk classification assessment confirming your chatbot is limited-risk (not high-risk), retaining it in case of regulatory enquiry.
+
+ONGOING:
+6. Monitor chatbot outputs for quality, accuracy, and potential harms.
+7. Maintain an accessible human escalation pathway for return disputes and complex queries.

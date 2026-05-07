@@ -1,0 +1,21 @@
+{
+  "name": "eu-ai-act",
+  "description": "EU AI Act (Regulation (EU) 2024/1689) compliance advisor — risk classification across all four tiers, all 8 prohibited practices (Art. 5), all 8 Annex III high-risk use case areas, provider and deployer obligations (Arts. 9–17, 26), GPAI model obligations and systemic risk (Arts. 51–55), conformity assessment and CE marking (Arts. 43–48), EU AI database registration, limited-risk transparency (Art. 50), governance (AI Office, AI Board), penalties (Art. 99), phase-in timeline, and cross-framework mapping to ISO 42001, NIST AI RMF, and GDPR.",
+  "version": "0.8.0",
+  "author": {
+    "name": "Hemant Naik",
+    "email": "hemant.naik@gmail.com"
+  },
+  "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+  "repository": "https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance",
+  "license": "MIT",
+  "keywords": [
+    "eu-ai-act",
+    "artificial-intelligence",
+    "ai-regulation",
+    "ai-compliance",
+    "gpai",
+    "high-risk-ai",
+    "grc"
+  ]
+}
