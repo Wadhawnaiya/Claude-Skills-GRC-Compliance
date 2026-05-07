@@ -1,0 +1,34 @@
+{
+  "eval_id": 108,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies exactly 3 MFA safeguards: 6.3, 6.4, and 6.5",
+      "passed": true,
+      "evidence": "Lists safeguards 6.3, 6.4, 6.5 with titles explicitly"
+    },
+    {
+      "text": "Correctly assigns all 3 MFA safeguards to IG2",
+      "passed": true,
+      "evidence": "States all three are IG2 in the safeguard table"
+    },
+    {
+      "text": "Explains phishing-resistant MFA (FIDO2/passkeys/hardware keys)",
+      "passed": true,
+      "evidence": "Explains FIDO2/hardware keys as phishing-resistant: \"cryptographically bound to origin URL\""
+    },
+    {
+      "text": "Explains SMS OTP vulnerabilities (SIM swap, AiTM/real-time phishing)",
+      "passed": true,
+      "evidence": "Describes AiTM phishing proxies and SIM swapping as SMS OTP vulnerabilities"
+    },
+    {
+      "text": "Notes CIS flags SMS OTP for privileged access as an explicit pitfall",
+      "passed": true,
+      "evidence": "States \"SMS OTP used for privileged access\" is a named CIS pitfall"
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,34 @@
+{
+  "eval_id": 110,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Lists all 7 safeguards (7.1\u20137.7) with their titles",
+      "passed": true,
+      "evidence": "Lists all 7 safeguards 7.1-7.7 with official CIS titles"
+    },
+    {
+      "text": "Correctly assigns safeguards 7.1\u20137.4 to IG1 and 7.5\u20137.7 to IG2",
+      "passed": true,
+      "evidence": "Table shows IG1 for 7.1-7.4, IG2 for 7.5-7.7 explicitly"
+    },
+    {
+      "text": "States Critical CVSS SLA of 15 days and High CVSS SLA of 30 days",
+      "passed": true,
+      "evidence": "States \"Critical (9.0\u201310.0): 15 days\" and \"High (7.0\u20138.9): 30 days\""
+    },
+    {
+      "text": "States quarterly scans are insufficient for IG2",
+      "passed": true,
+      "evidence": "States \"quarterly scans are non-compliant\" \u2014 IG2 requires weekly internal scans"
+    },
+    {
+      "text": "Explains that 15-day Critical SLA cannot be met with quarterly scanning",
+      "passed": true,
+      "evidence": "States \"impossible to honor the 15-day Critical vulnerability SLA\" with quarterly scanning"
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "pass_rate": 1.0
+}

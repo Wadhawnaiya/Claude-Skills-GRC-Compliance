@@ -1421,6 +1421,41 @@
       "prompt": "We are a US-headquartered technology company with \u20ac200M in EU revenue from our German and French subsidiaries combined. The German subsidiary has 600 employees and is not listed. Does CSRD apply to us as a non-EU company, and what do we need to do?",
       "expected_output": "Confirms CSRD applies to non-EU companies with >\u20ac150M net EU turnover and at least one EU subsidiary that qualifies (large company or listed). The German subsidiary has 600 employees and likely meets the large company thresholds \u2014 so yes, CSRD applies. First mandatory reporting year is FY 2028 (reporting in 2029). Explains the group-level sustainability report obligation. Notes that the non-EU parent must produce the CSRD report or can rely on an equivalent third-country standard if the Commission grants equivalence.",
       "files": []
+    },
+    {
+      "id": 106,
+      "skill": "cis-controls",
+      "prompt": "We are a 75-person accounting firm. We have one IT person who manages our systems part-time. We process client financial and tax data. We use cloud-based accounting software and Microsoft 365. We've never done a formal security assessment. What Implementation Group should we be targeting, and where should we start?",
+      "expected_output": "Correctly identifies IG2 (not just IG1) given dedicated IT responsibility and sensitive financial data. Explains the three IG criteria. Provides ordered starting point covering Controls 1-2 (inventory), 5-6 (accounts/access), 7 (patching), 11 (backups), 14 (training), 17 (IR plan). Mentions MFA on Microsoft 365 as immediate priority.",
+      "files": []
+    },
+    {
+      "id": 107,
+      "skill": "cis-controls",
+      "prompt": "Our manufacturing company (350 employees, dedicated IT team of 5) has done the following: we have antivirus on all endpoints, we patch Windows monthly, we have a basic firewall, and we do annual security training. We don't have MFA on our VPN, we don't have a vulnerability scanner, and our log management is just Windows Event Viewer on individual servers. Produce a gap assessment against CIS Controls IG2 with priority actions.",
+      "expected_output": "Identifies organization as IG2. Structured gap table covering all 18 controls. Identifies the 3 critical gaps with specific safeguard IDs: MFA on VPN (6.4), vulnerability scanner (7.5/7.6), centralized log management (8.9). Provides prioritized remediation roadmap. Mentions specific tools for each gap.",
+      "files": []
+    },
+    {
+      "id": 108,
+      "skill": "cis-controls",
+      "prompt": "Which specific CIS Controls v8 safeguards require Multi-Factor Authentication (MFA)? What are the exact safeguard IDs, their Implementation Group levels, and what types of MFA does CIS recommend? We want to understand the difference between SMS OTP and phishing-resistant MFA in the CIS Controls context.",
+      "expected_output": "Identifies exactly 3 MFA safeguards: 6.3 (externally-exposed apps), 6.4 (remote network access), 6.5 (admin access) \u2014 all IG2. Explains phishing-resistant MFA (FIDO2/hardware keys) vs SMS OTP vulnerabilities (SIM swap, AiTM). Notes CIS explicitly flags SMS for privileged access as a pitfall.",
+      "files": []
+    },
+    {
+      "id": 109,
+      "skill": "cis-controls",
+      "prompt": "We are building a security program and want to use CIS Controls v8 as our primary framework but also need to demonstrate alignment with NIST CSF 2.0 for a government contract. Map CIS Controls 1 through 8 to their corresponding NIST CSF 2.0 functions and categories. Which CIS Controls cover the NIST CSF 'Detect' function?",
+      "expected_output": "Maps CIS Controls 1-8 to NIST CSF 2.0 functions with category-level detail. Correctly identifies Control 8 (Audit Log Management) as the primary Detect function coverage in Controls 1-8. Recommends Controls 13 (Network Monitoring) and 18 (Pen Testing) for full Detect coverage. Uses CSF 2.0 category identifiers (ID.AM, PR.DS, DE.AE, etc.).",
+      "files": []
+    },
+    {
+      "id": 110,
+      "skill": "cis-controls",
+      "prompt": "Walk me through CIS Control 7 (Continuous Vulnerability Management) in detail. What are all 7 safeguards, which Implementation Group does each belong to, and what remediation SLAs does CIS recommend by CVSS severity? We run quarterly vulnerability scans right now \u2014 is that sufficient for IG2?",
+      "expected_output": "Lists all 7 safeguards (7.1-7.7) with correct IG assignments: 7.1-7.4 are IG1, 7.5-7.7 are IG2. States CVSS SLAs: Critical 15 days, High 30 days, Medium 90 days, Low 180 days. Clearly states quarterly scans are insufficient for IG2 (7.5 requires more frequent internal scans; 7.6 requires monthly external scans).",
+      "files": []
     }
   ]
 }

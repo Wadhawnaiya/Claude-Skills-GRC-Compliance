@@ -1,0 +1,34 @@
+{
+  "eval_id": 106,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies IG2 (not just IG1) for the accounting firm",
+      "passed": false,
+      "evidence": "Incorrectly recommends IG1 \u2014 overlooks that dedicated IT responsibility and sensitive financial data push to IG2"
+    },
+    {
+      "text": "Explains the three IG criteria used to determine the Implementation Group",
+      "passed": true,
+      "evidence": "Lists IG criteria: resource capacity, data sensitivity, regulatory obligations"
+    },
+    {
+      "text": "Recommends starting with Controls 1-2 (asset and software inventory)",
+      "passed": true,
+      "evidence": "Starts with inventory, patching, and account hygiene"
+    },
+    {
+      "text": "Identifies MFA on Microsoft 365 as an immediate priority action",
+      "passed": true,
+      "evidence": "Recommends MFA on M365 via Entra ID Conditional Access as top priority"
+    },
+    {
+      "text": "Mentions regulatory exposure (FTC Safeguards Rule or equivalent) driving security requirements",
+      "passed": false,
+      "evidence": "Does not cite specific regulations (FTC Safeguards Rule or IRS Pub 4557)"
+    }
+  ],
+  "passed": 3,
+  "total": 5,
+  "pass_rate": 0.6
+}

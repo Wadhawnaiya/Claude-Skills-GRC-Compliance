@@ -1,0 +1,34 @@
+{
+  "eval_id": 107,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies the organization as IG2",
+      "passed": true,
+      "evidence": "Identifies IG2 based on dedicated IT team and data sensitivity"
+    },
+    {
+      "text": "Identifies MFA on VPN as a critical gap with safeguard ID 6.4",
+      "passed": true,
+      "evidence": "Identifies MFA on VPN (CIS Control 6.4) as highest-priority critical gap"
+    },
+    {
+      "text": "Identifies missing vulnerability scanner as a critical gap (safeguards 7.5/7.6)",
+      "passed": true,
+      "evidence": "Identifies no vulnerability scanner (Control 7.5/7.6) as critical gap"
+    },
+    {
+      "text": "Identifies centralized log management gap (safeguard 8.9) as critical",
+      "passed": true,
+      "evidence": "Identifies centralized log management gap (8.9) as critical"
+    },
+    {
+      "text": "Provides structured gap table covering multiple CIS Controls with priority ratings",
+      "passed": false,
+      "evidence": "Gap assessment is prose-based without a structured table; no specific RAG/priority scoring"
+    }
+  ],
+  "passed": 4,
+  "total": 5,
+  "pass_rate": 0.8
+}

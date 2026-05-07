@@ -1,0 +1,12 @@
+{
+  "eval_id": 106,
+  "eval_name": "106 Cis Ig Determination",
+  "prompt": "We are a 75-person accounting firm...",
+  "assertions": [
+    "Correctly identifies IG2 (not just IG1) for the accounting firm",
+    "Explains the three IG criteria used to determine the Implementation Group",
+    "Recommends starting with Controls 1-2 (asset and software inventory)",
+    "Identifies MFA on Microsoft 365 as an immediate priority action",
+    "Mentions regulatory exposure (FTC Safeguards Rule or equivalent) driving security requirements"
+  ]
+}

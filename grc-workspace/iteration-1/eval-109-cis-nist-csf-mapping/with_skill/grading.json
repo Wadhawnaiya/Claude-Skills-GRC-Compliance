@@ -1,0 +1,34 @@
+{
+  "eval_id": 109,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Maps CIS Controls 1-8 to NIST CSF 2.0 functions with category identifiers",
+      "passed": true,
+      "evidence": "Full mapping table with CSF 2.0 function and category codes (DE.AE-3, ID.AM-1, PR.DS-1 etc.)"
+    },
+    {
+      "text": "Correctly identifies Control 8 as the primary Detect function coverage in Controls 1-8",
+      "passed": true,
+      "evidence": "States \"Only CIS Control 8 (Audit Log Management) maps to the Detect function within 1-8\""
+    },
+    {
+      "text": "States that Controls 1-2 map to the Identify function (ID.AM)",
+      "passed": true,
+      "evidence": "Controls 1, 2 \u2192 Identify: ID.AM-1, ID.AM-2, ID.AM-5"
+    },
+    {
+      "text": "States that Controls 3-6 map primarily to the Protect function (PR.DS, PR.AA)",
+      "passed": true,
+      "evidence": "Controls 3\u2192PR.DS, Control 5\u2192PR.AC/PR.AA, Control 6\u2192PR.AC-3/6/7"
+    },
+    {
+      "text": "Recommends Control 13 for fuller NIST CSF Detect coverage",
+      "passed": true,
+      "evidence": "Recommends Control 13 (NDR, SIEM) and Control 18 for full Detect coverage"
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "pass_rate": 1.0
+}

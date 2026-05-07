@@ -1,0 +1,34 @@
+{
+  "eval_id": 109,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Maps CIS Controls 1-8 to NIST CSF 2.0 functions with category identifiers",
+      "passed": true,
+      "evidence": "Maps all 8 controls to NIST CSF 2.0 functions with category IDs"
+    },
+    {
+      "text": "Correctly identifies Control 8 as the primary Detect function coverage in Controls 1-8",
+      "passed": true,
+      "evidence": "Identifies Control 8 as only Detect-function control in 1-8"
+    },
+    {
+      "text": "States that Controls 1-2 map to the Identify function (ID.AM)",
+      "passed": true,
+      "evidence": "Maps Controls 1-2 to ID.AM categories"
+    },
+    {
+      "text": "States that Controls 3-6 map primarily to the Protect function (PR.DS, PR.AA)",
+      "passed": true,
+      "evidence": "Maps Controls 3-6 to PR.DS and PR.AA categories"
+    },
+    {
+      "text": "Recommends Control 13 for fuller NIST CSF Detect coverage",
+      "passed": true,
+      "evidence": "Recommends Control 13 for full Detect function coverage"
+    }
+  ],
+  "passed": 5,
+  "total": 5,
+  "pass_rate": 1.0
+}

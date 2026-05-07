@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), and EU CSRD (Corporate Sustainability Reporting Directive) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), and CIS Controls v8 (CIS Top 18) — powered by Claude Skills.
 
-Benchmarked across 105 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 525 total assertions.
+Benchmarked across 110 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 550 total assertions.
 
 [![Release: v0.8.0](https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg)](../../releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 21](https://img.shields.io/badge/Skills-21-green.svg)](#the-skills)
+[![Skills: 22](https://img.shields.io/badge/Skills-22-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -37,6 +37,7 @@ Benchmarked across 105 test cases (5 per framework) using the eval framework —
   - [ITAR — International Traffic in Arms Regulations](#-itar--international-traffic-in-arms-regulations)
   - [LGPD — Brazil's General Data Protection Law](#-lgpd--brazils-general-data-protection-law)
   - [CSRD — EU Corporate Sustainability Reporting Directive](#-csrd--eu-corporate-sustainability-reporting-directive)
+  - [CIS Controls v8 — CIS Top 18 Cyber Hygiene](#-cis-controls-v8--cis-top-18-cyber-hygiene)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -496,6 +497,26 @@ The CSRD skill turns Claude into an expert advisor on **EU Directive 2022/2464 (
 
 ---
 
+### 22. 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene
+
+**File:** `CIS Controls - Claude Skill/cis-controls.skill`
+
+The CIS Controls v8 skill turns Claude into an expert CIS Controls advisor covering all **18 CIS Controls and 153 safeguards** from the May 2021 v8 release, including explicit cloud and mobile coverage. It applies the **Implementation Group (IG) framework** — IG1 (56 safeguards, essential cyber hygiene), IG2 (130 safeguards, intermediate), and IG3 (153 safeguards, advanced) — to scope guidance to each organization's risk profile and resource level.
+
+**What it does:**
+- Determines the correct **Implementation Group** for any organization based on IT resources, data sensitivity, regulatory exposure, and threat profile — then scopes all guidance to that IG
+- Conducts structured **CIS Controls gap assessments** across all 18 controls and applicable safeguards with 🔴/🟡/🟢 status, IG assignment, asset type, security function, and prioritised remediation roadmap
+- Provides **safeguard-level implementation guidance** for all 153 safeguards — practical steps, recommended tools (e.g., Qualys, CrowdStrike, Splunk, Microsoft Defender), and common pitfalls
+- Delivers a structured **IG1 12-week quick-start programme** — week-by-week asset inventory, secure configuration, access controls, patch management, backups, and training
+- **Maps CIS Controls v8 to NIST CSF 2.0** (subcategory-level), **ISO 27001:2022 Annex A**, **CMMC 2.0 / NIST SP 800-171**, **SOC 2 TSC**, and **PCI DSS v4.0**
+- Advises on **vulnerability management SLAs** — CVSS-based remediation timelines (Critical: 15 days, High: 30 days, Medium: 90 days) and authenticated scanner deployment
+- Designs **SIEM/log management programmes** per Control 8 — what to collect, retention standards (90-day hot, 12-month minimum), and NTP synchronisation
+- Provides **industry-specific guidance** — healthcare (HIPAA alignment), finance (PCI DSS alignment), government (CMMC alignment), and education (FERPA alignment)
+
+**Trigger phrases:** `CIS Controls`, `CIS Top 18`, `CIS v8`, `CIS Controls v8`, `Implementation Group`, `IG1`, `IG2`, `IG3`, `CIS safeguards`, `cyber hygiene controls`, `CIS gap assessment`, `CIS Controls NIST mapping`, `CIS Benchmarks`, `CIS CSAT`, `asset inventory CIS`, `vulnerability management CIS`, `CIS Controls ISO 27001`, `CIS Controls SOC 2`, `CIS Controls PCI DSS`, `CIS Controls CMMC`, `CIS Controls NIST CSF`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -623,6 +644,13 @@ The CSRD skill turns Claude into an expert advisor on **EU Directive 2022/2464 (
 | Drafting an at-collection privacy notice and a comprehensive privacy policy meeting all CCPA/CPRA disclosure requirements | CCPA/CPRA |
 | Implementing Global Privacy Control (GPC) signal recognition as a valid opt-out from sale/sharing | CCPA/CPRA |
 | Assessing CPPA enforcement risk and calculating penalty exposure for unintentional vs. intentional CCPA/CPRA violations | CCPA/CPRA |
+| Determining whether a small professional services firm needs IG1, IG2, or IG3 controls — and getting a scoped 12-week quick-start plan | CIS Controls v8 |
+| Running a CIS Controls v8 gap assessment for a healthcare organisation and mapping findings to HIPAA Security Rule safeguards | CIS Controls v8 + HIPAA |
+| Implementing all 56 IG1 safeguards across endpoints, user accounts, backups, and training — prioritised by security impact | CIS Controls v8 |
+| Deploying MFA across external applications, remote access, and admin accounts (Safeguards 6.3/6.4/6.5) and selecting phishing-resistant options | CIS Controls v8 |
+| Mapping CIS Controls v8 to NIST CSF 2.0 subcategories for a cross-framework compliance programme | CIS Controls v8 + NIST CSF |
+| Building a vulnerability management programme with authenticated scans, CVSS-based remediation SLAs, and tracking KPIs | CIS Controls v8 |
+| Designing a SIEM and log management programme per Control 8 — what events to collect, retention standards, and NTP synchronisation | CIS Controls v8 |
 
 ---
 
@@ -653,6 +681,7 @@ The CSRD skill turns Claude into an expert advisor on **EU Directive 2022/2464 (
    | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
    | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
    | <img src="assets/Logos/csrd-eu.svg" alt="EU" height="20" style="vertical-align:middle;object-fit:contain;"> CSRD [EU] — Corporate Sustainability Reporting Directive | [csrd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CSRD%20-%20Claude%20Skill/csrd.skill) |
+   | 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene | [cis-controls.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CIS%20Controls%20-%20Claude%20Skill/cis-controls.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -672,7 +701,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -683,13 +712,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **105 realistic test cases** were run across all 21 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **110 realistic test cases** were run across all 22 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **96%** | **503 / 525** |
-| Without skills (baseline Claude) | 81% | 425 / 525 |
-| **Delta** | **+15 points** | **+78 assertions** |
+| **With GRC Skills installed** | **96%** | **528 / 550** |
+| Without skills (baseline Claude) | 81% | 445 / 550 |
+| **Delta** | **+15 points** | **+83 assertions** |
 
 ### Per-Skill Results
 
@@ -716,6 +745,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | ITAR [US] | 5 | **100%** | 100% | 0% | USML jurisdiction analysis for military laptops; Deemed export for German engineer; DSP-73 temporary export for trade show; Violation and VSD process; TAA mandatory clauses for India |
 | LGPD [Brazil] | 5 | **100%** | 80% | +20% | Extraterritorial scope for US SaaS with Brazilian customers; Data deletion request across CRM/email/analytics; Sensitive health data marketing restrictions; Breach notification timelines (3 working days vs GDPR 72h); International transfer mechanisms to the US |
 | CSRD [EU] | 5 | **100%** | 72% | +28% | CSRD scope analysis for German listed manufacturer (PIE Wave 1); Double materiality vs GRI/TCFD; Post-DMA disclosure requirements for E1/S1/G1; GRI+TCFD to ESRS gap assessment; Non-EU company (US parent, €200M EU revenue) obligations |
+| CIS Controls v8 | 5 | **100%** | 80% | +20% | Implementation Group determination; Gap assessment for SaaS startup; MFA safeguard scoping (IG2); CIS v8 to NIST CSF 2.0 mapping; Vulnerability management programme with remediation SLAs |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 
