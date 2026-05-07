@@ -1,0 +1,283 @@
+DEEMED EXPORT COMPLIANCE ANALYSIS
+US Software Company — Chinese National Employee Access to 5D002 Encryption Source Code
+Date of Analysis: 2026-05-07
+
+==============================================================================
+EXECUTIVE SUMMARY
+==============================================================================
+
+Granting a Chinese national (even one holding Australian dual citizenship) access
+to source code for a product classified under ECCN 5D002 very likely triggers a
+deemed export obligation under the Export Administration Regulations (EAR). A
+BIS licence or applicable licence exception will almost certainly be required
+before access is granted. This is a high-risk scenario that warrants careful
+legal review before proceeding.
+
+==============================================================================
+1. BACKGROUND: THE DEEMED EXPORT RULE
+==============================================================================
+
+Under the EAR (15 CFR Part 734), a "deemed export" occurs when controlled
+technology or source code is released to a foreign national inside the United
+States. "Release" includes:
+
+  - Visual inspection of technology by foreign nationals
+  - Oral exchanges of information
+  - Applying technology abroad after release in the US
+  - Granting access to systems, source code repositories, or technical data
+
+The deemed export is treated as an export to the foreign national's country of
+citizenship/nationality, NOT the country where the release occurs (15 CFR
+734.13).
+
+==============================================================================
+2. ECCN 5D002 — WHAT IT COVERS
+==============================================================================
+
+ECCN 5D002 ("Information Security" — software) falls under Category 5, Part 2
+of the Commerce Control List (CCL). It covers software specifically designed or
+modified for encryption, cryptanalysis, or key management functions. Source code
+for encryption products (particularly those implementing non-standard or strong
+encryption algorithms) typically falls under 5D002.c.1.
+
+Control Reasons for 5D002:
+  - AT  (Anti-Terrorism)
+  - EI  (Encryption Items — the primary control reason)
+  - NS  (National Security)
+
+The EI (Encryption Items) controls are the dominant concern here and carry
+specific review and licensing requirements under Supplement No. 1 to Part 742
+and the encryption review provisions of Part 740.
+
+==============================================================================
+3. DUAL NATIONALITY — THE CRITICAL RULE
+==============================================================================
+
+BIS policy on dual nationals is unambiguous and unfavourable to the employer
+in this scenario:
+
+RULE: For deemed export purposes, BIS uses the MOST RESTRICTIVE nationality.
+When a person holds citizenship in two countries, the country that imposes
+the most restrictive export controls applies.
+
+  - China is subject to comprehensive EI controls and significant NS controls.
+  - Australia is a close ally with favourable treatment under EAR (e.g., Country
+    Group A:1 — Wassenaar Arrangement).
+
+Because the employee holds Chinese citizenship, BIS treats the deemed export
+as an export TO CHINA regardless of the Australian citizenship. The Australian
+citizenship does not dilute, override, or eliminate the China-related controls.
+
+This is explicitly addressed in BIS guidance and has been the subject of
+enforcement actions. Employers cannot rely on an employee's secondary
+(more favourable) nationality to avoid licence requirements tied to the
+primary (more restrictive) nationality.
+
+Key point: The employee's Australian passport does not help here.
+
+==============================================================================
+4. CHINA'S CONTROL STATUS UNDER THE EAR
+==============================================================================
+
+China is classified in the following Country Groups relevant to this analysis:
+
+  - Country Group D:1 (National Security concerns)
+  - Country Group D:5 (US Arms Embargo)
+  - NOT in Country Group A:1 (Wassenaar) or A:5/A:6 (Five Eyes / close allies)
+
+For ECCN 5D002 with EI controls, exports/deemed exports to China are subject
+to licence requirements or must qualify under a specific licence exception.
+
+China is NOT on the EAR Exclusion list (e.g., not Cuba, Iran, North Korea,
+Syria — which are subject to comprehensive embargoes), but it is a controlled
+destination for encryption technology under the EI regime.
+
+==============================================================================
+5. LICENCE EXCEPTIONS — CAN ANY APPLY?
+==============================================================================
+
+Several licence exceptions exist for encryption items. The most commonly used
+are:
+
+A. ENC (Encryption — 15 CFR 740.17)
+
+  ENC is the primary licence exception for encryption technology. It has
+  multiple tiers:
+
+  ENC Section 740.17(b)(1) — Mass market encryption software:
+    - Applies to products that qualify as "mass market" under the EAR
+    - Source code for encryption is generally NOT eligible for mass market
+      treatment under 740.17(b)(1). The exception is more readily available
+      for object code / compiled products, not source code.
+    - Source code for 5D002 products typically requires a higher tier review.
+
+  ENC Section 740.17(b)(3) — Government end users (allies):
+    - Does not apply here (employee is not a government end user).
+
+  ENC Section 740.17(d) — Unrestricted encryption source code:
+    - Covers source code that is publicly available (e.g., posted to the
+      internet without access controls). If the source code has already been
+      published openly, it may qualify. However, most proprietary company
+      source code does NOT qualify here.
+
+  Annual Self-Classification Report: Companies using ENC must file an annual
+  encryption registration/self-classification report with BIS and NSA
+  (Supplement No. 8 to Part 742). Failure to file is itself a violation.
+
+B. TSR (Technology and Software — Unrestricted, 15 CFR 740.13)
+
+  TSR allows release of technology and source code that is:
+    - Released to the public domain (no restriction on further dissemination)
+    - Or "educational" in nature (basic scientific information in public domain)
+
+  Proprietary commercial source code is NOT eligible for TSR.
+
+C. TMP (Temporary — 15 CFR 740.9)
+
+  For temporary exports/releases. This would not be applicable to ongoing
+  employment access.
+
+D. NLR (No Licence Required)?
+
+  For 5D002 with EI controls and a Chinese national, NLR is not available
+  as a blanket matter. The EI controls require affirmative action (either
+  a licence or a qualifying licence exception with proper procedures).
+
+CONCLUSION ON EXCEPTIONS: Unless the source code qualifies as publicly
+available/open source (in which case ENC 740.17(d) or TSR may apply after
+review), a BIS licence will very likely be required for a Chinese national to
+access proprietary 5D002 encryption source code.
+
+==============================================================================
+6. OPEN SOURCE / PUBLICLY AVAILABLE CARVE-OUT
+==============================================================================
+
+If your source code is truly publicly available (e.g., on a public GitHub repo
+with no access controls), the EAR's "publicly available" exemption (15 CFR
+734.7) may mean the technology is not subject to the EAR at all. In that case,
+no deemed export licence would be required.
+
+However, this is a narrow carve-out:
+  - The code must be genuinely publicly available without restriction
+  - Most commercial encryption source code is proprietary and does NOT qualify
+  - Even if parts of the codebase use open-source libraries, the proprietary
+    integration, configuration, and custom components remain controlled
+
+Do not assume this applies without a thorough legal review of what is public
+vs. proprietary.
+
+==============================================================================
+7. WHAT OBLIGATIONS DOES THE COMPANY HAVE?
+==============================================================================
+
+Step 1 — Classify the technology
+  Confirm the ECCN 5D002 classification is accurate. If any doubt, request
+  a commodity classification ruling from BIS (CCATS request).
+
+Step 2 — Do not grant access until compliant
+  Access to controlled source code must be withheld until either:
+    (a) A BIS licence is obtained; or
+    (b) An applicable licence exception is confirmed in writing by counsel; or
+    (c) A legal determination is made that the technology is publicly available
+        and outside EAR jurisdiction.
+
+Step 3 — Encryption Self-Classification / Annual Report
+  If not already filed, ensure your encryption products are registered under
+  the annual encryption self-classification report (Supplement No. 8 to Part
+  742). This is a standalone compliance obligation separate from the deemed
+  export question.
+
+Step 4 — Apply for a BIS Licence if required
+  Submit a licence application to BIS via SNAP-R (the online portal).
+  For an individual deemed export:
+    - Include the employee's biographical information
+    - Describe the technology (ECCN, technical parameters)
+    - Describe the business need
+    - Expect BIS review times of 30–90+ days (encryption items may take longer
+      due to NSA referral under EAR Part 742.15)
+
+Step 5 — Implement internal controls
+  While the licence application is pending (or as ongoing compliance):
+    - Restrict the employee's repository/code access by role or need-to-know
+    - Maintain access logs
+    - Train the employee and their manager on EAR obligations
+    - Document your compliance analysis in writing
+
+Step 6 — Consult export counsel
+  Given the complexity (5D002, Chinese national, dual nationality), engage a
+  qualified US export control attorney before making any access decisions.
+
+==============================================================================
+8. PENALTIES FOR NON-COMPLIANCE
+==============================================================================
+
+EAR violations (including deemed export violations) carry serious consequences:
+
+Civil penalties:
+  - Up to $364,992 per violation (adjusted annually for inflation) or twice the
+    value of the transaction, whichever is greater (as of recent adjustments)
+
+Criminal penalties:
+  - Up to $1,000,000 per violation and/or up to 20 years imprisonment
+    (for wilful violations — Export Control Reform Act of 2018 / ECRA)
+
+Other consequences:
+  - Denial of export privileges (debarment from export activities)
+  - Reputational damage
+  - Government contract ineligibility
+
+BIS has actively pursued deemed export enforcement cases. This is not a
+theoretical risk.
+
+==============================================================================
+9. PRACTICAL CONSIDERATIONS — STRUCTURING FOR COMPLIANCE
+==============================================================================
+
+While the licence application is pending, consider whether the employee can
+perform their role without accessing the controlled source code:
+  - Can work be restructured to use compiled binaries only?
+  - Can the employee work on non-encryption modules of the codebase?
+  - Can access be granted to non-controlled supporting tools only?
+
+If the employee's role genuinely requires source code access and a licence is
+needed, plan for the lead time. BIS encryption licence applications involving
+China can take several months.
+
+Some companies obtain a blanket/standing deemed export licence for categories
+of technology applicable to recurring employee situations, rather than
+applying per-employee. Consider this for ongoing hiring needs.
+
+==============================================================================
+10. SUMMARY TABLE
+==============================================================================
+
+  Question                                  Answer
+  ----------------------------------------  ---------------------------------
+  Is 5D002 source code controlled?          Yes — EI, NS, AT controls apply
+  Does deemed export rule apply?            Yes — release in US to foreign
+                                            national = deemed export
+  Does Australian citizenship help?         No — BIS uses most restrictive
+                                            nationality (China prevails)
+  Is China a controlled destination?        Yes — D:1 country group
+  Does NLR apply?                           No
+  Does ENC exception likely apply?          Only if source code is publicly
+                                            available (unlikely for proprietary)
+  Is a BIS licence required?                Almost certainly yes for proprietary
+                                            source code
+  Immediate action required?                Yes — do not grant access until
+                                            legal review and licence obtained
+
+==============================================================================
+DISCLAIMER
+==============================================================================
+
+This analysis is provided for general informational purposes based on the EAR
+framework as generally understood. It does not constitute legal advice. Export
+control regulations change frequently and the facts of individual situations
+significantly affect compliance outcomes. You should consult a qualified US
+export control attorney before making any decisions about access, licensing,
+or employee assignments involving controlled technology.
+
+==============================================================================
+END OF ANALYSIS
+==============================================================================

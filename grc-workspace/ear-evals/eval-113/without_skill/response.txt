@@ -1,0 +1,196 @@
+EXPORT COMPLIANCE RESPONSE: DISCOVERED EAR VIOLATION — 3A001 RE-EXPORT TO ENTITY LIST PARTY
+
+Situation Summary:
+- Your company exported a 3A001-classified semiconductor to a customer in Singapore.
+- That Singapore customer re-exported the item to a Chinese military research institute on the BIS Entity List.
+- You did not know of the intended re-export at the time of original sale.
+- You have now discovered the apparent violation.
+
+This is a serious situation involving potential violations of the Export Administration Regulations (EAR), 15 C.F.R. Parts 730-774, administered by the Bureau of Industry and Security (BIS) within the U.S. Department of Commerce. The key concern is that 3A001 items (semiconductors, electronic components) are controlled for National Security (NS), Anti-Terrorism (AT), and potentially other reasons, and exports/re-exports to Entity List parties generally require a license that is almost certainly subject to a policy of denial for Chinese military end-users.
+
+Below is a step-by-step guide on what to do.
+
+---
+
+STEP 1: STOP AND PRESERVE EVERYTHING IMMEDIATELY
+
+- Issue a litigation/investigation hold on all documents, records, emails, contracts, shipping documents, invoices, bank records, and communications related to this transaction.
+- Do not destroy, alter, or delete any records. Obstruction of a federal investigation is a separate and serious crime.
+- Suspend any ongoing shipments or dealings with this Singapore customer until the situation is fully assessed.
+- Identify and secure records of the original export: EAR99 or ECCN classification records, the license determination, the end-use/end-user statements or certifications obtained from the Singapore buyer, shipper's export declaration (EEI filed in AES), and any due diligence documentation.
+
+---
+
+STEP 2: ASSEMBLE AN INTERNAL RESPONSE TEAM
+
+- Immediately loop in:
+  - Legal counsel (ideally experienced export controls counsel)
+  - Senior management / C-suite
+  - Your export compliance officer (if you have one)
+  - Finance (for potential disgorgement considerations)
+- Do not conduct informal, uncoordinated inquiries. All fact-gathering should be directed by counsel to preserve attorney-client privilege where possible.
+
+---
+
+STEP 3: CONDUCT AN INTERNAL INVESTIGATION
+
+Under counsel's direction, investigate:
+
+a) The original export:
+   - Was the Singapore customer properly vetted at time of sale? Were they screened against the Consolidated Screening List (Entity List, SDN List, Denied Persons List, Debarred List)?
+   - Was the ECCN 3A001 classification accurate?
+   - What license exception, if any, was used — or was a license obtained?
+   - What end-use/end-user statements were collected from the Singapore buyer?
+   - Were there any red flags at the time that should have prompted additional diligence (e.g., questions about the end-use, unusual payment arrangements, requests for export control markings to be removed)?
+
+b) The re-export:
+   - How did you learn of the re-export? When did it occur?
+   - What evidence do you have of the Chinese military research institute as the actual end-user?
+   - Is that institute confirmed on the Entity List? (Check the current BIS Entity List at bis.doc.gov)
+   - Was there a license requirement for the re-export from Singapore to China? (Almost certainly yes — re-exports of U.S.-origin controlled items from third countries to Entity List parties require BIS authorization.)
+   - Did the Singapore customer have any obligation to notify you or seek authorization? (Review your customer agreement and any re-export certifications they signed.)
+
+c) Culpability assessment:
+   - Did your company have actual knowledge of the re-export destination?
+   - Were there red flags you should have acted on ("reason to know")?
+   - Was the Singapore customer acting as a conduit/transshipment hub — and were there indicators of this?
+   - Is there any evidence of intentional structuring to evade controls?
+
+The answers to these questions will determine the severity of the violation and shape your disclosure strategy.
+
+---
+
+STEP 4: CONSIDER VOLUNTARY SELF-DISCLOSURE (VSD) TO BIS
+
+This is one of the most important decisions you will make. BIS strongly encourages voluntary self-disclosure and provides significant mitigation credit for companies that self-report violations promptly, cooperate fully, and remediate.
+
+Why disclose:
+- BIS provides up to 50% reduction in base penalty for a VSD.
+- Failure to disclose — especially if BIS discovers the violation on its own — typically results in far harsher penalties.
+- Voluntary disclosure demonstrates good faith and can influence whether BIS pursues criminal vs. civil enforcement (BIS/OEE handles civil; DOJ handles criminal).
+- EAR violations can carry civil penalties of up to $364,992 per violation (indexed for inflation) or twice the value of the transaction, whichever is greater, and criminal penalties of up to $1,000,000 per violation and/or 20 years imprisonment.
+
+The VSD Process (15 C.F.R. Part 764, Supplement No. 1):
+
+1. Initial Notification: Submit a letter to the Director, Office of Export Enforcement (OEE), BIS, providing initial notice that you are conducting an internal review of a potential violation and intend to make a full submission. This letter preserves the date of disclosure. Send it promptly — do not wait until the investigation is complete.
+
+   Send to:
+   Office of Export Enforcement
+   Bureau of Industry and Security
+   U.S. Department of Commerce
+   14th Street and Pennsylvania Ave., NW
+   Washington, D.C. 20230
+   (or the appropriate regional OEE field office)
+
+2. Full Submission: Within 180 days of the initial notification (extensions can be requested), submit a comprehensive written disclosure that includes:
+   - A narrative description of the violation(s), including dates, parties, items, and ECCNs
+   - All relevant supporting documents (shipping records, invoices, correspondence, screening records)
+   - An explanation of how the violation occurred
+   - A description of your remediation efforts (see Step 5)
+   - Your internal compliance improvements
+
+3. Cooperation: Respond promptly to any follow-up requests from OEE. Full cooperation is a mitigating factor.
+
+Note: If there is any possibility of criminal conduct (intentional evasion, conspiracy, willful blindness), you must discuss with counsel whether to also make disclosure to DOJ or coordinate with OEE on referral.
+
+---
+
+STEP 5: CONSIDER WHETHER OFAC IS ALSO IMPLICATED
+
+Chinese military entities may also appear on OFAC's SDN List or other OFAC lists. If the end-user is OFAC-designated (not just BIS Entity Listed), you may have additional disclosure obligations to the Office of Foreign Assets Control (OFAC) under IEEPA/EO authorities separate from the EAR.
+
+Check: Is the Chinese military research institute on the SDN List or any OFAC list? If yes, consult counsel about a separate OFAC voluntary self-disclosure.
+
+---
+
+STEP 6: NOTIFY OTHER POTENTIALLY IMPLICATED AGENCIES
+
+Depending on the nature of the semiconductor and its capabilities, other agencies may have jurisdiction:
+- State Department / DDTC: If the item has defense application and could be construed as a defense article, ITAR may be implicated. (3A001 semiconductors are generally EAR-controlled, but review carefully.)
+- DOJ / FBI: BIS OEE may refer criminal matters to DOJ. If you believe criminal conduct occurred (by your company or the Singapore customer), counsel should assess proactive engagement.
+- U.S. Customs and Border Protection (CBP): May be relevant if the original export documentation was incorrect.
+
+---
+
+STEP 7: ADDRESS THE SINGAPORE CUSTOMER
+
+- Review your contractual agreements with the Singapore customer. Most robust export-controlled sales contracts include re-export restrictions, end-use certifications, and indemnification clauses for export violations by the buyer.
+- Consider whether to terminate the relationship or suspend business pending resolution.
+- Do not coach or collude with the Singapore customer on what to tell regulators.
+- Preserve all communications with the customer; do not contact them in ways that could appear to be witness tampering.
+
+---
+
+STEP 8: REMEDIATE YOUR COMPLIANCE PROGRAM
+
+BIS evaluates the strength of your export compliance program as a mitigating factor. Use this incident to:
+
+1. Audit your screening processes: Were all parties — including end-users and known re-export destinations — screened against the Consolidated Screening List? If not, implement automated screening.
+
+2. Review your ECCN classification procedures: Ensure all products are properly classified. 3A001 items carry significant controls, especially for China (AT-Column 1, NS Column 1 controls apply; China requires specific license for most NS-controlled items).
+
+3. Strengthen end-use/end-user documentation: Implement robust end-user certifications that explicitly require customers to notify you before re-exporting to controlled destinations and prohibit re-export to Entity List parties.
+
+4. Implement red flag training: Train sales, customer service, and logistics staff to recognize red flags — unusual shipping routes, customers unwilling to identify end-users, requests involving controlled countries.
+
+5. Conduct a transaction review: Look back at other sales to this Singapore customer and similar customers. Were there other shipments that may have been re-exported to problematic end-users?
+
+6. Update your compliance policies and procedures: Document the improvements in writing for the VSD submission.
+
+---
+
+STEP 9: DOCUMENT EVERYTHING
+
+Keep detailed records of:
+- When you discovered the issue
+- Who was notified internally and when
+- What investigative steps were taken and when
+- What remediation steps were implemented
+- All communications with BIS/OEE
+
+This documentation supports your VSD and demonstrates good faith.
+
+---
+
+KEY MITIGATING FACTORS UNDER BIS GUIDELINES (Supplement No. 1 to Part 766)
+
+BIS considers the following mitigating factors in penalty calculations:
+- Voluntary self-disclosure (up to 50% reduction)
+- No prior violations
+- Cooperation with investigation
+- Remedial compliance measures taken
+- Item did not provide significant military or WMD advantage
+- No evidence of intentional evasion
+- Transaction was isolated / not part of a pattern
+
+Aggravating factors that increase penalties:
+- Willful or intentional conduct
+- Prior violations
+- Involvement of WMD-related items or end-users
+- Obstruction of investigation
+- Large commercial benefit from the violation
+- Items with significant military application reaching military end-users
+
+---
+
+IMPORTANT CAVEATS
+
+This analysis is general guidance based on publicly available EAR frameworks and BIS enforcement policy. It is NOT legal advice. Given the severity of this situation — Entity List party, Chinese military end-use, controlled semiconductor — you must engage experienced export controls legal counsel immediately. The facts of your specific case will determine the appropriate strategy, and missteps (including delay) can significantly worsen outcomes.
+
+Time is critical. The sooner you move on Step 1 (preservation) and initiate attorney engagement, the better positioned you will be.
+
+---
+
+QUICK REFERENCE: KEY BIS RESOURCES
+
+- BIS Office of Export Enforcement (OEE): www.bis.doc.gov/oee
+- EAR Voluntary Self-Disclosure: 15 C.F.R. Part 764, Supplement No. 1
+- BIS Penalty Guidelines: 15 C.F.R. Part 766, Supplement No. 1
+- Consolidated Screening List: export.gov/csl (or trade.gov)
+- Entity List: 15 C.F.R. Part 744, Supplement No. 4
+- ECCN 3A001: 15 C.F.R. Part 774, CCL Category 3
+
+---
+
+Response generated: 2026-05-07
+Disclaimer: This is general informational guidance only, not legal advice. Consult qualified export controls counsel immediately.

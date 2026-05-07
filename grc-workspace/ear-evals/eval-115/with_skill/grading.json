@@ -1,0 +1,34 @@
+{
+  "eval_id": 115,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly names all 7 BIS ECP elements (or clearly covers all 7 substantively)",
+      "passed": true,
+      "evidence": "Part One explicitly names and covers all seven BIS ECP elements: (1) Management Commitment, (2) Risk Assessment, (3) Written Policies and Procedures, (4) Training and Awareness, (5) Restricted Party Screening, (6) Due Diligence (Know Your Customer), and (7) Recordkeeping and Audits — each with dedicated sections."
+    },
+    {
+      "text": "Identifies minimum restricted party lists to screen against (Entity List, Denied Persons, Unverified List, OFAC SDN)",
+      "passed": true,
+      "evidence": "Element 5, Section 5.1 lists: Entity List (Supplement 4 to Part 744), Denied Persons List (Part 764), Unverified List (Supplement 6 to Part 744), Military End-User (MEU) List, DDTC Debarred List, OFAC SDN List, and OFAC Consolidated Sanctions List — all required lists are covered."
+    },
+    {
+      "text": "Mentions the Consolidated Screening List (CSL) at trade.gov or single-search tool",
+      "passed": true,
+      "evidence": "Element 5 states 'The Consolidated Screening List (CSL) at trade.gov/consolidated-screening-list combines BIS Entity List, Denied Persons List, Unverified List, and MEU List... into a single searchable interface. Use the CSL as your primary search tool.' Also referenced in the regulatory citations section."
+    },
+    {
+      "text": "Notes 5-year recordkeeping requirement",
+      "passed": true,
+      "evidence": "Element 7 Section 7.1 states 'Retain for 5 years from the date of export or reexport' across all record types. The Part Four recordkeeping quick reference table shows '5 years from export date' for all major document types, citing § 762.6."
+    },
+    {
+      "text": "Addresses FDPR or semiconductor-specific export control considerations",
+      "passed": true,
+      "evidence": "Part Two Section B is dedicated entirely to 'FOREIGN DIRECT PRODUCT RULE (FDPR) — CRITICAL FOR YOUR COMPANY' with multiple sub-sections covering FDPR obligations. Section A covers 3B001 and 3B002 ECCNs in depth. The intro paragraph also explicitly mentions 'ECCNs 3B001 and/or 3B002' and the 'Foreign Direct Product Rule (FDPR) regime for advanced chips.'"
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

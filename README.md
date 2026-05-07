@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), and CIS Controls v8 (CIS Top 18) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), and EAR (Export Administration Regulations) — powered by Claude Skills.
 
-Benchmarked across 110 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 550 total assertions.
+Benchmarked across 115 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 575 total assertions.
 
 [![Release: v0.8.0](https://img.shields.io/badge/Release-v0.8.0-brightgreen.svg)](../../releases/tag/v0.8.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 22](https://img.shields.io/badge/Skills-22-green.svg)](#the-skills)
+[![Skills: 23](https://img.shields.io/badge/Skills-23-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -38,6 +38,7 @@ Benchmarked across 110 test cases (5 per framework) using the eval framework —
   - [LGPD — Brazil's General Data Protection Law](#-lgpd--brazils-general-data-protection-law)
   - [CSRD — EU Corporate Sustainability Reporting Directive](#-csrd--eu-corporate-sustainability-reporting-directive)
   - [CIS Controls v8 — CIS Top 18 Cyber Hygiene](#-cis-controls-v8--cis-top-18-cyber-hygiene)
+  - [EAR — Export Administration Regulations](#-ear--export-administration-regulations)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -517,6 +518,26 @@ The CIS Controls v8 skill turns Claude into an expert CIS Controls advisor cover
 
 ---
 
+### 23. 📦 EAR — Export Administration Regulations
+
+**File:** `EAR - Claude Skill/ear.skill`
+
+The EAR skill turns Claude into an expert Export Administration Regulations advisor with deep knowledge of all 15 CFR Parts 730–774, administered by the Bureau of Industry and Security (BIS). It guides exporters, manufacturers, technology companies, and compliance professionals through the full dual-use export control lifecycle — from item classification to licence analysis to enforcement response.
+
+**What it does:**
+- Applies the mandatory **Order of Review** to determine EAR vs. ITAR jurisdiction — USML check first, then CCL classification or EAR99 confirmation
+- Classifies items across all **10 CCL categories** (0–9) and **5 product groups** (A–E) with step-by-step ECCN determination, including when to seek a CCATS or CJ request
+- Analyses **licence requirements** using the Commerce Country Chart — RFC × country matrix — and identifies applicable **licence exceptions** (LVS, GBS, CIV, APP, TSR, TMP, RPL, GOV, TSU, ENC, BAG, AVS, ACE, GFT)
+- Screens transactions against all **restricted party lists**: Entity List, Denied Persons List, Unverified List, MEU List, and OFAC SDN — with guidance on the Consolidated Screening List (CSL)
+- Explains **deemed export rules** (§ 734.13), the **most restrictive nationality rule** for dual nationals, and access control obligations for foreign national employees
+- Covers the **Foreign Direct Product Rule (FDPR)** — General FDPR, Entity List FDPR (Huawei 2020), Advanced Computing FDPR (2022/2023), and Russia/Belarus FDPR (2022)
+- Guides through **Voluntary Self-Disclosure (VSD)** under § 764.5 — initial notification, 180-day full submission, OEE process, and penalty mitigation calculus
+- Designs a **7-element BIS Export Compliance Programme (ECP)** and assesses maturity (Basic/Developing/Proficient/Advanced) against BIS penalty mitigation standards
+
+**Trigger phrases:** `EAR`, `Export Administration Regulations`, `ECCN`, `EAR99`, `BIS`, `export control`, `Commerce Control List`, `CCL`, `dual-use export`, `export licence`, `Entity List`, `Denied Persons List`, `deemed export`, `FDPR`, `Foreign Direct Product Rule`, `licence exception`, `ENC exception`, `voluntary self-disclosure`, `VSD`, `SNAP-R`, `export compliance programme`, `ECP`, `restricted party screening`, `export to China`, `export to Russia`, `de minimis rule`, `CCATS`, `EAR vs ITAR`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -651,6 +672,13 @@ The CIS Controls v8 skill turns Claude into an expert CIS Controls advisor cover
 | Mapping CIS Controls v8 to NIST CSF 2.0 subcategories for a cross-framework compliance programme | CIS Controls v8 + NIST CSF |
 | Building a vulnerability management programme with authenticated scans, CVSS-based remediation SLAs, and tracking KPIs | CIS Controls v8 |
 | Designing a SIEM and log management programme per Control 8 — what events to collect, retention standards, and NTP synchronisation | CIS Controls v8 |
+| Classifying an RF power amplifier under the EAR — ECCN determination and licence requirement analysis for export to Germany | EAR |
+| Assessing deemed export obligations for a Chinese national employee accessing controlled encryption source code | EAR |
+| Responding to a discovered Entity List re-export violation — voluntary self-disclosure process and penalty mitigation | EAR |
+| Determining whether AES-256 cybersecurity software requires a BIS licence for export to France, India, and Brazil | EAR |
+| Designing a 7-element Export Compliance Programme for a semiconductor equipment company with customers in Europe and Asia | EAR |
+| Determining whether a foreign-made chip uses US-origin equipment subject to the Foreign Direct Product Rule (FDPR) | EAR |
+| Applying the ENC licence exception for a commercial encryption product and completing the one-time BIS notification | EAR |
 
 ---
 
@@ -682,6 +710,7 @@ The CIS Controls v8 skill turns Claude into an expert CIS Controls advisor cover
    | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
    | <img src="assets/Logos/csrd-eu.svg" alt="EU" height="20" style="vertical-align:middle;object-fit:contain;"> CSRD [EU] — Corporate Sustainability Reporting Directive | [csrd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CSRD%20-%20Claude%20Skill/csrd.skill) |
    | 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene | [cis-controls.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CIS%20Controls%20-%20Claude%20Skill/cis-controls.skill) |
+   | 📦 EAR [US] — Export Administration Regulations | [ear.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EAR%20-%20Claude%20Skill/ear.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -701,7 +730,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -712,13 +741,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **110 realistic test cases** were run across all 22 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **115 realistic test cases** were run across all 23 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **96%** | **528 / 550** |
-| Without skills (baseline Claude) | 81% | 445 / 550 |
-| **Delta** | **+15 points** | **+83 assertions** |
+| **With GRC Skills installed** | **96%** | **553 / 575** |
+| Without skills (baseline Claude) | 81% | 467 / 575 |
+| **Delta** | **+15 points** | **+86 assertions** |
 
 ### Per-Skill Results
 
@@ -746,6 +775,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | LGPD [Brazil] | 5 | **100%** | 80% | +20% | Extraterritorial scope for US SaaS with Brazilian customers; Data deletion request across CRM/email/analytics; Sensitive health data marketing restrictions; Breach notification timelines (3 working days vs GDPR 72h); International transfer mechanisms to the US |
 | CSRD [EU] | 5 | **100%** | 72% | +28% | CSRD scope analysis for German listed manufacturer (PIE Wave 1); Double materiality vs GRI/TCFD; Post-DMA disclosure requirements for E1/S1/G1; GRI+TCFD to ESRS gap assessment; Non-EU company (US parent, €200M EU revenue) obligations |
 | CIS Controls v8 | 5 | **100%** | 80% | +20% | Implementation Group determination; Gap assessment for SaaS startup; MFA safeguard scoping (IG2); CIS v8 to NIST CSF 2.0 mapping; Vulnerability management programme with remediation SLAs |
+| EAR [US] | 5 | **100%** | 88% | +12% | RF amplifier ECCN classification for Germany export; Deemed export for Chinese/Australian dual national on 5D002; Entity List re-export violation and VSD process; AES-256 software ENC exception for France/India/Brazil; ECP design for semiconductor equipment company |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

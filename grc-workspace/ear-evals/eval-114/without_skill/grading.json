@@ -1,0 +1,34 @@
+{
+  "eval_id": 114,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Classifies the encryption software as ECCN 5D002",
+      "passed": true,
+      "evidence": "Step 1 states 'Your product almost certainly falls under ECCN 5D002 on the Commerce Control List (CCL)' and explains the AES-256 key length exceeds the 56-bit threshold triggering encryption controls."
+    },
+    {
+      "text": "Identifies ENC licence exception (§740.17) as the applicable pathway",
+      "passed": true,
+      "evidence": "Step 4 is titled 'THE ENC LICENCE EXCEPTION (15 C.F.R. § 740.17)' and states 'the ENC licence exception (15 C.F.R. Section 740.17) is the primary pathway to avoid needing an individual licence.'"
+    },
+    {
+      "text": "States a one-time BIS notification is required before first export under ENC",
+      "passed": true,
+      "evidence": "Tier B under Step 4 states 'the standard ENC exception under 740.17(b)(2) is available after a one-time BIS/NSA review' and Step 9 practical steps state 'prepare and submit a one-time product review to BIS/NSA via SNAP-R under ENC (b)(2). Wait for clearance (or 30 days) before first export.' For Tier A (mass market), the response states no prior review is required but annual reporting applies."
+    },
+    {
+      "text": "Confirms no individual licence required for France, India, and Brazil",
+      "passed": true,
+      "evidence": "The conclusion states 'A BIS individual export licence is NOT required for France, India, and Brazil in most commercial scenarios.' France is described as 'No individual BIS licence required in the normal commercial case' and India/Brazil are confirmed as ENC exception eligible."
+    },
+    {
+      "text": "Mentions annual self-classification report requirement",
+      "passed": true,
+      "evidence": "Step 6 is titled 'ANNUAL SELF-CLASSIFICATION REPORTING REQUIREMENT' and states 'exporters using the ENC licence exception are generally required to submit annual self-classification reports to BIS and NSA by February 1 each year.' Also listed in Step 9 practical steps."
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,412 @@
+EAR COMPLIANCE ANALYSIS: COMMERCIAL EXPORT OF CYBERSECURITY SOFTWARE WITH AES-256 ENCRYPTION
+Destinations: France, India, Brazil
+Prepared under: 15 CFR Parts 730–774 (Export Administration Regulations)
+Administered by: Bureau of Industry and Security (BIS), U.S. Department of Commerce
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+Your cybersecurity software incorporating AES-256 encryption is almost certainly
+classified as ECCN 5D002 under the Commerce Control List (CCL). A BIS licence is
+not required for commercial export to France, India, or Brazil provided you qualify
+for the ENC licence exception under § 740.17. However, a one-time BIS notification
+(filing via SNAP-R) is a mandatory precondition before first use of the exception.
+No ongoing annual licence is needed, but recordkeeping and restricted-party
+screening obligations apply to every shipment.
+
+Below is a step-by-step analysis.
+
+================================================================================
+STEP 1 — JURISDICTION DETERMINATION (ORDER OF REVIEW)
+================================================================================
+
+Before classifying under the EAR, apply the mandatory Order of Review.
+
+1. ITAR / USML (22 CFR Part 121): Commercial encryption software for cybersecurity
+   does not appear on the United States Munitions List. It is not an ITAR-controlled
+   defence article. Jurisdiction is NOT with DDTC.
+
+2. Other agencies: Encryption software of this type falls outside NRC, FDA, DEA,
+   and ATF controls.
+
+3. Subject to EAR (§ 734.3): US-origin software is subject to the EAR regardless
+   of where it is located. Your product is subject to EAR.
+
+4. Proceed to CCL classification.
+
+================================================================================
+STEP 2 — ECCN CLASSIFICATION: 5D002
+================================================================================
+
+Category 5, Part 2 — Information Security.
+
+Your cybersecurity software falls under:
+
+  ECCN 5D002 — "Software" specially designed or modified for the "development",
+  "production" or "use" of equipment or "software" controlled by 5A002 or 5B002,
+  or software providing capabilities of equipment controlled by 5A002 or 5B002.
+
+AES-256 is a symmetric block cipher with a key length of 256 bits, well above the
+56-bit threshold that triggers encryption controls. Commercial cybersecurity
+software implementing AES-256 as a primary or integral feature is a paradigmatic
+5D002 product.
+
+Reasons for Control (RFCs) for ECCN 5D002:
+  - EI  — Encryption Items (primary reason for control)
+  - NS  — National Security (Column 2)
+  - AT  — Anti-Terrorism (Column 1)
+
+Note: If your software also incorporates features beyond encryption — e.g.,
+intrusion detection, firewall components, or vulnerability assessment tools — those
+features should be evaluated separately. However, the AES-256 encryption component
+alone is sufficient to produce a 5D002 classification.
+
+If you have not already obtained an official ECCN determination, consider submitting
+a Commodity Classification Automated Tracking System (CCATS) request via SNAP-R
+(snap-r.bis.doc.gov) using Form BIS-748P. This creates a defensible, BIS-endorsed
+classification record.
+
+================================================================================
+STEP 3 — LICENCE REQUIREMENT ANALYSIS (COUNTRY CHART)
+================================================================================
+
+The Commerce Country Chart (Part 738, Supplement No. 1) determines whether a
+licence is required by cross-referencing the ECCN's RFCs against each destination.
+
+--- France ---
+
+Country Group membership: A:1 (Wassenaar Arrangement), A:2 (Australia Group),
+A:3 (MTCR), A:4 (NSG), A:5 (allied/partner), B. NOT in any D or E group.
+
+Country Chart result for 5D002:
+  - NS Column 2: No "X" for France → no licence required on NS grounds
+  - EI: France is not on the EI column with an "X" for standard commercial encryption
+  - AT Column 1: No "X" for France (Country Group B, not AT-controlled destination)
+
+Preliminary conclusion: France does not generate a licence requirement on the
+Country Chart for 5D002 commercial encryption software. However, the ENC exception
+framework still applies because 5D002 carries EI controls, and BIS notification
+under § 740.17 is the mechanism that authorises export of EI-controlled items.
+
+--- India ---
+
+Country Group membership: B. India is NOT in Country Group A:5 and is not a
+member of all four multilateral export control regimes. India is also NOT in D:1,
+D:2, D:3, D:4, D:5, E:1, or E:2.
+
+Country Chart result for 5D002:
+  - NS Column 2: Check — India does have an "X" for NS2 controls in some CCL entries,
+    but for 5D002 (EI-controlled), the ENC exception framework governs.
+  - AT Column 1: No "X" for India.
+  - EI: India is not a prohibited destination for ENC (not E:1 or E:2).
+
+Preliminary conclusion: India is an eligible ENC destination. The ENC exception
+under § 740.17 is available, subject to the conditions described below.
+
+--- Brazil ---
+
+Country Group membership: B. Brazil is not in Country Group A:5 and is not in any
+D or E group.
+
+Country Chart result for 5D002:
+  - Same analysis as India applies. Brazil is an eligible ENC destination.
+  - Brazil is not on the E:1 or E:2 list.
+
+Preliminary conclusion: Brazil is an eligible ENC destination.
+
+================================================================================
+STEP 4 — ENC LICENCE EXCEPTION (§ 740.17) — DETAILED ANALYSIS
+================================================================================
+
+The ENC licence exception at § 740.17 is the primary — and almost certainly the
+correct — authorisation for your commercial exports of AES-256 cybersecurity
+software to all three destinations.
+
+--- ENC EXCEPTION STRUCTURE: THREE TIERS ---
+
+TIER 1 — § 740.17(a): Mass-Market Encryption
+  Applies to: Encryption commodities and software that qualify as "mass market"
+  under the criteria in § 740.17(b)(1) and Note 3 to Category 5, Part 2 of the CCL.
+
+  Mass-market criteria (all must be met):
+    1. The software is generally available to the public by being sold from stock
+       at retail selling points (physical or online) without restriction.
+    2. The encryption functionality cannot be easily changed by the user.
+    3. Designed for installation by the user without substantial support from the
+       supplier.
+    4. AES-256 qualifies as a standard, widely deployed algorithm — not proprietary
+       or non-standard encryption.
+
+  If your cybersecurity software is sold commercially off-the-shelf or via
+  standard download/subscription with no customised key management or bespoke
+  encryption architecture, it almost certainly qualifies as mass market.
+
+TIER 2 — § 740.17(b)(1): Source Code for Mass-Market Products
+  If you are exporting the source code of a mass-market encryption product (e.g.,
+  to an open-source community, a distribution partner, or for integration), this
+  tier applies. One-time BIS notification is still required.
+
+TIER 3 — § 740.17(b)(3): Non-Standard / Proprietary Encryption
+  If your encryption implementation is proprietary, non-standard, or cannot meet
+  the mass-market criteria above, Tier 3 applies. This requires an annual
+  self-classification report rather than a one-time notification.
+
+  ASSESSMENT: For standard AES-256 in commercially sold cybersecurity software,
+  Tier 1 (§ 740.17(a)) is the most likely applicable tier. Confirm with your
+  product manager that the mass-market criteria above are all satisfied.
+
+--- THE ONE-TIME BIS NOTIFICATION REQUIREMENT ---
+
+CRITICAL REQUIREMENT: You CANNOT use the ENC exception until you have filed the
+required notification with BIS. This is not optional.
+
+How to file:
+  1. Submit Form BIS-748P-A ("Supplement to Form BIS-748P") via SNAP-R at
+     snap-r.bis.doc.gov.
+  2. The notification covers the product (or product line) and its encryption
+     specifications (algorithm, key length, protocol).
+  3. BIS does not "approve" the notification — it is self-effectuating after filing.
+     You may begin exporting under ENC once the notification is submitted.
+  4. One notification covers all eligible destinations; you do not need separate
+     filings per country.
+
+What the notification must include:
+  - Product name and description
+  - ECCN (5D002)
+  - Encryption algorithms and key lengths (AES-256, and any others such as RSA,
+    SHA-2, TLS version)
+  - Intended markets and customer types
+  - Statement that the product meets mass-market criteria (for Tier 1)
+
+After filing: Retain a copy of the SNAP-R submission confirmation in your
+compliance records. This filing must be renewed if you materially change the
+encryption features of the product.
+
+--- ANNUAL SELF-CLASSIFICATION REPORT (§ 742.15(b)) ---
+
+All exporters relying on ENC (§ 740.17) must submit an annual self-classification
+report to BIS and NSA by February 1 of each year. This report covers all products
+exported under ENC during the prior calendar year. This is separate from, and in
+addition to, the one-time notification.
+
+The annual report is submitted via SNAP-R and must include:
+  - Product name and version
+  - ECCN
+  - Encryption details
+  - Approximate number of units/copies exported
+
+================================================================================
+STEP 5 — COUNTRY GROUP ANALYSIS FOR FRANCE, INDIA, AND BRAZIL
+================================================================================
+
+FRANCE:
+  Country Group: A:1, A:2, A:3, A:4, A:5, B
+  ENC eligibility: YES — France is a highly favoured destination. As an A:5 country
+  and EU member, France poses the lowest ENC compliance burden. The ENC exception
+  under § 740.17(a) is fully available.
+  Any restrictions: None specific to France for commercial encryption software.
+  Reexport: French customers may further reexport under ENC to most Country Group B
+  destinations without returning to you for authorisation, subject to their own
+  ENC compliance under the EAR (as foreign re-exporters, they are subject to EAR
+  reexport controls if the software was of US origin).
+
+INDIA:
+  Country Group: B
+  ENC eligibility: YES — India is a Country Group B destination. The ENC exception
+  is available under § 740.17(a).
+  Additional note: India is not a member of the Wassenaar Arrangement (A:1) or
+  Country Group A:5, meaning some other licence exceptions (e.g., TSR, GBS) have
+  narrower availability for India. However, for ENC specifically, Country Group B
+  eligibility is sufficient.
+  India-specific considerations:
+    - India has its own domestic encryption regulations (IT Act, 2000 and related
+      rules). While this does not affect your US EAR obligations, advise Indian
+      customers that domestic Indian import/use regulations may apply independently.
+    - Screen all Indian customers against the Entity List, Unverified List, and
+      Military End-User List before each shipment (see Step 6 below).
+
+BRAZIL:
+  Country Group: B
+  ENC eligibility: YES — Brazil is a Country Group B destination. The ENC exception
+  is available under § 740.17(a).
+  Brazil-specific considerations:
+    - Brazil is not subject to any US embargo or special controls.
+    - Brazil has its own data localisation and cybersecurity regulations (LGPD,
+      ANPD rules) which are separate from EAR obligations but relevant to your
+      customers' compliance.
+    - Screen all Brazilian customers against all restricted party lists.
+
+SUMMARY TABLE:
+
+Destination | Country Group | ENC Available | Restrictions
+------------|---------------|---------------|------------------------------------------
+France      | A:5, B        | YES (§740.17a)| None for commercial AES-256 software
+India       | B             | YES (§740.17a)| Screen entity lists; India not in A:5
+Brazil      | B             | YES (§740.17a)| Screen entity lists; Brazil not in A:5
+
+================================================================================
+STEP 6 — END-USER AND END-USE CONTROLS (PART 744)
+================================================================================
+
+Even with ENC exception eligibility confirmed, you must screen every transaction
+and every party before export.
+
+MANDATORY RESTRICTED PARTY SCREENING:
+Screen all parties — customer, distributor, end-user, broker, freight forwarder,
+bank, and any intermediate consignee — against:
+
+  1. Entity List (Supplement 4, Part 744): Licence required for all EAR items;
+     most licence exceptions INCLUDING ENC are unavailable for Entity List parties.
+  2. Denied Persons List (Part 764): Absolute prohibition. No exceptions apply.
+  3. Unverified List (Supplement 6, Part 744): Cannot use any licence exception.
+  4. Military End-User (MEU) List (Supplement 7, Part 744): Enhanced restrictions
+     for items in Supplement 2, Part 744.
+  5. SDN List (OFAC): Not EAR, but must be screened alongside BIS lists.
+
+Use the Consolidated Screening List at trade.gov/consolidated-screening-list for
+a single-search approach across BIS, State, and Treasury lists.
+
+WMD END-USE PROHIBITION (§ 744.2–744.6):
+No licence exception — including ENC — applies if you know or have reason to know
+your cybersecurity software will be used in nuclear weapons development, missile
+programmes, or chemical/biological weapons programmes. This prohibition is absolute.
+
+RED FLAGS (§ 732.6):
+Given that you are selling cybersecurity software (a sensitive dual-use item),
+apply heightened diligence. Stop and investigate before proceeding if:
+  - A customer refuses to identify the end-use or end-users of the software
+  - The order is inconsistent with the customer's stated business (e.g., a
+    mining company purchasing enterprise cybersecurity software in unusual volumes)
+  - Payment arrives from an unexpected third-country account
+  - The customer declines standard licence/maintenance support
+  - The customer requests delivery to an unusual transhipment point
+
+================================================================================
+STEP 7 — DEEMED EXPORT CONSIDERATIONS (§ 734.13)
+================================================================================
+
+If your company employs foreign nationals (including remote workers in France,
+India, or Brazil) who have access to the source code or controlled technology
+underlying your AES-256 implementation, a deemed export analysis is required.
+
+Releasing controlled technology or software source code to a foreign national in
+the US is deemed an export to their country of nationality. For 5D002 technology,
+if a licence would be required for export of that technology to the foreign
+national's home country, a deemed export licence or applicable exception must be
+identified.
+
+For France: country group A:5 — deemed export risk is very low; most exceptions
+available.
+For India and Brazil: Country Group B — ENC exception may cover deemed exports of
+5D002 software; confirm with your legal counsel that the deemed export falls within
+the ENC exception terms.
+
+================================================================================
+STEP 8 — ELECTRONIC EXPORT INFORMATION (EEI) FILING (PART 758)
+================================================================================
+
+EEI filing via the Automated Export System (AES) is required when:
+  - The value of the shipment exceeds $2,500 per Schedule B number and the
+    destination is outside Canada (all three destinations qualify).
+  - When filing, cite "ENC" in the licence exception field (not a licence number).
+
+For software delivered electronically (download, SaaS, cloud):
+  - If no physical media crosses the border, EEI filing requirements may not apply
+    to the electronic transmission itself. However, the EAR still controls the
+    export, and your ENC notification and recordkeeping obligations remain in full
+    force regardless of delivery method.
+
+================================================================================
+STEP 9 — RECORDKEEPING (PART 762)
+================================================================================
+
+Retain the following for 5 years from the date of each export (§ 762.6):
+  - Purchase orders, invoices, and contracts
+  - The ENC licence exception symbol ("ENC") on all shipping and export documents
+  - Your SNAP-R BIS-748P-A notification confirmation
+  - Annual self-classification reports submitted to BIS and NSA
+  - Denied party screening records and date of each screening
+  - Any end-user statements or due diligence documentation
+  - EEI/AES filing records
+
+================================================================================
+STEP 10 — ACTION CHECKLIST
+================================================================================
+
+BEFORE FIRST EXPORT:
+
+[ ] 1. Confirm ECCN 5D002 applies (consider CCATS if classification is uncertain).
+[ ] 2. Verify your product meets mass-market criteria under § 740.17(b)(1) / Note 3.
+[ ] 3. File BIS-748P-A notification via SNAP-R at snap-r.bis.doc.gov.
+[ ] 4. Set up a Consolidated Screening List workflow for all transactions.
+[ ] 5. Train sales, logistics, and finance staff on red flag recognition (§ 732.6).
+[ ] 6. Establish recordkeeping procedures (5-year retention, Part 762).
+
+FOR EVERY SHIPMENT:
+
+[ ] 7. Screen all parties against CSL and OFAC SDN list.
+[ ] 8. Confirm no red flags or WMD end-use indicators.
+[ ] 9. Cite "ENC" as the licence exception on the export documentation and EEI filing.
+[ ] 10. Retain all transaction records.
+
+ANNUALLY (by February 1):
+
+[ ] 11. Submit annual self-classification report for all ENC-exception exports
+        during the prior calendar year (§ 742.15(b)).
+
+IF PRODUCT CHANGES:
+
+[ ] 12. If you materially change the encryption algorithm, key length, or product
+        architecture, file a new BIS-748P-A notification. A material change that
+        causes the product to no longer qualify as mass-market may require
+        reclassification under Tier 3 (§ 740.17(b)(3)) or a BIS licence.
+
+================================================================================
+IMPORTANT CAVEATS AND LIMITATIONS
+================================================================================
+
+1. This analysis is based on the information provided: commercial cybersecurity
+   software, AES-256 encryption, exports to France, India, and Brazil. If the
+   software includes additional controlled features (e.g., intrusion detection
+   with NS or MT controls, or cryptanalysis tools), separate ECCN entries may
+   apply alongside or instead of 5D002.
+
+2. Country classification and Country Chart "X" marks are subject to regulatory
+   updates. Verify current Country Chart status in Part 738 Supplement No. 1
+   before export.
+
+3. This analysis does not address the destination countries' own import controls
+   for encryption software. India, Brazil, and France (via EU dual-use regulations)
+   may impose independent import licence requirements. Consult local counsel in
+   each jurisdiction.
+
+4. The ENC exception does not authorise exports to E:1 countries (Cuba, North
+   Korea, Iran, Syria) or E:2 countries (Russia, Belarus) for most encryption
+   items. None of your three destinations are E:1 or E:2, so this restriction
+   does not apply here but is noted for completeness.
+
+5. This analysis constitutes legal/compliance information and not legal advice.
+   Engage qualified export counsel for transaction-specific determinations and
+   before submitting BIS notifications or licence applications.
+
+================================================================================
+REGULATORY CITATIONS INDEX
+================================================================================
+
+§ 734.3       — Items subject to EAR
+§ 734.13      — Deemed export rule
+§ 736.2(b)    — Ten General Prohibitions
+§ 738         — Commerce Country Chart
+§ 740.2       — Global restrictions on all licence exceptions
+§ 740.17      — ENC licence exception (Encryption Items)
+§ 740.17(a)   — Tier 1: Mass-market encryption
+§ 740.17(b)(1)— Tier 2: Source code for mass-market products
+§ 740.17(b)(3)— Tier 3: Non-standard/proprietary encryption
+§ 742.15(b)   — Annual self-classification report requirement
+§ 744.2–744.6 — WMD end-use prohibitions
+§ 758.1       — EEI/AES filing requirements
+§ 762.2       — Recordkeeping — what to retain
+§ 762.6       — 5-year retention period
+Part 774      — Commerce Control List (ECCN 5D002)
+ECCN 5D002    — Information Security software classification

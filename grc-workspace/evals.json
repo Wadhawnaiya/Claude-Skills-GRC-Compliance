@@ -1,6 +1,6 @@
 {
   "skill_name": "grc-skills",
-  "description": "Evaluations for all 18 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF, SWIFT CSP, ISM, NIS2, CCPA/CPRA",
+  "description": "Evaluations for all 23 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF, SWIFT CSP, ISM, NIS2, CCPA/CPRA, CSRD, CIS Controls v8, EAR",
   "evals": [
     {
       "id": 1,
@@ -1455,6 +1455,41 @@
       "skill": "cis-controls",
       "prompt": "Walk me through CIS Control 7 (Continuous Vulnerability Management) in detail. What are all 7 safeguards, which Implementation Group does each belong to, and what remediation SLAs does CIS recommend by CVSS severity? We run quarterly vulnerability scans right now \u2014 is that sufficient for IG2?",
       "expected_output": "Lists all 7 safeguards (7.1-7.7) with correct IG assignments: 7.1-7.4 are IG1, 7.5-7.7 are IG2. States CVSS SLAs: Critical 15 days, High 30 days, Medium 90 days, Low 180 days. Clearly states quarterly scans are insufficient for IG2 (7.5 requires more frequent internal scans; 7.6 requires monthly external scans).",
+      "files": []
+    },
+    {
+      "id": 111,
+      "skill": "ear",
+      "prompt": "We manufacture an RF power amplifier that operates at 6 GHz with an output power of 40W. It is used in commercial wireless base stations. How do I classify it under the EAR, and does it need an export licence to ship to Germany?",
+      "expected_output": "Applies the Order of Review: not on USML, subject to EAR per §734.3. Searches CCL Category 3 (Electronics) — likely 3A001.b.4 or 3A001 for RF/microwave amplifiers above threshold parameters. Checks the Commerce Country Chart for NS controls: Germany is Country Group A:1/B, not D:1. Notes that Germany is a Wassenaar partner — NS Column 1 likely blank for Germany so no licence required. Identifies GBS or NLR (No Licence Required) as the applicable path. Mentions EEI filing obligations if value exceeds $2,500.",
+      "files": []
+    },
+    {
+      "id": 112,
+      "skill": "ear",
+      "prompt": "We are a US software company. We have a Chinese national employee (Chinese/Australian dual citizen) who needs access to our source code for a 5D002 encryption product. What deemed export obligations do we have, and do we need a licence?",
+      "expected_output": "Identifies this as a deemed export scenario under §734.13. Explains that 5D002 software is controlled for EI (Encryption Items) and NS reasons. Applies the 'most restrictive nationality' rule — dual Chinese/Australian national is treated as Chinese national. China is Country Group D:1. Notes that 5D002 with NS reason for control to China typically requires a licence or applicable licence exception. Explains the ENC exception (§740.17) may apply to the software itself but deemed export licences are handled separately. Advises applying for a deemed export licence via SNAP-R (BIS-748P). Notes access controls (role-based repo restrictions) as interim measure. Recommends deemed export screening in HR onboarding process.",
+      "files": []
+    },
+    {
+      "id": 113,
+      "skill": "ear",
+      "prompt": "We just discovered we shipped a 3A001 semiconductor component to a customer in Singapore, who we now believe re-exported it to a Chinese military research institute listed on the Entity List. We didn't know at the time of original sale. What do we do?",
+      "expected_output": "Identifies apparent violation: re-export to Entity List party without licence violates §744.11 and the Entity List licensing requirement. Advises immediate steps: stop any further shipments, escalate to ECO and legal counsel. Explains the Voluntary Self-Disclosure (VSD) process under §764.5: file preliminary notification to OEE promptly to preserve the VSD date, then full VSD within 180 days. Notes that VSD is a strong mitigating factor under the 2024 penalty guidelines. Advises conducting an internal investigation and root cause analysis. Notes civil penalties up to $374,474/violation or 2× transaction value. Warns that not disclosing is an aggravating factor. Recommends conducting a transaction review of all Singapore customer shipments.",
+      "files": []
+    },
+    {
+      "id": 114,
+      "skill": "ear",
+      "prompt": "Our company makes cybersecurity software that includes AES-256 encryption. We want to export it commercially to customers in France, India, and Brazil. Walk me through whether we need a BIS licence and which licence exception might apply.",
+      "expected_output": "Classifies the software as 5D002 (encryption software, EI controlled). Notes that France is Country Group A/B (EU ally — Wassenaar member); India and Brazil are Country Group B. Explains the ENC licence exception (§740.17): mass-market AES-256 encryption qualifies under Tier 1 (§740.17(a)) after filing a one-time BIS notification via SNAP-R (Form BIS-748P-A). Notes that after notification, software can be exported to Country Group B countries including France, India, Brazil without a licence. Notes ENC is NOT available for E:1 countries (Cuba, North Korea, Iran, Syria). Recommends completing the annual self-classification report requirement. Confirms no licence required for these three destinations once ENC notification is filed.",
+      "files": []
+    },
+    {
+      "id": 115,
+      "skill": "ear",
+      "prompt": "We are designing an Export Compliance Programme from scratch for our 200-person semiconductor equipment company. We export to customers in Europe, Japan, South Korea, Taiwan, and occasionally India. What are the seven BIS elements we need to implement, and what should our restricted party screening process look like?",
+      "expected_output": "Correctly names all seven BIS ECP elements: (1) Management Commitment, (2) Risk Assessment, (3) Written Policies and Procedures, (4) Training and Awareness, (5) Restricted Party Screening, (6) Due Diligence/Know Your Customer, (7) Recordkeeping and Audits. For screening: specifies minimum lists to screen (Entity List, Denied Persons List, Unverified List, MEU List, OFAC SDN, State Debarred), recommends the Consolidated Screening List at trade.gov/consolidated-screening-list. Explains screening cadence: at order acceptance, before each shipment, and monthly re-screening of existing customers. Recommends ERP integration (SAP GTS, Oracle AGIS, etc.). Notes 5-year recordkeeping requirement. Given semiconductor equipment exports (3B001/3B002 ECCNs), notes FDPR implications and heightened scrutiny for China customers.",
       "files": []
     }
   ]

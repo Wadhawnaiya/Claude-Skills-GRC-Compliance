@@ -486,6 +486,27 @@
         "vulnerability-management",
         "grc"
       ]
+    },
+    {
+      "name": "ear",
+      "source": "./plugins/ear",
+      "description": "EAR (Export Administration Regulations) compliance advisor — ECCN classification across all 10 CCL categories, EAR99 determination, EAR vs ITAR jurisdiction via Order of Review, licence requirement analysis using the Commerce Country Chart, all 14 licence exceptions (LVS, GBS, CIV, ENC, TMP, GOV, TSU, and more), restricted party screening (Entity List, Denied Persons, Unverified List, OFAC SDN), deemed exports, FDPR, VSD process, and 7-element Export Compliance Programme design. Use for any dual-use export control or BIS compliance question.",
+      "version": "0.8.0",
+      "author": {
+        "name": "Hemant Naik",
+        "email": "hemant.naik@gmail.com"
+      },
+      "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+      "category": "compliance",
+      "keywords": [
+        "ear",
+        "export-controls",
+        "eccn",
+        "bis",
+        "dual-use",
+        "export-compliance",
+        "grc"
+      ]
     }
   ]
 }

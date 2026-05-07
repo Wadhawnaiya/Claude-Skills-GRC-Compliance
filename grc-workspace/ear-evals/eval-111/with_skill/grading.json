@@ -1,0 +1,34 @@
+{
+  "eval_id": 111,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies ECCN 3A001 (or 3A001.b) for the RF power amplifier",
+      "passed": true,
+      "evidence": "Response explicitly states 'ECCN CLASSIFICATION: 3A001 (most likely 3A001.b.4)' and thoroughly analyzes 3A001.b.4 as the applicable subparagraph for the 6 GHz, 40 W RF power amplifier."
+    },
+    {
+      "text": "States no export licence required for Germany (NLR or equivalent)",
+      "passed": true,
+      "evidence": "Response clearly states 'LICENSE REQUIRED: NO' and 'EXPORT AUTHORIZATION: NLR (No License Required)' in the summary box, and 'No license is required based on the Country Chart analysis for a 3A001 item exported to Germany.'"
+    },
+    {
+      "text": "Identifies Germany as Country Group A or B (not D:1)",
+      "passed": true,
+      "evidence": "Response explicitly identifies 'Country Group A:1 (Wassenaar Arrangement member) — YES' and 'Country Group A:5 (allied/partner, license-friendly) — YES' and states 'Germany is NOT in Country Group D or E.'"
+    },
+    {
+      "text": "Mentions EEI/AES filing obligations",
+      "passed": true,
+      "evidence": "Step 6 is dedicated to 'EXPORT CLEARANCE AND DOCUMENTATION' and explicitly states 'EEI via AES (Automated Export System) is required for shipments valued over $2,500' and instructs to 'File EEI via AES if shipment value exceeds $2,500. Enter ECCN 3A001 and license code NLR.'"
+    },
+    {
+      "text": "Applies the Order of Review (USML check first)",
+      "passed": true,
+      "evidence": "Step 1 is explicitly titled 'JURISDICTION DETERMINATION (Order of Review, § 732.3)' and performs a USML check first, concluding the item is 'Not on USML — ITAR jurisdiction does NOT apply' before proceeding to EAR classification."
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

@@ -1,0 +1,34 @@
+{
+  "eval_id": 113,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies apparent violation of Entity List restriction (§744.11 or Entity List controls)",
+      "passed": true,
+      "evidence": "The opening paragraph states 'The key concern is that 3A001 items... exports/re-exports to Entity List parties generally require a license' and references 'Entity List (15 C.F.R. Part 744, Supplement 4)' multiple times. Step 3 conducts an internal investigation specifically around Entity List status."
+    },
+    {
+      "text": "Advises filing Voluntary Self-Disclosure (VSD) with BIS/OEE",
+      "passed": true,
+      "evidence": "Step 4 is titled 'CONSIDER VOLUNTARY SELF-DISCLOSURE (VSD) TO BIS' and describes the full VSD process including the two-step notification procedure referencing '15 C.F.R. Part 764, Supplement No. 1.'"
+    },
+    {
+      "text": "Explains VSD is a mitigating factor in penalty calculation",
+      "passed": true,
+      "evidence": "Step 4 states 'BIS provides up to 50% reduction in base penalty for a VSD' and the key mitigating factors section confirms 'Voluntary self-disclosure (up to 50% reduction)' as a listed factor."
+    },
+    {
+      "text": "Mentions civil penalty exposure (dollar amount or 2× transaction value)",
+      "passed": true,
+      "evidence": "Step 4 states 'EAR violations can carry civil penalties of up to $364,992 per violation (indexed for inflation) or twice the value of the transaction, whichever is greater.' Note: the amount stated is $364,992, slightly different from the expected $374,474 but represents the same penalty concept and is close enough to be credited."
+    },
+    {
+      "text": "Recommends immediate steps: stop transactions, preserve records, escalate to counsel",
+      "passed": true,
+      "evidence": "Step 1 states 'STOP AND PRESERVE EVERYTHING IMMEDIATELY' including litigation hold and suspending shipments. Step 2 states 'ASSEMBLE AN INTERNAL RESPONSE TEAM' including legal counsel. These are the first two steps before any disclosure analysis."
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}

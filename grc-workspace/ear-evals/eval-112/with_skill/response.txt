@@ -1,0 +1,331 @@
+DEEMED EXPORT ANALYSIS — CHINESE NATIONAL EMPLOYEE ACCESS TO 5D002 SOURCE CODE
+================================================================================
+Prepared under: Export Administration Regulations (EAR), 15 CFR Parts 730–774
+Administered by: Bureau of Industry and Security (BIS), U.S. Department of Commerce
+
+SCENARIO
+--------
+- Company: US software company
+- Employee: Chinese national, Chinese/Australian dual citizen, located in the US
+- Item at issue: Source code for a product classified under ECCN 5D002
+- Question: What deemed export obligations apply? Is a licence required?
+
+--------------------------------------------------------------------------------
+1. ECCN CLASSIFICATION — 5D002
+--------------------------------------------------------------------------------
+
+ECCN 5D002 covers software specifically designed or modified for the development,
+production, or use of commodities or software controlled under ECCN 5A002 or 5B002
+(information security equipment), as well as software using "cryptography" as defined
+in the CCL. In plain terms, 5D002 captures encryption software — including source
+code for encryption products.
+
+Reasons for Control under 5D002:
+  - EI  (Encryption Items) — primary control
+  - NS  (National Security)
+  - AT  (Anti-Terrorism)
+
+This is a controlled software classification, not EAR99. The source code of your
+encryption product is almost certainly 5D002 software technology or software itself.
+Note that "technology" for the development of 5D002 software (e.g., design
+documentation, architecture specs, cryptographic algorithms) would be classified
+5E002. For this analysis, we address source code access, which constitutes release
+of the 5D002 software itself.
+
+--------------------------------------------------------------------------------
+2. DEEMED EXPORT RULE — § 734.13
+--------------------------------------------------------------------------------
+
+Under 15 CFR § 734.13, the "release" of controlled technology or software to a
+foreign national in the United States is deemed to be an export to that person's
+country of nationality. This is the cornerstone of deemed export compliance.
+
+"Release" is defined broadly and includes:
+  - Visual inspection of controlled items or materials
+  - Oral briefings and demonstrations
+  - Electronic transmission (email, file share, repository access)
+  - Hands-on access to controlled systems or code
+
+Granting your employee access to the 5D002 source code repository — whether via
+GitHub, GitLab, an internal code server, or any other means — constitutes a
+"release" of controlled software under § 734.13. This triggers a deemed export
+analysis immediately.
+
+--------------------------------------------------------------------------------
+3. DUAL NATIONALITY RULE — MOST RESTRICTIVE NATIONALITY APPLIES
+--------------------------------------------------------------------------------
+
+This is the critical issue in your scenario. BIS applies the "most restrictive
+nationality" rule to individuals holding dual or multiple citizenships:
+
+  "For purposes of the deemed export rule, BIS will look to the most
+   restrictive licensing treatment applicable to any nationality held
+   by the individual."
+
+Your employee holds both Chinese and Australian citizenship. The analysis is:
+
+  - Australia: Country Group A:5 (allied/partner nation); highly favourable
+    licensing treatment; many licence exceptions available
+  - China: Country Group D:1 (national security-controlled country); D:5
+    (arms embargo); significantly more restrictive licensing treatment
+
+Result: The employee is treated as a CHINESE NATIONAL for all deemed export
+licensing purposes, regardless of Australian citizenship.
+
+Australian dual citizenship provides NO relief. The Chinese nationality controls.
+
+This rule is not discretionary. It is BIS policy applied consistently across
+enforcement actions. You may not argue that the employee's Australian passport,
+Australian residency, or Australian cultural ties change the nationality
+determination.
+
+--------------------------------------------------------------------------------
+4. LICENCE REQUIREMENT ANALYSIS FOR 5D002 TO CHINA
+--------------------------------------------------------------------------------
+
+Step 1 — Country Chart Check (15 CFR Part 738, Supplement No. 1)
+
+For ECCN 5D002, the applicable Reasons for Control are EI, NS, and AT.
+Check each against China (D:1 country) on the Commerce Country Chart:
+
+  Control Column         China
+  -----------------------------------------------
+  NS Column 1            X  (licence required)
+  NS Column 2            X  (licence required)
+  EI (Encryption Items)  Special — see ENC analysis below
+  AT Column 1            X  (licence required)
+
+A licence requirement is triggered under NS controls. The EI control for 5D002
+operates slightly differently and is addressed through the ENC licence exception
+framework below.
+
+Step 2 — Can a Licence Exception Apply?
+
+Review the key licence exceptions under Part 740:
+
+  TSU (Technology and Software Unrestricted, § 740.13):
+  - Covers published software and technology in the public domain
+  - Does NOT cover proprietary source code that is not publicly available
+  - Your source code is NOT publicly released → TSU does not apply
+
+  ENC (Encryption, § 740.17):
+  - The ENC exception is the primary pathway for 5D002 items
+  - Allows export/deemed export of certain encryption software to most destinations
+    after a one-time review and annual reporting
+  - Key eligibility tiers:
+      § 740.17(b)(1): Mass-market encryption products — broadest availability,
+        including to most Country Group D:1 countries, after one-time BIS/NSA
+        review notification
+      § 740.17(b)(2)-(3): Non-standard, proprietary encryption items — more
+        restricted; generally NOT available to Country Group D:1 nations including
+        China for source code
+
+  CRITICAL: ENC § 740.17(b)(1) for mass-market products EXCLUDES source code.
+  ENC § 740.17(b)(4) specifically restricts availability for encryption source
+  code and non-publicly available encryption software to Country Group D:1
+  countries including China.
+
+  For 5D002 source code released as a deemed export to a Chinese national:
+  - If the source code is for a product that qualifies as "mass market"
+    (widely available, off-the-shelf, with no specialised military/government
+    features), review § 740.17(b)(1) carefully — but source code (as opposed
+    to object code) may still be excluded
+  - For proprietary or non-mass-market encryption source code, ENC is generally
+    NOT available for deemed exports to Chinese nationals
+
+  CIV (Civil End-Users, § 740.7):
+  - Available for NS-controlled items to D:1 countries for civil end-use
+  - Does NOT apply to EI-controlled items (5D002 has EI control)
+  - CIV is not available here
+
+  GBS, TSR, LVS: Not applicable to 5D002 technology/software deemed exports
+  to D:1 countries.
+
+CONCLUSION ON LICENCE EXCEPTIONS:
+For most 5D002 source code deemed export scenarios involving Chinese nationals,
+no licence exception will be available. A BIS export licence will be required.
+
+--------------------------------------------------------------------------------
+5. IS A LICENCE REQUIRED? — BOTTOM LINE
+--------------------------------------------------------------------------------
+
+YES. A deemed export licence is required before your company allows this employee
+access to the 5D002 source code, unless a specific exception analysis confirms
+eligibility.
+
+The specific pathway is:
+  - Apply for a deemed export licence via SNAP-R (snap-r.bis.doc.gov)
+  - Use Form BIS-748P (Multipurpose Application Form)
+  - Describe the technology (5D002 source code), the nationality of the employee
+    (Chinese national), and the intended use (software development within the
+    company)
+  - BIS/NSA will review; encryption licence applications involve NSA referral
+  - Review timeline: up to 90 days; plan accordingly
+
+IMPORTANT: Do NOT grant the employee access to the source code while the licence
+application is pending. Doing so would constitute an unlicensed deemed export —
+a violation carrying civil penalties up to $374,474 per violation (or 2x the
+transaction value) and potential criminal exposure under § 764.2.
+
+--------------------------------------------------------------------------------
+6. POSSIBLE EXCEPTION — FUNDAMENTAL RESEARCH (§ 734.8)
+--------------------------------------------------------------------------------
+
+If any of the software development work qualifies as "fundamental research" —
+basic or applied research at an accredited institution where results are ordinarily
+published — the Fundamental Research Exclusion (FRE) under § 734.8 may apply.
+
+However, for a US software company developing a commercial encryption product:
+  - The work is not conducted at an accredited institution
+  - The source code is proprietary and not intended for public release
+  - The FRE almost certainly does NOT apply
+
+Do not rely on this exception without a detailed legal review.
+
+--------------------------------------------------------------------------------
+7. PRACTICAL HR AND ACCESS CONTROL STEPS
+--------------------------------------------------------------------------------
+
+Immediate Actions (Before Any Source Code Access):
+
+1. HALT SOURCE CODE ACCESS
+   Remove or do not grant repository access to the employee until licence analysis
+   is complete and a deemed export licence is obtained. This is a bright-line
+   compliance requirement.
+
+2. CONDUCT NATIONALITY VERIFICATION
+   Obtain documentation confirming citizenship status. Under the most-restrictive
+   nationality rule, Chinese nationality controls. Confirm there are no additional
+   citizenships via an HR screening questionnaire (ensure questionnaire is
+   legally reviewed for employment law compliance in your jurisdiction).
+
+3. CLASSIFY ALL TECHNOLOGIES THE EMPLOYEE WILL ACCESS
+   Map the specific source code modules, libraries, algorithms, and documentation
+   the employee's role requires. Classify each under the EAR:
+   - Encryption source code → 5D002 (primary)
+   - Encryption technology (design specs, algorithm documentation) → 5E002
+   - Test equipment → 5B002 (if applicable)
+
+4. SCREEN THE EMPLOYEE AGAINST RESTRICTED PARTY LISTS
+   Run the employee's name against:
+   - BIS Entity List (Supplement 4, Part 744)
+   - BIS Denied Persons List
+   - BIS Unverified List
+   - OFAC SDN List
+   Use the Consolidated Screening List at trade.gov/consolidated-screening-list.
+   Document the screening result. A match on any list creates a hard stop.
+
+5. APPLY FOR DEEMED EXPORT LICENCE VIA SNAP-R
+   File Form BIS-748P at snap-r.bis.doc.gov. Include:
+   - Description of the 5D002 source code
+   - Employee's name, nationality, job title, and role description
+   - End-use statement: internal software development only
+   - BIS-748P-A supplement for encryption items
+   Engagement of export counsel experienced in encryption licences is strongly
+   recommended given the NSA referral requirement.
+
+6. IMPLEMENT ACCESS CONTROLS PENDING LICENCE
+   During the period between hiring and licence receipt:
+   - Assign the employee to non-controlled tasks (documentation, UI work, testing
+     of non-encryption modules, or other EAR99 activities)
+   - Use role-based access controls (RBAC) on all code repositories
+   - Ensure the employee cannot access controlled source code through indirect
+     means (shared drives, Slack/Teams file sharing, screen sharing, pair
+     programming on controlled modules)
+
+7. ESTABLISH ONGOING COMPLIANCE CONTROLS
+   Once a licence is obtained:
+   - Record the licence number, conditions, and expiry date
+   - Document the access scope — what code repositories and modules are covered
+   - Audit access logs periodically to ensure usage within licence scope
+   - Re-apply at least 60 days before licence expiry
+   - Update access controls if the employee's role changes
+
+8. TRAINING
+   Ensure the employee completes EAR/deemed export training before accessing any
+   controlled material. Document completion. Retain training records for 5 years
+   (§ 762.6).
+
+9. RECORDKEEPING (§ 762)
+   Retain all of the following for 5 years:
+   - Deemed export licence application and approval
+   - Nationality screening documentation
+   - Restricted party screening records (dated)
+   - Access control logs
+   - Training records
+
+--------------------------------------------------------------------------------
+8. BROADER COMPLIANCE PROGRAMME IMPLICATIONS
+--------------------------------------------------------------------------------
+
+This scenario highlights gaps that should be addressed in your Export Compliance
+Programme (ECP) if they are not already in place:
+
+Element 3 — Written Policies and Procedures:
+  Your ECP should include a written procedure for hiring foreign nationals into
+  roles that involve access to controlled technology. The procedure should require:
+  - Pre-hire deemed export screening for all technical roles
+  - Classification review of technologies in the role scope
+  - Licence or exception determination before access is granted
+  - HR and Legal coordination on questionnaire design (nationality questions must
+    comply with employment discrimination law, but may be asked for export
+    compliance purposes under § 734.13)
+
+Element 4 — Training:
+  HR staff and engineering managers must understand deemed export concepts.
+  Engineers should understand that sharing controlled source code with foreign
+  national colleagues — even informally, in a code review or via a shared screen —
+  can constitute an unlicensed deemed export.
+
+Element 5 — Restricted Party Screening:
+  Foreign national employees should be screened against restricted party lists
+  at hire and periodically thereafter (recommended: annually, and whenever lists
+  are materially updated).
+
+Element 6 — Due Diligence:
+  For employees from D:1 countries in sensitive technical roles, enhanced due
+  diligence is appropriate. This does not mean discriminatory treatment but does
+  mean earlier and more thorough export compliance analysis.
+
+--------------------------------------------------------------------------------
+9. SUMMARY TABLE
+--------------------------------------------------------------------------------
+
+Issue                          Analysis                        Conclusion
+------------------------------ ------------------------------- ------------------
+ECCN of source code            5D002 (encryption software)     Controlled item
+Deemed export trigger          § 734.13 release of software    YES — triggered
+Applicable nationality         Most restrictive = Chinese       China (D:1)
+Country group for China        D:1, D:5                        High restriction
+NS Country Chart check         NS Column 1 & 2 = X for China  Licence required
+EI control / ENC exception     Source code excluded from       ENC likely N/A
+                               ENC § 740.17(b)(1) for D:1
+Other exceptions available     TSU, CIV, GBS, TSR              None applicable
+Licence required?              YES                             Apply via SNAP-R
+Access permitted pending app?  NO                              HALT access now
+Restricted party screening     Required                        Screen before hire
+
+--------------------------------------------------------------------------------
+10. DISCLAIMER
+--------------------------------------------------------------------------------
+
+This analysis is provided for general EAR compliance guidance purposes only and
+does not constitute legal advice. Export control regulations are complex, subject
+to frequent amendment, and highly fact-specific. Engage qualified US export
+counsel — particularly counsel with encryption (EI) and deemed export experience —
+before making final compliance determinations or filing licence applications.
+
+Key regulatory citations:
+  - Deemed exports: 15 CFR § 734.13
+  - Dual nationality rule: BIS policy; § 734.13 interpretive guidance
+  - 5D002 classification: 15 CFR Part 774, ECCN 5D002
+  - ENC licence exception: 15 CFR § 740.17
+  - Country Chart: 15 CFR Part 738, Supplement No. 1
+  - China country groups: 15 CFR Part 740, Supplement No. 1 (D:1, D:5)
+  - SNAP-R licensing: snap-r.bis.doc.gov; Form BIS-748P
+  - Recordkeeping: 15 CFR Part 762
+  - Enforcement and penalties: 15 CFR §§ 764.2, 764.3, Part 766
+
+================================================================================
+END OF ANALYSIS
+================================================================================

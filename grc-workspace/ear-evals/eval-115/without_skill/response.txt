@@ -1,0 +1,572 @@
+EXPORT COMPLIANCE PROGRAMME DESIGN FOR A 200-PERSON SEMICONDUCTOR EQUIPMENT COMPANY
+Covering the Seven BIS Elements and Restricted Party Screening
+
+=============================================================================
+
+INTRODUCTION
+
+Semiconductor equipment is among the most tightly controlled categories of dual-use technology
+in U.S. export regulations. The Export Administration Regulations (EAR), administered by the
+Bureau of Industry and Security (BIS) within the U.S. Department of Commerce, impose
+significant obligations on exporters of items classified under Export Control Classification
+Numbers (ECCNs) in the 3B category (semiconductor manufacturing equipment). Your destinations —
+Europe, Japan, South Korea, Taiwan, and India — range from very favorable (close treaty allies)
+to requiring heightened diligence (India, depending on end-use and end-user). Building a
+credible Export Compliance Programme (ECP) from scratch requires implementing the seven
+elements BIS has identified as core to an effective compliance framework.
+
+=============================================================================
+
+PART I: THE SEVEN BIS ELEMENTS OF AN EFFECTIVE EXPORT COMPLIANCE PROGRAMME
+
+BIS has articulated these elements through its enforcement guidelines, penalty mitigation
+factors, and guidance documents (including the Export Compliance Guidelines published on the
+BIS website). Companies that implement all seven elements in good faith receive meaningful
+mitigation credit in enforcement proceedings and, more importantly, are far less likely to
+commit violations in the first place.
+
+---------------------------------------------------------------------
+ELEMENT 1: MANAGEMENT COMMITMENT
+---------------------------------------------------------------------
+
+What it means:
+Senior leadership — the CEO, Board, and executive team — must visibly and actively champion
+the compliance programme. This is not a delegated-down function; it requires top-down tone
+and resources.
+
+Implementation for your company:
+
+a) Designate a senior Export Compliance Officer (ECO) or Export Compliance Manager with
+   direct reporting access to the CEO or General Counsel. For a 200-person semiconductor
+   equipment company, this should be a dedicated, experienced hire — not a collateral duty
+   added to the Legal or Finance function.
+
+b) Obtain and document Board/executive-level approval of the Export Compliance Policy
+   Statement. The policy should be signed by the CEO and reviewed annually.
+
+c) Allocate budget: screening tools, legal counsel, training platforms, and dedicated staff
+   time are real costs. Management must fund them adequately.
+
+d) Establish an Export Control Committee or steering group that includes representatives from
+   Sales, Engineering, Legal, Finance, and Operations. This group should meet at least
+   quarterly to review compliance matters, emerging regulatory changes (e.g., Entity List
+   additions), and escalations.
+
+e) Include export compliance objectives in executive performance evaluations and incorporate
+   compliance metrics in management reporting.
+
+f) Ensure that management is briefed on significant changes to the Entity List and on any
+   transactions involving heightened risk (India end-uses, unusual routing, etc.).
+
+Why it matters for semiconductor equipment:
+BIS has significantly escalated enforcement in the semiconductor space, particularly regarding
+China-adjacent supply chains, advanced node equipment, and multilateral controls under the
+Wassenaar Arrangement. Management buy-in is essential for the cultural authority to say "no"
+to a lucrative sale that raises compliance concerns.
+
+---------------------------------------------------------------------
+ELEMENT 2: RISK ASSESSMENT
+---------------------------------------------------------------------
+
+What it means:
+A systematic, documented process for identifying, evaluating, and prioritizing export control
+risks across the company's products, markets, customers, and transactions.
+
+Implementation for your company:
+
+a) Product Classification Review:
+   - Conduct a thorough ECCN classification review for all products in your portfolio.
+     Semiconductor equipment will commonly fall under ECCN 3B001 or 3B002 (equipment for
+     manufacturing semiconductor devices) or potentially 3B991/3B992 for less sensitive items.
+   - Engage outside counsel or a technical expert to classify products if internal expertise
+     is limited. Misclassification is a common source of violations.
+   - Document the classification rationale in a Classification Register, including the
+     technical parameters that drove the classification decision (e.g., overlay accuracy,
+     minimum feature size, throughput thresholds).
+   - Identify which products qualify as EAR99 (no ECCN, subject to EAR but generally low
+     risk) versus controlled ECCNs.
+
+b) Destination/Country Risk Mapping:
+   - Map your destination countries against the EAR's Country Groups (A, B, D, E).
+   - Europe and Japan: generally Country Group A, with favorable license exception
+     availability (e.g., License Exception STA — Strategic Trade Authorization).
+   - South Korea and Taiwan: broadly favorable, but verify transaction-by-transaction.
+   - India: Country Group B but not A:5 (no validated end-user list at the same level
+     as close allies). Certain items require a license for India that would be license-
+     exception eligible for Japan. Also review Validated End-User (VEU) program
+     opportunities for repeat Indian customers.
+   - Assess whether any products are subject to foreign military end-use / end-user
+     (FMEU) controls under EAR Part 744.
+
+c) End-Use Risk Assessment:
+   - Semiconductor equipment is of particular concern for:
+     * Military end-use (EAR 744.21 — the military end-use / end-user rule)
+     * WMD end-use (EAR 744.2-.6)
+     * Proliferation activities
+     * Advanced node chip fabrication that may be restricted under recent semiconductor
+       rules (e.g., October 2022 and subsequent BIS rules targeting advanced computing
+       and semiconductor manufacturing items — "ITAR-adjacent" EAR controls)
+   - Develop an end-use risk scoring matrix that factors in: customer type (IDM, foundry,
+     research institution, distributor, defense contractor), product application, and
+     country of ultimate destination.
+
+d) Channel Risk:
+   - Assess risks from distributors, sales agents, and resellers who may export your
+     equipment onward.
+   - For your destination mix, this is particularly relevant in India (where equipment
+     may be resold or transferred to third parties) and Taiwan (given proximity to China
+     and potential for diversion).
+
+e) Document and update your risk assessment at least annually and whenever there is a
+   significant change in your product portfolio, customer base, or the regulatory
+   environment.
+
+---------------------------------------------------------------------
+ELEMENT 3: EXPORT COMPLIANCE POLICIES, PROCEDURES, AND GUIDELINES
+---------------------------------------------------------------------
+
+What it means:
+Written, accessible, and operationally integrated policies that govern how the company
+conducts export-controlled activities, makes classification decisions, screens parties,
+processes license applications, and responds to red flags.
+
+Implementation for your company:
+
+a) Core Policy Documents to Draft:
+   - Export Compliance Policy (top-level, CEO-signed)
+   - Product Classification Procedure (including the ECCN determination workflow)
+   - Order Review and Transaction Screening Procedure
+   - Restricted Party Screening Procedure (see Part II below for detail)
+   - License Determination and Application Procedure
+   - Red Flag Identification and Resolution Procedure
+   - Technology Control Plan (TCP) for controlled technology
+   - Deemed Export Procedure (for foreign nationals working with controlled technology)
+   - Recordkeeping Policy (EAR requires five-year retention of export records)
+   - Incident Response and Voluntary Self-Disclosure Procedure
+
+b) Make policies searchable and accessible — host on your intranet with version control.
+   Procedures should be written at an operational level: who does what, when, using
+   which tools, and how decisions are documented.
+
+c) Integration into Business Processes:
+   - Embed compliance checkpoints in the order-to-cash process (CRM to ERP).
+   - Require compliance sign-off before contract execution for controlled items.
+   - Link classification records to the ERP system's product master data.
+
+d) Deemed Export Controls:
+   - Semiconductor equipment technology is frequently subject to deemed export controls —
+     sharing controlled technical data with a foreign national in the U.S. is treated as
+     an export to that person's country of nationality.
+   - Implement a deemed export procedure: maintain records of foreign national employees/
+     contractors with access to EAR-controlled technical data, assess their nationalities
+     against license requirements, and obtain licenses where required.
+   - This is especially important given that your engineering team likely includes
+     nationals of China, India, Taiwan, and other countries.
+
+---------------------------------------------------------------------
+ELEMENT 4: TRAINING AND AWARENESS
+---------------------------------------------------------------------
+
+What it means:
+A systematic programme to educate employees on their export control responsibilities,
+proportionate to their role and the risk level they encounter.
+
+Implementation for your company:
+
+a) Role-Based Training Curriculum:
+   - All employees: Annual general awareness training (what are export controls, why
+     they matter, what is a red flag, how to escalate).
+   - Sales and customer-facing staff: In-depth training on restricted party screening,
+     end-use/end-user red flags, license requirements by destination, and embargo awareness.
+   - Engineering and R&D: Training on deemed exports, technology control plans, and
+     classification of technical data.
+   - Shipping/logistics: Training on export documentation (EEI filings, AES), destination
+     controls statements, and physical security of shipments.
+   - Management and ECO: Advanced training on penalty exposure, recent enforcement actions,
+     and emerging regulatory changes.
+
+b) Training Delivery:
+   - Use a learning management system (LMS) to track completion and issue certificates.
+   - Supplement annual training with targeted briefings after significant regulatory changes
+     (BIS issues rules frequently in the semiconductor space).
+   - Include export compliance scenarios in onboarding for new hires in Sales, Engineering,
+     and Operations.
+
+c) Documentation:
+   - Retain training completion records. BIS views documented training as a significant
+     mitigating factor in enforcement proceedings.
+
+d) Awareness Culture:
+   - Circulate brief "compliance alerts" when significant regulatory changes occur (e.g.,
+     new Entity List additions of semiconductor customers, new EAR rules on advanced
+     computing).
+   - Maintain a confidential reporting channel for employees to raise compliance concerns
+     without fear of retaliation.
+
+---------------------------------------------------------------------
+ELEMENT 5: SCREENING, AUDITING, AND MONITORING
+---------------------------------------------------------------------
+
+What it means:
+Systematic and ongoing processes to screen transactions and parties, and to audit the
+compliance programme for effectiveness and gaps.
+
+This element has two distinct components: (a) ongoing transaction/party screening, and
+(b) periodic compliance auditing. Restricted party screening is covered in depth in
+Part II below.
+
+Auditing:
+
+a) Internal Audits:
+   - Conduct a comprehensive internal export compliance audit at least annually. The audit
+     should cover: classification accuracy, screening process adherence, license condition
+     compliance, recordkeeping, training completion, and deemed export compliance.
+   - The audit should be conducted by someone independent of the day-to-day compliance
+     function — either an internal audit team member trained in EAR, or outside counsel.
+
+b) Audit Scope for Semiconductor Equipment Exporters:
+   - Sample shipment records and verify EEI filings in AES (Automated Export System).
+   - Verify that ECCN classifications are current and reflect current product specifications
+     (engineering changes can affect ECCN).
+   - Test that restricted party screening was performed and documented for audited
+     shipments.
+   - Review license conditions for any licenses held and verify compliance.
+   - Check that technology transfers (technical data, software) to foreign nationals
+     and overseas subsidiaries/customers were properly screened and authorized.
+
+c) Monitoring:
+   - Monitor regulatory changes continuously: subscribe to BIS email alerts, Federal
+     Register notices, and law firm client alerts.
+   - Monitor the Entity List, SDN List, and other restricted party lists for additions
+     relevant to your customer/supplier base.
+   - Track BIS enforcement actions for industry-specific lessons learned.
+
+---------------------------------------------------------------------
+ELEMENT 6: HANDLING AND REPORTING EXPORT CONTROL PROBLEMS
+---------------------------------------------------------------------
+
+What it means:
+Clear processes for identifying, escalating, investigating, and (where appropriate)
+voluntarily disclosing export control violations or potential violations.
+
+Implementation for your company:
+
+a) Red Flag Escalation:
+   - Define what constitutes a "red flag" (unusual payment terms, requests to remove
+     technical markings, vague end-use descriptions, routing through unusual third
+     countries, customer reluctance to provide end-use certificates).
+   - Require employees to escalate red flags to the ECO before proceeding with a
+     transaction. Establish a formal hold process.
+
+b) Investigation Protocol:
+   - When a potential violation is identified, the ECO (with Legal) should conduct a
+     prompt preliminary investigation.
+   - Preserve all relevant records immediately.
+   - Assess whether a Voluntary Self-Disclosure (VSD) to BIS's Office of Export
+     Enforcement (OEE) is appropriate.
+
+c) Voluntary Self-Disclosure:
+   - BIS strongly encourages VSDs and provides significant mitigation credit (typically
+     50% reduction in civil penalty) for timely, complete, and good-faith disclosures.
+   - VSDs should be submitted to OEE with a narrative of facts, root cause analysis,
+     and corrective action plan.
+   - Engage experienced export control counsel before submitting a VSD.
+
+d) Corrective Action:
+   - Every violation or near-miss should result in a documented root cause analysis and
+     corrective action plan.
+   - Update policies, training, and screening procedures as needed.
+
+e) No Retaliation Policy:
+   - Employees who report compliance concerns in good faith must be protected from
+     retaliation. Make this explicit in policy and in leadership communications.
+
+---------------------------------------------------------------------
+ELEMENT 7: RECORDKEEPING
+---------------------------------------------------------------------
+
+What it means:
+Systematic maintenance of all export-related records in compliance with EAR requirements,
+and in a manner that supports auditing and investigation.
+
+Implementation for your company:
+
+a) Regulatory Requirements:
+   - EAR Part 762 requires exporters to maintain records for five years from the date
+     of export, reexport, or other regulated transaction.
+   - Required records include: export licenses, AES filings, purchase orders, invoices,
+     packing lists, shipping documents, end-use certificates, restricted party screening
+     records, and export classification determinations.
+
+b) Recordkeeping System:
+   - Implement a centralized document management system for export records.
+   - Ensure records are indexed and retrievable by transaction, customer, and date.
+   - Link records to the ERP system where possible.
+
+c) Technology Control / Data Security:
+   - Maintain access controls for technical data stored in engineering systems (PLM, CAD,
+     file servers) to prevent unauthorized access by foreign nationals or transfer to
+     unauthorized destinations.
+   - Log and retain records of technical data access for deemed export compliance.
+
+d) Retention Schedule:
+   - Set an automated retention schedule of at least five years, with legal hold
+     capability for records under investigation.
+
+=============================================================================
+
+PART II: RESTRICTED PARTY SCREENING PROCESS
+
+Restricted party screening (RPS) is arguably the most operationally critical compliance
+control for an active exporter. Transacting with a party on a restricted list is a per se
+violation of U.S. law and may result in criminal prosecution, civil penalties, and
+debarment — regardless of whether you knew the party was listed.
+
+---------------------------------------------------------------------
+WHICH LISTS MUST YOU SCREEN AGAINST?
+---------------------------------------------------------------------
+
+For a U.S.-based semiconductor equipment exporter, screening must cover at minimum:
+
+1. OFAC Lists (administered by Treasury's Office of Foreign Assets Control):
+   - Specially Designated Nationals and Blocked Persons List (SDN List) — the most
+     critical. Transacting with an SDN is generally prohibited regardless of what
+     is being sold.
+   - Non-SDN Sectoral Sanctions Identifications List (SSI List)
+   - Consolidated Sanctions List (covers multiple OFAC programs)
+   - Foreign Sanctions Evaders List
+   - Sectoral sanctions lists (e.g., for Russia, Cuba, Iran, North Korea, Syria)
+
+2. BIS Lists (administered by Department of Commerce):
+   - Entity List (EAR Part 744, Supplement 4) — parties for whom a license is required
+     for all items subject to the EAR. This list has grown dramatically in recent years
+     with semiconductor-related additions, particularly Chinese entities.
+   - Denied Persons List — parties denied export privileges; no U.S. person may
+     participate in any export transaction involving them.
+   - Unverified List — parties for whom BIS could not verify end-use; heightened due
+     diligence required; license exception unavailability.
+
+3. DDTC List (administered by State's Directorate of Defense Trade Controls):
+   - Debarred Parties List (ITAR) — while your products may be EAR-controlled rather
+     than ITAR, debarred parties are generally high-risk and warrant screening.
+
+4. Additional Government Lists:
+   - DHS CAATS / Consolidated Terrorist List
+   - FBI Most Wanted
+   - Non-SDN Palestinian Legislative Council List
+   - Various country-specific sanctions lists
+
+Best practice: Use a commercial restricted party screening (RPS) tool (e.g., Descartes
+Visual Compliance, Amber Road/E2open, Thomson Reuters World-Check, Dow Jones Risk &
+Compliance, Sayari, or similar) that aggregates all relevant lists into a single search
+interface and auto-updates as lists change. Manual screening against individual government
+websites is error-prone and not sustainable at transaction volume.
+
+---------------------------------------------------------------------
+WHEN TO SCREEN
+---------------------------------------------------------------------
+
+Screen at each of the following trigger points:
+
+1. Pre-Opportunity / Quote Stage: Screen the prospective customer (legal entity name,
+   doing business as names, and any named intermediaries) before committing engineering
+   or commercial resources to a proposal.
+
+2. Order Receipt: Screen at order entry into the ERP or order management system.
+   This is the primary transaction-level control.
+
+3. Pre-Shipment: Conduct a final screen immediately before releasing a shipment,
+   particularly if there has been a gap of more than 30 days since the last screen.
+   Entity List and SDN additions occur on a rolling basis.
+
+4. Contract Execution: Screen before signing distribution agreements, service contracts,
+   or technology license agreements.
+
+5. After Significant List Updates: When BIS makes a major Entity List addition (e.g.,
+   adding a major chip manufacturer or fab), proactively screen your existing customer
+   and pipeline against the update.
+
+6. New Employees / Contractors (Foreign Nationals): Screen under deemed export
+   obligations — assess nationality of foreign national employees before granting
+   access to controlled technology.
+
+---------------------------------------------------------------------
+WHOM TO SCREEN
+---------------------------------------------------------------------
+
+Screen all relevant parties in a transaction, not just the direct customer:
+
+- The ordering customer (bill-to party)
+- The ship-to / end-use party (may differ from the ordering customer)
+- Distributors, sales agents, and resellers acting on your behalf
+- Freight forwarders and customs brokers (for completeness)
+- Named end-users in end-use certificates
+- Ultimate consignees
+- Intermediate consignees
+- Any third parties introduced mid-transaction
+
+For your destination mix:
+- Taiwan: Pay particular attention to whether the customer or end-user has known ties to
+  Chinese entities or Chinese-funded fabs, given the EAR's focus on preventing
+  semiconductor technology from reaching restricted Chinese end-users.
+- India: Screen not just the customer but the stated end-use facility and any Indian
+  government or defense-affiliated entities involved.
+- South Korea and Japan: Lower routine risk, but screen systematically regardless —
+  lists include parties in all countries.
+- Europe: Include EU and UK sanctions lists (post-Brexit, UK has its own sanctions
+  regime) in addition to OFAC/BIS lists for customers in the UK.
+
+---------------------------------------------------------------------
+FUZZY MATCHING AND ALIAS MATCHING
+---------------------------------------------------------------------
+
+Restricted party screening is complicated by transliteration, name variations, and
+aliases. Your screening tool must:
+
+- Apply fuzzy matching logic (typically 80-85% match threshold is a reasonable starting
+  point, adjustable based on your risk tolerance).
+- Screen aliases, also-known-as (AKA), formerly-known-as (FKA), and doing-business-as
+  (DBA) names.
+- Screen addresses and other identifying information where available.
+- Flag partial matches for human review rather than auto-clearing them.
+
+Establish a documented match review process:
+- Screening tool generates a "hit" or "potential match."
+- A trained reviewer conducts manual due diligence: compare address, country, industry,
+  and other identifiers against the list entry.
+- Document the determination: confirmed match (transaction blocked) or false positive
+  (transaction cleared, with written rationale).
+- Escalate any confirmed match to the ECO and Legal.
+
+---------------------------------------------------------------------
+DOCUMENTATION
+---------------------------------------------------------------------
+
+For every screening action, retain:
+- Date and time of screen
+- Names and entities screened
+- Lists screened against (or confirmation that the tool covers all required lists)
+- Result (clear, hit, or potential match)
+- For potential matches: the reviewer's analysis and determination
+- Authorizing signature for cleared transactions involving any potential match
+
+This documentation is essential for audit defense and forms part of your five-year
+EAR recordkeeping obligation.
+
+---------------------------------------------------------------------
+CUSTOMER DUE DILIGENCE BEYOND LIST SCREENING
+---------------------------------------------------------------------
+
+Restricted party screening is necessary but not sufficient. BIS's Red Flag guidance
+(EAR Supplement 1 to Part 732, "Know Your Customer" guidance) requires that you also
+conduct broader due diligence when red flags are present.
+
+For new customers in your markets, consider also:
+- Verifying the customer's business existence and legitimacy (website, trade references,
+  business registration).
+- Requiring end-use certificates or statements for controlled items, particularly for
+  India and any new customer in any market.
+- Conducting enhanced due diligence for distributors who will resell your equipment —
+  review their customer list if possible, obtain flow-down compliance representations
+  in the distribution agreement.
+- Implementing a Know Your Customer (KYC) questionnaire for new distributors and
+  high-value customers.
+
+---------------------------------------------------------------------
+AUTOMATED INTEGRATION
+---------------------------------------------------------------------
+
+For a 200-person company with active transaction volume, integrate your RPS tool with
+your ERP or CRM system to:
+- Automatically trigger a screen when a new customer is added or a new order is entered.
+- Block order release until screening is completed and documented.
+- Generate screening certificates that attach to the shipment record.
+
+This automation reduces the risk of human omission and creates an auditable trail.
+
+---------------------------------------------------------------------
+INDIA-SPECIFIC CONSIDERATIONS FOR YOUR SCREENING PROGRAMME
+---------------------------------------------------------------------
+
+India presents additional considerations:
+
+- Indian Space Research Organisation (ISRO) and entities affiliated with it have at
+  various times appeared on restricted lists. Verify current status at each transaction.
+- India's defense-civil integration means some ostensibly commercial customers may
+  have defense connections requiring license review under EAR 744.21.
+- For certain controlled semiconductor equipment, India may require a BIS license even
+  where a license exception would apply to Japan or South Korea. Verify ECCN-specific
+  India license requirements.
+- Pursue Validated End-User (VEU) authorization for trusted, repeat Indian customers
+  to streamline ongoing transactions.
+
+=============================================================================
+
+PART III: PROGRAMME IMPLEMENTATION ROADMAP (SUGGESTED SEQUENCING)
+
+Given you are building from scratch, a phased approach is recommended:
+
+PHASE 1 (Months 1-3): Foundation
+- Hire/designate Export Compliance Officer
+- Engage outside export control counsel for initial assessment
+- Conduct ECCN classification review of product portfolio
+- Implement commercial RPS screening tool immediately
+- Draft and execute Export Compliance Policy (CEO-signed)
+- Establish screening procedure and begin documenting all screens
+
+PHASE 2 (Months 3-6): Core Programme Build
+- Draft all core policy documents (classification, order review, deemed export, etc.)
+- Implement role-based training programme; complete all-employee training
+- Conduct comprehensive risk assessment; document in writing
+- Integrate RPS tool with ERP
+- Establish Export Control Committee
+- Review and classify deemed export risk for foreign national employees
+
+PHASE 3 (Months 6-12): Full Programme Operationalization
+- Complete integration of compliance checkpoints into order-to-cash workflow
+- Conduct first internal compliance audit
+- Establish recordkeeping system and retention schedule
+- Develop incident response and VSD procedure
+- Submit VEU applications for qualifying Indian customers (if applicable)
+- Benchmark programme against BIS guidance and peer-industry practices
+
+ONGOING:
+- Annual risk assessment update
+- Annual training refresh
+- Annual internal audit
+- Continuous regulatory monitoring
+- Quarterly Export Control Committee meetings
+- Pre-shipment screening on every controlled transaction
+
+=============================================================================
+
+PART IV: KEY REGULATORY REFERENCES
+
+- Export Administration Regulations (EAR): 15 C.F.R. Parts 730-774
+- BIS Entity List: EAR Part 744, Supplement No. 4
+- BIS Denied Persons List: EAR Part 764, Supplement No. 2
+- BIS Unverified List: EAR Part 744, Supplement No. 6
+- Red Flag guidance: EAR Supplement 1 to Part 732
+- OFAC SDN List: 31 C.F.R. various parts
+- EAR Recordkeeping: 15 C.F.R. Part 762
+- BIS Penalty Guidelines: 15 C.F.R. Part 766, Supplement No. 1
+- Commerce Control List (CCL): EAR Part 774 (ECCN 3B001, 3B002 for semiconductor equipment)
+
+Note: The semiconductor equipment sector is subject to particularly dynamic regulatory
+change. As of 2024-2026, BIS has issued multiple significant rules restricting exports
+of advanced semiconductor manufacturing equipment, particularly to China, including
+restrictions on items that assist in producing advanced logic chips below certain node
+sizes. Monitor BIS Federal Register notices closely and engage outside counsel to assess
+the impact of each new rule on your product portfolio and customer relationships.
+
+=============================================================================
+
+DISCLAIMER
+
+This document reflects general knowledge of U.S. export control law and BIS compliance
+programme design principles as of May 2026. It does not constitute legal advice.
+Export control regulations change frequently and can be highly fact-specific. Consult
+qualified export control counsel before making licensing determinations or compliance
+programme decisions.
+
+=============================================================================

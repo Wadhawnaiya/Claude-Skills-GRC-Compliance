@@ -1,0 +1,876 @@
+EXPORT COMPLIANCE PROGRAMME DESIGN FOR A 200-PERSON SEMICONDUCTOR EQUIPMENT COMPANY
+=====================================================================================
+Prepared under the Export Administration Regulations (EAR), 15 CFR Parts 730–774
+Bureau of Industry and Security (BIS), U.S. Department of Commerce
+
+Company profile: 200 employees, semiconductor capital equipment manufacturer, export
+destinations: Europe, Japan, South Korea, Taiwan, occasional India.
+
+======================================================================================
+PART ONE: THE SEVEN BIS ELEMENTS OF AN EFFECTIVE EXPORT COMPLIANCE PROGRAMME (ECP)
+======================================================================================
+
+BIS has identified seven elements of an effective ECP. A documented, fully functioning
+ECP is the single largest mitigating factor in an enforcement action — it can reduce
+civil penalties substantially and, in borderline cases, result in a Warning Letter rather
+than a monetary penalty. For a semiconductor equipment company, the stakes are
+particularly high: your core products almost certainly fall under ECCNs 3B001 and/or
+3B002, which carry NS, AT, and NP controls and are central to the Foreign Direct Product
+Rule (FDPR) regime for advanced chips. Here is how to build each element.
+
+----------------------------------------------------------------------
+ELEMENT 1 — MANAGEMENT COMMITMENT
+----------------------------------------------------------------------
+
+What BIS expects:
+  Senior leadership must visibly and substantively champion export compliance — not
+  simply sign a policy and move on. This means resources, authority, and accountability
+  flowing from the top.
+
+Specific actions for your company:
+
+  1.1 Export Compliance Policy
+      Draft a written, board-approved Export Compliance Policy signed by the CEO or
+      President. The policy must state that compliance with EAR (and any applicable ITAR
+      obligations) is a condition of doing business, that violations will not be tolerated,
+      and that resources will be provided to maintain the programme.
+
+  1.2 Designated Export Control Officer (ECO)
+      Appoint an ECO in writing. For a 200-person company with semiconductor equipment
+      exports to Japan, South Korea, Taiwan, and India, this should be a dedicated
+      position, not a collateral duty. The ECO must have direct access to senior leadership
+      and authority to stop shipments. Document the ECO's authority, reporting line, and
+      budget.
+
+  1.3 Compliance Reporting Structure
+      Implement quarterly compliance reporting to the CEO/Board. Reports should cover:
+      screening results, classification updates, licence status, training completion rates,
+      and any identified compliance gaps or near-misses.
+
+  1.4 Annual ECP Review Certification
+      The ECO should certify annually to the board that the ECP is operating effectively,
+      identify any gaps, and propose remediation with timelines and budgets.
+
+  1.5 Resources
+      Commit budget for: screening software (see Element 5), ERP integration, legal
+      counsel with EAR expertise, and periodic third-party ECP audits. BIS rewards
+      companies that invest in compliance infrastructure, not just paper policies.
+
+  Semiconductor-specific note: Given the heightened scrutiny on semiconductor
+  manufacturing equipment — particularly in light of the October 2022 and October 2023
+  BIS rules on advanced computing — management commitment must include explicit
+  attention to China-related transactions and FDPR applicability. Your CEO and board
+  should be briefed on what these rules mean operationally.
+
+----------------------------------------------------------------------
+ELEMENT 2 — RISK ASSESSMENT
+----------------------------------------------------------------------
+
+What BIS expects:
+  A systematic identification of all items, transactions, customers, and channels that
+  present export control risk, with documented rationale.
+
+Specific actions:
+
+  2.1 Product Classification Audit (Start Here)
+      Every product in your portfolio must be classified under the EAR. For semiconductor
+      capital equipment, the primary ECCNs are:
+
+        3B001 — Equipment for the manufacture of semiconductor devices or materials:
+          - Lithography equipment (photolithography, e-beam, ion beam)
+          - Etch equipment (plasma, wet etch)
+          - Deposition equipment (CVD, PVD, ALD, MBE)
+          - Ion implantation equipment
+          - Rapid thermal processing equipment
+          Controls include: NS, AT, and in some cases NP or MT
+          Note: 3B001.a through 3B001.j have specific technical parameter thresholds
+          that determine control.
+
+        3B002 — Equipment for the inspection and testing of semiconductor devices:
+          - Wafer probers, testers, parametric test equipment
+          - In-process and post-process metrology tools
+          Controls: NS, AT
+
+        3D001/3D002/3E001/3E002 — Corresponding software (D) and technology (E) for
+          3B equipment. Software and technology ECCNs must be classified separately
+          from the equipment itself.
+
+        EAR99 — Lower-end equipment, spare parts, consumables with no CCL entry may
+          be EAR99. Do not assume; verify against the CCL.
+
+      Build an ECCN Classification Log with these fields for every product, subassembly,
+      component, and software package:
+        - Part number and description
+        - Technical parameters reviewed (e.g., minimum feature size, throughput)
+        - ECCN assigned
+        - Reason(s) for Control (NS, AT, NP, etc.)
+        - Date of classification
+        - Classifier name
+        - Next review date (trigger: product modification, new regulatory guidance)
+
+  2.2 Geography Risk Assessment
+      Your destination mix presents the following risk profile:
+
+        Europe (EU/UK/EEA): Generally A:1, A:5 countries. Low-risk for most 3B001/3B002
+          exports; many licence exceptions available (e.g., STA for A:5 countries). Still
+          requires screening and classification.
+
+        Japan: A:1, A:5. Low licence risk for most items. Japan is a Wassenaar Arrangement
+          member and a close ally. Japan's own export controls (FEFTA/Foreign Exchange Act)
+          mirror EAR in many respects. However, Japan-origin semiconductor equipment is
+          subject to FDPR analysis.
+
+        South Korea: A:1, A:5. Similar to Japan. Low licence risk for NS-controlled items.
+          KITA alignment with multilateral regimes.
+
+        Taiwan: Country Group B (not A:5). Taiwan is not a Wassenaar member but is
+          treated favourably. However, proximity to China and active PRC pressure on
+          Taiwan-based chipmakers (TSMC, UMC, etc.) elevates the diversion and re-export
+          risk. Taiwan-based fab customers may be producing chips for Chinese end-users.
+          Enhanced due diligence required.
+
+        India: Country Group B. India is an occasional destination. India became an
+          A:5-equivalent partner (U.S.-India iCET initiative) but for EAR purposes India
+          remains Country Group B for most purposes. India has its own import controls
+          under SCOMET. For 3B001/3B002 equipment, verify licence exception availability
+          on a case-by-case basis.
+
+  2.3 Customer/Channel Risk Assessment
+      Segment customers by risk tier:
+        Tier 1 (Low): Large, established IDMs and foundries in EU/Japan/Korea with
+          documented end-use (Intel, Samsung, TSMC, Infineon, etc.)
+        Tier 2 (Medium): Distributors, trading companies, smaller fabs; Taiwan and
+          India customers; customers whose end-use is not wholly transparent
+        Tier 3 (High): Any customer with connections to China; distributors who
+          sub-distribute in D:1 countries; any customer on or near any restricted list
+
+  2.4 Technology Risk Assessment (Deemed Exports)
+      For a semiconductor equipment company, your engineers regularly work with
+      3E001/3E002-controlled technology. Every foreign national employee or visitor who
+      accesses controlled technology is a deemed export risk. Conduct a deemed export
+      risk assessment covering: lab access, CAD/design files, process recipes, and
+      system software source code.
+
+----------------------------------------------------------------------
+ELEMENT 3 — WRITTEN POLICIES AND PROCEDURES
+----------------------------------------------------------------------
+
+What BIS expects:
+  Procedure-level written guidance for every process that touches controlled items or
+  transactions. A high-level policy alone is insufficient.
+
+Procedures your company needs:
+
+  3.1 ECCN Classification Procedure
+      - Who classifies (ECO + engineering)
+      - How to access the CCL (Part 774)
+      - How to complete and maintain the Classification Log
+      - Triggers for reclassification (product change, new guidance)
+      - Use of CCATS (Commodity Classification Automated Tracking System) for
+        official BIS classification when uncertain
+
+  3.2 Restricted Party Screening Procedure (see Element 5 for full detail)
+      - Which lists to screen
+      - When to screen (order acceptance, pre-shipment, periodic re-screen)
+      - How to handle a potential match
+      - Escalation path
+
+  3.3 Order Acceptance and Licence Determination Procedure
+      - Sales team check: Does the customer, destination, or stated end-use raise flags?
+      - ECO check: Is a licence required? Is a licence exception available?
+      - Approval workflow before accepting an order that triggers a licence requirement
+      - "Hold for compliance" authority (ECO can stop any shipment)
+
+  3.4 Licence Application and Management Procedure
+      - How to apply via SNAP-R (snap-r.bis.doc.gov)
+      - Documentation required for 3B001/3B002 applications (technical specs,
+        end-user statements on BIS-711 form, end-use certificates)
+      - Licence condition tracking (re-export authorisations, reporting requirements)
+      - Licence expiry calendar and renewal process (apply 60 days before expiry)
+
+  3.5 End-User Statement and Due Diligence Procedure
+      - When an End-User Statement (EUS) is required (high-risk transactions,
+        Tier 2/Tier 3 customers, any 3B001 to Country Group B)
+      - Use of BIS Form BIS-711 (Statement by Ultimate Consignee and Purchaser)
+      - KYC due diligence steps for new distributors and resellers
+      - Distributor agreement provisions (downstream compliance obligations,
+        right to audit, no-reexport-to-D:1 clauses)
+
+  3.6 Deemed Export Procedure
+      - Pre-hire screening for foreign national candidates who will access controlled tech
+      - Access control for controlled technology (lab, CAD tools, source code repositories)
+      - Deemed export licence application process via SNAP-R
+      - Most-restrictive nationality rule for dual nationals (§ 734.13)
+
+  3.7 FDPR Assessment Procedure
+      - For all foreign-manufactured products incorporating your US technology or
+        produced on equipment you manufactured: FDPR analysis checklist
+      - Two-prong test (technology/software prong + destination prong)
+      - Documentation of FDPR analysis for each product line
+
+  3.8 Recordkeeping Procedure
+      - List of record types to retain (see Element 7)
+      - Five-year retention from date of export (§ 762.6)
+      - Electronic storage, backup, and retrieval requirements
+      - Response to BIS inspection requests (generally within 5 business days)
+
+  3.9 Voluntary Self-Disclosure (VSD) Procedure
+      - How to recognise a potential violation
+      - Immediate escalation to ECO and legal counsel
+      - Preliminary Inquiry process
+      - Criteria for filing an initial notification to OEE
+      - Full VSD submission within 180 days
+      - Internal documentation during VSD process
+
+  3.10 Trade Show, Demo, and Visitor Access Procedure
+      - Controls on technology disclosed during trade shows or customer site visits
+      - Foreign visitor access to controlled equipment or technology in US facilities
+      - Temporary export of demo equipment (TMP licence exception, § 740.9)
+
+----------------------------------------------------------------------
+ELEMENT 4 — TRAINING AND AWARENESS
+----------------------------------------------------------------------
+
+What BIS expects:
+  Mandatory, role-appropriate training for all employees who may touch controlled
+  transactions, with documented completion and annual refresh.
+
+Training programme structure:
+
+  4.1 Role-Based Training Tracks
+
+      Track A — All Employees (1-hour annual awareness):
+        - What is export control and why it matters
+        - EAR vs. ITAR (don't assume semiconductor equipment is ITAR-free; verify)
+        - What is an ECCN and what is EAR99
+        - Restricted parties — what they are and why you must not engage
+        - Red flag recognition (15 red flags from Supplement 3 to Part 732)
+        - How to report concerns (escalation path to ECO)
+
+      Track B — Sales, Business Development, Customer Success (2-3 hours annual):
+        - Deeper dive on licence requirements and exceptions for your destination mix
+        - End-user statements and due diligence
+        - How to handle a customer who pushes back on compliance requests
+        - Red flags in customer inquiries
+        - Distributor management requirements
+
+      Track C — Engineering, R&D, Product Management (2-3 hours annual):
+        - Deemed exports — what they are and how they arise (visual access, oral briefings,
+          electronic transmission, source code access)
+        - Most-restrictive nationality rule
+        - FDPR — when your technology creates FDPR obligations for foreign manufacturers
+        - 3B001/3B002 technical parameter thresholds — when does a design change affect
+          the ECCN?
+        - Cloud and repository access controls for controlled technology
+        - Fundamental research exclusion and its limits
+
+      Track D — ECO, Legal, Finance (deep dive, 4-8 hours, plus continuing education):
+        - Complete ECCN classification methodology
+        - Licence exception analysis (all 14 exceptions in Part 740)
+        - SNAP-R licence application process
+        - FDPR comprehensive analysis
+        - Enforcement regime (civil and criminal penalties, § 764)
+        - VSD process (§ 764.5)
+        - Advanced computing rules (October 2022/2023 BIS rules)
+        - Entity List additions and update monitoring
+
+      Track E — HR and Recruiting:
+        - Deemed export screening in the hiring process
+        - Foreign national pre-hire compliance checklist
+        - How to handle a candidate who triggers deemed export concern
+
+  4.2 Training Administration
+      - Annual mandatory training for all tracks; completion required within 30 days
+        of hire for new employees and annually thereafter
+      - Track completion records retained for 5 years
+      - Signed acknowledgement by each employee
+      - Training content updated whenever regulations change materially (BIS
+        entity list additions, new FDPR rules, new licence exceptions)
+
+  4.3 Practical Exercises
+      - Annual tabletop exercise for the ECO and leadership: a realistic scenario
+        (e.g., discovery of shipments to an Entity List party's subsidiary; FDPR
+        analysis of a new OEM partnership with a Japanese company; a deemed export
+        situation with a newly hired Chinese national engineer)
+
+----------------------------------------------------------------------
+ELEMENT 5 — RESTRICTED PARTY SCREENING
+----------------------------------------------------------------------
+
+What BIS expects:
+  Screening of all parties to every transaction against all applicable government lists,
+  on a defined cadence, with documented procedures for handling matches.
+
+5.1 Mandatory Lists to Screen
+
+  You must screen against, at minimum, the following lists:
+
+  BIS Lists (15 CFR Part 744 and Part 764):
+    (a) Entity List (Supplement 4 to Part 744)
+        - Effect: Licence required for ALL items subject to EAR, destined for or involving
+          listed entities; most licence exceptions unavailable
+        - Key relevance: Many Chinese semiconductor companies and research institutes
+          are on the Entity List. Taiwan-based customers producing for Chinese
+          Entity List companies create a prohibited-end-user risk.
+
+    (b) Denied Persons List (Part 764)
+        - Effect: Absolute prohibition — you may not export, reexport, or transfer
+          any item subject to EAR to or with a denied person; no exceptions
+        - Applies to persons acting as agents, freight forwarders, banks, and intermediaries
+
+    (c) Unverified List (Supplement 6 to Part 744)
+        - Effect: Cannot use any licence exceptions; must obtain a UVL Statement from
+          the party before proceeding with any transaction
+        - Signals: Party's bona fides could not be verified by BIS end-use checks
+
+    (d) Military End-User (MEU) List (Supplement 7 to Part 744)
+        - Effect: Licence required for items listed in Supplement 2 to Part 744
+          (which includes many semiconductor manufacturing items) to listed military
+          end-users in China, Russia, and other D:5 countries
+
+  State Department Lists:
+    (e) DDTC Debarred List (22 CFR Part 127)
+        - While ITAR-specific, debarred persons are prohibited from participating in
+          ITAR transactions and frequently overlap with EAR concerns; best practice
+          is to screen all parties against this list
+
+  OFAC Lists (Treasury Department):
+    (f) Specially Designated Nationals (SDN) List
+        - Effect: Full asset block; US persons may not transact with SDNs regardless
+          of whether items are subject to EAR. Non-compliance is a Treasury matter,
+          not BIS, but the prohibition is absolute.
+
+    (g) OFAC Consolidated Sanctions List
+        - Includes SDNs, Foreign Sanctions Evaders, Sectoral Sanctions (SSI list),
+          Non-SDN Chinese Military-Industrial Complex (NS-CMIC) companies, and more
+
+  Single-Search Resource:
+    The Consolidated Screening List (CSL) at trade.gov/consolidated-screening-list
+    combines BIS Entity List, Denied Persons List, Unverified List, and MEU List with
+    State's Debarred List and OFAC's SDN and Consolidated Sanctions List into a single
+    searchable interface. Use the CSL as your primary search tool, but supplement with
+    direct source checks for high-risk transactions, as the CSL may have a brief lag
+    behind individual agency publications.
+
+5.2 Who to Screen
+
+  Screen ALL parties to every transaction, not just the buyer. This includes:
+    - Buyer / purchaser
+    - End-user (if different from buyer)
+    - All intermediate consignees
+    - Freight forwarder and logistics providers
+    - Customs brokers
+    - Banks and financial intermediaries involved in payment
+    - Brokers or agents
+    - Parent companies and subsidiaries of any of the above (ownership/control analysis)
+
+  For semiconductor equipment: Pay particular attention to end-users at the wafer
+  fabrication level. Your direct customer may be a trading company; the actual fab
+  is the end-user. Screen both.
+
+5.3 When to Screen (Screening Cadence)
+
+  At order inception:
+    - Screen all parties when a quote is first requested or an order is received,
+      before any commitment is made to the customer
+
+  Before shipment:
+    - Re-screen all parties immediately before each shipment; lists are updated
+      continuously and a party clean at order acceptance may be listed by shipment date
+    - This is especially important for long-cycle semiconductor equipment orders
+      (equipment may be ordered 6-12 months before delivery)
+
+  During ongoing relationships:
+    - Re-screen existing distributors, agents, and regular customers at minimum
+      monthly; for China-adjacent channels, consider weekly re-screening
+    - Automate this via ERP integration (SAP GTS, Oracle AGIS, Visual Compliance,
+      Descartes Denied Party Screening, or similar)
+
+  When parties change:
+    - Any change in ownership, address, banking details, or shipping instructions
+      triggers an immediate re-screen — these are classic red flags for diversion
+
+  When new lists are published:
+    - BIS publishes Entity List amendments in the Federal Register, often with
+      immediate effective dates. Subscribe to BIS update alerts at bis.gov.
+      When a new list is published, run all active customers and open orders against it.
+
+5.4 Handling a Potential Match
+
+  When a screening result returns a potential match, follow this process:
+
+  Step 1 — Do Not Ship
+    Immediately place a hold on the order or shipment. No item subject to EAR may
+    be exported or transferred while a potential match is unresolved.
+
+  Step 2 — Escalate to ECO and Legal Counsel
+    The screening analyst escalates to the ECO within 1 business day. ECO engages
+    export control counsel for any non-trivial match.
+
+  Step 3 — True Hit vs. False Positive Analysis
+    Conduct a structured comparison:
+      - Name: exact match, phonetic similarity, known aliases?
+      - Address: same country, city, street?
+      - Date of birth / incorporation date (for individuals/companies)
+      - Ownership and control linkages
+      - Nature of business compared to the listed reason for control
+    Document the analysis in writing with the date and the analyst's name.
+
+  Step 4 — False Positive Disposition
+    If the match is clearly a different entity (e.g., same common name, different
+    country, no other overlapping identifiers), document the false positive
+    determination and the basis for it. Retain the record for 5 years. Proceed
+    with the transaction.
+
+  Step 5 — True Hit Disposition
+    If the match is confirmed or cannot be ruled out:
+      (a) Refuse the transaction — do not proceed with the sale, shipment, or service
+      (b) Do not tip off the customer that they have been identified as a restricted
+          party (while EAR has no explicit "tipping off" prohibition as severe as OFAC,
+          alerting an SDN to their status creates additional exposure)
+      (c) For SDN hits: OFAC may require reporting; consult counsel
+      (d) Document the true hit, the decision to refuse, and all communications
+      (e) If items have already shipped to a party that is subsequently listed,
+          consult counsel immediately regarding potential VSD obligations (§ 764.5)
+
+  Step 6 — Record Retention
+    All screening records — positive, negative, and false positive — are retained
+    for 5 years from the date of the transaction or screening event. For systematic
+    screening, retain dated screenshots or system-generated reports.
+
+5.5 Semiconductor-Equipment-Specific Screening Considerations
+
+  China Channel Risk:
+    Even for your legitimate destinations (Japan, Korea, Taiwan), screen for
+    connections to Chinese entities. Taiwan-based customers often produce for
+    Chinese fabs. A shipment to TSMC's fab in Taiwan is legitimate; a shipment
+    to a trading company that re-sells to a Yangtze Memory or CXMT subsidiary
+    is a potential violation. Your distributor agreements in Taiwan should require
+    downstream screening and no-reexport clauses for any controlled equipment.
+
+  Entity List Alumni:
+    Monitor not only current Entity List entries but watch for successor entities,
+    renamed subsidiaries, and shell companies. The Entity List entry for Huawei
+    includes hundreds of non-designated affiliates; transactions with them still
+    require BIS licensing analysis.
+
+  India-Specific:
+    India's Department for Promotion of Industry and Internal Trade (DPIIT) SCOMET
+    list controls some semiconductor manufacturing equipment. For Indian transactions,
+    screen against SCOMET in addition to the US lists, and confirm your Indian
+    customer's import authorisation for 3B001/3B002 equipment where required.
+
+----------------------------------------------------------------------
+ELEMENT 6 — DUE DILIGENCE (KNOW YOUR CUSTOMER)
+----------------------------------------------------------------------
+
+What BIS expects:
+  Going beyond list screening to actually know who your customers are, what they
+  will do with your equipment, and whether your channel partners are reliable.
+
+  6.1 Customer Onboarding KYC
+      For all new customers and distributors:
+        - Business registration documents
+        - Ownership and control structure (beneficial ownership)
+        - Description of end-use and end-facility
+        - References from existing suppliers or customers
+        - For high-risk Tier 2/3 customers: site visit or third-party due diligence report
+
+  6.2 End-User Statements (EUS)
+      For any 3B001/3B002 equipment sold to Country Group B customers, Taiwan customers,
+      or any transaction where the end-use is not transparent from your direct sales
+      relationship, obtain a signed End-User Statement covering:
+        - Identity of the actual end-user and end-facility
+        - Specific intended end-use of the equipment
+        - Certification that the equipment will not be re-exported without BIS authorisation
+        - Certification that the party is not acting as an agent for a third party not
+          identified in the transaction
+
+      Use BIS Form BIS-711 (Statement by Ultimate Consignee and Purchaser) as the
+      baseline template. For Japanese and Korean customers, a Japanese/Korean language
+      version with certified translation is acceptable.
+
+  6.3 Distributor Agreements
+      Distributor and reseller agreements must include:
+        - Obligation to comply with US export laws (EAR, OFAC)
+        - Prohibition on re-export or transfer to restricted parties or destinations
+          without BIS authorisation
+        - Flow-down of restricted party screening obligations
+        - Right of your company to audit the distributor's compliance records
+        - Termination right for export control violations
+        - Record-retention obligation aligned with Part 762 (5 years)
+
+  6.4 Red Flag Investigation
+      BIS publishes 15 red flags in Supplement 3 to Part 732. Any of the following
+      require you to pause the transaction, investigate, and document your findings:
+        - Customer reluctant to provide end-use information or end-user identity
+        - Ordered item is inconsistent with the customer's stated business
+          (e.g., a general trading company ordering precision lithography equipment)
+        - Payment from an unusual third-country account or unusual payment structure
+        - Shipping route is circuitous or through unusual transshipment hubs
+          (e.g., routing semiconductor equipment through Singapore or UAE to a
+          destination that should receive direct shipments)
+        - Customer declines installation, training, warranty, or service
+          (unusual for complex capital equipment)
+        - Customer uses a freight forwarder as the address of record
+        - Customer's ordering volume or frequency is inconsistent with known capacity
+        - Requests for unusual technical documentation or modifications
+
+      For each red flag identified, document: the flag, your investigation, and your
+      conclusion about whether the transaction is legitimate. Unresolved red flags
+      are grounds to refuse a transaction.
+
+  6.5 Post-Sale Monitoring
+      For high-value or high-risk equipment:
+        - Installation sign-off confirming equipment is at the declared end-facility
+        - Periodic check-ins with customers (annual for low-risk, quarterly for Tier 2)
+        - BIS may conduct post-shipment verifications (PSVs) at customer sites;
+          cooperation is mandatory and confirms your compliance posture
+
+----------------------------------------------------------------------
+ELEMENT 7 — RECORDKEEPING AND AUDITS
+----------------------------------------------------------------------
+
+What BIS expects:
+  Retention of all export-related records for 5 years, with timely retrieval capability,
+  and regular internal and external audits of the ECP.
+
+  7.1 Recordkeeping Requirements (§ 762.6)
+
+  Retain for 5 years from the date of export or reexport:
+
+      Transaction Records:
+        - Purchase orders and order confirmations
+        - Commercial invoices
+        - Packing lists
+        - Bills of lading, air waybills, ocean bills
+        - Electronic Export Information (EEI) filings via AES/ACE
+        - Shipping instructions
+
+      Classification Records:
+        - ECCN Classification Log entries for each product
+        - CCATS determinations (if obtained from BIS)
+        - Classification rationale memoranda
+
+      Screening Records:
+        - Dated screenshots or system reports of every restricted party screening
+          (positive, negative, and false positive)
+        - False positive analysis documentation
+        - True hit resolution documentation
+
+      Licensing Records:
+        - All SNAP-R licence applications (BIS-748P)
+        - Issued licences and all conditions
+        - Licence exception documentation (basis for each exception claimed)
+        - End-user statements and BIS-711 forms
+        - Advisory opinions received from BIS
+
+      Due Diligence Records:
+        - Customer KYC files
+        - Distributor agreements and compliance certifications
+        - Red flag investigation files
+
+      Training Records:
+        - Training materials, version history
+        - Completion records with employee signatures/acknowledgements
+
+      VSD Records (retain permanently, not just 5 years):
+        - Initial notifications to OEE
+        - Full VSD submissions
+        - OEE correspondence
+        - Internal investigation findings
+
+  7.2 Record Format and Accessibility
+      Records may be maintained in any readable electronic or paper format.
+      Electronic storage must be backed up, with access controls preventing
+      unauthorised alteration. BIS must be able to retrieve any record within
+      a reasonable time (generally 5 business days of an OEE request).
+
+  7.3 Internal Audit Programme
+      Annual internal ECP audit covering:
+        - Sample of screening records: were all parties screened, at the right cadence?
+        - Sample of classification records: are ECCNs current and documented?
+        - Sample of shipments: were correct ECCNs and licence authorities used
+          on EEI filings?
+        - Training completion rates
+        - Licence condition compliance
+        - Distributor agreement currency
+        - Deemed export controls
+
+      Audit findings reported to senior leadership; remediation tracked to closure.
+
+  7.4 Periodic Third-Party Assessment
+      For a semiconductor equipment company with 3B001/3B002 products and sales to
+      Taiwan and India, conduct a third-party ECP assessment at minimum every 2-3 years.
+      Third-party assessors provide defensible evidence of programme quality if BIS
+      ever investigates. BIS's own penalty guidelines give substantial credit to
+      companies with externally validated ECPs.
+
+=======================================================================
+PART TWO: SEMICONDUCTOR-EQUIPMENT-SPECIFIC CONSIDERATIONS
+=======================================================================
+
+----------------------------------------------------------------------
+A. ECCN CLASSIFICATION: 3B001 AND 3B002 IN DEPTH
+----------------------------------------------------------------------
+
+3B001 — Equipment for manufacturing semiconductor devices and materials
+
+This ECCN has approximately 10 sub-entries (3B001.a through 3B001.j), each with
+specific technical parameter thresholds. Classification is not at the ECCN level —
+you must determine the specific paragraph (e.g., 3B001.a.1 for photolithography
+equipment using UV or deep UV light sources). Technical differences such as:
+  - Minimum feature size achievable
+  - Wavelength of light source
+  - Alignment accuracy
+  - Film thickness uniformity
+
+...all affect which paragraph applies and, consequently, which reasons for control
+apply (NS, AT, NP, MT). Your engineering team must be involved in classification —
+this is not a task that can be done purely by legal or compliance staff.
+
+Recommendation: For each product line, obtain a CCATS determination from BIS to
+lock in an official classification. CCATS provides certainty and is valuable in
+enforcement situations (good faith reliance on BIS classification is a mitigating
+factor).
+
+3B002 — Equipment specifically designed for the inspection or testing of semiconductor
+devices or materials
+
+Covers parametric test equipment, wafer probers, and certain metrology tools. Similarly
+technical, with NS and AT controls in most cases.
+
+Controls and destinations:
+  For NS-controlled 3B001/3B002 equipment:
+    - Europe (Country Group A:5): Licence exception STA (Strategic Trade Authorization,
+      § 740.20) available for most NS items
+    - Japan, South Korea (A:5): STA available; favourable
+    - Taiwan (Country Group B): NS column 1 and 2 on the Country Chart — check
+      for licence requirement; STA not available to Country Group B; may need
+      licence or alternative exception (LVS if low value; TMP for demos)
+    - India (Country Group B): Same analysis as Taiwan; case-by-case
+
+----------------------------------------------------------------------
+B. FOREIGN DIRECT PRODUCT RULE (FDPR) — CRITICAL FOR YOUR COMPANY
+----------------------------------------------------------------------
+
+As a semiconductor equipment manufacturer, the FDPR is not just something you must
+comply with as an exporter — your products CREATE FDPR obligations for your customers
+and foreign buyers of your equipment. This is a dual exposure:
+
+  B.1 Your Outbound FDPR Obligations
+      When you export US-origin technology (3E001) to a Japanese equipment manufacturer
+      who then uses that technology to build equipment, that foreign-made equipment
+      may be subject to EAR under the General FDPR if destined for D:1 or E countries.
+      You must assess this in your technology licensing agreements.
+
+  B.2 FDPR Triggered by Your Equipment
+      Under the Entity List FDPR (Huawei Rule, 2020) and the Advanced Computing FDPR
+      (October 2022/2023), semiconductor wafer fabrication equipment controlled under
+      3B001 or 3B002 is specifically designated as triggering equipment. This means:
+
+      If your customer (Japanese or Korean equipment maker, or a Taiwanese foundry) uses
+      YOUR 3B001/3B002 equipment to produce chips or equipment, those foreign-made items
+      may be subject to EAR when destined for:
+        (i) Entity List parties (Entity List FDPR — all destinations)
+        (ii) China or Macau for advanced computing applications above the specified
+             performance thresholds (Advanced Computing FDPR)
+
+      Practical implication: Your distributor agreements and equipment sale agreements
+      with foreign manufacturers must include FDPR representations:
+        - Buyer acknowledges that the equipment is subject to EAR
+        - Buyer agrees not to use the equipment to produce items for Entity List parties
+          or for China/Macau advanced computing applications, unless separately licensed
+        - Buyer agrees to flow these restrictions down in their own supply agreements
+
+  B.3 Russia/Belarus FDPR (March 2022)
+      Since March 2022, virtually all items produced anywhere in the world using any
+      US-origin technology, software, or equipment are subject to EAR for Russia and
+      Belarus destinations. This is nearly categorical; the exceptions are narrow.
+      You should have zero Russia/Belarus sales, and your distributor agreements must
+      explicitly prohibit reexport to Russia and Belarus.
+
+  B.4 FDPR Documentation
+      For each product line, document in writing:
+        - Does the product incorporate US-origin technology or software controlled for NS?
+        - Was the product manufactured on US-origin equipment controlled under 3B001/3B002?
+        - Two-prong FDPR analysis (technology/software prong + destination prong)
+        - Conclusion: subject to EAR via FDPR or not?
+
+----------------------------------------------------------------------
+C. HEIGHTENED CHINA SCRUTINY
+----------------------------------------------------------------------
+
+Even though China is not listed as a current export destination for your company, the
+China dimension is pervasive given your products, customers, and the current regulatory
+environment.
+
+  C.1 October 2022 and October 2023 Advanced Computing Rules
+      BIS's October 7, 2022 interim final rule and October 17, 2023 final rule imposed:
+        - New licence requirements for advanced chip exports to China/Macau
+        - Expanded FDPR covering items produced with US wafer fab equipment above
+          performance thresholds destined for China
+        - New end-use restrictions under § 744.23 for supercomputer and semiconductor
+          manufacturing end-uses in China
+        - Restrictions on US persons supporting development/production of advanced
+          ICs in China
+
+      Your semiconductor equipment, particularly any 3B001.c-f class tools with
+      capability above specified thresholds, may be subject to these rules even for
+      sales to non-China customers, if those customers supply Chinese fabs.
+
+  C.2 Taiwan-Based Customer Diversion Risk
+      Taiwan is a major diversion risk point. TSMC, UMC, and other Taiwanese foundries
+      have production for Chinese customers. While a sale to TSMC itself is generally
+      compliant, equipment that ends up used for production above thresholds for Chinese
+      advanced chip customers may trigger questions. Your due diligence for Taiwan
+      customers should document the production activities of the fab and confirm
+      the equipment will not be used for prohibited China-related applications.
+
+  C.3 MEU List and Chinese Military-Civil Fusion
+      China's Military-Civil Fusion strategy means that ostensibly civilian Chinese
+      entities (universities, research institutes, ostensibly commercial companies)
+      may have military connections. The MEU List and the NS-CMIC (Non-SDN Chinese
+      Military-Industrial Complex) list are your primary tools here. Screen for these
+      even for transactions that appear wholly commercial.
+
+  C.4 No China Sales Policy
+      Consider implementing a formal "No Direct Sales to China" policy, pending
+      individual transaction review and approval by the ECO and legal counsel.
+      This is increasingly standard practice for semiconductor equipment companies
+      and provides a defensible compliance posture given current regulatory risk.
+
+----------------------------------------------------------------------
+D. DEEMED EXPORTS — SPECIFIC TO SEMICONDUCTOR EQUIPMENT ENGINEERING CULTURE
+----------------------------------------------------------------------
+
+A 200-person semiconductor equipment company typically has a significant portion of
+its workforce in engineering roles, often including foreign nationals from China,
+India, South Korea, and Taiwan. The deemed export implications are substantial.
+
+  D.1 Pre-Hire Screening
+      Before extending an offer to any foreign national for a role that will involve
+      access to 3E001 (technology for 3B001 equipment) or 3E002 (technology for 3B002
+      equipment), conduct a deemed export screening:
+        - Identify which technology the employee will access
+        - Classify that technology
+        - Determine the employee's nationality (most restrictive rule for dual nationals)
+        - Determine if a licence would be required to export that technology to the
+          employee's home country
+
+      For Chinese nationals accessing NS-controlled 3E001 technology: a deemed export
+      licence is very likely required. Apply through SNAP-R before granting access.
+
+  D.2 Access Controls
+      Implement role-based access controls for all controlled technology:
+        - Physical lab access: badge control, visitor logs
+        - CAD and design files: permissions by role and nationality
+        - Source code repositories (GitHub/GitLab/Bitbucket): access groups controlled
+          by the ECO, not just IT or engineering management
+        - Test data and process recipes: treat as controlled technology
+
+  D.3 Foreign Visitors to Your Facilities
+      Any foreign national who visits your facility and is shown controlled equipment
+      or technology (even in a marketing or sales context) may trigger a deemed export.
+      Implement a visitor access policy: screen visitors, log their access, and ensure
+      controlled technology is not disclosed without appropriate authorisation.
+
+=======================================================================
+PART THREE: PROGRAMME LAUNCH — RECOMMENDED SEQUENCING
+=======================================================================
+
+For a company building an ECP from scratch, implement in this order:
+
+Phase 1 (Months 1-3) — Foundations:
+  - Appoint ECO; draft and execute management commitment policy
+  - Begin ECCN classification of the top 20 product lines (highest revenue/highest risk)
+  - Implement restricted party screening tool (at minimum, CSL screening via
+    trade.gov or a commercial tool like Visual Compliance or Descartes)
+  - Draft and implement the restricted party screening procedure
+  - Deliver Track A training to all employees
+
+Phase 2 (Months 4-6) — Structure:
+  - Complete ECCN classification of full product portfolio
+  - Draft all written procedures (Elements 3.1-3.10)
+  - Conduct deemed export assessment of engineering roles
+  - Begin KYC review of existing customer and distributor base
+  - Deliver Track B and Track C training
+  - Implement ERP integration for automated screening
+
+Phase 3 (Months 7-12) — Maturity:
+  - FDPR analysis for all product lines and customer agreements
+  - Update distributor agreements with EAR compliance clauses
+  - Obtain CCATS determinations for key product lines
+  - Conduct first internal ECP audit
+  - Deliver Track D training to ECO/legal/finance
+  - Engage third-party counsel for programme review
+  - Commission SNAP-R accounts and practice licence application workflows
+  - Implement VSD procedure; run tabletop exercise
+
+=======================================================================
+PART FOUR: RECORDKEEPING QUICK REFERENCE
+=======================================================================
+
+Document Type                              | Retention Period
+-------------------------------------------|--------------------------
+Commercial invoices, purchase orders       | 5 years from export date
+Bills of lading, air waybills              | 5 years
+EEI/AES filings                            | 5 years
+Licence applications and approvals         | 5 years from expiry
+Licence exception documentation            | 5 years from export
+Restricted party screening records         | 5 years
+End-user statements (BIS-711)              | 5 years
+ECCN classification records                | 5 years from last export
+Customer KYC/due diligence files           | 5 years from last transaction
+Training records                           | 5 years
+VSD submissions and OEE correspondence     | Permanently
+
+=======================================================================
+REGULATORY CITATIONS AND RESOURCES
+=======================================================================
+
+  15 CFR Part 730         — General Information
+  15 CFR Part 734         — Scope of the EAR; definitions of export, reexport, transfer
+  15 CFR § 734.13         — Deemed export rule
+  15 CFR § 734.4          — De minimis rule
+  15 CFR Part 736         — Ten General Prohibitions
+  15 CFR § 736.2(b)(3)    — Foreign Direct Product Rule
+  15 CFR Part 738         — Commerce Country Chart
+  15 CFR Part 740         — License Exceptions (all 14 exceptions)
+  15 CFR § 740.20         — STA (Strategic Trade Authorization) exception
+  15 CFR Part 742         — Control policy
+  15 CFR Part 744         — End-user and end-use controls
+  15 CFR § 744.2-744.6    — WMD end-use prohibitions
+  15 CFR Part 744, Supp. 4 — Entity List
+  15 CFR Part 744, Supp. 6 — Unverified List
+  15 CFR Part 744, Supp. 7 — MEU List
+  15 CFR Part 746         — Embargoes and special controls
+  15 CFR Part 748         — License applications; SNAP-R; BIS-748P; BIS-711
+  15 CFR Part 758         — Export clearance (EEI)
+  15 CFR Part 762         — Recordkeeping (5-year retention at § 762.6)
+  15 CFR Part 764         — Enforcement; Denied Persons List; civil/criminal penalties
+  15 CFR § 764.5          — Voluntary Self-Disclosure
+  15 CFR Part 766         — Administrative enforcement proceedings
+  15 CFR Part 774, Supp. 1 — Commerce Control List; ECCN 3B001, 3B002, 3E001, 3E002
+  15 CFR Part 732, Supp. 3 — Red Flag Indicators (15 flags)
+
+  BIS Portal:       bis.gov
+  SNAP-R:           snap-r.bis.doc.gov
+  CSL:              trade.gov/consolidated-screening-list
+  CCATS:            Submit via SNAP-R using Form BIS-748P
+  BIS Alerts:       Subscribe at bis.gov/regulations/subscribe-bis-alerts
+
+=======================================================================
+DISCLAIMER
+=======================================================================
+
+This guidance reflects the EAR as of the date of preparation and is based on
+publicly available regulatory text and BIS guidance. Export control regulations
+change frequently — particularly for semiconductor equipment given ongoing
+national security policy activity. This response is for informational and compliance
+planning purposes. Before making final licensing determinations, consult qualified
+export control counsel and verify current regulatory text at ecfr.gov and bis.gov.
+
+=======================================================================
+END OF RESPONSE
+=======================================================================

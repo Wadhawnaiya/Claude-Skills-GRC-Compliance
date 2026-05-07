@@ -1,0 +1,34 @@
+{
+  "eval_id": 114,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Classifies the encryption software as ECCN 5D002",
+      "passed": true,
+      "evidence": "Step 2 is titled 'ECCN CLASSIFICATION: 5D002' and states 'Your cybersecurity software falls under: ECCN 5D002' with full analysis of why AES-256 encryption software meets this classification."
+    },
+    {
+      "text": "Identifies ENC licence exception (§740.17) as the applicable pathway",
+      "passed": true,
+      "evidence": "Step 4 is titled 'ENC LICENCE EXCEPTION (§ 740.17) — DETAILED ANALYSIS' and the executive summary states 'a BIS licence is not required for commercial export to France, India, or Brazil provided you qualify for the ENC licence exception under § 740.17.'"
+    },
+    {
+      "text": "States a one-time BIS notification is required before first export under ENC",
+      "passed": true,
+      "evidence": "The response states 'CRITICAL REQUIREMENT: You CANNOT use the ENC exception until you have filed the required notification with BIS. This is not optional.' and describes how to file via SNAP-R with Form BIS-748P-A."
+    },
+    {
+      "text": "Confirms no individual licence required for France, India, and Brazil",
+      "passed": true,
+      "evidence": "The summary table explicitly shows 'ENC Available: YES (§740.17a)' for all three countries (France, India, Brazil) with 'No restrictions for commercial AES-256 software' for France, and confirms ENC availability for India and Brazil. The executive summary also confirms 'A BIS licence is not required for commercial export to France, India, or Brazil.'"
+    },
+    {
+      "text": "Mentions annual self-classification report requirement",
+      "passed": true,
+      "evidence": "The response dedicates a section to 'ANNUAL SELF-CLASSIFICATION REPORT (§ 742.15(b))' stating 'All exporters relying on ENC (§ 740.17) must submit an annual self-classification report to BIS and NSA by February 1 of each year.' Also listed in the action checklist as step 11."
+    }
+  ],
+  "pass_count": 5,
+  "total_count": 5,
+  "pass_rate": 1.0
+}
