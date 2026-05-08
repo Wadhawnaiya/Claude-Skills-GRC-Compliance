@@ -5,7 +5,7 @@
 ### Art. 3(63) — What Qualifies as a GPAI Model
 
 A model qualifies as GPAI when **all** of the following apply:
-- Trained with **large amounts of data** using **self-supervised or self-supervision at scale**
+- Trained with **large amounts of data** using **self-supervision at scale**
 - Displays **significant generality** — competently performs a wide range of distinct tasks
 - Can be used for multiple **different purposes** regardless of how placed on market
 - **Excludes:** Models in pre-release R&D phase not yet placed on market
