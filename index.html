@@ -563,24 +563,6 @@ layout: null
     @media (max-width: 700px) { .audience-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 420px) { .audience-grid { grid-template-columns: 1fr; } }
 
-    /* ── SKILL CATEGORY DIVIDERS ── */
-    .skill-category-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin: 2.2rem 0 0.8rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: var(--text-muted);
-    }
-    .skill-category-header::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
 
     /* ── QUICK-START STRIP ── */
     .quickstart-strip {
@@ -620,23 +602,6 @@ layout: null
       .qs-arrow { display: none; }
     }
 
-    /* ── HEADER GRID MOBILE COLLAPSE ── */
-    .header-grid-toggle {
-      display: none;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 20px;
-      color: #fff;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.35rem 1rem;
-      cursor: pointer;
-      margin: 0.6rem auto 0;
-    }
-    @media (max-width: 720px) {
-      .header-grid-toggle { display: inline-block; }
-      .skills-category-grid.collapsed { display: none; }
-    }
 
     /* ── DETAILS COLLAPSE (old releases) ── */
     .releases-archive { margin-top: 1.5rem; }
@@ -736,7 +701,7 @@ layout: null
     </div>
 
   </div>
-  <button class="header-grid-toggle" onclick="toggleHeaderGrid()" id="header-grid-btn">Show all frameworks ↓</button>
+
   <div class="badges">
     <img src="https://img.shields.io/badge/Release-v0.9.0-brightgreen.svg" alt="Release v0.9.0" />
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License" />
@@ -755,7 +720,7 @@ layout: null
     <span class="qs-arrow">›</span>
     <div class="qs-step"><span class="qs-num">2</span> <span><strong>Upload</strong> it in Claude → Customize → Skills</span></div>
     <span class="qs-arrow">›</span>
-    <div class="qs-step"><span class="qs-num">3</span> <span><strong>Ask</strong> any compliance question — Claude activates the skill automatically</span></div>
+    <div class="qs-step"><span class="qs-num">3</span> <span><strong>Ask</strong> any compliance question — Claude activates the skill and provides expert-level compliance guidance</span></div>
   </div>
 </div>
 
@@ -765,8 +730,7 @@ layout: null
     <button class="tab-btn active" data-tab="skills" role="tab" aria-selected="true">🛡️ GRC Skills</button>
     <button class="tab-btn" data-tab="installation" role="tab">📦 Installation</button>
     <button class="tab-btn" data-tab="evaluation" role="tab">📊 Evaluation</button>
-    <button class="tab-btn" data-tab="whats-new" role="tab">📰 What's New</button>
-    <button class="tab-btn" data-tab="releases" role="tab">📋 Release Notes</button>
+    <button class="tab-btn" data-tab="whats-new" role="tab">📅 Monthly GRC Updates</button>
     <button class="tab-btn" data-tab="resources" role="tab">📚 Resources</button>
     <button class="tab-btn" data-tab="feedback" role="tab">💬 Feedback</button>
   </nav>
@@ -844,9 +808,48 @@ layout: null
 
     <h2 id="section-skills">The Skills</h2>
 
-    <div class="skill-category-header">🔐 Privacy &amp; Data Protection</div>
+<div class="skill-card">
+      <h3>1. <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ISO 27001</h3>
+      <span class="file-badge">ISO 27001 - Claude Skill/iso27001.skill</span>
+      <p>Turns Claude into an expert ISO 27001 Lead Auditor and ISMS implementation consultant. Covers both <strong>ISO 27001:2013</strong> (114 controls, 14 domains) and <strong>ISO 27001:2022</strong> (93 controls, 4 themes), defaulting to 2022.</p>
+      <ul>
+        <li>Runs structured <strong>gap analyses</strong> against mandatory clauses (4–10) and all Annex A controls</li>
+        <li>Generates complete, audit-ready <strong>policy documents</strong> with document control blocks, scope statements, and clause-to-control mappings</li>
+        <li>Builds <strong>risk registers</strong> and <strong>risk treatment plans</strong> using the likelihood × impact methodology</li>
+        <li>Creates <strong>Statement of Applicability (SoA)</strong> templates covering all 93 controls</li>
+        <li>Guides <strong>2013 → 2022 transition</strong>, explaining the 11 new controls and mapping changes</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISO 27001</code> <code>ISMS</code> <code>Annex A</code> <code>SoA</code> <code>gap analysis</code> <code>risk register</code> <code>certification readiness</code> <code>internal audit</code></div>
+    </div>
 
-    <div class="skill-card">
+<div class="skill-card">
+      <h3>2. <img src="assets/Logos/soc2.jpeg" alt="SOC 2" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> SOC 2</h3>
+      <span class="file-badge">SOC 2 - Claude Skill/soc2.skill</span>
+      <p>Turns Claude into an expert SOC 2 compliance advisor grounded in the <strong>AICPA 2017 Trust Services Criteria (TSC) with 2022 Revised Points of Focus</strong>. Covers all five TSC: Security (CC1–CC9), Availability (A1), Confidentiality (C1), Processing Integrity (PI1), and Privacy (P1–P8).</p>
+      <ul>
+        <li>Conducts <strong>gap analyses</strong> across in-scope TSC criteria with 🔴/🟡/🟢 status ratings and remediation roadmaps</li>
+        <li>Drafts all <strong>12 core SOC 2 policies</strong> — Information Security, Access Control, Incident Response, Change Management, and more</li>
+        <li>Documents <strong>controls</strong> in auditor-ready format: Control ID, TSC criterion, type, owner, frequency, evidence, and test procedure</li>
+        <li>Handles <strong>vendor risk</strong>: tiering, 32-question security questionnaires, SOC 2 report review, CUEC tracking</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>SOC 2</code> <code>Trust Services Criteria</code> <code>TSC</code> <code>CC6</code> <code>Type 1</code> <code>Type 2</code> <code>AICPA</code> <code>audit readiness</code> <code>control statement</code></div>
+    </div>
+
+<div class="skill-card">
+      <h3>3. <img src="assets/Logos/fedramp.svg" alt="FedRAMP" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> FedRAMP [US]</h3>
+      <span class="file-badge">FedRamp - Claude Skill/fedramp.skill</span>
+      <p>Turns Claude into a knowledgeable FedRAMP advisor covering the full authorization lifecycle for Cloud Service Providers under <strong>NIST SP 800-53 Rev 5</strong>. Current as of 2025–2026, incorporating the Rev 5 transition, September 2026 OSCAL mandate, and December 2024 template updates.</p>
+      <ul>
+        <li>Conducts <strong>readiness and gap assessments</strong> using a 75+ item checklist across 14 security domains</li>
+        <li>Guides authoring of <strong>ATO documentation</strong>: SSP, POA&amp;Ms, SAPs, SARs, and all required appendices (A–Q)</li>
+        <li>Maps <strong>NIST 800-53 Rev 5 controls</strong> across all 20 control families</li>
+        <li>Provides <strong>cloud architecture guidance</strong> for AWS GovCloud, Azure Government, and Google Cloud Government</li>
+        <li>Supports <strong>Continuous Monitoring (ConMon)</strong> obligations and guides the <strong>Rev 4 → Rev 5 transition</strong></li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>FedRAMP</code> <code>ATO</code> <code>SSP</code> <code>POA&M</code> <code>3PAO</code> <code>NIST 800-53</code> <code>ConMon</code> <code>AWS GovCloud</code> <code>impact level</code> <code>OSCAL</code></div>
+    </div>
+
+<div class="skill-card">
       <h3>4. 🇪🇺 GDPR [EU]</h3>
       <span class="file-badge">GDPR - Claude Skill/gdpr-compliance.skill</span>
       <p>Turns Claude into an expert GDPR compliance assistant bridging technical and legal perspectives. Covers full <strong>EU GDPR</strong> with notes on <strong>UK GDPR (DPA 2018)</strong> where rules differ.</p>
@@ -859,8 +862,7 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>GDPR</code> <code>data protection</code> <code>privacy</code> <code>personal data</code> <code>DPA</code> <code>DPIA</code> <code>lawful basis</code> <code>data subject rights</code> <code>consent</code> <code>RoPA</code></div>
     </div>
 
-
-    <div class="skill-card">
+<div class="skill-card">
       <h3>5. <img src="assets/Logos/hipaa.png" alt="HIPAA" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> HIPAA [US]</h3>
       <span class="file-badge">HIPAA - Claude Skill/hipaa-compliance.skill</span>
       <p>Turns Claude into a knowledgeable HIPAA compliance advisor covering the <strong>Privacy Rule, Security Rule, and Breach Notification Rule</strong> (45 CFR Parts 160 and 164, as amended by HITECH).</p>
@@ -873,8 +875,62 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>HIPAA</code> <code>PHI</code> <code>ePHI</code> <code>covered entity</code> <code>business associate</code> <code>BAA</code> <code>NPP</code> <code>breach notification</code> <code>Privacy Rule</code> <code>Security Rule</code></div>
     </div>
 
+<div class="skill-card">
+      <h3>6. <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> NIST CSF</h3>
+      <span class="file-badge">NIST Cybersecurity framework - Claude Skill/NIST Cybersecurity.skill</span>
+      <p>Turns Claude into an expert NIST Cybersecurity Framework advisor covering both <strong>CSF 2.0</strong> (February 2024) and <strong>CSF 1.1</strong> (April 2018), defaulting to CSF 2.0. Covers all six functions — <strong>Govern, Identify, Protect, Detect, Respond, Recover</strong> — including the new Govern function in CSF 2.0.</p>
+      <ul>
+        <li>Conducts structured <strong>gap assessments</strong> across all six CSF 2.0 functions, categories, and subcategories</li>
+        <li>Builds <strong>Organisational Profiles</strong> — Current and Target — aligned to business context and risk tolerance</li>
+        <li>Assesses <strong>Implementation Tiers</strong> (1–4) and provides targeted advancement guidance</li>
+        <li><strong>Maps CSF subcategories</strong> to NIST SP 800-53, ISO 27001:2022, and CIS Controls v8</li>
+        <li>Guides <strong>CSF 1.1 → CSF 2.0 migration</strong> with a detailed subcategory mapping and migration checklist</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIST CSF</code> <code>Cybersecurity Framework</code> <code>CSF 2.0</code> <code>Govern function</code> <code>GV.SC</code> <code>ID.AM</code> <code>PR.AA</code> <code>cybersecurity profile</code> <code>implementation tiers</code></div>
+    </div>
 
-    <div class="skill-card">
+<div class="skill-card">
+      <h3>7. <img src="assets/Logos/pci-dss.png" alt="PCI DSS" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> PCI DSS</h3>
+      <span class="file-badge">PCI Compliance - Claude Skill/PCI-Compliance.skill</span>
+      <p>Turns Claude into an expert PCI DSS compliance advisor covering <strong>PCI DSS v4.0.1</strong> (June 2024 — current), including all requirements that became mandatory on March 31, 2025. Covers all 12 requirements, all 8 SAQ types, merchant and service provider levels, and v4.0 changes from v3.2.1.</p>
+      <ul>
+        <li><strong>Scopes the Cardholder Data Environment (CDE)</strong> — identifies what's in scope, assesses network segmentation, recommends scope reduction via tokenisation or P2PE</li>
+        <li><strong>Selects the correct SAQ type</strong> — decision tree for SAQ A, A-EP, B, B-IP, C, C-VT, P2PE, and D</li>
+        <li>Conducts structured <strong>gap assessments</strong> across all 12 requirements with QSA evidence requirements</li>
+        <li>Guides <strong>v3.2.1 → v4.0.1 migration</strong> including MFA expansion, payment page script integrity (Req 6.4.3), phishing protection (Req 5.4.1)</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>PCI DSS</code> <code>PCI compliance</code> <code>cardholder data</code> <code>CDE</code> <code>SAQ</code> <code>ROC</code> <code>QSA</code> <code>PAN</code> <code>tokenisation</code> <code>merchant level</code></div>
+    </div>
+
+<div class="skill-card">
+      <h3>8. 🚨 TSA Cybersecurity [US]</h3>
+      <span class="file-badge">TSA Compliance - Claude Skill/TSA-Compliance.skill</span>
+      <p>Turns Claude into an expert TSA cybersecurity directive advisor for <strong>critical transportation infrastructure</strong>. Covers all current TSA Security Directive series — SD Pipeline-2021-01G, SD Pipeline-2021-02F, SD 1580-21-01E (freight rail), and SD 1582-21-01E (transit/passenger rail) — plus the <strong>November 2024 NPRM</strong>.</p>
+      <div class="info-box"><strong>Note on SSI:</strong> TSA Security Directives are classified as Sensitive Security Information (SSI). This skill is built from publicly available summaries, Federal Register notices, and DHS/CISA publications — not the classified full directive text.</div>
+      <ul>
+        <li><strong>Determines applicability</strong> — which directive series applies to your organisation and what it means for compliance</li>
+        <li>Runs structured <strong>gap assessments</strong> across four technical domains: IT/OT network segmentation, access controls (MFA), continuous monitoring, and patch management</li>
+        <li><strong>Drafts CRMP documents</strong>: Cybersecurity Implementation Plan (CIP/COIP), IRP, Architecture Design Review (ADR), and Cybersecurity Assessment Plan (CAP)</li>
+        <li>Guides <strong>OT/ICS-specific implementation</strong> — data diodes, jump servers for legacy HMIs, passive monitoring tools (Claroty, Dragos, Nozomi)</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>TSA Security Directive</code> <code>SD Pipeline-2021</code> <code>TSA cybersecurity</code> <code>Critical Cyber Systems</code> <code>CCS</code> <code>CRMP</code> <code>IRP testing</code> <code>OT segmentation TSA</code> <code>pipeline cybersecurity</code></div>
+    </div>
+
+<div class="skill-card">
+      <h3>9. <img src="assets/Logos/iso42001.webp" alt="ISO 42001" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ISO 42001 AI Management System</h3>
+      <span class="file-badge">ISO 42001 - Claude Skill/ISO-42001.skill</span>
+      <p>Turns Claude into an expert <strong>ISO/IEC 42001:2023</strong> AI Management System (AIMS) advisor — the world's first international standard for AI governance. Serves both <strong>AI providers</strong> (organisations developing or deploying AI) and <strong>AI users</strong> (organisations integrating third-party AI).</p>
+      <ul>
+        <li>Conducts structured <strong>gap assessments</strong> across all mandatory clauses (4–10) and all <strong>38 Annex A controls</strong> (domains A.2–A.10) with 🔴/🟡/🟢 status and phased remediation roadmap</li>
+        <li>Guides the mandatory <strong>AI System Impact Assessment (AISIA)</strong> — identifying affected populations, assessing impact dimensions, classifying impact level (Low/Medium/High)</li>
+        <li>Performs <strong>AI risk assessment</strong> across model risks, data risks, operational risks, and supply chain risks</li>
+        <li>Generates a complete <strong>Statement of Applicability (SoA)</strong> covering all 38 Annex A controls (A.2.2–A.10.4)</li>
+        <li><strong>Maps ISO 42001 to the EU AI Act</strong> — aligns AISIA to the Fundamental Rights Impact Assessment (FRIA) for high-risk AI systems</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISO 42001</code> <code>ISO/IEC 42001</code> <code>AI Management System</code> <code>AIMS</code> <code>AISIA</code> <code>AI governance standard</code> <code>Annex A AI controls</code> <code>AI certification</code> <code>EU AI Act management system</code></div>
+    </div>
+
+<div class="skill-card">
       <h3>10. <img src="assets/Logos/iso27701.png" alt="ISO 27701" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ISO 27701 Privacy Information Management</h3>
       <span class="file-badge">ISO 27701 - Claude Skill/iso27701.skill</span>
       <p>Turns Claude into an expert <strong>ISO/IEC 27701:2025</strong> Privacy Information Management System (PIMS) advisor. Covers the full lifecycle from gap assessment through certification for both <strong>PII controllers</strong> and <strong>PII processors</strong>, and handles both the new standalone 2025 edition and the legacy 2019 extension edition.</p>
@@ -889,222 +945,7 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISO 27701</code> <code>PIMS</code> <code>privacy information management</code> <code>PII controller</code> <code>PII processor</code> <code>DPIA</code> <code>RoPA</code> <code>data subject rights</code> <code>privacy by design</code> <code>data processing agreement</code> <code>GDPR alignment ISO 27701</code></div>
     </div>
 
-
-    <div class="skill-card">
-      <h3>12. 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act</h3>
-      <span class="file-badge">DPDPA - Claude Skill/dpdpa.skill</span>
-      <p>Turns Claude into an expert advisor on India's <strong>Digital Personal Data Protection Act, 2023</strong> and the finalized <strong>DPDP Rules, 2025</strong> (notified 13 November 2025, effective 13 May 2027). Covers all 44 sections and 23 Rules with section-level citations, GDPR-alignment mapping, and guidance for both Indian companies and global organizations with Indian data subjects.</p>
-      <ul>
-        <li>Conducts structured <strong>DPDPA gap analyses</strong> covering notice/consent (Sections 5–6 + Rules 3–4), Data Fiduciary obligations (Section 8 + Rules 6–9), children's data (Section 9 + Rules 10–12), and SDF obligations (Section 10 + Rule 13)</li>
-        <li><strong>Distinguishes DPDPA from GDPR</strong> across 8 dimensions — digital-only scope, no legitimate interests basis, unconditional consent + no bundling, blacklist cross-border transfers, narrower erasure right, India-resident DPO for SDFs, 18-year children's threshold, single Board enforcement</li>
-        <li>Guides <strong>breach notification</strong> per Section 8(6) and Rule 6 — 72-hour Board notification, all breaches notifiable (no risk threshold), Processor cascade obligations</li>
-        <li>Designs <strong>children's data programmes</strong> — Rule 12 parental verification (DigiLocker, government tokens, virtual tokens) and absolute prohibitions on tracking, profiling, and targeted advertising for under-18s</li>
-        <li>Advises <strong>Significant Data Fiduciaries</strong> on India-resident DPO, annual DPIA, annual independent audit, and data localisation readiness</li>
-        <li>Guides <strong>Data Principal rights fulfilment</strong> — access (Section 11), correction/erasure (Section 12), grievance redressal (Section 13), and the unique right to nominate (Section 14)</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>DPDPA</code> <code>Digital Personal Data Protection Act</code> <code>India data protection</code> <code>Data Fiduciary</code> <code>Data Principal</code> <code>Significant Data Fiduciary</code> <code>DPDP Rules 2025</code> <code>Rule 6 DPDP breach</code> <code>Rule 12 parental consent</code> <code>India privacy law</code> <code>DPDPA vs GDPR</code> <code>DigiLocker consent</code> <code>India children data</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>18. <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" style="height:1em;width:auto;vertical-align:middle;border-radius:2px;"> CCPA/CPRA [California] Privacy</h3>
-      <span class="file-badge">CCPA - Claude Skill/ccpa.skill</span>
-      <p>Turns Claude into an expert advisor on <strong>California's comprehensive privacy laws</strong> — the California Consumer Privacy Act (CCPA, effective Jan 1, 2020) and the California Privacy Rights Act (CPRA/Proposition 24, effective Jan 1, 2023). CPRA created the California Privacy Protection Agency (CPPA), introduced Sensitive Personal Information (SPI), and added rights to correct PI, limit SPI use, and require data retention disclosures.</p>
-      <ul>
-        <li>Determines <strong>business applicability</strong> — whether an organisation meets any of the three CCPA/CPRA thresholds ($25M revenue OR 100K+ consumers/households OR 50%+ revenue from PI sale/sharing) and outlines resulting obligations</li>
-        <li>Guides <strong>consumer rights fulfillment</strong> — step-by-step workflows for right to know, delete, correct, opt-out of sale/sharing, limit SPI use, portability, and non-discrimination — including identity verification, exception handling, response deadlines (45 days / 15 business days for SPI), and service provider propagation</li>
-        <li>Classifies <strong>ad tech, cookie tracking, and data sharing</strong> as "sale" or CPRA "sharing" (cross-context behavioral advertising) and advises on Global Privacy Control (GPC) signal compliance and consent management platform implementation</li>
-        <li>Identifies and advises on <strong>Sensitive Personal Information (SPI)</strong> — precise geolocation, biometrics, health data, SSNs, credentials, and more — including permitted uses, limitation right obligations, and 15-business-day response SLA</li>
-        <li>Performs <strong>GDPR-to-CCPA/CPRA gap analysis</strong> — identifies California-specific additions (Do Not Sell or Share link, GPC, SPI limitation, minors' opt-in, financial incentive disclosures) and structural differences (opt-out vs. opt-in, no lawful basis requirement, breach private right of action)</li>
-        <li>Assesses <strong>CPPA enforcement and penalty exposure</strong> — $2,500/unintentional, $7,500/intentional, $100–$750/consumer for breach class actions — and advises on remediation prioritisation</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CCPA</code> <code>CPRA</code> <code>California Consumer Privacy Act</code> <code>California Privacy Rights Act</code> <code>Do Not Sell or Share</code> <code>sensitive personal information California</code> <code>CPPA</code> <code>California privacy compliance</code> <code>right to know California</code> <code>right to delete California</code> <code>California opt-out</code> <code>GPC signal</code> <code>Global Privacy Control</code> <code>ad tech CCPA</code> <code>CCPA vs GDPR</code> <code>CCPA service provider</code> <code>CCPA penalty</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law</h3>
-      <span class="file-badge">LGPD - Claude Skill/lgpd.skill</span>
-      <p>Turns Claude into an expert advisor on <strong>Brazil's Lei Geral de Proteção de Dados Pessoais (Law 13,709/2018)</strong>, enforced by the <strong>ANPD (Autoridade Nacional de Proteção de Dados)</strong>. LGPD applies extraterritorially to any organisation processing personal data of individuals located in Brazil — covering SaaS companies, fintechs, healthcare, e-commerce, and any business with Brazilian users.</p>
-      <ul>
-        <li>Analyses <strong>extraterritorial scope</strong> (Art. 3) — determines LGPD applicability regardless of where the organisation is established</li>
-        <li>Maps <strong>legal bases for processing</strong> — 10 bases under Art. 7 for regular data; stricter Art. 11 bases for sensitive data (health, biometric, racial/ethnic origin); legitimate interest balancing tests</li>
-        <li>Drafts <strong>LGPD-compliant privacy notices</strong> (Art. 9) and valid <strong>consent mechanisms</strong> (Art. 8) — specific, freely given, documented, and revocable</li>
-        <li>Guides <strong>data subject rights fulfilment</strong> (Arts. 17–22) — access, correction, deletion, portability, and automated decision review — with 15-day response workflows</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>LGPD</code> <code>Brazil data protection</code> <code>Lei Geral de Proteção de Dados</code> <code>ANPD</code> <code>Brazilian privacy law</code> <code>LGPD compliance</code> <code>LGPD gap assessment</code> <code>Encarregado</code> <code>RIPD</code> <code>LGPD legal basis</code> <code>Brazil data breach</code> <code>ANPD notification</code> <code>LGPD vs GDPR</code> <code>Brazil personal data</code> <code>LGPD penalty</code></div>
-    </div>
-
-
-    <div class="skill-category-header">🛡️ Information Security</div>
-
-    <div class="skill-card">
-      <h3>1. <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ISO 27001</h3>
-      <span class="file-badge">ISO 27001 - Claude Skill/iso27001.skill</span>
-      <p>Turns Claude into an expert ISO 27001 Lead Auditor and ISMS implementation consultant. Covers both <strong>ISO 27001:2013</strong> (114 controls, 14 domains) and <strong>ISO 27001:2022</strong> (93 controls, 4 themes), defaulting to 2022.</p>
-      <ul>
-        <li>Runs structured <strong>gap analyses</strong> against mandatory clauses (4–10) and all Annex A controls</li>
-        <li>Generates complete, audit-ready <strong>policy documents</strong> with document control blocks, scope statements, and clause-to-control mappings</li>
-        <li>Builds <strong>risk registers</strong> and <strong>risk treatment plans</strong> using the likelihood × impact methodology</li>
-        <li>Creates <strong>Statement of Applicability (SoA)</strong> templates covering all 93 controls</li>
-        <li>Guides <strong>2013 → 2022 transition</strong>, explaining the 11 new controls and mapping changes</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISO 27001</code> <code>ISMS</code> <code>Annex A</code> <code>SoA</code> <code>gap analysis</code> <code>risk register</code> <code>certification readiness</code> <code>internal audit</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>2. <img src="assets/Logos/soc2.jpeg" alt="SOC 2" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> SOC 2</h3>
-      <span class="file-badge">SOC 2 - Claude Skill/soc2.skill</span>
-      <p>Turns Claude into an expert SOC 2 compliance advisor grounded in the <strong>AICPA 2017 Trust Services Criteria (TSC) with 2022 Revised Points of Focus</strong>. Covers all five TSC: Security (CC1–CC9), Availability (A1), Confidentiality (C1), Processing Integrity (PI1), and Privacy (P1–P8).</p>
-      <ul>
-        <li>Conducts <strong>gap analyses</strong> across in-scope TSC criteria with 🔴/🟡/🟢 status ratings and remediation roadmaps</li>
-        <li>Drafts all <strong>12 core SOC 2 policies</strong> — Information Security, Access Control, Incident Response, Change Management, and more</li>
-        <li>Documents <strong>controls</strong> in auditor-ready format: Control ID, TSC criterion, type, owner, frequency, evidence, and test procedure</li>
-        <li>Handles <strong>vendor risk</strong>: tiering, 32-question security questionnaires, SOC 2 report review, CUEC tracking</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>SOC 2</code> <code>Trust Services Criteria</code> <code>TSC</code> <code>CC6</code> <code>Type 1</code> <code>Type 2</code> <code>AICPA</code> <code>audit readiness</code> <code>control statement</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>6. <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> NIST CSF</h3>
-      <span class="file-badge">NIST Cybersecurity framework - Claude Skill/NIST Cybersecurity.skill</span>
-      <p>Turns Claude into an expert NIST Cybersecurity Framework advisor covering both <strong>CSF 2.0</strong> (February 2024) and <strong>CSF 1.1</strong> (April 2018), defaulting to CSF 2.0. Covers all six functions — <strong>Govern, Identify, Protect, Detect, Respond, Recover</strong> — including the new Govern function in CSF 2.0.</p>
-      <ul>
-        <li>Conducts structured <strong>gap assessments</strong> across all six CSF 2.0 functions, categories, and subcategories</li>
-        <li>Builds <strong>Organisational Profiles</strong> — Current and Target — aligned to business context and risk tolerance</li>
-        <li>Assesses <strong>Implementation Tiers</strong> (1–4) and provides targeted advancement guidance</li>
-        <li><strong>Maps CSF subcategories</strong> to NIST SP 800-53, ISO 27001:2022, and CIS Controls v8</li>
-        <li>Guides <strong>CSF 1.1 → CSF 2.0 migration</strong> with a detailed subcategory mapping and migration checklist</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIST CSF</code> <code>Cybersecurity Framework</code> <code>CSF 2.0</code> <code>Govern function</code> <code>GV.SC</code> <code>ID.AM</code> <code>PR.AA</code> <code>cybersecurity profile</code> <code>implementation tiers</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>16. 🇦🇺 ISM [Australia] — Australian Information Security Manual</h3>
-      <span class="file-badge">ISM - Claude Skill/ism.skill</span>
-      <p>Turns Claude into an expert advisor on the <strong>Australian Information Security Manual (ISM)</strong> — the whole-of-government cybersecurity framework published by the Australian Signals Directorate (ASD) for federal and state government entities and their supply chains. Covers all 22 guideline chapters, control applicability markings (NC/OS/PROTECTED/SECRET/TOP SECRET), the IRAP assessment programme, system authorisation, and the Essential Eight relationship.</p>
-      <ul>
-        <li>Applies the ISM's <strong>control applicability marking system</strong> — determines NC/OS/PROTECTED/SECRET/TOP SECRET controls for a given system using the stacking rule, and scopes gap analyses accordingly</li>
-        <li>Guides the complete <strong>system authorisation pathway</strong> — six-step cycle (define, select, implement, assess, authorise, monitor), SSP structure, and ATO sign-off by the Authorising Official</li>
-        <li>Prepares agencies for <strong>IRAP assessments</strong> — full artefact checklist, what assessors evaluate, post-assessment POA&amp;M → ATO pathway, and 24-month re-assessment obligations</li>
-        <li>Provides deep-dive guidance on all <strong>22 ISM guideline chapters</strong>: system hardening (Ch. 13), patch management SLAs (Ch. 14), logging/retention (Ch. 15), cryptography (Ch. 20), email security (Ch. 18), networking (Ch. 19)</li>
-        <li>Explains the <strong>Essential Eight</strong> as a prioritised ISM subset — maps each of the 8 strategies to ISM chapters, covers ML0–ML3 maturity levels, and distinguishes Essential Eight from full ISM compliance</li>
-        <li>Advises <strong>private sector cloud providers and supply chain partners</strong> on ISM obligations under government contracts and when IRAP is required for non-government entities</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISM</code> <code>Information Security Manual</code> <code>ASD cybersecurity</code> <code>IRAP assessment</code> <code>system authorisation</code> <code>ATO Australia</code> <code>PROTECTED system</code> <code>OFFICIAL Sensitive</code> <code>Essential Eight</code> <code>ASD compliance</code> <code>ISM controls</code> <code>ISM gap analysis</code> <code>ISM hardening</code> <code>cyber.gov.au</code> <code>NC OS PROTECTED</code></div>
-    </div>
-
-
-    <div class="skill-card" id="cis-controls">
-      <h3>22. 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene</h3>
-      <span class="file-badge">CIS Controls - Claude Skill/cis-controls.skill</span>
-      <p>Turns Claude into an expert <strong>CIS Controls v8</strong> advisor covering all 18 controls and 153 safeguards from the May 2021 release. Applies the <strong>Implementation Group (IG) framework</strong> to scope guidance to your organisation's risk profile: IG1 (56 safeguards — essential cyber hygiene for all orgs), IG2 (130 safeguards — dedicated IT, sensitive data), and IG3 (153 safeguards — large enterprise with security team). Includes complete cross-framework mapping to NIST CSF 2.0, ISO 27001:2022, CMMC 2.0, SOC 2, and PCI DSS v4.0.</p>
-      <ul>
-        <li>Determines the correct <strong>Implementation Group</strong> for any organisation — applies IG criteria (IT resources, data sensitivity, regulatory exposure, threat profile) and scopes all guidance to that IG</li>
-        <li>Conducts <strong>CIS Controls gap assessments</strong> across all 18 controls and applicable safeguards with 🔴/🟡/🟢 status, IG assignment, asset type, security function, and prioritised remediation roadmap</li>
-        <li>Provides <strong>safeguard-level implementation guidance</strong> — practical steps, recommended tools (Qualys, CrowdStrike, Splunk, Microsoft Defender, Nessus), and common pitfalls for all 153 safeguards</li>
-        <li>Delivers a structured <strong>IG1 12-week quick-start programme</strong> — week-by-week: asset inventory, secure configuration, access controls, patch management, backups, and security awareness training</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CIS Controls</code> <code>CIS Top 18</code> <code>CIS v8</code> <code>CIS Controls v8</code> <code>Implementation Group</code> <code>IG1</code> <code>IG2</code> <code>IG3</code> <code>CIS safeguards</code> <code>cyber hygiene controls</code> <code>CIS gap assessment</code> <code>CIS Controls NIST mapping</code> <code>CIS Benchmarks</code> <code>CIS CSAT</code> <code>asset inventory CIS</code> <code>vulnerability management CIS</code> <code>CIS Controls ISO 27001</code> <code>CIS Controls SOC 2</code> <code>CIS Controls PCI DSS</code> <code>CIS Controls CMMC</code> <code>CIS Controls NIST CSF</code></div>
-    </div>
-
-
-    <div class="skill-category-header">🏛️ Cybersecurity Regulation</div>
-
-    <div class="skill-card">
-      <h3>3. <img src="assets/Logos/fedramp.svg" alt="FedRAMP" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> FedRAMP [US]</h3>
-      <span class="file-badge">FedRamp - Claude Skill/fedramp.skill</span>
-      <p>Turns Claude into a knowledgeable FedRAMP advisor covering the full authorization lifecycle for Cloud Service Providers under <strong>NIST SP 800-53 Rev 5</strong>. Current as of 2025–2026, incorporating the Rev 5 transition, September 2026 OSCAL mandate, and December 2024 template updates.</p>
-      <ul>
-        <li>Conducts <strong>readiness and gap assessments</strong> using a 75+ item checklist across 14 security domains</li>
-        <li>Guides authoring of <strong>ATO documentation</strong>: SSP, POA&amp;Ms, SAPs, SARs, and all required appendices (A–Q)</li>
-        <li>Maps <strong>NIST 800-53 Rev 5 controls</strong> across all 20 control families</li>
-        <li>Provides <strong>cloud architecture guidance</strong> for AWS GovCloud, Azure Government, and Google Cloud Government</li>
-        <li>Supports <strong>Continuous Monitoring (ConMon)</strong> obligations and guides the <strong>Rev 4 → Rev 5 transition</strong></li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>FedRAMP</code> <code>ATO</code> <code>SSP</code> <code>POA&M</code> <code>3PAO</code> <code>NIST 800-53</code> <code>ConMon</code> <code>AWS GovCloud</code> <code>impact level</code> <code>OSCAL</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>8. 🚨 TSA Cybersecurity [US]</h3>
-      <span class="file-badge">TSA Compliance - Claude Skill/TSA-Compliance.skill</span>
-      <p>Turns Claude into an expert TSA cybersecurity directive advisor for <strong>critical transportation infrastructure</strong>. Covers all current TSA Security Directive series — SD Pipeline-2021-01G, SD Pipeline-2021-02F, SD 1580-21-01E (freight rail), and SD 1582-21-01E (transit/passenger rail) — plus the <strong>November 2024 NPRM</strong>.</p>
-      <div class="info-box"><strong>Note on SSI:</strong> TSA Security Directives are classified as Sensitive Security Information (SSI). This skill is built from publicly available summaries, Federal Register notices, and DHS/CISA publications — not the classified full directive text.</div>
-      <ul>
-        <li><strong>Determines applicability</strong> — which directive series applies to your organisation and what it means for compliance</li>
-        <li>Runs structured <strong>gap assessments</strong> across four technical domains: IT/OT network segmentation, access controls (MFA), continuous monitoring, and patch management</li>
-        <li><strong>Drafts CRMP documents</strong>: Cybersecurity Implementation Plan (CIP/COIP), IRP, Architecture Design Review (ADR), and Cybersecurity Assessment Plan (CAP)</li>
-        <li>Guides <strong>OT/ICS-specific implementation</strong> — data diodes, jump servers for legacy HMIs, passive monitoring tools (Claroty, Dragos, Nozomi)</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>TSA Security Directive</code> <code>SD Pipeline-2021</code> <code>TSA cybersecurity</code> <code>Critical Cyber Systems</code> <code>CCS</code> <code>CRMP</code> <code>IRP testing</code> <code>OT segmentation TSA</code> <code>pipeline cybersecurity</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>13. <img src="assets/Logos/cmmc.png" alt="CMMC" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> CMMC 2.0 [US] — Cybersecurity Maturity Model Certification</h3>
-      <span class="file-badge">CMMC - Claude Skill/cmmc.skill</span>
-      <p>Turns Claude into an expert CMMC compliance advisor for US defense contractors. Covers all three CMMC levels — <strong>Level 1</strong> (17 FAR 52.204-21 practices), <strong>Level 2</strong> (110 NIST SP 800-171 Rev 2 practices/C3PAO), and <strong>Level 3</strong> (110+ NIST SP 800-172/DIBCAC) — under the final <strong>32 CFR Part 170</strong> rule effective December 16, 2024.</p>
-      <ul>
-        <li>Determines the correct <strong>CMMC level</strong> based on FCI vs. CUI handling, DFARS clauses (7012, 7019, 7020, 7021), and program criticality</li>
-        <li>Conducts structured <strong>gap assessments</strong> across all 17 domains — AC, AT, AU, CM, IA, IR, MA, MP, PE, PS, RA, CA, SC, SI — against all 110 Level 2 practices</li>
-        <li>Drafts <strong>System Security Plans (SSP)</strong> covering system boundary, CUI data flows, and implementation narratives for all 110 practices</li>
-        <li>Calculates <strong>SPRS scores</strong> (starting at 110; deductions per unmet practice; range −203 to +110) and prioritises highest-impact gaps</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CMMC</code> <code>CMMC 2.0</code> <code>CMMC Level 2</code> <code>CUI</code> <code>NIST 800-171</code> <code>DFARS 7021</code> <code>C3PAO</code> <code>SPRS score</code> <code>defense contractor</code> <code>DIB</code> <code>DoD contractor</code> <code>FCI</code> <code>SSP CMMC</code> <code>POA&amp;M CMMC</code> <code>DIBCAC</code> <code>CUI scoping</code></div>
-    </div>
-
-
-    <div class="skill-card">
-      <h3>17. 🇪🇺 NIS2 [EU] Directive</h3>
-      <span class="file-badge">NIS2 - Claude Skill/nis2.skill</span>
-      <p>Turns Claude into an expert advisor on the <strong>EU NIS2 Directive (Directive (EU) 2022/2555)</strong> — the EU's overarching cybersecurity framework for essential and important entities, in force since 27 December 2022 (transposition deadline 17 October 2024). Replaces NIS1 with expanded scope, stronger incident reporting, management body accountability, and penalties up to €10M or 2% of global turnover.</p>
-      <ul>
-        <li>Determines <strong>entity classification</strong> — Essential Entity (Annex I: 11 highly critical sectors including energy, transport, health, banking) or Important Entity (Annex II: 7 other critical sectors) — with size-threshold analysis to confirm scope</li>
-        <li>Guides compliance with all <strong>10 Art. 21 cybersecurity risk management measures</strong>: risk analysis policies, incident handling, BCP/DR/crisis management, supply chain security, secure SDLC and vulnerability management, effectiveness assessment, cyber hygiene training, cryptography, HR security and access control, and MFA/secure communications</li>
-        <li>Walks through the <strong>Art. 23 incident reporting workflow</strong>: 24-hour early warning, 72-hour incident notification, and 1-month final report — with content requirements for each stage and significant incident threshold guidance</li>
-        <li>Explains <strong>Art. 20 governance obligations</strong> — management body approval, mandatory cybersecurity training, and personal liability under Member State transposition law</li>
-        <li>Performs <strong>ISO 27001 gap analysis</strong> — maps ISO 27001:2022 Annex A controls to NIS2 Art. 21 measures and identifies critical gaps (Art. 20 governance, Art. 23 reporting timelines, MFA mandate, ENISA supply chain assessments)</li>
-        <li>Addresses the <strong>DORA lex specialis interaction</strong> — explains DORA precedence for financial entities under Art. 4, identifies residual NIS2 obligations, and recommends an integrated compliance programme</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIS2</code> <code>NIS 2</code> <code>Directive EU 2022/2555</code> <code>essential entity</code> <code>important entity</code> <code>NIS2 compliance</code> <code>Article 21 NIS2</code> <code>Article 23 NIS2</code> <code>NIS2 incident reporting</code> <code>NIS2 gap analysis</code> <code>NIS2 supply chain</code> <code>NIS2 governance</code> <code>NIS2 penalties</code> <code>NIS2 and DORA</code> <code>NIS2 and ISO 27001</code> <code>ENISA NIS2</code> <code>network information security directive</code></div>
-    </div>
-
-
-    <div class="skill-card" id="nist-800-53">
-      <h3>24. 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems</h3>
-      <span class="file-badge">NIST 800-53 - Claude Skill/nist-800-53.skill</span>
-      <p>Turns Claude into an expert <strong>NIST SP 800-53 Rev 5</strong> federal security and privacy controls advisor covering the full catalog (September 2020) and its companion publications — SP 800-53B baselines, SP 800-53A assessment procedures, and SP 800-37 Rev 2 Risk Management Framework. Serves federal agency teams, cloud service providers pursuing FedRAMP, system owners, ISSOs, and GRC professionals implementing FISMA-mandated controls.</p>
-      <ul>
-        <li>Categorises systems using <strong>FIPS 199/200</strong> and SP 800-60 — determines C/I/A impact levels, applies the high-water mark rule, and selects the appropriate Low, Moderate, or High baseline from SP 800-53B</li>
-        <li>Covers all <strong>20 control families</strong> (AC, AT, AU, CA, CM, CP, IA, IR, MA, MP, PE, PL, PM, PS, PT, RA, SA, SC, SI, SR) — including the new <strong>PT Privacy</strong> and <strong>SR Supply Chain</strong> families added in Rev 5</li>
-        <li>Guides the full <strong>tailoring process</strong> — identifies common/inherited controls, applies scoping considerations, fills in Organization-Defined Values (ODVs) with federal guidance, designs compensating controls, and supplements baselines for elevated risks</li>
-        <li>Writes <strong>SSP control narratives</strong> in the standard format — implementation description, responsible role, inherited/hybrid designation, and SP 800-53A testing method for each control</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIST SP 800-53</code> <code>SP 800-53</code> <code>NIST 800-53</code> <code>federal security controls</code> <code>RMF</code> <code>Risk Management Framework</code> <code>FISMA</code> <code>ATO</code> <code>Authority to Operate</code> <code>FIPS 199</code> <code>FIPS 200</code> <code>FIPS 140</code> <code>SP 800-53B</code> <code>control baseline</code> <code>Low baseline</code> <code>Moderate baseline</code> <code>High baseline</code> <code>SSP narrative</code> <code>System Security Plan</code> <code>POA&amp;M</code> <code>Plan of Action</code> <code>ConMon</code> <code>SP 800-53A</code> <code>security assessment</code> <code>ODV</code> <code>control tailoring</code> <code>common controls</code> <code>AC-2</code> <code>IA-2</code> <code>SC-8</code> <code>SI-2</code> <code>SR family</code> <code>PT family</code> <code>OSCAL</code> <code>3PAO</code> <code>FedRAMP controls</code> <code>ISSO</code> <code>authorizing official</code></div>
-    </div>
-
-
-    <div class="skill-category-header">🏦 Financial Services</div>
-
-    <div class="skill-card">
-      <h3>7. <img src="assets/Logos/pci-dss.png" alt="PCI DSS" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> PCI DSS</h3>
-      <span class="file-badge">PCI Compliance - Claude Skill/PCI-Compliance.skill</span>
-      <p>Turns Claude into an expert PCI DSS compliance advisor covering <strong>PCI DSS v4.0.1</strong> (June 2024 — current), including all requirements that became mandatory on March 31, 2025. Covers all 12 requirements, all 8 SAQ types, merchant and service provider levels, and v4.0 changes from v3.2.1.</p>
-      <ul>
-        <li><strong>Scopes the Cardholder Data Environment (CDE)</strong> — identifies what's in scope, assesses network segmentation, recommends scope reduction via tokenisation or P2PE</li>
-        <li><strong>Selects the correct SAQ type</strong> — decision tree for SAQ A, A-EP, B, B-IP, C, C-VT, P2PE, and D</li>
-        <li>Conducts structured <strong>gap assessments</strong> across all 12 requirements with QSA evidence requirements</li>
-        <li>Guides <strong>v3.2.1 → v4.0.1 migration</strong> including MFA expansion, payment page script integrity (Req 6.4.3), phishing protection (Req 5.4.1)</li>
-      </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>PCI DSS</code> <code>PCI compliance</code> <code>cardholder data</code> <code>CDE</code> <code>SAQ</code> <code>ROC</code> <code>QSA</code> <code>PAN</code> <code>tokenisation</code> <code>merchant level</code></div>
-    </div>
-
-
-    <div class="skill-card">
+<div class="skill-card">
       <h3>11. <img src="assets/Logos/dora.png" alt="DORA" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> DORA [EU] — Digital Operational Resilience</h3>
       <span class="file-badge">DORA - Claude Skill/dora.skill</span>
       <p>Turns Claude into an expert advisor on <strong>Regulation (EU) 2022/2554</strong> (DORA) — the anchoring ICT regulation for EU financial entities since 17 January 2025. Encodes all 64 DORA articles, all 12 adopted RTS/ITS, and provides precise article-level guidance. Explicitly separates DORA from NIS2, legacy EBA ICT guidelines, and ISO 27001.</p>
@@ -1119,41 +960,35 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>DORA</code> <code>Regulation (EU) 2022/2554</code> <code>digital operational resilience</code> <code>ICT risk management framework</code> <code>Art. 18 classification</code> <code>Art. 19 incident reporting</code> <code>Art. 26 TLPT</code> <code>Art. 30 contractual provisions</code> <code>Register of Information</code> <code>ICT concentration risk</code> <code>DORA vs NIS2</code> <code>Chapter II DORA</code> <code>Chapter III DORA</code></div>
     </div>
 
-
-    <div class="skill-card">
-      <h3>15. <img src="assets/Logos/swift-csp.png" alt="SWIFT CSP" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> SWIFT Customer Security Programme (CSP)</h3>
-      <span class="file-badge">SWIFT CSP - Claude Skill/swift-csp.skill</span>
-      <p>Turns Claude into an expert advisor on the <strong>SWIFT Customer Security Controls Framework (CSCF) v2025</strong> — the mandatory cybersecurity programme for all SWIFT network participants. Covers all 31 controls (23 mandatory + 8 advisory), all five architecture types (A1/A2/A3/A4/B), the KYC-SA annual attestation process, and cross-framework mapping to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0.</p>
+<div class="skill-card">
+      <h3>12. 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act</h3>
+      <span class="file-badge">DPDPA - Claude Skill/dpdpa.skill</span>
+      <p>Turns Claude into an expert advisor on India's <strong>Digital Personal Data Protection Act, 2023</strong> and the finalized <strong>DPDP Rules, 2025</strong> (notified 13 November 2025, effective 13 May 2027). Covers all 44 sections and 23 Rules with section-level citations, GDPR-alignment mapping, and guidance for both Indian companies and global organizations with Indian data subjects.</p>
       <ul>
-        <li>Determines the correct <strong>SWIFT architecture type</strong> (A1/A2/A3/A4/B) and produces the full mandatory/advisory control applicability matrix for your deployment</li>
-        <li>Conducts structured <strong>CSCF v2025 gap assessments</strong> with 🔴/🟡/🟢 status per control, evidence requirements, and prioritised remediation roadmaps</li>
-        <li>Provides <strong>deep-dive implementation guidance</strong> for all 23 mandatory controls — purpose, requirements, implementation steps, and audit evidence artifacts</li>
-        <li>Guides the complete <strong>KYC-SA attestation process</strong> — evidence prep, independent assessor qualification, portal submission, and post-submission counterparty visibility</li>
-        <li>Advises on <strong>SWIFT-specific incident response</strong> — 24-hour initial notification to security@swift.com, 30-day full report, evidence preservation, and Control 7.1 IRP requirements</li>
-        <li><strong>Maps CSCF to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0</strong> — identifying synergies and SWIFT-specific additions not covered by existing certifications</li>
+        <li>Conducts structured <strong>DPDPA gap analyses</strong> covering notice/consent (Sections 5–6 + Rules 3–4), Data Fiduciary obligations (Section 8 + Rules 6–9), children's data (Section 9 + Rules 10–12), and SDF obligations (Section 10 + Rule 13)</li>
+        <li><strong>Distinguishes DPDPA from GDPR</strong> across 8 dimensions — digital-only scope, no legitimate interests basis, unconditional consent + no bundling, blacklist cross-border transfers, narrower erasure right, India-resident DPO for SDFs, 18-year children's threshold, single Board enforcement</li>
+        <li>Guides <strong>breach notification</strong> per Section 8(6) and Rule 6 — 72-hour Board notification, all breaches notifiable (no risk threshold), Processor cascade obligations</li>
+        <li>Designs <strong>children's data programmes</strong> — Rule 12 parental verification (DigiLocker, government tokens, virtual tokens) and absolute prohibitions on tracking, profiling, and targeted advertising for under-18s</li>
+        <li>Advises <strong>Significant Data Fiduciaries</strong> on India-resident DPO, annual DPIA, annual independent audit, and data localisation readiness</li>
+        <li>Guides <strong>Data Principal rights fulfilment</strong> — access (Section 11), correction/erasure (Section 12), grievance redressal (Section 13), and the unique right to nominate (Section 14)</li>
       </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>SWIFT CSP</code> <code>CSCF</code> <code>KYC-SA</code> <code>SWIFT security attestation</code> <code>Alliance Access</code> <code>SWIFT operator MFA</code> <code>SWIFT secure zone</code> <code>CSCF v2025</code> <code>Control 4.2 SWIFT</code> <code>Control 6.4 SWIFT</code> <code>Control 7.1 SWIFT</code> <code>SWIFT architecture A1</code> <code>SWIFT service bureau</code> <code>SWIFT gap assessment</code> <code>SWIFT hardware token</code></div>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>DPDPA</code> <code>Digital Personal Data Protection Act</code> <code>India data protection</code> <code>Data Fiduciary</code> <code>Data Principal</code> <code>Significant Data Fiduciary</code> <code>DPDP Rules 2025</code> <code>Rule 6 DPDP breach</code> <code>Rule 12 parental consent</code> <code>India privacy law</code> <code>DPDPA vs GDPR</code> <code>DigiLocker consent</code> <code>India children data</code></div>
     </div>
 
-
-    <div class="skill-category-header">🤖 AI &amp; Governance</div>
-
-    <div class="skill-card">
-      <h3>9. <img src="assets/Logos/iso42001.webp" alt="ISO 42001" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ISO 42001 AI Management System</h3>
-      <span class="file-badge">ISO 42001 - Claude Skill/ISO-42001.skill</span>
-      <p>Turns Claude into an expert <strong>ISO/IEC 42001:2023</strong> AI Management System (AIMS) advisor — the world's first international standard for AI governance. Serves both <strong>AI providers</strong> (organisations developing or deploying AI) and <strong>AI users</strong> (organisations integrating third-party AI).</p>
+<div class="skill-card">
+      <h3>13. <img src="assets/Logos/cmmc.png" alt="CMMC" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> CMMC 2.0 [US] — Cybersecurity Maturity Model Certification</h3>
+      <span class="file-badge">CMMC - Claude Skill/cmmc.skill</span>
+      <p>Turns Claude into an expert CMMC compliance advisor for US defense contractors. Covers all three CMMC levels — <strong>Level 1</strong> (17 FAR 52.204-21 practices), <strong>Level 2</strong> (110 NIST SP 800-171 Rev 2 practices/C3PAO), and <strong>Level 3</strong> (110+ NIST SP 800-172/DIBCAC) — under the final <strong>32 CFR Part 170</strong> rule effective December 16, 2024.</p>
       <ul>
-        <li>Conducts structured <strong>gap assessments</strong> across all mandatory clauses (4–10) and all <strong>38 Annex A controls</strong> (domains A.2–A.10) with 🔴/🟡/🟢 status and phased remediation roadmap</li>
-        <li>Guides the mandatory <strong>AI System Impact Assessment (AISIA)</strong> — identifying affected populations, assessing impact dimensions, classifying impact level (Low/Medium/High)</li>
-        <li>Performs <strong>AI risk assessment</strong> across model risks, data risks, operational risks, and supply chain risks</li>
-        <li>Generates a complete <strong>Statement of Applicability (SoA)</strong> covering all 38 Annex A controls (A.2.2–A.10.4)</li>
-        <li><strong>Maps ISO 42001 to the EU AI Act</strong> — aligns AISIA to the Fundamental Rights Impact Assessment (FRIA) for high-risk AI systems</li>
+        <li>Determines the correct <strong>CMMC level</strong> based on FCI vs. CUI handling, DFARS clauses (7012, 7019, 7020, 7021), and program criticality</li>
+        <li>Conducts structured <strong>gap assessments</strong> across all 17 domains — AC, AT, AU, CM, IA, IR, MA, MP, PE, PS, RA, CA, SC, SI — against all 110 Level 2 practices</li>
+        <li>Drafts <strong>System Security Plans (SSP)</strong> covering system boundary, CUI data flows, and implementation narratives for all 110 practices</li>
+        <li>Calculates <strong>SPRS scores</strong> (starting at 110; deductions per unmet practice; range −203 to +110) and prioritises highest-impact gaps</li>
       </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISO 42001</code> <code>ISO/IEC 42001</code> <code>AI Management System</code> <code>AIMS</code> <code>AISIA</code> <code>AI governance standard</code> <code>Annex A AI controls</code> <code>AI certification</code> <code>EU AI Act management system</code></div>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CMMC</code> <code>CMMC 2.0</code> <code>CMMC Level 2</code> <code>CUI</code> <code>NIST 800-171</code> <code>DFARS 7021</code> <code>C3PAO</code> <code>SPRS score</code> <code>defense contractor</code> <code>DIB</code> <code>DoD contractor</code> <code>FCI</code> <code>SSP CMMC</code> <code>POA&amp;M CMMC</code> <code>DIBCAC</code> <code>CUI scoping</code></div>
     </div>
 
-
-    <div class="skill-card">
+<div class="skill-card">
       <h3>14. <img src="assets/Logos/nist-ai-rmf.svg" alt="NIST AI RMF" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> NIST AI Risk Management Framework</h3>
       <span class="file-badge">NIST AI RMF - Claude Skill/nist-ai-rmf.skill</span>
       <p>Turns Claude into an expert advisor on the <strong>NIST AI Risk Management Framework (AI RMF 1.0)</strong>, published January 2023 as NIST AI 100-1. Covers all four core functions — GOVERN, MAP, MEASURE, MANAGE — their 19 categories and subcategories, the AI RMF Playbook's suggested actions, and deep guidance on AI trustworthiness evaluation.</p>
@@ -1168,24 +1003,67 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIST AI RMF</code> <code>AI RMF</code> <code>NIST AI 100-1</code> <code>AI Risk Management Framework</code> <code>GOVERN function</code> <code>MAP function</code> <code>MEASURE function</code> <code>MANAGE function</code> <code>AI RMF Playbook</code> <code>AI risk profile</code> <code>AI trustworthiness</code> <code>AI bias assessment</code> <code>MEASURE 2.2</code> <code>AI risk register</code> <code>responsible AI framework</code></div>
     </div>
 
-
-    <div class="skill-card" id="eu-ai-act">
-      <h3>25. 🤖 EU AI Act — Regulation (EU) 2024/1689</h3>
-      <span class="file-badge">EU AI Act - Claude Skill/eu-ai-act.skill</span>
-      <p>Turns Claude into an expert <strong>EU AI Act</strong> compliance advisor covering the full <strong>Regulation (EU) 2024/1689</strong> — the world's first comprehensive horizontal AI regulation, in force from 1 August 2024. Serves AI providers, deployers, importers, and authorised representatives operating in or placing AI systems on the EU market.</p>
+<div class="skill-card">
+      <h3>15. <img src="assets/Logos/swift-csp.png" alt="SWIFT CSP" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> SWIFT Customer Security Programme (CSP)</h3>
+      <span class="file-badge">SWIFT CSP - Claude Skill/swift-csp.skill</span>
+      <p>Turns Claude into an expert advisor on the <strong>SWIFT Customer Security Controls Framework (CSCF) v2025</strong> — the mandatory cybersecurity programme for all SWIFT network participants. Covers all 31 controls (23 mandatory + 8 advisory), all five architecture types (A1/A2/A3/A4/B), the KYC-SA annual attestation process, and cross-framework mapping to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0.</p>
       <ul>
-        <li>Classifies AI systems across all four risk tiers — <strong>Prohibited (Art. 5), High-Risk (Art. 6), Limited Risk (Art. 50), and Minimal/No Risk</strong> — using both Annex I safety component path (Art. 6(1)) and Annex III listed use case path (Art. 6(2))</li>
-        <li>Screens for all <strong>8 prohibited AI practices</strong> (Art. 5, applies from 2 February 2025): subliminal manipulation, vulnerability exploitation, social scoring, predictive criminal assessment, untargeted biometric scraping, workplace/education emotion inference, sensitive-attribute biometric categorisation, and real-time RBI in public spaces by law enforcement</li>
-        <li>Covers all <strong>8 Annex III high-risk use case areas</strong>: biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration/border control, and justice/democracy</li>
-        <li>Walks through all <strong>Arts. 9–17 provider obligations</strong>: risk management (5-step lifecycle process), data governance, Annex IV technical documentation, automatic logging, transparency to deployers, human oversight design (stop button, override capability), accuracy/robustness/cybersecurity, 12-item provider checklist, and 13-component Quality Management System</li>
+        <li>Determines the correct <strong>SWIFT architecture type</strong> (A1/A2/A3/A4/B) and produces the full mandatory/advisory control applicability matrix for your deployment</li>
+        <li>Conducts structured <strong>CSCF v2025 gap assessments</strong> with 🔴/🟡/🟢 status per control, evidence requirements, and prioritised remediation roadmaps</li>
+        <li>Provides <strong>deep-dive implementation guidance</strong> for all 23 mandatory controls — purpose, requirements, implementation steps, and audit evidence artifacts</li>
+        <li>Guides the complete <strong>KYC-SA attestation process</strong> — evidence prep, independent assessor qualification, portal submission, and post-submission counterparty visibility</li>
+        <li>Advises on <strong>SWIFT-specific incident response</strong> — 24-hour initial notification to security@swift.com, 30-day full report, evidence preservation, and Control 7.1 IRP requirements</li>
+        <li><strong>Maps CSCF to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0</strong> — identifying synergies and SWIFT-specific additions not covered by existing certifications</li>
       </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>EU AI Act</code> <code>AI Act</code> <code>Regulation 2024/1689</code> <code>high-risk AI</code> <code>prohibited AI</code> <code>GPAI model</code> <code>general-purpose AI</code> <code>AI system classification</code> <code>AI conformity assessment</code> <code>CE marking AI</code> <code>EU AI database</code> <code>AI Office</code> <code>AI Board</code> <code>systemic risk AI</code> <code>Art. 5 AI</code> <code>Annex III AI</code> <code>AI provider obligations</code> <code>AI deployer obligations</code> <code>human oversight AI</code> <code>AI risk management</code> <code>Art. 50 transparency</code> <code>chatbot disclosure AI</code> <code>AI Act compliance</code> <code>GPAI obligations</code> <code>open-source AI Act</code> <code>AI Act penalty</code> <code>AI Act timeline</code> <code>AI Act GDPR</code></div>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>SWIFT CSP</code> <code>CSCF</code> <code>KYC-SA</code> <code>SWIFT security attestation</code> <code>Alliance Access</code> <code>SWIFT operator MFA</code> <code>SWIFT secure zone</code> <code>CSCF v2025</code> <code>Control 4.2 SWIFT</code> <code>Control 6.4 SWIFT</code> <code>Control 7.1 SWIFT</code> <code>SWIFT architecture A1</code> <code>SWIFT service bureau</code> <code>SWIFT gap assessment</code> <code>SWIFT hardware token</code></div>
     </div>
 
+<div class="skill-card">
+      <h3>16. 🇦🇺 ISM [Australia] — Australian Information Security Manual</h3>
+      <span class="file-badge">ISM - Claude Skill/ism.skill</span>
+      <p>Turns Claude into an expert advisor on the <strong>Australian Information Security Manual (ISM)</strong> — the whole-of-government cybersecurity framework published by the Australian Signals Directorate (ASD) for federal and state government entities and their supply chains. Covers all 22 guideline chapters, control applicability markings (NC/OS/PROTECTED/SECRET/TOP SECRET), the IRAP assessment programme, system authorisation, and the Essential Eight relationship.</p>
+      <ul>
+        <li>Applies the ISM's <strong>control applicability marking system</strong> — determines NC/OS/PROTECTED/SECRET/TOP SECRET controls for a given system using the stacking rule, and scopes gap analyses accordingly</li>
+        <li>Guides the complete <strong>system authorisation pathway</strong> — six-step cycle (define, select, implement, assess, authorise, monitor), SSP structure, and ATO sign-off by the Authorising Official</li>
+        <li>Prepares agencies for <strong>IRAP assessments</strong> — full artefact checklist, what assessors evaluate, post-assessment POA&amp;M → ATO pathway, and 24-month re-assessment obligations</li>
+        <li>Provides deep-dive guidance on all <strong>22 ISM guideline chapters</strong>: system hardening (Ch. 13), patch management SLAs (Ch. 14), logging/retention (Ch. 15), cryptography (Ch. 20), email security (Ch. 18), networking (Ch. 19)</li>
+        <li>Explains the <strong>Essential Eight</strong> as a prioritised ISM subset — maps each of the 8 strategies to ISM chapters, covers ML0–ML3 maturity levels, and distinguishes Essential Eight from full ISM compliance</li>
+        <li>Advises <strong>private sector cloud providers and supply chain partners</strong> on ISM obligations under government contracts and when IRAP is required for non-government entities</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ISM</code> <code>Information Security Manual</code> <code>ASD cybersecurity</code> <code>IRAP assessment</code> <code>system authorisation</code> <code>ATO Australia</code> <code>PROTECTED system</code> <code>OFFICIAL Sensitive</code> <code>Essential Eight</code> <code>ASD compliance</code> <code>ISM controls</code> <code>ISM gap analysis</code> <code>ISM hardening</code> <code>cyber.gov.au</code> <code>NC OS PROTECTED</code></div>
+    </div>
 
-    <div class="skill-category-header">🚀 Export &amp; Defense</div>
+<div class="skill-card">
+      <h3>17. 🇪🇺 NIS2 [EU] Directive</h3>
+      <span class="file-badge">NIS2 - Claude Skill/nis2.skill</span>
+      <p>Turns Claude into an expert advisor on the <strong>EU NIS2 Directive (Directive (EU) 2022/2555)</strong> — the EU's overarching cybersecurity framework for essential and important entities, in force since 27 December 2022 (transposition deadline 17 October 2024). Replaces NIS1 with expanded scope, stronger incident reporting, management body accountability, and penalties up to €10M or 2% of global turnover.</p>
+      <ul>
+        <li>Determines <strong>entity classification</strong> — Essential Entity (Annex I: 11 highly critical sectors including energy, transport, health, banking) or Important Entity (Annex II: 7 other critical sectors) — with size-threshold analysis to confirm scope</li>
+        <li>Guides compliance with all <strong>10 Art. 21 cybersecurity risk management measures</strong>: risk analysis policies, incident handling, BCP/DR/crisis management, supply chain security, secure SDLC and vulnerability management, effectiveness assessment, cyber hygiene training, cryptography, HR security and access control, and MFA/secure communications</li>
+        <li>Walks through the <strong>Art. 23 incident reporting workflow</strong>: 24-hour early warning, 72-hour incident notification, and 1-month final report — with content requirements for each stage and significant incident threshold guidance</li>
+        <li>Explains <strong>Art. 20 governance obligations</strong> — management body approval, mandatory cybersecurity training, and personal liability under Member State transposition law</li>
+        <li>Performs <strong>ISO 27001 gap analysis</strong> — maps ISO 27001:2022 Annex A controls to NIS2 Art. 21 measures and identifies critical gaps (Art. 20 governance, Art. 23 reporting timelines, MFA mandate, ENISA supply chain assessments)</li>
+        <li>Addresses the <strong>DORA lex specialis interaction</strong> — explains DORA precedence for financial entities under Art. 4, identifies residual NIS2 obligations, and recommends an integrated compliance programme</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIS2</code> <code>NIS 2</code> <code>Directive EU 2022/2555</code> <code>essential entity</code> <code>important entity</code> <code>NIS2 compliance</code> <code>Article 21 NIS2</code> <code>Article 23 NIS2</code> <code>NIS2 incident reporting</code> <code>NIS2 gap analysis</code> <code>NIS2 supply chain</code> <code>NIS2 governance</code> <code>NIS2 penalties</code> <code>NIS2 and DORA</code> <code>NIS2 and ISO 27001</code> <code>ENISA NIS2</code> <code>network information security directive</code></div>
+    </div>
 
-    <div class="skill-card">
+<div class="skill-card">
+      <h3>18. <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" style="height:1em;width:auto;vertical-align:middle;border-radius:2px;"> CCPA/CPRA [California] Privacy</h3>
+      <span class="file-badge">CCPA - Claude Skill/ccpa.skill</span>
+      <p>Turns Claude into an expert advisor on <strong>California's comprehensive privacy laws</strong> — the California Consumer Privacy Act (CCPA, effective Jan 1, 2020) and the California Privacy Rights Act (CPRA/Proposition 24, effective Jan 1, 2023). CPRA created the California Privacy Protection Agency (CPPA), introduced Sensitive Personal Information (SPI), and added rights to correct PI, limit SPI use, and require data retention disclosures.</p>
+      <ul>
+        <li>Determines <strong>business applicability</strong> — whether an organisation meets any of the three CCPA/CPRA thresholds ($25M revenue OR 100K+ consumers/households OR 50%+ revenue from PI sale/sharing) and outlines resulting obligations</li>
+        <li>Guides <strong>consumer rights fulfillment</strong> — step-by-step workflows for right to know, delete, correct, opt-out of sale/sharing, limit SPI use, portability, and non-discrimination — including identity verification, exception handling, response deadlines (45 days / 15 business days for SPI), and service provider propagation</li>
+        <li>Classifies <strong>ad tech, cookie tracking, and data sharing</strong> as "sale" or CPRA "sharing" (cross-context behavioral advertising) and advises on Global Privacy Control (GPC) signal compliance and consent management platform implementation</li>
+        <li>Identifies and advises on <strong>Sensitive Personal Information (SPI)</strong> — precise geolocation, biometrics, health data, SSNs, credentials, and more — including permitted uses, limitation right obligations, and 15-business-day response SLA</li>
+        <li>Performs <strong>GDPR-to-CCPA/CPRA gap analysis</strong> — identifies California-specific additions (Do Not Sell or Share link, GPC, SPI limitation, minors' opt-in, financial incentive disclosures) and structural differences (opt-out vs. opt-in, no lawful basis requirement, breach private right of action)</li>
+        <li>Assesses <strong>CPPA enforcement and penalty exposure</strong> — $2,500/unintentional, $7,500/intentional, $100–$750/consumer for breach class actions — and advises on remediation prioritisation</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CCPA</code> <code>CPRA</code> <code>California Consumer Privacy Act</code> <code>California Privacy Rights Act</code> <code>Do Not Sell or Share</code> <code>sensitive personal information California</code> <code>CPPA</code> <code>California privacy compliance</code> <code>right to know California</code> <code>right to delete California</code> <code>California opt-out</code> <code>GPC signal</code> <code>Global Privacy Control</code> <code>ad tech CCPA</code> <code>CCPA vs GDPR</code> <code>CCPA service provider</code> <code>CCPA penalty</code></div>
+    </div>
+
+<div class="skill-card">
       <h3>19. <img src="assets/Logos/itar.jpg" alt="ITAR" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations</h3>
       <span class="file-badge">ITAR - Claude Skill/itar.skill</span>
       <p>Turns Claude into an expert advisor on <strong>US defense export controls under 22 CFR Parts 120–130</strong>, administered by the Directorate of Defense Trade Controls (DDTC). ITAR controls the export, re-export, and transfer of defense articles, defense services, and technical data on the United States Munitions List (USML) — covering 21 categories from firearms to spacecraft.</p>
@@ -1200,24 +1078,20 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>ITAR</code> <code>International Traffic in Arms Regulations</code> <code>USML</code> <code>United States Munitions List</code> <code>DDTC</code> <code>defense export</code> <code>deemed export</code> <code>TAA</code> <code>technical assistance agreement</code> <code>MLA</code> <code>DSP-5</code> <code>DSP-73</code> <code>ITAR registration</code> <code>ITAR violation</code> <code>voluntary disclosure ITAR</code> <code>ITAR vs EAR</code> <code>commodity jurisdiction</code> <code>technology control plan</code> <code>Empowered Official</code></div>
     </div>
 
-
-    <div class="skill-card" id="ear">
-      <h3>23. 📦 EAR [US] — Export Administration Regulations</h3>
-      <span class="file-badge">EAR - Claude Skill/ear.skill</span>
-      <p>Turns Claude into an expert <strong>Export Administration Regulations (EAR)</strong> advisor with deep knowledge of all 15 CFR Parts 730–774, administered by the Bureau of Industry and Security (BIS). Covers the full dual-use export control lifecycle — ECCN classification, licence analysis, restricted party screening, deemed exports, FDPR, and enforcement response.</p>
+<div class="skill-card">
+      <h3>20. <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law</h3>
+      <span class="file-badge">LGPD - Claude Skill/lgpd.skill</span>
+      <p>Turns Claude into an expert advisor on <strong>Brazil's Lei Geral de Proteção de Dados Pessoais (Law 13,709/2018)</strong>, enforced by the <strong>ANPD (Autoridade Nacional de Proteção de Dados)</strong>. LGPD applies extraterritorially to any organisation processing personal data of individuals located in Brazil — covering SaaS companies, fintechs, healthcare, e-commerce, and any business with Brazilian users.</p>
       <ul>
-        <li>Applies the mandatory <strong>Order of Review</strong> to determine EAR vs. ITAR jurisdiction — USML check first, then CCL classification or EAR99 confirmation per § 732.3</li>
-        <li>Classifies items across all <strong>10 CCL categories</strong> (0–9) and <strong>5 product groups</strong> (A–E) with step-by-step ECCN determination, including CCATS and CJ request guidance</li>
-        <li>Analyses <strong>licence requirements</strong> using the Commerce Country Chart (RFC × country matrix) and identifies all 14 applicable <strong>licence exceptions</strong>: LVS, GBS, CIV, APP, TSR, TMP, RPL, GOV, TSU, ENC, BAG, AVS, ACE, GFT</li>
-        <li>Guides <strong>restricted party screening</strong> against the Entity List, Denied Persons List, Unverified List, MEU List, and OFAC SDN — with Consolidated Screening List (CSL) workflow</li>
+        <li>Analyses <strong>extraterritorial scope</strong> (Art. 3) — determines LGPD applicability regardless of where the organisation is established</li>
+        <li>Maps <strong>legal bases for processing</strong> — 10 bases under Art. 7 for regular data; stricter Art. 11 bases for sensitive data (health, biometric, racial/ethnic origin); legitimate interest balancing tests</li>
+        <li>Drafts <strong>LGPD-compliant privacy notices</strong> (Art. 9) and valid <strong>consent mechanisms</strong> (Art. 8) — specific, freely given, documented, and revocable</li>
+        <li>Guides <strong>data subject rights fulfilment</strong> (Arts. 17–22) — access, correction, deletion, portability, and automated decision review — with 15-day response workflows</li>
       </ul>
-      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>EAR</code> <code>Export Administration Regulations</code> <code>ECCN</code> <code>EAR99</code> <code>BIS</code> <code>export control</code> <code>Commerce Control List</code> <code>CCL</code> <code>dual-use export</code> <code>export licence</code> <code>Entity List</code> <code>Denied Persons List</code> <code>deemed export</code> <code>FDPR</code> <code>Foreign Direct Product Rule</code> <code>licence exception</code> <code>ENC exception</code> <code>voluntary self-disclosure</code> <code>VSD</code> <code>SNAP-R</code> <code>export compliance programme</code> <code>ECP</code> <code>restricted party screening</code> <code>export to China</code> <code>export to Russia</code> <code>de minimis rule</code> <code>CCATS</code> <code>EAR vs ITAR</code></div>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>LGPD</code> <code>Brazil data protection</code> <code>Lei Geral de Proteção de Dados</code> <code>ANPD</code> <code>Brazilian privacy law</code> <code>LGPD compliance</code> <code>LGPD gap assessment</code> <code>Encarregado</code> <code>RIPD</code> <code>LGPD legal basis</code> <code>Brazil data breach</code> <code>ANPD notification</code> <code>LGPD vs GDPR</code> <code>Brazil personal data</code> <code>LGPD penalty</code></div>
     </div>
 
-
-    <div class="skill-category-header">🌱 ESG &amp; Sustainability</div>
-
-    <div class="skill-card">
+<div class="skill-card">
       <h3>21. <img src="assets/Logos/csrd-eu.svg" alt="EU" style="height:1.25em;width:auto;vertical-align:middle;object-fit:contain;"> CSRD [EU] — Corporate Sustainability Reporting Directive</h3>
       <span class="file-badge">CSRD - Claude Skill/csrd.skill</span>
       <p>Turns Claude into an expert advisor on <strong>EU Directive 2022/2464 (CSRD)</strong>, which requires approximately 50,000 companies to disclose detailed ESG information under the <strong>European Sustainability Reporting Standards (ESRS)</strong>. CSRD came into force on 5 January 2023 and replaces the Non-Financial Reporting Directive (NFRD), extending mandatory sustainability reporting from ~11,000 to ~50,000 companies across the EU.</p>
@@ -1230,9 +1104,59 @@ layout: null
       <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CSRD</code> <code>Corporate Sustainability Reporting Directive</code> <code>ESRS</code> <code>double materiality</code> <code>double materiality assessment</code> <code>DMA</code> <code>ESG reporting Europe</code> <code>sustainability disclosure EU</code> <code>non-financial reporting</code> <code>ESRS E1</code> <code>ESRS S1</code> <code>ESRS G1</code> <code>Scope 3 CSRD</code> <code>transition plan ESRS</code> <code>CSRD gap assessment</code> <code>CSRD scope</code> <code>EU sustainability reporting</code> <code>ESRS assurance</code> <code>XBRL sustainability</code> <code>CSRD vs GRI</code> <code>EU Taxonomy CSRD</code></div>
     </div>
 
+<div class="skill-card" id="cis-controls">
+      <h3>22. 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene</h3>
+      <span class="file-badge">CIS Controls - Claude Skill/cis-controls.skill</span>
+      <p>Turns Claude into an expert <strong>CIS Controls v8</strong> advisor covering all 18 controls and 153 safeguards from the May 2021 release. Applies the <strong>Implementation Group (IG) framework</strong> to scope guidance to your organisation's risk profile: IG1 (56 safeguards — essential cyber hygiene for all orgs), IG2 (130 safeguards — dedicated IT, sensitive data), and IG3 (153 safeguards — large enterprise with security team). Includes complete cross-framework mapping to NIST CSF 2.0, ISO 27001:2022, CMMC 2.0, SOC 2, and PCI DSS v4.0.</p>
+      <ul>
+        <li>Determines the correct <strong>Implementation Group</strong> for any organisation — applies IG criteria (IT resources, data sensitivity, regulatory exposure, threat profile) and scopes all guidance to that IG</li>
+        <li>Conducts <strong>CIS Controls gap assessments</strong> across all 18 controls and applicable safeguards with 🔴/🟡/🟢 status, IG assignment, asset type, security function, and prioritised remediation roadmap</li>
+        <li>Provides <strong>safeguard-level implementation guidance</strong> — practical steps, recommended tools (Qualys, CrowdStrike, Splunk, Microsoft Defender, Nessus), and common pitfalls for all 153 safeguards</li>
+        <li>Delivers a structured <strong>IG1 12-week quick-start programme</strong> — week-by-week: asset inventory, secure configuration, access controls, patch management, backups, and security awareness training</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>CIS Controls</code> <code>CIS Top 18</code> <code>CIS v8</code> <code>CIS Controls v8</code> <code>Implementation Group</code> <code>IG1</code> <code>IG2</code> <code>IG3</code> <code>CIS safeguards</code> <code>cyber hygiene controls</code> <code>CIS gap assessment</code> <code>CIS Controls NIST mapping</code> <code>CIS Benchmarks</code> <code>CIS CSAT</code> <code>asset inventory CIS</code> <code>vulnerability management CIS</code> <code>CIS Controls ISO 27001</code> <code>CIS Controls SOC 2</code> <code>CIS Controls PCI DSS</code> <code>CIS Controls CMMC</code> <code>CIS Controls NIST CSF</code></div>
+    </div>
 
-    <hr />
+<div class="skill-card" id="ear">
+      <h3>23. 📦 EAR [US] — Export Administration Regulations</h3>
+      <span class="file-badge">EAR - Claude Skill/ear.skill</span>
+      <p>Turns Claude into an expert <strong>Export Administration Regulations (EAR)</strong> advisor with deep knowledge of all 15 CFR Parts 730–774, administered by the Bureau of Industry and Security (BIS). Covers the full dual-use export control lifecycle — ECCN classification, licence analysis, restricted party screening, deemed exports, FDPR, and enforcement response.</p>
+      <ul>
+        <li>Applies the mandatory <strong>Order of Review</strong> to determine EAR vs. ITAR jurisdiction — USML check first, then CCL classification or EAR99 confirmation per § 732.3</li>
+        <li>Classifies items across all <strong>10 CCL categories</strong> (0–9) and <strong>5 product groups</strong> (A–E) with step-by-step ECCN determination, including CCATS and CJ request guidance</li>
+        <li>Analyses <strong>licence requirements</strong> using the Commerce Country Chart (RFC × country matrix) and identifies all 14 applicable <strong>licence exceptions</strong>: LVS, GBS, CIV, APP, TSR, TMP, RPL, GOV, TSU, ENC, BAG, AVS, ACE, GFT</li>
+        <li>Guides <strong>restricted party screening</strong> against the Entity List, Denied Persons List, Unverified List, MEU List, and OFAC SDN — with Consolidated Screening List (CSL) workflow</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>EAR</code> <code>Export Administration Regulations</code> <code>ECCN</code> <code>EAR99</code> <code>BIS</code> <code>export control</code> <code>Commerce Control List</code> <code>CCL</code> <code>dual-use export</code> <code>export licence</code> <code>Entity List</code> <code>Denied Persons List</code> <code>deemed export</code> <code>FDPR</code> <code>Foreign Direct Product Rule</code> <code>licence exception</code> <code>ENC exception</code> <code>voluntary self-disclosure</code> <code>VSD</code> <code>SNAP-R</code> <code>export compliance programme</code> <code>ECP</code> <code>restricted party screening</code> <code>export to China</code> <code>export to Russia</code> <code>de minimis rule</code> <code>CCATS</code> <code>EAR vs ITAR</code></div>
+    </div>
 
+<div class="skill-card" id="nist-800-53">
+      <h3>24. 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems</h3>
+      <span class="file-badge">NIST 800-53 - Claude Skill/nist-800-53.skill</span>
+      <p>Turns Claude into an expert <strong>NIST SP 800-53 Rev 5</strong> federal security and privacy controls advisor covering the full catalog (September 2020) and its companion publications — SP 800-53B baselines, SP 800-53A assessment procedures, and SP 800-37 Rev 2 Risk Management Framework. Serves federal agency teams, cloud service providers pursuing FedRAMP, system owners, ISSOs, and GRC professionals implementing FISMA-mandated controls.</p>
+      <ul>
+        <li>Categorises systems using <strong>FIPS 199/200</strong> and SP 800-60 — determines C/I/A impact levels, applies the high-water mark rule, and selects the appropriate Low, Moderate, or High baseline from SP 800-53B</li>
+        <li>Covers all <strong>20 control families</strong> (AC, AT, AU, CA, CM, CP, IA, IR, MA, MP, PE, PL, PM, PS, PT, RA, SA, SC, SI, SR) — including the new <strong>PT Privacy</strong> and <strong>SR Supply Chain</strong> families added in Rev 5</li>
+        <li>Guides the full <strong>tailoring process</strong> — identifies common/inherited controls, applies scoping considerations, fills in Organization-Defined Values (ODVs) with federal guidance, designs compensating controls, and supplements baselines for elevated risks</li>
+        <li>Writes <strong>SSP control narratives</strong> in the standard format — implementation description, responsible role, inherited/hybrid designation, and SP 800-53A testing method for each control</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>NIST SP 800-53</code> <code>SP 800-53</code> <code>NIST 800-53</code> <code>federal security controls</code> <code>RMF</code> <code>Risk Management Framework</code> <code>FISMA</code> <code>ATO</code> <code>Authority to Operate</code> <code>FIPS 199</code> <code>FIPS 200</code> <code>FIPS 140</code> <code>SP 800-53B</code> <code>control baseline</code> <code>Low baseline</code> <code>Moderate baseline</code> <code>High baseline</code> <code>SSP narrative</code> <code>System Security Plan</code> <code>POA&amp;M</code> <code>Plan of Action</code> <code>ConMon</code> <code>SP 800-53A</code> <code>security assessment</code> <code>ODV</code> <code>control tailoring</code> <code>common controls</code> <code>AC-2</code> <code>IA-2</code> <code>SC-8</code> <code>SI-2</code> <code>SR family</code> <code>PT family</code> <code>OSCAL</code> <code>3PAO</code> <code>FedRAMP controls</code> <code>ISSO</code> <code>authorizing official</code></div>
+    </div>
+
+<div class="skill-card" id="eu-ai-act">
+      <h3>25. 🤖 EU AI Act — Regulation (EU) 2024/1689</h3>
+      <span class="file-badge">EU AI Act - Claude Skill/eu-ai-act.skill</span>
+      <p>Turns Claude into an expert <strong>EU AI Act</strong> compliance advisor covering the full <strong>Regulation (EU) 2024/1689</strong> — the world's first comprehensive horizontal AI regulation, in force from 1 August 2024. Serves AI providers, deployers, importers, and authorised representatives operating in or placing AI systems on the EU market.</p>
+      <ul>
+        <li>Classifies AI systems across all four risk tiers — <strong>Prohibited (Art. 5), High-Risk (Art. 6), Limited Risk (Art. 50), and Minimal/No Risk</strong> — using both Annex I safety component path (Art. 6(1)) and Annex III listed use case path (Art. 6(2))</li>
+        <li>Screens for all <strong>8 prohibited AI practices</strong> (Art. 5, applies from 2 February 2025): subliminal manipulation, vulnerability exploitation, social scoring, predictive criminal assessment, untargeted biometric scraping, workplace/education emotion inference, sensitive-attribute biometric categorisation, and real-time RBI in public spaces by law enforcement</li>
+        <li>Covers all <strong>8 Annex III high-risk use case areas</strong>: biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration/border control, and justice/democracy</li>
+        <li>Walks through all <strong>Arts. 9–17 provider obligations</strong>: risk management (5-step lifecycle process), data governance, Annex IV technical documentation, automatic logging, transparency to deployers, human oversight design (stop button, override capability), accuracy/robustness/cybersecurity, 12-item provider checklist, and 13-component Quality Management System</li>
+      </ul>
+      <div class="trigger-tags"><strong>Trigger phrases:</strong> <code>EU AI Act</code> <code>AI Act</code> <code>Regulation 2024/1689</code> <code>high-risk AI</code> <code>prohibited AI</code> <code>GPAI model</code> <code>general-purpose AI</code> <code>AI system classification</code> <code>AI conformity assessment</code> <code>CE marking AI</code> <code>EU AI database</code> <code>AI Office</code> <code>AI Board</code> <code>systemic risk AI</code> <code>Art. 5 AI</code> <code>Annex III AI</code> <code>AI provider obligations</code> <code>AI deployer obligations</code> <code>human oversight AI</code> <code>AI risk management</code> <code>Art. 50 transparency</code> <code>chatbot disclosure AI</code> <code>AI Act compliance</code> <code>GPAI obligations</code> <code>open-source AI Act</code> <code>AI Act penalty</code> <code>AI Act timeline</code> <code>AI Act GDPR</code></div>
+    </div>
+
+    
     <h2 id="section-usecases">Potential Use Cases</h2>
 
     <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:0.5rem;">Filter by category — each button shows use cases for all frameworks in that group.</p>
@@ -2051,10 +1975,7 @@ layout: null
     <p>Regulatory requirements evolve. Always verify guidance against the latest official publications from the relevant standards body or regulatory authority.</p>
     <p style="margin-top:1rem;"><em>Licensed under the <a href="https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/blob/main/LICENSE">MIT License</a>.</em></p>
 
-  </section>
-
-  <!-- ── Release Notes Tab ── -->
-  <section class="tab-panel" id="tab-releases" role="tabpanel">
+    <hr />
 
     <h2>Release Notes</h2>
     <p>Full changelog for all public releases. Latest release: <strong>v0.9.0</strong>.</p>
@@ -2312,7 +2233,9 @@ layout: null
 
       </div>
     </details>
+
   </section>
+
 
 </main>
 
@@ -2348,7 +2271,7 @@ layout: null
 
   // Restore tab from URL hash on load
   const hash = location.hash.replace('#', '');
-  const validTabs = ['skills', 'installation', 'evaluation', 'feedback', 'whats-new', 'resources', 'releases'];
+  const validTabs = ['skills', 'installation', 'evaluation', 'feedback', 'whats-new', 'resources'];
   if (hash && validTabs.includes(hash)) activateTab(hash);
 
   // Form submission is handled by @formspree/ajax (see the feedback tab)
@@ -2433,23 +2356,6 @@ layout: null
     });
   })();
 
-  // ── MOBILE HEADER GRID TOGGLE ──
-  function toggleHeaderGrid() {
-    const grid = document.getElementById('header-skills-grid');
-    const btn = document.getElementById('header-grid-btn');
-    if (!grid || !btn) return;
-    const collapsed = grid.classList.toggle('collapsed');
-    btn.textContent = collapsed ? 'Show all frameworks ↓' : 'Hide frameworks ↑';
-  }
-  // Collapse by default on mobile
-  (function() {
-    if (window.innerWidth <= 720) {
-      const grid = document.getElementById('header-skills-grid');
-      const btn = document.getElementById('header-grid-btn');
-      if (grid) grid.classList.add('collapsed');
-      if (btn) btn.textContent = 'Show all frameworks ↓';
-    }
-  })();
 
   // ── SKILL CARD ACCORDION ──
   (function () {
