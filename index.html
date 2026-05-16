@@ -2298,14 +2298,16 @@ layout: null
 
     <div>
       <h3>Responsible AI Model Evaluations for NIST AI Risk Management Framework</h3>
-      <p>An open-source, automated red-teaming study benchmarking frontier LLMs from Anthropic, OpenAI, and Google against 19,500 adversarial prompts across 22 safety risk categories. Scored via a dual-judge pipeline (deterministic regex + Claude Haiku neural judge) and mapped to the NIST AI Risk Management Framework.</p>
-      <p>Over seven weekly evaluation runs, Claude Sonnet 4.6 averaged the lowest Attack Success Rate (3.9%), GPT-4o Mini showed a rising safety regression (9.5% in the latest run), and Election Interference emerged as a new top-5 risk category. Results are published weekly to a live public dashboard.</p>
+      <p>An open-source, automated red-teaming study benchmarking frontier LLMs from Anthropic, OpenAI, and Google against the RedBench dataset (29,362 prompts across 37 sub-benchmarks and 22 safety risk categories). Scored via a dual-judge pipeline (deterministic regex + Claude Haiku neural judge) and mapped to the NIST AI Risk Management Framework. Findings are published weekly to a live public dashboard and compiled into a peer-reviewed research paper.</p>
+      <p>Across eight weekly evaluation runs, Claude Sonnet 4.6 averaged the lowest Attack Success Rate (3.9%), GPT-4o Mini showed a rising safety regression (9.5% in the latest run), and Election Interference emerged as a new top-5 risk category. A full eight-week analysis — covering ASR trends, drift coefficients, and NIST AI RMF alignment across all 6 models — is available in the published research paper.</p>
       <p>
         <a href="https://sushegaad.github.io/Responsible-AI-Model-Evaluations/" target="_blank" rel="noopener">🔗 Live Dashboard</a>
         &nbsp;·&nbsp;
+        <a href="https://sushegaad.github.io/Responsible-AI-Model-Evaluations/paper/research-paper.pdf" target="_blank" rel="noopener">📄 Research Paper (PDF)</a>
+        &nbsp;·&nbsp;
         <a href="https://github.com/Sushegaad/Responsible-AI-Model-Evaluations" target="_blank" rel="noopener">GitHub Repository</a>
       </p>
-      <p style="color:var(--text-muted);font-size:0.875rem;">Hemant Naik &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; MIT License</p>
+      <p style="color:var(--text-muted);font-size:0.875rem;">Hemant Naik &nbsp;·&nbsp; May 2026 &nbsp;·&nbsp; MIT License &nbsp;·&nbsp; Dataset: RedBench (knoveleng/redbench, MIT)</p>
     </div>
 
   </section>
