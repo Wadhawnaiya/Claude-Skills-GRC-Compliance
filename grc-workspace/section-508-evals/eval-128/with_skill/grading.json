@@ -1,0 +1,33 @@
+{
+  "eval_id": 128,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "States PDFs must be Tagged PDFs with a correct tag hierarchy (Document, headings, paragraphs, tables, lists)",
+      "passed": true,
+      "evidence": "Requirement 1 explicitly states: 'Every PDF must be a Tagged PDF. Tags are hidden metadata that describe the document structure to screen readers.' The tag hierarchy is listed as: Document (root tag), H1-H6 (headings in logical order), P (paragraphs), Table > TR > TH/TD (data tables), L > LI > Lbl + LBody (lists), Form, Figure, Link, Artifact."
+    },
+    {
+      "text": "Mentions form fields must have accessible names (Tooltip/name field in Acrobat Pro form editor)",
+      "passed": true,
+      "evidence": "Requirement 2 states: 'Every interactive form field...must have an accessible name that is programmatically exposed to screen readers. In Adobe Acrobat Pro, this is set in the form field properties under the General tab — the Tooltip field is what JAWS, NVDA, and VoiceOver announce when a user moves focus to that field.' Step-by-step Acrobat Pro instructions are also provided (Tools > Prepare Form, right-click > Properties > General tab > Tooltip)."
+    },
+    {
+      "text": "States all images in PDFs must have Alt text set in the tag properties",
+      "passed": true,
+      "evidence": "Requirement 3 states: 'Every image in the PDF that conveys information must have Alt text set in the tag properties.' Instructions for Acrobat Pro are given: 'Open the Tags panel, locate each <Figure> tag, right-click > Properties > Tag tab > enter Alt Text.' Decorative images are addressed separately (mark as Artifacts)."
+    },
+    {
+      "text": "Mentions document language must be set in Document Properties",
+      "passed": true,
+      "evidence": "Requirement 4 states: 'The default human language of the document must be programmatically declared.' Explicit Acrobat Pro instructions are given: 'File > Properties > Advanced tab, under Reading Options, set the Language field to the appropriate IETF language tag (e.g., en-US for American English).' This maps to SC 3.1.1."
+    },
+    {
+      "text": "References a verification/testing step using Acrobat Pro's Full Accessibility Check or equivalent",
+      "passed": true,
+      "evidence": "Phase 3 (Verification and Testing) states: 'After each form is remediated, run the Full Accessibility Check in Acrobat Pro (Tools > Accessibility > Full Check). This check tests against the PDF/UA standard and flags issues including: missing tags, missing Alt text, missing form field names, missing document language, incorrect reading order, and table structure problems.' PAC 2024 (PDF Accessibility Checker) is also mentioned as a free standalone alternative for a second automated check."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

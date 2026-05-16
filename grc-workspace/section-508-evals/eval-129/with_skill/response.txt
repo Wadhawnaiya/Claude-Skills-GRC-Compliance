@@ -1,0 +1,144 @@
+Section 508 Requirements for Case Management System Procurement
+
+This guidance covers three areas: what to include in your RFP, how to evaluate VPAT responses, and what deficiencies to watch for.
+
+---
+
+PART 1: RFP REQUIREMENTS
+
+Regulatory Mandate
+
+Your RFP must include FAR Clause 52.239-2 (Access to Diagnostic and Therapeutic Equipment), which implements the Section 508 procurement requirements under FAR Subpart 39.2. This clause mandates that ICT delivered under the contract conform to the Revised Section 508 Standards (36 CFR Part 1194), effective January 18, 2018.
+
+Core Provisions to Reference in the RFP
+
+1. Applicable Technical Standards
+   - E205 (Web / Software / Electronic Documents): WCAG 2.0 Level A and AA — this is the primary standard for a case management system's web-based or desktop software interface.
+   - Chapter 3 (Functional Performance Criteria): Must support users without vision, without color perception, without hearing, without speech, with limited fine motor control, and with limited cognitive/language/learning abilities.
+   - Chapter 5 (Software): Applies to native software components not covered by WCAG 2.0.
+   - Chapter 6 (Support Documentation and Services): All user guides, help documentation, and support services must also be accessible.
+
+2. Required Deliverables — VPAT / ACR
+   Include the following language:
+   "The vendor shall provide an Accessibility Conformance Report (ACR) using the VPAT 2.x (WCAG Edition) template, published by the Information Technology Industry Council (ITI), within 30 days of contract award. The ACR must correspond to the exact product version being delivered under this contract. An ACR for a different product version will not be accepted."
+
+3. Testing Methodology Requirements
+   Require vendors to document the methodology used to produce their VPAT, including:
+   - Automated tools used (e.g., axe-core, WAVE, Lighthouse)
+   - Screen readers tested (e.g., JAWS + Chrome, NVDA + Firefox, VoiceOver + Safari)
+   - Manual testing performed (keyboard-only navigation, color contrast verification, zoom to 200%)
+   - Dates of testing and versions of assistive technologies used
+
+4. Assistive Technology Compatibility
+   Specify the assistive technologies the system must support consistent with your agency's environment, at minimum:
+   - JAWS (current and prior major version) with Google Chrome
+   - NVDA with Mozilla Firefox
+   - Windows Magnifier and/or ZoomText
+   - Dragon NaturallySpeaking (speech input)
+   - Microsoft Narrator (where applicable)
+
+5. Remediation SLAs (Post-Award)
+   Include enforceable remediation timelines in the contract. Recommended SLAs by severity:
+   - Critical (keyboard trap, complete screen reader blockage, login inaccessible): 30 calendar days
+   - High (major workflows inaccessible, missing alt text on functional images, form fields unlabeled): 60 calendar days
+   - Moderate (partial support failures, inconsistent navigation, contrast failures): 90 calendar days
+   - Low (minor informational issues, low-impact WCAG AA gaps): 180 calendar days
+
+   These SLAs should run from the date of written notice from the Contracting Officer's Representative (COR) or agency accessibility team.
+
+6. Ongoing ACR Refresh
+   Require the vendor to provide an updated ACR with each major product release or significant update during the contract period of performance.
+
+7. Undue Burden Provisions
+   If the vendor claims undue burden for any provision, require:
+   - Written justification referencing the specific Section 508 provision at issue
+   - Proposed alternative means of access for affected users
+   - Agency COR review and acceptance before any exception is granted
+
+---
+
+PART 2: EVALUATING VENDOR VPAT RESPONSES
+
+Step 1 — Verify Template Version
+Confirm the vendor used the VPAT 2.x (WCAG Edition) template. Older templates (VPAT 1.x) do not map to the Revised 508 Standards and are not acceptable. The VPAT 2.x WCAG Edition includes tables for WCAG 2.x Level A and AA success criteria, Functional Performance Criteria, and Chapter 5/6 provisions. If the submitted ACR uses any other template format, reject it and request a conforming document.
+
+Step 2 — Verify Product Version Match
+Confirm that the product name and version documented in the ACR match exactly the version being delivered. A VPAT for version 4.1 is not valid evidence for version 5.0. Require the vendor to certify in writing that the ACR covers the procured version.
+
+Step 3 — Evaluate Completeness
+Every WCAG 2.0 Level A and Level AA success criterion must have an entry. For each criterion, look for:
+- A conformance level: Supports, Partially Supports, Does Not Support, or Not Applicable
+- Substantive remarks — not just a repeated conformance level
+   - "Supports" entries must explain HOW the product meets the criterion
+   - "Partially Supports" entries must identify WHICH scenarios succeed and which fail
+   - "Does Not Support" entries must describe the nature of the failure
+   - "Not Applicable" entries must justify why the criterion does not apply
+
+Step 4 — Assess Testing Methodology
+The ACR should include a methodology section. Red flags:
+- No testing methodology disclosed
+- Only automated scanning listed (automated tools catch only 30-40% of issues)
+- No screen reader testing documented
+- Testing performed on a different version than the one being procured
+
+Step 5 — Score Weighted Criteria
+Weight your evaluation toward criteria most critical for a case management system:
+- 2.1.1 Keyboard (A): Full keyboard operability — critical for screen reader and motor-impaired users
+- 4.1.2 Name, Role, Value (A): Programmatic names for all UI components — essential for JAWS/NVDA compatibility
+- 1.3.1 Info and Relationships (A): Form field labels, table structure, heading hierarchy
+- 3.3.1 Error Identification (A) and 3.3.2 Labels or Instructions (A): Error handling in data entry workflows
+- 1.4.3 Contrast Minimum (AA): Text contrast at 4.5:1 ratio
+- 2.4.7 Focus Visible (AA): Visible keyboard focus indicator throughout
+
+Step 6 — Request a Demonstration
+For top-ranked vendors, require a live accessibility demonstration with an agency assistive technology user or certified accessibility tester. VPAT claims should be verifiable against the live product.
+
+---
+
+PART 3: COMMON VPAT DEFICIENCIES TO WATCH FOR
+
+1. Outdated VPAT Template
+The vendor submits a VPAT 1.x document or a proprietary format rather than the ITI VPAT 2.x (WCAG Edition). These templates do not cover all Revised 508 Standards criteria and cannot serve as valid ACRs under the current regulatory framework.
+
+2. Unsupported "Supports" Claims Without Evidence
+The vendor marks criteria as "Supports" with no explanatory remarks — or with boilerplate text like "Our product fully supports all WCAG criteria." Without specific, verifiable evidence of how conformance is achieved, these claims have no probative value. Each "Supports" entry must include substantive explanation.
+
+3. Overuse of "Not Applicable"
+Vendors frequently mark criteria as "Not Applicable" to avoid disclosing failures. For a case management system, very few WCAG 2.0 AA criteria are genuinely not applicable. Be especially skeptical of "Not Applicable" for: 1.3.1 (Info and Relationships), 2.1.1 (Keyboard), 3.3.1 (Error Identification), and 4.1.2 (Name, Role, Value). Require justification for every "Not Applicable" entry.
+
+4. Missing or Vague Testing Methodology
+The ACR omits the testing methodology section, lists only automated scanning, or fails to name specific assistive technologies and versions. Automated tools alone are insufficient. A credible VPAT must reference manual keyboard testing, named screen readers (JAWS, NVDA, VoiceOver), contrast analysis tools, and zoom testing.
+
+5. Version Mismatch
+The ACR covers a prior product version, a demo environment, or a "similar" product rather than the exact version being procured. Conformance data from a different version is not valid evidence of the procured version's conformance. This is one of the most common — and consequential — deficiencies in federal procurements.
+
+6. Blanket "Partially Supports" Without Scope
+The vendor marks a criterion as "Partially Supports" without describing which components or workflows partially conform and which do not. A conforming ACR must scope the partial support — for example: "SC 2.1.1: The main navigation and search functions support keyboard operation. The bulk-upload module does not currently support keyboard-only operation."
+
+7. No Functional Performance Criteria Coverage
+Chapter 3 (Functional Performance Criteria) is omitted entirely or marked "Not Applicable" without justification. These criteria ensure usability for users across all disability categories and must be addressed for any ICT that does not fully satisfy the technical standards.
+
+8. No Chapter 6 (Support Documentation) Coverage
+Vendors frequently omit coverage of user guides, help content, training materials, and support services. All documentation delivered under the contract must also meet accessibility requirements under Chapter 6 / E205.
+
+---
+
+SUMMARY CHECKLIST FOR PROCUREMENT OFFICERS
+
+RFP Must Include:
+[ ] FAR Clause 52.239-2 (FAR Subpart 39.2)
+[ ] Reference to 36 CFR Part 1194 and applicable provisions (E205, Chapter 3, Chapter 5, Chapter 6)
+[ ] Requirement for VPAT 2.x (WCAG Edition) matching the exact procured version
+[ ] Documented testing methodology requirement
+[ ] Specified assistive technology compatibility requirements
+[ ] Remediation SLAs by severity (Critical: 30 days, High: 60 days, Moderate: 90 days)
+[ ] Updated ACR requirement with each major release
+
+VPAT Evaluation — Watch For:
+[ ] Wrong template version (VPAT 1.x or proprietary format)
+[ ] Unsupported "Supports" claims (no explanatory remarks)
+[ ] Excessive "Not Applicable" without justification
+[ ] Missing testing methodology or automated-only testing
+[ ] Version mismatch between ACR and procured product
+[ ] Vague "Partially Supports" without scope description
+[ ] Missing Chapter 3 (Functional Performance) or Chapter 6 (Support Documentation) coverage

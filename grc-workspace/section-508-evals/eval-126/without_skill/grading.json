@@ -1,0 +1,33 @@
+{
+  "eval_id": 126,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Explains the four conformance levels: Supports, Partially Supports, Does Not Support, Not Applicable",
+      "passed": true,
+      "evidence": "Step 3 explicitly defines all four conformance levels with individual numbered sections: 'Supports', 'Partially Supports', 'Does Not Support', and 'Not Applicable', each with clear definitions and usage guidance."
+    },
+    {
+      "text": "References the VPAT 2.x WCAG Edition (not an older version) and mentions the ITI template",
+      "passed": true,
+      "evidence": "The response states 'the correct template is the VPAT 2.x WCAG Edition' and explicitly names the Information Technology Industry Council (ITI) as the publisher, noting templates are available at www.itic.org. It also warns against using 'older VPAT 1.x templates'."
+    },
+    {
+      "text": "Explains the three main VPAT tables: Level A success criteria, Level AA success criteria, and Functional Performance Criteria",
+      "passed": true,
+      "evidence": "Step 2 describes all three tables in dedicated subsections: 'Table 1: Success Criteria, Level A', 'Table 2: Success Criteria, Level AA', and 'Table 3: Functional Performance Criteria (FPC)', each with examples of applicable criteria."
+    },
+    {
+      "text": "Specifies at least two assistive technology + browser combinations required for testing (e.g., JAWS + Chrome, NVDA + Firefox, VoiceOver + Safari)",
+      "passed": true,
+      "evidence": "Section 1c lists six AT/browser combinations including: JAWS + Chrome on Windows, NVDA + Firefox on Windows, VoiceOver + Safari on macOS, VoiceOver + Safari on iOS, TalkBack + Chrome on Android, and Dragon NaturallySpeaking + Chrome. The minimum recommendation explicitly calls out 'JAWS + Chrome, NVDA + Firefox, and VoiceOver + Safari'."
+    },
+    {
+      "text": "Mentions automated testing tools (e.g., axe, WAVE, Lighthouse) as a first step, noting they catch only a portion of issues",
+      "passed": true,
+      "evidence": "Section 1a is titled 'Automated Testing (First Step — Necessary but Not Sufficient)' and names axe, WAVE, Lighthouse, IBM Equal Access Checker, and Siteimprove. It explicitly states 'Automated tools can reliably detect roughly 30-40% of WCAG failures' and calls automated testing 'a starting point, not a finishing point'."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

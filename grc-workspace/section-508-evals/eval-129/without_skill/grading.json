@@ -1,0 +1,33 @@
+{
+  "eval_id": 129,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "References FAR clause 52.239-2 or FAR Subpart 39.2 as the procurement mandate",
+      "passed": true,
+      "evidence": "The response explicitly references both 'FAR Subpart 39.2 — Information and Communication Technology' and 'FAR clause 52.239-2' in Section 1 (Legal Basis and Procurement Mandate), and again in the Summary Checklist under 'Cite FAR Subpart 39.2 and incorporate FAR 39.203 requirements'."
+    },
+    {
+      "text": "Specifies requiring a VPAT 2.x (WCAG Edition) from vendors — not an older template version",
+      "passed": true,
+      "evidence": "Section 2B explicitly states: 'Require vendors to submit a completed Voluntary Product Accessibility Template (VPAT), version 2.x — specifically the WCAG Edition or INT (International) Edition, not older pre-2017 templates.' The Summary Checklist also states 'Require VPAT 2.x (WCAG Edition or INT Edition) — reject VPAT 1.x'."
+    },
+    {
+      "text": "Lists at least 3 common VPAT deficiencies (e.g., outdated template, unsupported Supports claims without evidence, overuse of Not Applicable, missing testing methodology)",
+      "passed": true,
+      "evidence": "Section 4 lists 9 deficiencies, including: (1) Outdated Template Version (VPAT 1.x), (3) Unsupported 'Supports' Claims Without Evidence, (4) Overuse or Misuse of 'Not Applicable', (5) Missing or Vague Testing Methodology, (2) Product Version Mismatch, and more — well exceeding the minimum of 3."
+    },
+    {
+      "text": "Recommends including remediation SLAs in the contract (e.g., timeline for fixing critical vs. moderate issues post-award)",
+      "passed": true,
+      "evidence": "Section 2D explicitly addresses remediation SLAs: 'Critical barriers: remediation within 30 days of written notice; Significant deficiencies: remediation within 60–90 days; Moderate issues: remediation within 180 days.' The Summary Checklist also includes 'Include remediation SLAs: critical (30 days), significant (60-90 days), moderate (180 days)'."
+    },
+    {
+      "text": "States that the VPAT must match the exact product version being procured",
+      "passed": true,
+      "evidence": "Section 2B states the VPAT must 'Reflect the exact product name, version number, and release date being proposed.' Section 3B states 'Confirm that the VPAT explicitly identifies the product version that matches the version the vendor is offering.' Deficiency #2 in Section 4 is specifically 'Product Version Mismatch'. The Summary Checklist includes 'Require VPAT to match the exact product version being procured'."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

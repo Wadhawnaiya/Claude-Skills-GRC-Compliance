@@ -1,0 +1,139 @@
+SECTION 508 UNDUE BURDEN EXCEPTION: LEGAL BASIS, PROCESS, AND ALTERNATIVE ACCESS REQUIREMENTS
+================================================================================================
+
+Your situation — a legacy grants management system requiring $3.5M in remediation against a constrained IT budget — is precisely the scenario the undue burden exception was designed to address. Here is a complete analysis.
+
+---
+
+1. LEGAL BASIS
+--------------
+
+The undue burden exception is grounded in two authorities:
+
+  a) 29 U.S.C. § 794d — Section 508 of the Rehabilitation Act of 1973, as amended, which establishes the accessibility mandate for federal ICT and expressly authorizes agencies to claim an exception when compliance would impose an undue burden.
+
+  b) E202.5 of the Revised Section 508 Standards (36 CFR Part 1194) — the operative regulatory provision. E202.5 states that agencies are not required to conform to the Standards where doing so would impose an "undue burden" on the agency, defined as a significant difficulty or expense.
+
+Additionally, the legacy ICT exception under E202.7 of 36 CFR Part 1194 may independently apply to ICT that was acquired or deployed before January 18, 2018 (the effective date of the Revised Standards) and has not been altered. However, the undue burden exception provides the stronger, more thoroughly documented path for systems that are still actively in use and maintained.
+
+---
+
+2. DEFINITION AND FACTORS: WHAT "UNDUE BURDEN" MEANS
+------------------------------------------------------
+
+Under E202.5, "undue burden" means significant difficulty or expense. This is not an absolute dollar threshold — it is a proportionality analysis. The Revised Standards require agencies to consider all of the following factors when making the determination:
+
+  - The nature and cost of the action needed to achieve compliance
+  - The overall financial resources of the agency or component involved
+  - The number of employees at the agency or component
+  - The type of operations of the agency or component
+  - The impact of the action on the operations of the agency or component
+  - The agency's total IT budget (not just the budget of a single program or office)
+
+For your situation, relevant evidence to document would include:
+  - The $3.5M remediation estimate (with vendor quotes or independent cost analysis)
+  - Your total agency IT budget for the fiscal year
+  - The ratio of remediation cost to overall IT budget (if $3.5M equals or exceeds total IT budget, this is strong evidence)
+  - Whether the remediation cost would crowd out other mission-critical IT obligations
+  - The age and technology stack of the 15-year-old system
+  - Any scheduled replacement or modernization timeline
+
+---
+
+3. REQUIRED PROCESS: WRITTEN DETERMINATION
+-------------------------------------------
+
+E202.5 imposes mandatory procedural requirements. An agency cannot simply decide internally that compliance is too expensive — the exception requires formal documentation. The specific steps are:
+
+  Step 1 — Document the ICT at issue
+    Identify the specific system (grants management system), its functions, the user population, and the specific Section 508 provisions that cannot be met.
+
+  Step 2 — Calculate the cost of full compliance
+    Obtain formal vendor quotes or independent cost estimates. The $3.5M figure must be documented and defensible, not a rough estimate. Break down by remediation activity (e.g., front-end UI remediation, back-end accessibility, document remediation, testing).
+
+  Step 3 — Assess agency resources
+    Document your agency's total financial resources: IT budget, overall appropriations, and any competing capital obligations. Show the proportionality analysis.
+
+  Step 4 — Obtain a signed written determination from the agency head (or properly delegated official)
+    This is a hard requirement under E202.5. The determination must be:
+      - In writing
+      - Signed by the agency head or an official to whom the agency head has formally delegated this authority (typically the CIO or Deputy Administrator)
+      - Specific to the ICT in question — a blanket agency-wide determination is not sufficient
+      - Based on the documented factors above
+
+  Step 5 — Retain documentation
+    The written determination and supporting evidence must be retained and made available for audit by oversight bodies (e.g., OMB, GAO, agency Inspector General, or in the event of a complaint to the Access Board or DOJ).
+
+  Step 6 — Re-evaluate when the ICT is altered or replaced
+    The exception is not permanent. Under E202.5, the undue burden determination must be re-evaluated whenever the ICT is substantially altered or replaced. If your agency undertakes a modernization effort, the exception lapses and the new or altered system must achieve full 508 conformance.
+
+---
+
+4. ALTERNATIVE MEANS OF ACCESS — THIS IS NOT A FULL EXEMPTION
+--------------------------------------------------------------
+
+This is the most critical point: claiming an undue burden exception does NOT exempt your agency from all accessibility obligations. E202.5 explicitly requires that the agency still provide an alternative means of access to the information or functionality for individuals with disabilities.
+
+The alternative means of access must be:
+  - Genuinely equivalent in the information or service it provides — it cannot be a lesser or degraded substitute
+  - Available without unreasonable delay (comparable to the time a non-disabled user can access the system)
+  - Provided at no additional cost to the user with a disability
+  - Documented and publicized so that users with disabilities know how to access it
+
+Common acceptable alternatives for a grants management system may include:
+  - A staffed accessible helpline (phone or video relay) where agency personnel complete transactions on behalf of the user
+  - A fully accessible PDF or HTML alternative format for grant applications and status reporting
+  - A dedicated accessibility contact (email/phone) with a documented service-level response commitment
+  - In-person assistance at an accessible agency office
+
+The alternative means must not simply tell users to "call us" without ensuring the person answering can actually complete the full transaction.
+
+---
+
+5. RE-EVALUATION OBLIGATION WHEN ICT IS ALTERED OR REPLACED
+------------------------------------------------------------
+
+Under E202.5 of 36 CFR Part 1194, the undue burden determination is tied to the current state of the ICT. If your agency:
+  - Undertakes any substantial alteration of the grants management system (new modules, UI redesign, platform migration, API integration)
+  - Replaces the system entirely through a modernization or re-procurement effort
+
+...the exception must be re-evaluated. Any alteration that is within scope of the agency's resources must be made accessible at the time of that alteration, even if full system remediation remains an undue burden. In practice, this means your next procurement or upgrade project must include 508 conformance requirements from day one, and FAR clause 52.239-2 (for contract-based systems) must be applied.
+
+---
+
+6. STRATEGIC RECOMMENDATIONS
+-----------------------------
+
+Given your circumstances, here is a practical path forward:
+
+  a) Pursue a partial remediation strategy alongside the undue burden claim. Even if full remediation is an undue burden, the agency should remediate the highest-impact barriers (e.g., keyboard accessibility, screen reader compatibility for core grant application workflows) with whatever resources are available. This demonstrates good faith and reduces legal risk.
+
+  b) Document the system replacement timeline. If a system modernization is already planned (even in a 3–5 year horizon), include that timeline in the written determination and ensure the replacement procurement requires full 508 conformance from the outset via the VPAT/ACR requirement and FAR 52.239-2.
+
+  c) Contact the U.S. Access Board. The Access Board provides free technical assistance (508@access-board.gov) and can advise on the adequacy of your written determination and alternative access plan before you finalize them.
+
+  d) Review E202.7 (Legacy ICT exception). If the system was deployed before January 18, 2018 and has not been substantially altered, you may have an independent exemption under E202.7. Consult your agency counsel on whether this applies and whether it is simpler to document than a full undue burden analysis.
+
+  e) Brief your agency's Section 508 Program Manager, General Counsel, CIO, and (if required) your IG on the determination before it is signed, to ensure it will withstand audit scrutiny.
+
+---
+
+SUMMARY TABLE
+-------------
+
+| Element                        | Requirement                                                      |
+|-------------------------------|------------------------------------------------------------------|
+| Legal authority                | 29 U.S.C. § 794d; E202.5 of 36 CFR Part 1194                   |
+| Standard                       | "Significant difficulty or expense" — proportionality analysis  |
+| Key factors                    | Cost of compliance, agency size, total financial resources       |
+| Written determination required | Yes — signed by agency head or delegated official               |
+| Full exemption from 508?       | No — alternative means of access must still be provided         |
+| Re-evaluation trigger          | Any alteration or replacement of the ICT                        |
+| Documentation retention        | Required — must be audit-ready                                   |
+
+---
+
+Cite these provisions in your written determination:
+  - 29 U.S.C. § 794d(a)(1)(B) — undue burden authorization
+  - 36 CFR § 1194, E202.5 — Revised Standards undue burden provision
+  - 36 CFR § 1194, E202.7 — Legacy ICT exception (if applicable)

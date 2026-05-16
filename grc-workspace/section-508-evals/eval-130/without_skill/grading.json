@@ -1,0 +1,33 @@
+{
+  "eval_id": 130,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly states the legal basis: E202.5 of the Revised Section 508 Standards (36 CFR Part 1194) and/or 29 U.S.C. § 794d",
+      "passed": true,
+      "evidence": "Section 1 (Legal Basis) explicitly cites both: '29 U.S.C. § 794d' and 'E202.5 of the Revised Section 508 Standards (36 CFR Part 1194), published by the U.S. Access Board (effective January 18, 2018).' Both authorities are named and described accurately."
+    },
+    {
+      "text": "States that undue burden means 'significant difficulty or expense' and lists factors to consider (agency resources, size, cost of compliance)",
+      "passed": true,
+      "evidence": "Section 2 states: 'undue burden is defined as significant difficulty or expense' and lists factors including 'The overall financial resources of the agency as a whole,' 'The size of the agency, including number of employees,' 'The nature and cost of the specific accessibility compliance measures required,' 'The impact of the compliance cost relative to the agency's total IT budget,' and 'The type of operation of the agency.'"
+    },
+    {
+      "text": "Requires a written determination signed by the agency head (or delegated official) documenting the undue burden finding",
+      "passed": true,
+      "evidence": "Section 3 (Step 1) requires a 'written determination that explains the basis for the undue burden claim' and Step 2 states it 'must be signed by the agency head or a duly authorized official to whom the agency head has formally delegated this authority,' explicitly noting it cannot be a line manager decision alone."
+    },
+    {
+      "text": "States that an alternative means of access must still be provided to people with disabilities — not a full exemption from accessibility obligations",
+      "passed": true,
+      "evidence": "Section 4 explicitly states: 'the undue burden exception does NOT excuse the agency from all accessibility obligations. Even where a valid undue burden determination is made, the agency must still provide an alternative means of access to the information or functionality for individuals with disabilities.' Concrete examples of alternative access methods are also provided."
+    },
+    {
+      "text": "Notes that the exception must be re-evaluated if the ICT is altered or replaced",
+      "passed": true,
+      "evidence": "Section 5 is dedicated to this requirement, stating: 'The undue burden exception is tied to the current state of the ICT and the agency's current resources. If the grants management system is significantly altered or upgraded, replaced with a new system, or subject to a new procurement or modernization initiative...then the agency must re-evaluate whether the undue burden exception still applies.' Also noted in Section 3 Step 4 as a periodic re-evaluation requirement."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

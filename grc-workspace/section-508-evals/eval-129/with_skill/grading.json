@@ -1,0 +1,33 @@
+{
+  "eval_id": 129,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "References FAR clause 52.239-2 or FAR Subpart 39.2 as the procurement mandate",
+      "passed": true,
+      "evidence": "The response explicitly states: 'Your RFP must include FAR Clause 52.239-2 (Access to Diagnostic and Therapeutic Equipment), which implements the Section 508 procurement requirements under FAR Subpart 39.2.' Both the specific clause and the subpart are named."
+    },
+    {
+      "text": "Specifies requiring a VPAT 2.x (WCAG Edition) from vendors — not an older template version",
+      "passed": true,
+      "evidence": "The response includes sample RFP language: 'The vendor shall provide an Accessibility Conformance Report (ACR) using the VPAT 2.x (WCAG Edition) template, published by the Information Technology Industry Council (ITI).' It also explicitly warns against VPAT 1.x in the deficiencies section: 'The vendor submits a VPAT 1.x document or a proprietary format rather than the ITI VPAT 2.x (WCAG Edition).'"
+    },
+    {
+      "text": "Lists at least 3 common VPAT deficiencies (e.g., outdated template, unsupported 'Supports' claims without evidence, overuse of 'Not Applicable', missing testing methodology)",
+      "passed": true,
+      "evidence": "The response lists 8 distinct deficiencies, including: (1) Outdated VPAT Template, (2) Unsupported 'Supports' Claims Without Evidence, (3) Overuse of 'Not Applicable', (4) Missing or Vague Testing Methodology, (5) Version Mismatch, (6) Blanket 'Partially Supports' Without Scope, (7) No Functional Performance Criteria Coverage, (8) No Chapter 6 Coverage — well exceeding the minimum of 3."
+    },
+    {
+      "text": "Recommends including remediation SLAs in the contract (e.g., timeline for fixing critical vs. moderate issues post-award)",
+      "passed": true,
+      "evidence": "The response dedicates a full section to remediation SLAs: 'Critical (keyboard trap, complete screen reader blockage, login inaccessible): 30 calendar days; High: 60 calendar days; Moderate: 90 calendar days; Low: 180 calendar days.' It also specifies SLAs run from written notice by the COR."
+    },
+    {
+      "text": "States that the VPAT must match the exact product version being procured",
+      "passed": true,
+      "evidence": "The response states in the RFP section: 'The ACR must correspond to the exact product version being delivered under this contract. An ACR for a different product version will not be accepted.' It is reinforced in the evaluation guidance ('Verify Product Version Match') and listed as a standalone deficiency: 'Version Mismatch — The ACR covers a prior product version... Conformance data from a different version is not valid evidence of the procured version's conformance.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

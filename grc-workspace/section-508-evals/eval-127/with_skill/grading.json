@@ -1,0 +1,33 @@
+{
+  "eval_id": 127,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies SC 2.1.1 Keyboard (Level A) as the primary violated criterion",
+      "passed": true,
+      "evidence": "Response explicitly labels SC 2.1.1 Keyboard (Level A) as the 'PRIMARY VIOLATION' in Section 1, explaining that dropdown menus not operable by keyboard are a direct failure and that the application 'Does Not Support this criterion.'"
+    },
+    {
+      "text": "Identifies SC 2.4.7 Focus Visible (Level AA) for the disappearing focus issue",
+      "passed": true,
+      "evidence": "Response identifies SC 2.4.7 Focus Visible (Level AA) as a 'SECONDARY VIOLATION' and directly links it to 'users reporting that focus disappears,' listing CSS outline:none as a common cause."
+    },
+    {
+      "text": "Identifies SC 2.1.2 No Keyboard Trap as applicable if focus is trapped or lost",
+      "passed": true,
+      "evidence": "Response includes SC 2.1.2 No Keyboard Trap (Level A) as 'POTENTIALLY VIOLATED,' distinguishing between focus being lost (SC 2.4.7) versus focus entering a component and being unable to exit (SC 2.1.2), and instructs testers to verify both conditions."
+    },
+    {
+      "text": "Provides specific remediation guidance — e.g., use native HTML controls, implement ARIA keyboard patterns, never use CSS outline:none without replacement",
+      "passed": true,
+      "evidence": "Phase 1 explicitly states 'Replace custom dropdown widgets with native HTML <select> elements' as Option A, provides full ARIA APG keyboard pattern implementation (role=menuitem, Arrow keys, Escape, tabindex=-1) as Option B, and Phase 2 states 'Search the entire stylesheet for outline: none / outline: 0 patterns and remove or replace every instance' with replacement CSS provided."
+    },
+    {
+      "text": "Recommends a specific testing approach: keyboard-only tab-through test covering all interactive elements",
+      "passed": true,
+      "evidence": "Section 3 provides a detailed 'Keyboard-Only Tab-Through Test Procedure' with explicit steps: Tab through all interactive elements, verify focus visibility, test each control type (dropdowns, buttons, modals, etc.) with specific keys, and document every failure — with no mouse use permitted during the test."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

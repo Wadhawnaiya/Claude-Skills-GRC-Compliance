@@ -1,0 +1,287 @@
+Section 508 / WCAG 2.0 Keyboard Accessibility Analysis and Remediation Plan
+Federal Internal Web Application — Keyboard Navigation Failures
+
+===========================================================================
+SECTION 1: VIOLATED WCAG 2.0 SUCCESS CRITERIA
+===========================================================================
+
+The issues described — focus disappearing during navigation and dropdown menus
+that require a mouse — map to three specific WCAG 2.0 success criteria
+incorporated into the Revised Section 508 Standards (36 CFR Part 1194, E205):
+
+-----------------------------------------------------------------------
+SC 2.1.1 Keyboard (Level A) — PRIMARY VIOLATION
+-----------------------------------------------------------------------
+Requirement: All functionality of the content is operable through a keyboard
+interface without requiring specific timings for individual keystrokes, except
+where the underlying function requires input that depends on the path of the
+user's movement and not just the endpoints.
+
+Violation: Dropdown menus that cannot be opened without a mouse are a direct
+failure of SC 2.1.1. Every interactive function — including opening, navigating,
+and selecting options from dropdown menus — must be fully operable via keyboard
+(Tab, Enter, Space, Arrow keys). If any mouse-only interaction exists, the
+application Does Not Support this criterion.
+
+Applicable Section 508 provision: E205.4 (WCAG 2.0 Level A and AA)
+
+-----------------------------------------------------------------------
+SC 2.4.7 Focus Visible (Level AA) — SECONDARY VIOLATION
+-----------------------------------------------------------------------
+Requirement: Any keyboard operable user interface has a mode of operation where
+the keyboard focus indicator is visible.
+
+Violation: Users reporting that "focus disappears" describes a direct failure of
+SC 2.4.7. When a user tabs through the application and cannot see which element
+currently has focus, they are operating blind. Common causes include:
+  - CSS rule: outline: none or outline: 0 applied to :focus selectors without
+    a replacement focus indicator
+  - Focus being moved programmatically to a non-visible element
+  - Focus being set on a container element with no visible styling
+
+Applicable Section 508 provision: E205.4 (WCAG 2.0 Level AA)
+
+-----------------------------------------------------------------------
+SC 2.1.2 No Keyboard Trap (Level A) — POTENTIALLY VIOLATED
+-----------------------------------------------------------------------
+Requirement: If keyboard focus can be moved to a component of the page using a
+keyboard interface, then focus can be moved away from that component using only
+a keyboard interface, and, if it requires more than unmodified arrow or tab keys,
+the user is advised of the method for moving focus away.
+
+Violation: The report of focus "disappearing" may indicate one of two conditions:
+  (a) Focus is genuinely lost — moved to a non-focusable element or off-screen
+      element — rather than trapped, which is a SC 2.4.7 failure; OR
+  (b) Focus enters a component (e.g., a modal, custom widget, or dropdown) and
+      cannot be moved out without a mouse, which is a SC 2.1.2 keyboard trap.
+
+Both conditions should be tested. If a user can Tab into a dropdown or modal but
+cannot Escape or Shift-Tab out, SC 2.1.2 is violated.
+
+Applicable Section 508 provision: E205.4 (WCAG 2.0 Level A)
+
+-----------------------------------------------------------------------
+ADDITIONAL CRITERION TO VERIFY
+-----------------------------------------------------------------------
+SC 2.4.3 Focus Order (Level A): If the programmatic focus order does not match
+the visual/logical order of the interface (e.g., focus jumps unexpectedly after
+interacting with a dropdown), SC 2.4.3 may also be violated.
+
+SC 4.1.2 Name, Role, Value (Level A): Custom dropdown widgets built from
+non-semantic HTML elements (e.g., <div> or <span> used as menus) will have no
+keyboard role by default and may fail SC 4.1.2 in addition to SC 2.1.1.
+
+===========================================================================
+SECTION 2: REMEDIATION PLAN
+===========================================================================
+
+The following phased plan addresses each violation with specific technical fixes,
+responsible owners, effort estimates, and recommended timelines aligned with
+federal remediation SLA guidance (Critical issues: 30 days; High: 60 days).
+
+---------------------------------------------------------------------------
+Phase 1 — Critical (Target: 30 days)
+---------------------------------------------------------------------------
+
+Issue 1: Dropdown menus not operable by keyboard
+Criterion: SC 2.1.1 Keyboard (Level A) — Critical
+Fix:
+  Option A (Preferred): Replace custom dropdown widgets with native HTML
+  <select> elements. Native controls are keyboard-accessible by default, require
+  no additional scripting, and are supported by all assistive technologies.
+
+  Option B (If custom UI required): Implement the ARIA Authoring Practices Guide
+  (APG) Listbox or Disclosure Navigation patterns:
+    - The trigger button must be a <button> element (or have role="button") so
+      it receives focus and responds to Enter/Space.
+    - Arrow keys (Up/Down) must move focus between menu items.
+    - Escape must close the menu and return focus to the trigger button.
+    - Home/End keys should optionally jump to first/last item.
+    - Each menu item must have role="menuitem" (or "option" for listboxes) and
+      tabindex="-1" so Arrow keys control focus within the widget.
+  Reference: https://www.w3.org/WAI/ARIA/apg/patterns/
+
+  NEVER use event listeners bound only to mousedown, mouseenter, or click
+  without equivalent keyboard event handlers (keydown for Enter, Space, Arrows).
+
+Owner: Front-end development team
+Effort: Medium (2–5 days per widget type)
+Timeline: 30 days
+
+Issue 2: Keyboard trap in dropdown or modal components
+Criterion: SC 2.1.2 No Keyboard Trap (Level A) — Critical
+Fix:
+  - Ensure Escape key closes any open dropdown, modal, or custom widget and
+    returns focus to the element that triggered it.
+  - Implement focus containment in modals (Tab and Shift-Tab should cycle only
+    within the modal while it is open), and focus must be released when the
+    modal closes.
+  - Audit all third-party component libraries for keyboard trap issues; if a
+    vendor component is the source, escalate to the vendor with reference to
+    SC 2.1.2 and require a patch or replace the component.
+
+Owner: Front-end development team
+Effort: Low–Medium (1–3 days)
+Timeline: 30 days
+
+---------------------------------------------------------------------------
+Phase 2 — High (Target: 60 days)
+---------------------------------------------------------------------------
+
+Issue 3: Disappearing focus indicator
+Criterion: SC 2.4.7 Focus Visible (Level AA) — High
+Fix:
+  Step 1 — Audit CSS: Search the entire stylesheet for the following patterns
+  and remove or replace every instance:
+    *:focus { outline: none; }
+    *:focus { outline: 0; }
+    a:focus { outline: none; }
+    button:focus { outline: none; }
+  Use of outline: none without a replacement focus style is the single most
+  common cause of this failure and is never acceptable.
+
+  Step 2 — Implement a visible focus style: Apply a high-contrast focus
+  indicator to all interactive elements. Recommended approach:
+    :focus-visible {
+      outline: 3px solid #005FCC;   /* high-contrast blue */
+      outline-offset: 2px;
+    }
+  Alternatively, use a box-shadow focus ring. The indicator must be visible
+  against both light and dark backgrounds used in the application.
+
+  Step 3 — Verify programmatic focus: Search for JavaScript calls to
+  element.focus() and confirm the target element is visible in the viewport
+  and has a visible focus style. If focus is set on a <div> or <span>, ensure
+  the element has tabindex="0" and an appropriate focus indicator.
+
+  Step 4 — Do not suppress :focus styles for mouse users only without also
+  providing them for keyboard users. The :focus-visible pseudo-class can be
+  used to show focus rings only during keyboard navigation without affecting
+  mouse interactions, but the keyboard indicator must always be present.
+
+Owner: Front-end development team / UX/design team
+Effort: Low (1–2 days for CSS audit and fix; additional time for design review)
+Timeline: 60 days
+
+Issue 4: Non-semantic custom widgets lacking keyboard roles
+Criterion: SC 4.1.2 Name, Role, Value (Level A) — High
+Fix:
+  - Audit all custom interactive components (dropdowns, tabs, accordions,
+    tooltips, date pickers) built from <div>, <span>, or <a> elements.
+  - Add appropriate ARIA roles, states, and properties per the APG patterns.
+  - Ensure every interactive element has an accessible name (aria-label,
+    aria-labelledby, or visible text label).
+  - Add tabindex="0" to any custom focusable element that is not a native
+    interactive element.
+
+Owner: Front-end development team
+Effort: Medium (varies by number and complexity of components)
+Timeline: 60 days
+
+---------------------------------------------------------------------------
+Phase 3 — Ongoing / Systemic (Target: 90 days and continuous)
+---------------------------------------------------------------------------
+
+Issue 5: Prevent recurrence — developer standards
+Fix:
+  - Establish a coding standard that mandates use of native semantic HTML
+    elements for interactive controls wherever possible.
+  - Add automated accessibility testing to the CI/CD pipeline using axe-core
+    (axe-core npm package or axe DevTools) to catch regressions on every build.
+    Note: automated tools catch ~30–40% of issues; manual testing is still
+    required.
+  - Require keyboard-only smoke testing as part of QA sign-off for every sprint
+    that touches UI components.
+
+Owner: Engineering lead, QA team, DevOps
+Effort: Medium
+Timeline: 90 days
+
+===========================================================================
+SECTION 3: TESTING APPROACH
+===========================================================================
+
+Before and after remediation, perform the following structured keyboard-only
+test. Do NOT use a mouse at any point during this test.
+
+-----------------------------------------------------------------------
+Keyboard-Only Tab-Through Test Procedure
+-----------------------------------------------------------------------
+
+Tools needed: Any modern browser (Chrome or Firefox recommended); no mouse or
+trackpad input during testing.
+
+Step 1 — Establish baseline
+  Load the application in the browser and note the starting focus position
+  (or lack thereof). The browser tab itself may have initial focus; press Tab
+  once to enter the page.
+
+Step 2 — Tab through all interactive elements
+  Press Tab repeatedly and verify:
+  [ ] A visible focus indicator appears on each focusable element.
+  [ ] Focus moves in a logical, top-to-bottom / left-to-right order matching
+      the visual layout (SC 2.4.3 Focus Order).
+  [ ] Focus never becomes invisible or moves to an element that cannot be seen
+      or identified (SC 2.4.7 Focus Visible).
+  [ ] Focus does not become trapped in any component — you can always Tab
+      forward or Shift-Tab backward to exit (SC 2.1.2 No Keyboard Trap).
+
+Step 3 — Operate all interactive controls by keyboard
+  For each interactive element reached by Tab, test:
+  [ ] Links: press Enter to activate.
+  [ ] Buttons: press Enter or Space to activate.
+  [ ] Dropdown menus: press Enter or Space to open; Arrow keys to navigate
+      options; Enter to select; Escape to close without selecting.
+  [ ] Checkboxes: press Space to toggle.
+  [ ] Radio buttons: use Arrow keys within the group to change selection.
+  [ ] Text fields: type to enter text.
+  [ ] Modals/dialogs: verify Tab cycles within the modal; Escape closes it
+      and returns focus to the trigger (SC 2.1.2, SC 2.4.3).
+  [ ] Date pickers, sliders, tabs, accordions: follow APG keyboard patterns.
+
+Step 4 — Document every failure
+  For each failure, record:
+  - Element type and location (page, section, element ID or description)
+  - WCAG 2.0 success criterion violated
+  - Screenshot or video capture showing the failure
+  - Steps to reproduce
+
+Step 5 — Supplement with automated scanning
+  Run axe DevTools or WAVE on each page after manual testing to capture
+  additional programmatic failures (missing labels, invalid ARIA, etc.).
+
+Step 6 — Screen reader verification (after keyboard fixes are deployed)
+  Confirm fixes with NVDA + Chrome and JAWS + Chrome to ensure ARIA roles
+  and focus management work correctly with assistive technologies.
+
+===========================================================================
+SECTION 4: VPAT / ACR IMPACT
+===========================================================================
+
+The application's current Accessibility Conformance Report (ACR/VPAT) must
+be updated to reflect:
+
+  SC 2.1.1 Keyboard (Level A):       Does Not Support → (target) Supports
+  SC 2.1.2 No Keyboard Trap (A):     Partially Supports or Does Not Support
+                                       (confirm via testing) → Supports
+  SC 2.4.7 Focus Visible (Level AA): Does Not Support → Supports
+
+Until remediation is complete, the agency must document these failures in the
+ACR and, per E205, provide an alternative means of access for users who cannot
+operate the application with a mouse (e.g., an accessible alternative workflow,
+a phone-based service, or an accessible offline process). Retain the written
+determination and alternative access documentation for audit purposes.
+
+===========================================================================
+REFERENCES
+===========================================================================
+
+- 36 CFR Part 1194 — Revised Section 508 Standards (2018)
+- WCAG 2.0, Guideline 2.1 (Keyboard Accessible): https://www.w3.org/TR/WCAG20/#keyboard-operation
+- WCAG 2.0, SC 2.1.1: https://www.w3.org/TR/WCAG20/#keyboard-operation-keyboard-operable
+- WCAG 2.0, SC 2.1.2: https://www.w3.org/TR/WCAG20/#keyboard-operation-trapping
+- WCAG 2.0, SC 2.4.7: https://www.w3.org/TR/WCAG20/#navigation-mechanisms-focus-visible
+- ARIA Authoring Practices Guide (APG): https://www.w3.org/WAI/ARIA/apg/
+- ARIA APG Menu Button Pattern: https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/
+- Section508.gov Testing Guide: https://www.section508.gov/test/
+- axe-core: https://github.com/dequelabs/axe-core

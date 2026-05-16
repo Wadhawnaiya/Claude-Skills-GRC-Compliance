@@ -660,6 +660,7 @@ layout: null
         <span>🇪🇺 NIS2 [EU]</span>
         <span>🚨 TSA [US]</span>
         <span><img src="assets/Logos/NIST SP 800-53 logo.webp" alt="NIST SP 800-53" style="height:1.1em;width:auto;vertical-align:middle;object-fit:contain;"> NIST SP 800-53 [US]</span>
+        <span>♿ Section 508 [US]</span>
       </div>
     </div>
 
@@ -705,7 +706,7 @@ layout: null
   <div class="badges">
     <img src="https://img.shields.io/badge/Release-v0.9.0-brightgreen.svg" alt="Release v0.9.0" />
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License" />
-    <img src="https://img.shields.io/badge/Skills-25-green.svg" alt="25 Skills" />
+    <img src="https://img.shields.io/badge/Skills-26-green.svg" alt="25 Skills" />
     <img src="https://img.shields.io/badge/Built%20with-Claude-orange.svg" alt="Built with Claude" />
     <a href="https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance" target="_blank" rel="noopener">
       <img src="https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold" alt="GitHub Stars" />
@@ -1161,7 +1162,7 @@ layout: null
 
     <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:0.5rem;">Filter by category — each button shows use cases for all frameworks in that group.</p>
     <div class="filter-bar" id="usecase-filters" role="group" aria-label="Filter use cases by category">
-      <button class="filter-btn active" data-filter="all">Show All (125)</button>
+      <button class="filter-btn active" data-filter="all">Show All (130)</button>
       <button class="filter-btn" data-filter="privacy">🔐 Privacy &amp; Data</button>
       <button class="filter-btn" data-filter="infosec">🛡️ Info Security</button>
       <button class="filter-btn" data-filter="cyberreg">🏛️ Cybersecurity Reg</button>
@@ -1169,6 +1170,7 @@ layout: null
       <button class="filter-btn" data-filter="ai">🤖 AI &amp; Governance</button>
       <button class="filter-btn" data-filter="export">🚀 Export &amp; Defense</button>
       <button class="filter-btn" data-filter="esg">🌱 ESG &amp; Sustainability</button>
+      <button class="filter-btn" data-filter="accessibility">♿ Accessibility</button>
     </div>
 
     <div class="table-wrap">
@@ -2342,6 +2344,7 @@ layout: null
       'ai':        ['ISO 42001', 'NIST AI RMF', 'EU AI Act'],
       'export':    ['ITAR', 'EAR'],
       'esg':       ['CSRD'],
+      'accessibility': ['Section 508'],
     };
 
     function skillMatchesCategory(skillName, category) {

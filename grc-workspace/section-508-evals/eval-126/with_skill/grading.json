@@ -1,0 +1,33 @@
+{
+  "eval_id": 126,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Explains the four conformance levels: Supports, Partially Supports, Does Not Support, Not Applicable",
+      "passed": true,
+      "evidence": "Step 3 explicitly defines all four conformance levels with their exact names and provides a project-management-specific example for each: 'Supports', 'Partially Supports', 'Does Not Support', and 'Not Applicable', including guidance that Not Applicable requires justification."
+    },
+    {
+      "text": "References the VPAT 2.x WCAG Edition (not an older version) and mentions the ITI template",
+      "passed": true,
+      "evidence": "Step 1 states: 'Use the VPAT 2.x WCAG Edition template published by ITI (Information Technology Industry Council)' and explicitly warns 'Do not use older VPAT 1.x templates.' The regulatory citation summary also reiterates 'VPAT template source: ITI (Information Technology Industry Council), VPAT 2.x WCAG Edition.'"
+    },
+    {
+      "text": "Explains the three main VPAT tables: Level A success criteria, Level AA success criteria, and Functional Performance Criteria",
+      "passed": true,
+      "evidence": "Step 2 is titled 'Understand the Three Main Tables' and provides detailed coverage of Table 1 (Level A Success Criteria), Table 2 (Level AA Success Criteria), and Table 3 (Functional Performance Criteria), including specific criteria examples and the full list of FPC categories 302.1-302.9."
+    },
+    {
+      "text": "Specifies at least two assistive technology + browser combinations required for testing (e.g., JAWS + Chrome, NVDA + Firefox, VoiceOver + Safari)",
+      "passed": true,
+      "evidence": "Phase 3 of Step 4 lists six AT+browser combinations: JAWS + Chrome, NVDA + Firefox, NVDA + Chrome, VoiceOver + Safari (macOS), VoiceOver + Safari (iOS), and TalkBack + Chrome (Android) — well exceeding the minimum of two."
+    },
+    {
+      "text": "Mentions automated testing tools (e.g., axe, WAVE, Lighthouse) as a first step, noting they catch only a portion of issues",
+      "passed": true,
+      "evidence": "Phase 1 of Step 4 names axe DevTools, WAVE, and Google Lighthouse as the first testing phase, and explicitly states: 'Automated tools catch approximately 30-40% of WCAG failures' with a warning that 'Automated results are a floor, not a ceiling.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

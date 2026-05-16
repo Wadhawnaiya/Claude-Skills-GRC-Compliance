@@ -1,0 +1,127 @@
+Section 508 Requirements for Case Management System Procurement: RFP Language, VPAT Evaluation, and Common Deficiencies
+==========================================================================================================================
+
+1. LEGAL BASIS AND PROCUREMENT MANDATE
+---------------------------------------
+
+All federal IT procurements must comply with Section 508 of the Rehabilitation Act of 1973, as amended (29 U.S.C. § 794d), and the Access Board's revised standards published at 36 CFR Part 1194 (effective January 18, 2018). On the acquisition side, the primary regulatory hook is FAR Subpart 39.2 — Information and Communication Technology, which implements Section 508 requirements in federal contracting. Specifically, FAR clause 52.239-2 (Access to Nonpublic Information) and the broader requirements of FAR 39.203 mandate that agencies must include Section 508 standards in solicitations and contracts for ICT supplies and services.
+
+Your RFP should cite 36 CFR Part 1194 directly, reference the applicable Technical Standards (typically WCAG 2.1 Level AA for web-based case management software under Chapter 5 of the Revised 508 Standards), and incorporate FAR Subpart 39.2 as the procurement authority. The contracting officer should coordinate with the agency's Section 508 Program Manager to ensure the correct standards apply.
+
+2. WHAT TO INCLUDE IN YOUR RFP
+--------------------------------
+
+A. Mandatory 508 Conformance Statement
+Include a statement requiring vendors to demonstrate how their proposed solution meets or exceeds the applicable Section 508 Technical Standards, specifically:
+  - Chapter 5 (Software) — for application functionality
+  - Chapter 6 (Support Documentation and Services) — for user guides, help content, and training materials
+  - WCAG 2.1 Level AA — for any web-based components (via Chapter 7 / E205)
+
+B. VPAT Requirement
+Require vendors to submit a completed Voluntary Product Accessibility Template (VPAT), version 2.x — specifically the WCAG Edition or INT (International) Edition, not older pre-2017 templates. The VPAT 2.x (published by the Information Technology Industry Council, ITI) maps to the Revised 508 Standards and WCAG 2.1. Older VPAT formats based on the original 1194.21/1194.22 standards are not acceptable for procurements under the Revised 508 Standards.
+
+The VPAT must:
+  - Reflect the exact product name, version number, and release date being proposed
+  - Be completed no more than 12–18 months prior to submission (or updated to match the proposed version)
+  - Include the name, title, and contact information of the evaluator
+  - Describe the evaluation methodology used (e.g., automated testing tools, manual testing, assistive technology combinations)
+
+C. Testing Methodology Disclosure
+Require vendors to describe how they tested their product:
+  - Which automated tools were used (e.g., axe, WAVE, Deque tools)
+  - Which assistive technologies were tested (e.g., JAWS, NVDA, VoiceOver, Dragon NaturallySpeaking)
+  - Whether testing was conducted by an independent third party or internally
+  - The scope of testing (all modules, specific workflows, representative sample)
+
+D. Remediation SLAs
+The RFP should specify, and the resulting contract must include, remediation service level agreements (SLAs) for accessibility defects discovered post-award:
+  - Critical barriers (completely blocks access for users with disabilities): remediation within 30 days of written notice
+  - Significant deficiencies (substantially impairs access): remediation within 60–90 days
+  - Moderate issues (workarounds exist but accessibility is degraded): remediation within 180 days or within the next scheduled release cycle
+  - SLAs should be tied to contract performance metrics and, where appropriate, financial penalties or cure notices
+
+E. Ongoing Conformance
+Include requirements for:
+  - Updated VPATs with each major release or version update
+  - Notification to the contracting officer within 30 days of any accessibility regression introduced in a new release
+  - Access to the vendor's accessibility roadmap and bug tracking process
+
+F. Market Research and Exceptions
+Document that you conducted pre-solicitation accessibility market research. If no fully conformant solution exists, the agency may need to invoke an exception under 36 CFR 1194.3 (e.g., undue burden or fundamental alteration), which requires written documentation approved by the agency head.
+
+3. HOW TO EVALUATE VENDOR VPAT RESPONSES
+------------------------------------------
+
+A. Verify Version and Template Currency
+Check that the submitted VPAT uses version 2.x (the current ITI template). Look for the version notation in the document header. Reject or flag submissions using the legacy VPAT 1.x format, which does not map to the Revised 508 Standards.
+
+B. Match VPAT to Proposed Product Version
+Confirm that the VPAT explicitly identifies the product version that matches the version the vendor is offering. A VPAT for version 3.1 is not valid for a proposal offering version 4.0. This is a frequent and significant discrepancy.
+
+C. Review Conformance Level Entries
+For each criterion, vendors may claim: Supports, Partially Supports, Does Not Support, or Not Applicable. Evaluate each entry:
+  - "Supports" claims must be accompanied by meaningful remarks explaining how the feature works accessibly. Bare "Supports" with no remarks is a red flag.
+  - "Partially Supports" entries should describe specifically what works and what does not, and ideally identify a remediation timeline.
+  - "Not Applicable" claims require justification. Overuse of "Not Applicable" — particularly for common criteria like keyboard access (2.1.1), focus order (2.4.3), or color contrast (1.4.3) — is a significant deficiency.
+  - "Does Not Support" entries should be understood as known accessibility barriers.
+
+D. Assess Testing Methodology Quality
+A credible VPAT will describe:
+  - Specific assistive technologies and browser combinations tested
+  - Whether an independent accessibility auditor was involved
+  - The date of testing relative to the proposed product version
+VPATs with vague methodology sections (e.g., "tested internally") with no specifics warrant skepticism.
+
+E. Score or Weight the VPAT in Evaluation Criteria
+Consider including accessibility conformance as a rated technical factor in the source selection, not merely a pass/fail checkbox. Agencies with strong 508 programs may weight third-party-validated VPATs higher than self-attested ones.
+
+F. Request a Demonstration
+For critical workflows (e.g., case intake, search, document management), request a live accessibility demonstration using JAWS or NVDA as part of the technical evaluation. This can surface gaps not reflected in the VPAT.
+
+4. MOST COMMON VPAT DEFICIENCIES TO WATCH FOR
+------------------------------------------------
+
+1. Outdated Template Version
+   The vendor submits a VPAT using the pre-2017 format (VPAT 1.x), which references the original 1194.21 (desktop software) and 1194.22 (web) standards rather than the Revised 508 Standards. This template is not aligned with WCAG 2.1 Level AA and should be rejected.
+
+2. Product Version Mismatch
+   The VPAT covers a different version than what is being proposed. For example, the VPAT was written for version 2.5 but the vendor is offering version 3.0, which may have undergone significant UI changes. Always require the VPAT to match the exact proposed version.
+
+3. Unsupported "Supports" Claims Without Evidence
+   A vendor marks dozens of success criteria as "Supports" but provides no remarks, no description of implementation, and no testing evidence. This is the most common and most misleading deficiency. A credible VPAT explains how conformance is achieved for non-trivial criteria.
+
+4. Overuse or Misuse of "Not Applicable"
+   Vendors mark critical accessibility criteria as "Not Applicable" without legitimate justification. Common examples: marking keyboard accessibility (SC 2.1.1) as N/A for a web application, or marking color contrast (SC 1.4.3) as N/A. These criteria apply to virtually all software products.
+
+5. Missing or Vague Testing Methodology
+   The VPAT does not describe how the product was tested — no mention of assistive technologies, browsers, testing tools, or whether the evaluation was conducted by a qualified accessibility professional. Without this, the VPAT cannot be verified or trusted.
+
+6. Stale VPAT — Not Updated for Recent Releases
+   The product has had multiple releases since the VPAT was written, but the vendor resubmits an unchanged document. New features, redesigns, or UI framework changes can introduce new barriers not reflected in an old VPAT.
+
+7. Incomplete Coverage of Product Modules
+   The VPAT covers only the main dashboard or homepage, while ignoring complex workflows like case creation, document upload, search results, data entry forms, or reporting modules — which are often the least accessible parts of case management systems.
+
+8. No Remarks for "Partially Supports" Entries
+   Vendors acknowledge partial conformance but provide no detail about what works, what does not, and what the remediation plan is. This provides insufficient information for the agency to assess risk.
+
+9. No Contact Information for the Evaluator
+   The VPAT lacks the name, title, organization, and contact information of the person or firm that conducted the evaluation, making it impossible to follow up with questions.
+
+5. SUMMARY CHECKLIST FOR YOUR RFP
+-----------------------------------
+
+[ ] Cite FAR Subpart 39.2 and incorporate FAR 39.203 requirements
+[ ] Reference 36 CFR Part 1194 (Revised 508 Standards)
+[ ] Require VPAT 2.x (WCAG Edition or INT Edition) — reject VPAT 1.x
+[ ] Require VPAT to match the exact product version being procured
+[ ] Require disclosure of testing methodology and assistive technologies used
+[ ] Include remediation SLAs: critical (30 days), significant (60-90 days), moderate (180 days)
+[ ] Require updated VPATs with each major version release post-award
+[ ] Consider weighted evaluation factor for accessibility in source selection
+[ ] Reserve right to conduct independent accessibility testing as part of evaluation
+[ ] Document market research on accessible alternatives per FAR 39.203(c)
+
+---
+Prepared: 2026-05-16
+Scope: Federal Agency Procurement Advisory — Section 508 / ICT Accessibility

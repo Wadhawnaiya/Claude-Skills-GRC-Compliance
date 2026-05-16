@@ -1,0 +1,33 @@
+{
+  "eval_id": 127,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies SC 2.1.1 Keyboard (Level A) as the primary violated criterion",
+      "passed": true,
+      "evidence": "Response explicitly labels SC 2.1.1 Keyboard (Level A) as 'PRIMARY VIOLATION' and explains that dropdown menus requiring a mouse to open directly violate this criterion, quoting the criterion text and explaining its applicability."
+    },
+    {
+      "text": "Identifies SC 2.4.7 Focus Visible (Level AA) for the disappearing focus issue",
+      "passed": true,
+      "evidence": "Response includes a dedicated section for 'SC 2.4.7 Focus Visible (Level AA)' and directly ties it to the user-reported symptom of 'focus disappears,' explaining that CSS rules such as `outline: none` or `outline: 0` are the typical cause."
+    },
+    {
+      "text": "Identifies SC 2.1.2 No Keyboard Trap as applicable if focus is trapped or lost",
+      "passed": true,
+      "evidence": "Response includes 'SC 2.1.2 No Keyboard Trap (Level A)' as a third violated criterion, explaining that disappearing focus may indicate focus is sent to a stranded element or that custom JavaScript dropdown implementations can inadvertently trap focus."
+    },
+    {
+      "text": "Provides specific remediation guidance — e.g., use native HTML controls, implement ARIA keyboard patterns, never use CSS outline:none without replacement",
+      "passed": true,
+      "evidence": "Phase 2 of the remediation plan instructs teams to search for and remove `outline: none`/`outline: 0` and replace with a visible indicator (providing a CSS code example). Phase 3 offers three remediation options: use native HTML controls (Option A), implement ARIA keyboard patterns per the APG (Option B, with specific key behaviors listed), or adopt accessible third-party component libraries (Option C)."
+    },
+    {
+      "text": "Recommends a specific testing approach: keyboard-only tab-through test covering all interactive elements",
+      "passed": true,
+      "evidence": "Phase 1 of the remediation plan is titled 'Keyboard-Only Tab-Through Test' and explicitly instructs testers to disconnect the mouse, use Tab/Shift+Tab from the top of each page, and systematically document elements that cannot receive focus, show no visible indicator, trap focus, or cannot be activated — covering all interactive elements including dropdown menus specifically."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

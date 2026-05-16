@@ -1,0 +1,157 @@
+PDF Accessibility Remediation for Section 508 Compliance: Requirements and Process
+====================================================================================
+
+Your 200 PDF forms fall under Section 508 provision E205, which requires electronic documents to conform to WCAG 2.0 Level A and AA success criteria. For PDFs specifically, the governing standards are SC 1.3.1 (Info and Relationships), SC 4.1.2 (Name, Role, Value), SC 3.1.1 (Language of Page), SC 1.1.1 (Non-text Content), and SC 3.3.2 (Labels or Instructions), cross-referenced against PDF/UA (ISO 14289).
+
+---
+
+SPECIFIC PDF ACCESSIBILITY REQUIREMENTS
+----------------------------------------
+
+1. Tagged PDF with Correct Tag Hierarchy (SC 1.3.1, 4.1.2)
+
+Every PDF must be a "Tagged PDF." Tags are hidden metadata that describe the document structure to screen readers. Without tags, a screen reader user experiences the PDF as a stream of unordered text or complete silence. The tag tree must follow a correct hierarchy:
+
+  - Document (root tag)
+    - H1, H2 ... H6 (headings in logical order)
+    - P (paragraphs)
+    - Table > TR > TH / TD (data tables with header associations)
+    - L > LI > Lbl + LBody (lists)
+    - Form (form containers)
+    - Figure (images)
+    - Link (hyperlinks)
+    - Artifact (decorative content excluded from reading order)
+
+Scanned image-based PDFs (PDF images of paper forms) cannot be made accessible by tagging alone — they require OCR to produce actual text, followed by full remediation.
+
+2. Accessible Form Field Names (SC 4.1.2, 3.3.2)
+
+Every interactive form field (text boxes, checkboxes, radio buttons, dropdowns, signature fields) must have an accessible name that is programmatically exposed to screen readers. In Adobe Acrobat Pro, this is set in the form field properties under the "General" tab — the "Tooltip" field is what JAWS, NVDA, and VoiceOver announce when a user moves focus to that field. A field labeled visually with nearby text but lacking a Tooltip value will be announced only by its internal field name (often a meaningless string like "Text1") or announced as "blank."
+
+Steps in Acrobat Pro:
+  - Open the Forms editor (Tools > Prepare Form)
+  - Right-click each field > Properties > General tab
+  - Enter a descriptive Tooltip (e.g., "First Name," "Date of Birth (MM/DD/YYYY)," "Applicant Signature")
+  - For radio button groups, each button should have the Tooltip set to the group question (e.g., "Are you a U.S. citizen? Yes" / "Are you a U.S. citizen? No")
+
+3. Alt Text for All Images (SC 1.1.1)
+
+Every image in the PDF that conveys information must have Alt text set in the tag properties. Decorative images (dividers, background graphics) must be marked as Artifacts so screen readers skip them.
+
+In Acrobat Pro:
+  - Open the Tags panel
+  - Locate each <Figure> tag
+  - Right-click > Properties > Tag tab > enter Alt Text
+  - For decorative images: right-click the tag > Change Tag to Artifact
+
+Charts, graphs, logos with informational content, and signature line graphics all require meaningful Alt text descriptions.
+
+4. Document Language Set in Document Properties (SC 3.1.1)
+
+The default human language of the document must be programmatically declared so that screen readers apply the correct speech synthesis engine and pronunciation rules. A form with no language set will be read with the screen reader's default language, which may produce unintelligible output for non-English speakers or cause the wrong language engine to be applied even to English text.
+
+In Acrobat Pro:
+  - File > Properties > Advanced tab
+  - Under "Reading Options," set the Language field to the appropriate IETF language tag (e.g., "en-US" for American English, "es" for Spanish)
+
+5. Correct Reading Order (SC 1.3.2)
+
+The order in which a screen reader reads content must match the logical visual order. Multi-column layouts, sidebars, and complex form layouts often produce incorrect reading order in tagged PDFs. Use Acrobat Pro's Reading Order tool (Tools > Accessibility > Reading Order) to inspect and correct the sequence. The Order panel shows the numerical reading sequence and allows drag-and-drop reordering.
+
+6. Meaningful Hyperlink Text (SC 2.4.4)
+
+All hyperlinks must have descriptive link text. A link tagged as "click here" or a raw URL ("https://www.agency.gov/very-long-path") fails SC 2.4.4. Update link display text in the tag properties or via the Link tool in Acrobat.
+
+7. Table Header Associations (SC 1.3.1)
+
+Data tables must use TH (table header) tags with a Scope attribute (Row or Column) or explicit ID/Headers associations. Layout tables used purely for visual positioning should be marked as Artifacts or have their table role removed.
+
+8. Document Title Set (SC 2.4.2)
+
+The document title — not the filename — must be set in Document Properties and configured to display as the window title. This allows screen reader users to identify the document.
+
+In Acrobat Pro: File > Properties > Description tab > enter a meaningful Title, then in the Initial View tab set "Show" to "Document Title."
+
+---
+
+REMEDIATION PROCESS FOR 200 PDF FORMS
+---------------------------------------
+
+Given the volume, a phased triage-and-batch approach is recommended.
+
+Phase 1 — Triage and Prioritization (Weeks 1–2)
+
+Categorize all 200 forms by type:
+  - Category A: Scanned image-only PDFs (require OCR + full rebuild — highest effort)
+  - Category B: Digitally created PDFs with no tags (require tagging + form field remediation)
+  - Category C: Tagged PDFs with incomplete or incorrect tags (require audit and repair)
+
+Prioritize by public impact: forms used in high-volume public-facing transactions (applications, benefits, enrollment) should be addressed before internal administrative forms.
+
+Run an automated pre-screening using Acrobat Pro's Full Accessibility Check (Tools > Accessibility > Full Check) on each PDF. Export results to identify the most common failure categories across your inventory. This surfaces patterns (e.g., all forms missing language, all forms have untagged images) that allow batch processing.
+
+Phase 2 — Remediation (Weeks 3–12, scaled to staff/vendor capacity)
+
+For each form:
+  1. If scanned image-only: run OCR (Tools > Scan & OCR > Recognize Text), then proceed to tagging.
+  2. Apply or correct the tag tree to establish correct Document > heading > paragraph > table > list hierarchy.
+  3. Set reading order using the Reading Order tool and Order panel.
+  4. Add Tooltip/accessible name to every form field via the Prepare Form editor.
+  5. Add Alt text to all informational Figure tags; mark decorative images as Artifacts.
+  6. Set document language in File > Properties > Advanced > Reading Options.
+  7. Set document title in File > Properties > Description; configure Initial View to display title.
+  8. Verify table header (TH) Scope attributes for all data tables.
+  9. Update any non-descriptive hyperlink text.
+
+For large batches of structurally similar forms, consider using the Acrobat Action Wizard to automate repetitive steps (adding language, title settings) across multiple files simultaneously.
+
+Phase 3 — Verification and Testing (Concurrent with Phase 2)
+
+After each form is remediated, run the Full Accessibility Check in Acrobat Pro (Tools > Accessibility > Full Check). This check tests against the PDF/UA standard and flags issues including: missing tags, missing Alt text, missing form field names, missing document language, incorrect reading order, and table structure problems. Review each flagged item and resolve before sign-off.
+
+Supplement automated checking with manual screen reader testing using NVDA + Chrome (for PDF opened in browser) or JAWS + Adobe Acrobat Reader. Tab through all form fields and confirm each is announced with its correct Tooltip name. Navigate headings using the H key in NVDA/JAWS to verify heading hierarchy is correct.
+
+Use the Acrobat Pro Tags panel and Order panel for visual inspection of tag structure and reading sequence.
+
+Phase 4 — Quality Assurance and Publication (Ongoing)
+
+Establish a sign-off checklist for each form before it is re-published:
+  [ ] Tagged PDF confirmed (File > Properties > Description > "Tagged PDF: Yes")
+  [ ] Full Accessibility Check passes with zero errors
+  [ ] All form fields have Tooltip values confirmed via screen reader test
+  [ ] Document language set (en-US or applicable language code)
+  [ ] Document title set and displayed as window title
+  [ ] Reading order verified manually
+  [ ] At least one screen reader spot-check completed (NVDA or JAWS)
+
+---
+
+APPLICABLE WCAG 2.0 SUCCESS CRITERIA SUMMARY
+----------------------------------------------
+
+  SC 1.1.1 (Level A)    — Alt text for all informational images
+  SC 1.3.1 (Level A)    — Tagged structure with correct hierarchy; table headers
+  SC 1.3.2 (Level A)    — Logical reading order
+  SC 2.4.2 (Level A)    — Document title set
+  SC 2.4.4 (Level A)    — Descriptive hyperlink text
+  SC 3.1.1 (Level A)    — Document language declared
+  SC 3.3.2 (Level A)    — Labels or instructions for form fields (Tooltip/accessible name)
+  SC 4.1.2 (Level A)    — Form fields expose name, role, value to assistive technology
+
+All of the above are Level A requirements, meaning they are non-negotiable baseline requirements — no undue burden exception applies to Level A criteria unless the agency head makes a formal written determination and provides an alternative means of access.
+
+---
+
+TOOLING SUMMARY
+----------------
+
+  Adobe Acrobat Pro        — Primary remediation tool (tag editor, Reading Order tool, Prepare Form, Full Accessibility Check, Action Wizard for batch)
+  NVDA (free) + Chrome     — Screen reader verification
+  JAWS + Acrobat Reader    — Additional screen reader verification
+  PAC 2024 (PDF Accessibility Checker) — Free standalone tool that validates PDF/UA conformance; useful as a second automated check alongside Acrobat's built-in checker
+
+If your agency lacks Acrobat Pro licenses at scale, consider CommonLook PDF or Equidox as enterprise-grade PDF remediation platforms that integrate with Section 508 workflows and support batch processing with audit trails.
+
+---
+
+If you would like a phased remediation plan table with effort estimates by category, a procurement template for outsourcing this work to a 508 remediation vendor, or a form-by-form audit issue tracker template, I can provide those as well.

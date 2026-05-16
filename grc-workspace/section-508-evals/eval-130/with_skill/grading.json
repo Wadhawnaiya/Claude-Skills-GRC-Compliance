@@ -1,0 +1,33 @@
+{
+  "eval_id": 130,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly states the legal basis: E202.5 of the Revised Section 508 Standards (36 CFR Part 1194) and/or 29 U.S.C. § 794d",
+      "passed": true,
+      "evidence": "Section 1 (Legal Basis) explicitly cites both authorities: '29 U.S.C. § 794d — Section 508 of the Rehabilitation Act of 1973, as amended' and 'E202.5 of the Revised Section 508 Standards (36 CFR Part 1194)'. Both are cited again in the Summary Table and in the final citation block."
+    },
+    {
+      "text": "States that undue burden means 'significant difficulty or expense' and lists factors to consider (agency resources, size, cost of compliance)",
+      "passed": true,
+      "evidence": "Section 2 states: 'undue burden means significant difficulty or expense' and enumerates the statutory factors including 'the nature and cost of the action needed to achieve compliance', 'the overall financial resources of the agency or component involved', 'the number of employees at the agency or component', 'the type of operations of the agency or component', and 'the impact of the action on the operations of the agency or component'."
+    },
+    {
+      "text": "Requires a written determination signed by the agency head (or delegated official) documenting the undue burden finding",
+      "passed": true,
+      "evidence": "Section 3, Step 4 states: 'Obtain a signed written determination from the agency head (or properly delegated official)' and specifies it must be 'In writing', 'Signed by the agency head or an official to whom the agency head has formally delegated this authority (typically the CIO or Deputy Administrator)', and 'Specific to the ICT in question'. The Summary Table also lists 'Written determination required: Yes — signed by agency head or delegated official'."
+    },
+    {
+      "text": "States that an alternative means of access must still be provided to people with disabilities — not a full exemption from accessibility obligations",
+      "passed": true,
+      "evidence": "Section 4 is titled 'ALTERNATIVE MEANS OF ACCESS — THIS IS NOT A FULL EXEMPTION' and states: 'claiming an undue burden exception does NOT exempt your agency from all accessibility obligations. E202.5 explicitly requires that the agency still provide an alternative means of access to the information or functionality for individuals with disabilities.' Requirements for the alternative (equivalent, no delay, no cost) and examples are also provided."
+    },
+    {
+      "text": "Notes that the exception must be re-evaluated if the ICT is altered or replaced",
+      "passed": true,
+      "evidence": "Section 5 is titled 'RE-EVALUATION OBLIGATION WHEN ICT IS ALTERED OR REPLACED' and states: 'the undue burden determination is tied to the current state of the ICT. If your agency undertakes any substantial alteration of the grants management system...or replaces the system entirely...the exception must be re-evaluated.' Step 6 in Section 3 also states: 'The exception is not permanent...the undue burden determination must be re-evaluated whenever the ICT is substantially altered or replaced.'"
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

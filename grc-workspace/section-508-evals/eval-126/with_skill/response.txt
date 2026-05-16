@@ -1,0 +1,173 @@
+Completing an Accessibility Conformance Report (ACR) Using the VPAT 2.x WCAG Edition
+
+As a SaaS vendor responding to a federal RFP that requires a VPAT, you are entering a formal procurement process governed by Section 508 of the Rehabilitation Act (29 U.S.C. § 794d), as implemented by the Revised Section 508 Standards (36 CFR Part 1194, effective January 18, 2018). Below is a complete walkthrough of the ACR process for your web-based project management tool.
+
+---
+
+STEP 1: UNDERSTAND THE TEMPLATE
+
+Use the VPAT 2.x WCAG Edition template published by ITI (Information Technology Industry Council), available at www.itic.org. Do not use older VPAT 1.x templates — federal agencies now require the 2.x series because it maps directly to the 2018 Revised Section 508 Standards, which incorporate WCAG 2.0 Level A and AA (via provision E205).
+
+The VPAT 2.x WCAG Edition ACR has the following major sections:
+
+  1. Product Information — Product name, version, report date, vendor contact, and a brief description of the product.
+  2. Evaluation Methods Used — Describe what tools, assistive technologies, browsers, and manual methods you used.
+  3. Table 1: Success Criteria, Level A — One row per WCAG 2.0 Level A success criterion.
+  4. Table 2: Success Criteria, Level AA — One row per WCAG 2.0 Level AA success criterion.
+  5. Table 3: Functional Performance Criteria — How your product supports users with various disabilities independent of specific technical criteria.
+  6. Chapter 5 (Software) and Chapter 6 (Support Documentation and Services) — Applicable if your product includes native software components or has support documentation requirements.
+
+For a pure web-based SaaS product, Tables 1, 2, and 3 are the core deliverables. Chapters 5 and 6 apply if you have downloadable clients or published help documentation.
+
+---
+
+STEP 2: UNDERSTAND THE THREE MAIN TABLES
+
+Table 1 — WCAG 2.0 Level A Success Criteria
+This table covers the baseline accessibility requirements. Key criteria for a project management tool include:
+  - 1.1.1 Non-text Content (A): All icons, avatars, chart images, and status indicators must have meaningful alt text.
+  - 1.3.1 Info and Relationships (A): Tables, lists, headings, and form labels must use proper semantic markup.
+  - 2.1.1 Keyboard (A): Every feature — task creation, drag-and-drop, modals, menus — must be fully operable by keyboard alone.
+  - 2.1.2 No Keyboard Trap (A): Users must be able to navigate away from every component using keyboard alone.
+  - 4.1.2 Name, Role, Value (A): All interactive UI components (buttons, dropdowns, date pickers, custom widgets) must expose their name, role, and state to assistive technologies via ARIA or native HTML semantics.
+
+Table 2 — WCAG 2.0 Level AA Success Criteria
+These are the additional requirements that Section 508 mandates for federal procurement. Key criteria include:
+  - 1.4.3 Contrast Minimum (AA): Text must have at least 4.5:1 contrast ratio (3:1 for large text). Check all text colors, disabled state labels, and placeholder text.
+  - 1.4.4 Resize Text (AA): The application must remain functional and readable when text is scaled to 200% in the browser.
+  - 2.4.5 Multiple Ways (AA): Users must be able to find content via multiple means (navigation, search, sitemap).
+  - 2.4.6 Headings and Labels (AA): All headings and form labels must be descriptive.
+  - 2.4.7 Focus Visible (AA): The keyboard focus indicator must be visible at all times.
+  - 3.3.3 Error Suggestion (AA): When a form error occurs (e.g., invalid date, missing required field), the error message must suggest how to correct it.
+
+Table 3 — Functional Performance Criteria (Chapter 3)
+This table evaluates whether users with various disability types can independently use your product, even if they rely on methods not covered by the WCAG criteria alone. The criteria are:
+  - 302.1 Without Vision — Can a blind user access all features using a screen reader?
+  - 302.2 With Limited Vision — Can a low-vision user access features using magnification and high contrast?
+  - 302.3 Without Perception of Color — Is color never the sole indicator of status or meaning?
+  - 302.4 Without Hearing — Is all audio content available as text (captions, transcripts)?
+  - 302.5 With Limited Hearing — Is audio quality sufficient for users with partial hearing?
+  - 302.6 Without Speech — Does the product function without voice input?
+  - 302.7 With Limited Manipulation — Can users with limited dexterity operate all features (no fine-motor-required gestures)?
+  - 302.8 With Limited Reach and Strength — All controls operable without requiring sustained physical effort.
+  - 302.9 With Limited Language, Cognitive, and Learning Abilities — Content uses plain language and consistent navigation.
+
+For each row in all three tables, you must supply a Conformance Level and Remarks.
+
+---
+
+STEP 3: UNDERSTAND THE FOUR CONFORMANCE LEVELS
+
+Each row in Tables 1, 2, and 3 requires one of exactly four conformance level values:
+
+  1. Supports
+     The product fully meets the success criterion across all relevant functionality. There are no known failures. Example: "All interactive controls expose their name and role via native HTML semantics and ARIA; verified with JAWS 2024 + Chrome and NVDA + Firefox."
+
+  2. Partially Supports
+     The product meets the criterion in some instances but not all. You must specify in the Remarks column exactly where it fails. Example: "Most form fields have associated labels via <label> elements. However, the custom date-picker widget in the task creation modal does not expose its current value to screen readers (SC 4.1.2 failure)."
+
+  3. Does Not Support
+     The product does not meet the criterion. You must describe the failure and, ideally, your remediation timeline. Example: "Drag-and-drop task reordering has no keyboard-accessible equivalent (SC 2.1.1 failure). Remediation planned for Q3 2026 release."
+
+  4. Not Applicable
+     The criterion does not apply to the product. You must justify this. Example: "SC 1.2.1 Audio-only and Video-only: The product contains no pre-recorded audio-only or video-only content. Not Applicable."
+
+Important: Do not use "Not Applicable" as an escape hatch. Auditors will challenge unjustified Not Applicable entries. If your product has any video tutorials, embedded media, or dynamic content, those criteria apply.
+
+---
+
+STEP 4: CONDUCT THE REQUIRED TESTING
+
+You cannot complete an accurate ACR without real testing. Self-attestation based on code inspection alone is not sufficient and will be challenged during agency review. Complete the following testing phases before filling in the VPAT tables.
+
+Phase 1 — Automated Scanning (Start Here)
+Run automated accessibility scanners as a first pass. Recommended tools:
+  - axe DevTools (browser extension or axe-core API) — the industry standard; integrates with CI/CD pipelines
+  - WAVE (WebAIM) — browser extension with visual overlay of errors
+  - Google Lighthouse — built into Chrome DevTools; run the Accessibility audit
+
+Important caveat: Automated tools catch approximately 30-40% of WCAG failures. They reliably detect missing alt text, duplicate IDs, missing form labels, and obvious contrast failures. They cannot detect logical reading order failures, meaningful focus order problems, or whether a screen reader actually announces custom widgets correctly. Automated results are a floor, not a ceiling.
+
+Phase 2 — Keyboard-Only Navigation
+Test every workflow in your project management tool using only Tab, Shift+Tab, Enter, Space, Escape, and Arrow keys. Verify:
+  - All task creation, editing, and deletion flows are keyboard operable.
+  - Modal dialogs trap focus correctly (focus stays inside the modal) and release focus properly on close.
+  - Dropdown menus and custom selects are operable by keyboard.
+  - Drag-and-drop functionality has a keyboard-accessible alternative.
+  - There are no keyboard traps (SC 2.1.2).
+  - Focus order is logical (SC 2.4.3).
+  - Focus indicator is always visible (SC 2.4.7).
+
+Phase 3 — Screen Reader + Browser Combinations
+Test with the following assistive technology and browser combinations. Each combination reflects real-world usage patterns among federal government users:
+
+  - JAWS (latest version) + Google Chrome — JAWS is the most widely used screen reader in federal environments. Chrome is the dominant browser.
+  - NVDA (latest version) + Mozilla Firefox — NVDA is the primary free/open-source screen reader; Firefox has strong ARIA support.
+  - NVDA (latest version) + Google Chrome — Cross-test NVDA with Chrome to catch browser-specific rendering differences.
+  - VoiceOver + Safari on macOS — Required for Mac users and for testing ARIA live regions on WebKit.
+  - VoiceOver + Safari on iOS — Test mobile responsiveness for government employees using iPads or iPhones.
+  - TalkBack + Chrome on Android — Android is common on federal mobile devices.
+
+For each combination, walk through the primary user workflows: logging in, creating a project, creating a task, assigning a user, setting a due date, and viewing a dashboard. Document what the screen reader announces at each step.
+
+Phase 4 — Color Contrast Verification
+Use the Colour Contrast Analyser (TPGi) or the browser DevTools contrast checker to verify:
+  - All body text: minimum 4.5:1 ratio (SC 1.4.3)
+  - Large text (18pt/14pt bold and above): minimum 3:1 ratio
+  - Focus indicators: verify visible against adjacent colors
+  - Status badges and tags (e.g., "High Priority" in red): ensure contrast meets threshold
+
+Phase 5 — Zoom and Reflow Testing
+Set browser zoom to 200% and verify no content is lost or obscured. At 400% zoom (WCAG 2.1 SC 1.4.10, Reflow — not required by 508 but good practice), content should reflow to a single column without horizontal scrolling.
+
+Phase 6 — Document Results
+For each failure found, record: the WCAG success criterion number and name, the specific element or workflow, the assistive technology/browser combination that revealed it, a screenshot or video clip, and the severity (Critical, High, Medium, Low).
+
+---
+
+STEP 5: FILL IN THE VPAT TABLES
+
+With test results in hand:
+
+1. Complete the Product Information section: include product name, version number, report date, company name, and a description of what the product does.
+
+2. Complete the Evaluation Methods section: list every tool and AT combination used (e.g., "axe DevTools 4.x, NVDA 2024.1 + Firefox 125, JAWS 2024 + Chrome 124, VoiceOver + Safari 17 on macOS Sonoma, keyboard-only navigation testing, manual code inspection").
+
+3. For each row in Table 1 and Table 2: assign the appropriate conformance level and write a Remarks entry. The Remarks must be specific — cite the affected component, the failure mode, and your remediation status. Vague remarks like "Generally supports this criterion" will not satisfy agency reviewers.
+
+4. For each row in Table 3: describe how your product supports the functional category. Reference your screen reader test results and keyboard test results.
+
+5. Complete Chapters 5 and 6 if applicable.
+
+---
+
+STEP 6: WRITE THE REMARKS CORRECTLY
+
+Federal agency evaluators read the Remarks column carefully. Best practices:
+
+- For "Supports": briefly confirm and cite the mechanism (e.g., "All images use <img> with meaningful alt text or alt='' for decorative images. Verified with axe-core and NVDA + Firefox.").
+- For "Partially Supports": name the specific component that fails and the failure mode. Do not leave this vague.
+- For "Does Not Support": state the failure clearly and include your remediation commitment if you have one.
+- For "Not Applicable": provide a one-sentence justification tied to your product's actual functionality.
+
+---
+
+PROCUREMENT OBLIGATIONS SUMMARY
+
+Under FAR clause 52.239-2 (when incorporated) and the agency's 508 program requirements, you may be required to:
+  - Submit the completed ACR with your RFP response or within 30 days of contract award.
+  - Provide updated ACRs with each major product release.
+  - Remediate Critical issues (keyboard traps, complete screen reader failures) within 30 days of identification; High issues within 60 days; Medium within 90 days.
+  - Provide an alternative means of access if claiming undue burden on any criterion.
+
+If your product has known gaps, do not hide them. Agencies expect gaps in commercial products. A "Partially Supports" entry with a clear remediation timeline is far preferable — legally and practically — to a false "Supports" claim that unravels during agency accessibility testing.
+
+---
+
+REGULATORY CITATION SUMMARY
+
+- Section 508 authority: 29 U.S.C. § 794d; Revised Standards: 36 CFR Part 1194 (effective January 18, 2018)
+- Web/software/document requirement: E205 (incorporates WCAG 2.0 Level A and AA)
+- Functional Performance Criteria: Chapter 3 (302.1–302.9)
+- VPAT template source: ITI (Information Technology Industry Council), VPAT 2.x WCAG Edition
+- FAR procurement clause: 52.239-2 (AccessIbilty of ICT)

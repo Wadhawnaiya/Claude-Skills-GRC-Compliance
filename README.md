@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), and EU AI Act (Regulation (EU) 2024/1689) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), EU AI Act (Regulation (EU) 2024/1689), and Section 508 (US Federal ICT Accessibility) — powered by Claude Skills.
 
 Benchmarked across 125 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **82%** across 625 total assertions.
 
 [![Release: v0.9.0](https://img.shields.io/badge/Release-v0.9.0-brightgreen.svg)](../../releases/tag/v0.9.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 25](https://img.shields.io/badge/Skills-25-green.svg)](#the-skills)
+[![Skills: 26](https://img.shields.io/badge/Skills-26-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -41,6 +41,7 @@ Benchmarked across 125 test cases (5 per framework) using the eval framework —
   - [EAR — Export Administration Regulations](#-ear--export-administration-regulations)
   - [NIST SP 800-53 — Security and Privacy Controls for Federal Systems](#-nist-sp-800-53--security-and-privacy-controls-for-federal-systems)
   - [EU AI Act — Regulation (EU) 2024/1689](#-eu-ai-act--regulation-eu-20241689)
+  - [Section 508 — US Federal ICT Accessibility](#-section-508--us-federal-ict-accessibility)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -581,6 +582,24 @@ The EU AI Act skill turns Claude into an expert EU AI Act compliance advisor cov
 
 ---
 
+### 26. ♿ Section 508 — US Federal ICT Accessibility
+
+**File:** `Section 508 - Claude Skill/section-508.skill`
+
+The Section 508 skill turns Claude into an expert **US federal ICT accessibility compliance advisor** covering the **Revised Section 508 Standards (2018)** (36 CFR Part 1194), which incorporate **WCAG 2.0 Level A and AA** as the technical standard for web content, software, and electronic documents. It supports federal agencies, contractors, and ICT vendors across the full compliance lifecycle — from accessibility audits and VPAT completion to PDF remediation, procurement RFP language, and undue burden determinations.
+
+**What this skill covers:**
+- **VPAT/ACR completion** — VPAT 2.x WCAG Edition structure, all four conformance levels (Supports/Partially Supports/Does Not Support/Not Applicable), three tables (Level A, Level AA, Functional Performance Criteria), required testing methodology disclosure
+- **WCAG 2.0 Level A and AA success criteria** — all 38 criteria across the four POUR principles (Perceivable, Operable, Understandable, Robust) with common failure patterns and fixes
+- **Accessibility auditing** — automated scanning (axe, WAVE, Lighthouse), keyboard-only testing, screen reader testing (JAWS + Chrome, NVDA + Firefox, VoiceOver + Safari), colour contrast verification
+- **PDF accessibility** — Tagged PDFs, tag hierarchy, form field accessible names, Alt text, reading order, document language, Acrobat Pro Full Accessibility Check
+- **Federal procurement** — FAR clause 52.239-2, RFP accessibility requirements, VPAT evaluation methodology, common vendor VPAT deficiencies, post-award remediation SLAs
+- **Exceptions** — Undue burden (E202.5): written determination process, alternative means of access obligations, re-evaluation triggers; fundamental alteration; legacy ICT
+
+**Trigger phrases:** `Section 508`, `508 compliance`, `WCAG federal`, `VPAT`, `ACR accessibility`, `accessibility conformance report`, `ICT accessibility`, `federal accessibility`, `POUR principles`, `web accessibility 508`, `keyboard accessibility audit`, `screen reader testing`, `PDF accessibility`, `accessible federal website`, `undue burden 508`, `assistive technology testing`, `FAR 52.239-2`, `508 procurement`, `JAWS testing`, `VoiceOver compliance`, `axe accessibility`, `colour contrast 508`, `focus visible 508`, `alt text federal`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -768,6 +787,7 @@ The EU AI Act skill turns Claude into an expert EU AI Act compliance advisor cov
    | 📦 EAR [US] — Export Administration Regulations | [ear.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EAR%20-%20Claude%20Skill/ear.skill) |
    | 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems | [nist-800-53.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20800-53%20-%20Claude%20Skill/nist-800-53.skill) |
    | 🤖 EU AI Act — Regulation (EU) 2024/1689 | [eu-ai-act.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20AI%20Act%20-%20Claude%20Skill/eu-ai-act.skill) |
+   | ♿ Section 508 [US] — Federal ICT Accessibility | [section-508.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Section%20508%20-%20Claude%20Skill/section-508.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -798,13 +818,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **120 realistic test cases** were run across all 24 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **130 realistic test cases** were run across all 26 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **96%** | **576 / 600** |
-| Without skills (baseline Claude) | 81% | 488 / 600 |
-| **Delta** | **+15 points** | **+88 assertions** |
+| **With GRC Skills installed** | **96%** | **626 / 650** |
+| Without skills (baseline Claude) | 83% | 538 / 650 |
+| **Delta** | **+13 points** | **+88 assertions** |
 
 ### Per-Skill Results
 
@@ -835,6 +855,7 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | EAR [US] | 5 | **100%** | 88% | +12% | RF amplifier ECCN classification for Germany export; Deemed export for Chinese/Australian dual national on 5D002; Entity List re-export violation and VSD process; AES-256 software ENC exception for France/India/Brazil; ECP design for semiconductor equipment company |
 | NIST SP 800-53 | 5 | **92%** | 84% | +8% | FIPS 199 categorization for federal HR system; AC-2(3) OTS finding and POA&M documentation; MFA controls and EO 14028 phishing-resistant MFA; SSP narrative for SC-8(1) Transmission Confidentiality; ISO 27001 to FedRAMP gap analysis and RMF steps |
 | EU AI Act | 5 | **100%** | 88% | +12% | CV screening tool high-risk classification under Annex III Area 4; Predictive policing Art. 5 prohibition analysis; Open-source GPAI model obligations with 3×10²⁴ FLOPs; AI diagnostic imaging tool dual MDR/AI Act regulation; E-commerce chatbot Art. 50(1) disclosure obligations |
+| Section 508 [US] | 5 | **100%** | 100% | 0% | VPAT 2.x ACR completion and testing methodology; Keyboard-only navigation failures and WCAG remediation; PDF forms accessibility remediation (200 PDFs); Federal procurement RFP requirements and VPAT evaluation; Undue burden exception process and alternative access obligations |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

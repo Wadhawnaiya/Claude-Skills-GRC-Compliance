@@ -1,0 +1,33 @@
+{
+  "eval_id": 128,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "States PDFs must be Tagged PDFs with a correct tag hierarchy (Document, headings, paragraphs, tables, lists)",
+      "passed": true,
+      "evidence": "Response explicitly states 'PDFs must be Tagged PDFs' and lists the required tag hierarchy including <Document> as root, <H1>-<H3> headings, <P> paragraphs, <Table>/<TR>/<TH>/<TD> table tags, and <L>/<LI>/<Lbl>/<LBody> list tags under requirement #1."
+    },
+    {
+      "text": "Mentions form fields must have accessible names (Tooltip/name field in Acrobat Pro form editor)",
+      "passed": true,
+      "evidence": "Response states under requirement #2: 'In Adobe Acrobat Pro's form editor, this is set via the Tooltip field in each form field's properties dialog. The Tooltip becomes the accessible name read by assistive technology.' Also repeated in remediation Step 4: 'In the General tab, fill in the Tooltip field with a clear, descriptive label.'"
+    },
+    {
+      "text": "States all images in PDFs must have Alt text set in the tag properties",
+      "passed": true,
+      "evidence": "Response states under requirement #3: 'All meaningful images must have alternative text (Alt text) set in the tag properties. In Acrobat Pro, this is done by opening the Tags panel, right-clicking the <Figure> tag, selecting Properties, and entering descriptive Alt text.' Also covered in remediation Step 3."
+    },
+    {
+      "text": "Mentions document language must be set in Document Properties",
+      "passed": true,
+      "evidence": "Response states under requirement #4: 'The primary language of the PDF must be specified in Document Properties. In Acrobat Pro: File > Properties > Advanced tab > Reading Options > Language.' Also repeated in remediation Step 5."
+    },
+    {
+      "text": "References a verification/testing step using Acrobat Pro's Full Accessibility Check or equivalent",
+      "passed": true,
+      "evidence": "Response references verification in multiple places: the automated pre-scan step states 'Run Adobe Acrobat Pro's Full Accessibility Check (Tools > Accessibility > Full Check)' and Phase 5 (Verification and Testing) states 'Run the Full Accessibility Check in Adobe Acrobat Pro (Tools > Accessibility > Full Check) — this must pass with zero errors.' Also mentions PAC 3/PAC 2024 as equivalent tools."
+    }
+  ],
+  "total": 5,
+  "passed": 5
+}

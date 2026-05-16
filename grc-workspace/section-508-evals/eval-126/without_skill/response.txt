@@ -1,0 +1,165 @@
+Completing an Accessibility Conformance Report (ACR) Using the VPAT 2.x WCAG Edition Template
+
+Overview
+
+When responding to a federal agency RFP that requires a Voluntary Product Accessibility Template (VPAT), you must produce an Accessibility Conformance Report (ACR). The ACR is your formal, documented statement of how well your product meets accessibility standards. Federal agencies use it to evaluate whether your SaaS product complies with Section 508 of the Rehabilitation Act, which incorporates WCAG 2.0 Level A and AA success criteria by reference (via the 2017 ICT Final Rule).
+
+The VPAT 2.x templates are published and maintained by the Information Technology Industry Council (ITI). For a web-based product, the correct template is the VPAT 2.x WCAG Edition. As of the current versions (VPAT 2.4 and later revisions), this template is available directly from the ITI website (www.itic.org). Do not use older VPAT 1.x templates; federal procurement reviewers will expect the 2.x format.
+
+
+Step 1: Testing Before You Fill Out the VPAT
+
+You cannot accurately complete a VPAT without prior accessibility testing. Completing a VPAT based on assumptions or developer intent — rather than actual test results — is a serious error that can expose your company to legal risk and damage your agency relationship. Testing should precede document authoring.
+
+1a. Automated Testing (First Step — Necessary but Not Sufficient)
+
+Start with automated scanning tools. These are fast, repeatable, and catch a well-defined subset of issues. Common tools include:
+
+- axe (Deque Systems) — available as a browser extension and CI/CD integration
+- WAVE (WebAIM) — browser extension and API
+- Lighthouse (Google) — built into Chrome DevTools, also available via CLI
+- IBM Equal Access Checker
+- Siteimprove Accessibility Checker
+
+Important caveat: Automated tools can reliably detect roughly 30–40% of WCAG failures (some estimates range from 20–57% depending on the tool and ruleset). They cannot assess cognitive usability, logical reading order in complex layouts, the meaningfulness of alt text, or whether interactive components are operable by keyboard in practice. Automated testing is a starting point, not a finishing point.
+
+1b. Manual Keyboard Testing
+
+Navigate your entire application using only a keyboard (Tab, Shift+Tab, Enter, Space, Arrow keys, Escape). Verify that:
+- All interactive elements receive visible focus
+- Focus order is logical
+- No keyboard traps exist
+- Modals and custom widgets (date pickers, drag-and-drop, rich text editors) are fully keyboard-operable
+
+1c. Assistive Technology Testing
+
+You must test with real assistive technology (AT) paired with specific browsers, because AT/browser combinations behave differently. Required combinations for a thorough VPAT covering a web product include at minimum:
+
+- JAWS (Job Access With Speech) + Chrome on Windows — the most common enterprise screen reader combination; JAWS is widely used in federal government
+- NVDA (NonVisual Desktop Access) + Firefox on Windows — open-source screen reader, widely used; pairing with Firefox tests a distinct rendering path
+- VoiceOver + Safari on macOS — required for Apple ecosystem coverage
+- VoiceOver + Safari on iOS (iPhone/iPad) — if your product has a mobile-responsive interface
+- TalkBack + Chrome on Android — for mobile coverage
+- Dragon NaturallySpeaking (Dragon Professional) + Chrome — for speech input testing (relevant to WCAG 2.1 success criteria and Section 508 functional performance criteria)
+
+At minimum, cover JAWS + Chrome, NVDA + Firefox, and VoiceOver + Safari to address the most common federal user scenarios.
+
+1d. Color Contrast and Visual Testing
+
+Use tools like the Colour Contrast Analyser or browser dev tools to verify all text meets the 4.5:1 ratio (normal text) and 3:1 ratio (large text) required by WCAG 1.4.3.
+
+1e. User Testing with People with Disabilities
+
+Where possible, include participants with disabilities in usability testing. This is not strictly required for the VPAT but strengthens the credibility of your conformance claims.
+
+
+Step 2: Understanding the VPAT 2.x WCAG Edition Structure
+
+The ITI VPAT 2.x WCAG Edition template contains three primary tables you must complete:
+
+Table 1: Success Criteria, Level A
+
+This table lists all WCAG 2.x Level A success criteria (the minimum baseline requirements). For a web application, this includes criteria such as:
+- 1.1.1 Non-text Content
+- 1.3.1 Info and Relationships
+- 2.1.1 Keyboard
+- 4.1.2 Name, Role, Value
+...and all other Level A criteria.
+
+For each criterion, you provide:
+- A conformance level (see Step 3)
+- Remarks and explanations describing how your product meets or does not meet the criterion, and what specific issues exist
+
+Table 2: Success Criteria, Level AA
+
+This table lists all WCAG 2.x Level AA success criteria, which are required by Section 508 (the 2017 ICT Final Rule incorporates WCAG 2.0 Levels A and AA). Examples include:
+- 1.4.3 Contrast (Minimum)
+- 1.4.4 Resize Text
+- 2.4.7 Focus Visible
+- 3.3.3 Error Suggestion
+
+The same conformance level and remarks structure applies.
+
+Note: The VPAT 2.x template also includes an optional Level AAA table. Federal agencies do not require Level AAA conformance, but you may include it voluntarily.
+
+Table 3: Functional Performance Criteria (FPC)
+
+This table is specific to Section 508 and does not map directly to individual WCAG criteria. Instead, it addresses the functional outcomes that the product must support, corresponding to 36 CFR 1194.31. The criteria include:
+
+- Without Vision — usable without sight (screen reader access)
+- With Limited Vision — usable with low vision (magnification, contrast)
+- Without Perception of Color — usable when color is not available
+- Without Hearing — usable without audio
+- With Limited Hearing — usable with limited hearing
+- Without Speech — operable without spoken input
+- With Limited Manipulation — operable with limited hand/arm dexterity
+- With Limited Reach and Strength — operable with limited physical reach
+- With Limited Language, Cognitive, and Learning Abilities — usable by people with cognitive disabilities
+- With Photosensitivity — does not cause seizures
+
+For each FPC, you again provide a conformance level and narrative explanation.
+
+The template also includes a header section where you document: product name and version, report date, contact information, evaluation methods used, and applicable standards (WCAG 2.x, Revised Section 508).
+
+
+Step 3: Understanding the Four Conformance Levels
+
+Every row in every VPAT table must be assigned one of four conformance levels. These are standardized terms — do not use alternatives like "Mostly Supports" or "N/A with asterisk."
+
+1. Supports
+The product fully meets the success criterion without exception. All functionality that is within scope of the criterion works in an accessible manner. Use this level only when you have confirmed through testing that there are no failures.
+
+2. Partially Supports
+Some functionality meets the success criterion, but some does not. This is the most commonly used level for products that have some accessibility issues but are not completely inaccessible for a given criterion. Your remarks must explain what works, what does not, and ideally describe the specific defect (e.g., "The modal dialog closes on Escape in Chrome but does not return focus to the triggering element in NVDA + Firefox").
+
+3. Does Not Support
+The product does not meet the success criterion. The functionality exists but is not accessible in the way the criterion requires. Your remarks should explain the nature of the failure.
+
+4. Not Applicable
+The success criterion does not apply to your product because the relevant feature type is not present. For example, if your project management tool has no audio or video content, criteria like 1.2.1 (Audio-only and Video-only) would be Not Applicable. Document clearly why the criterion does not apply.
+
+Important note on honesty: Federal agencies and their 508 coordinators are increasingly sophisticated in reviewing VPATs. Overclaiming "Supports" where issues exist will damage your credibility during procurement. It is better to acknowledge "Partially Supports" with a clear remediation roadmap than to claim full conformance inaccurately.
+
+
+Step 4: Writing the Remarks and Explanations Column
+
+For every row where conformance is not "Supports" or "Not Applicable," the Remarks and Explanations column must provide enough detail for the agency to understand:
+- What specific functionality is affected
+- What the failure mode is
+- What user impact results (e.g., screen reader users cannot access the Gantt chart export function)
+- What your remediation plan and timeline is (optional but strengthens the submission)
+
+Vague remarks like "Some issues exist" are insufficient. Specificity demonstrates that you have actually tested the product.
+
+
+Step 5: Scoping Your VPAT
+
+For a web-based project management SaaS tool, you need to define what is in scope before you begin. Typical scope considerations:
+
+- Core application features: task creation, project dashboards, user management, reporting
+- Authentication flows: login, MFA, password reset
+- Third-party embedded components: if you use a third-party Gantt chart widget, rich text editor, or file picker, you are responsible for its accessibility in your product
+- Help documentation and support portal (if web-based): also subject to Section 508
+- Mobile web experience: if your app is responsive or has a mobile site
+- Out of scope: things genuinely not part of your product offering (document clearly)
+
+
+Step 6: Keeping the ACR Current
+
+An ACR is a point-in-time document. Federal agencies expect it to reflect the version of the product being procured. When you release new versions with significant UI changes, update the ACR. Some agencies will ask for an ACR dated within the past 12–18 months. Maintain version control on your ACR alongside your product releases.
+
+
+Summary Checklist for VPAT Completion
+
+1. Select the correct template: VPAT 2.x WCAG Edition from ITI (itic.org)
+2. Define scope (what features and user flows are covered)
+3. Run automated scans (axe, WAVE, Lighthouse) — document tool versions and scan dates
+4. Conduct manual keyboard testing across all workflows
+5. Test with AT/browser combinations: at minimum JAWS + Chrome, NVDA + Firefox, VoiceOver + Safari
+6. Complete Table 1 (Level A criteria) with conformance levels and remarks
+7. Complete Table 2 (Level AA criteria) with conformance levels and remarks
+8. Complete Table 3 (Functional Performance Criteria) with conformance levels and remarks
+9. Fill in the header: product name, version, report date, evaluation methodology, contact
+10. Review for honesty and specificity before submission
+11. Plan a remediation roadmap for any "Partially Supports" or "Does Not Support" findings
+12. Update the ACR with each significant product release

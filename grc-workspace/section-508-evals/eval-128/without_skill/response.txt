@@ -1,0 +1,146 @@
+Section 508 PDF Accessibility: Requirements and Remediation Process
+===================================================================
+
+Section 508 of the Rehabilitation Act requires federal agencies to ensure their electronic and information technology, including PDF documents and forms, is accessible to people with disabilities. For PDFs, the relevant technical standard is WCAG 2.0 Level AA (incorporated by reference in the Revised 508 Standards) and PDF/UA (ISO 14289).
+
+---
+
+SPECIFIC REQUIREMENTS FOR PDF ACCESSIBILITY
+--------------------------------------------
+
+1. Tagged PDFs with Correct Tag Hierarchy
+   PDFs must be "Tagged PDFs" — meaning they contain a hidden tag structure that screen readers use to interpret content order and meaning. The tag tree must follow a logical hierarchy:
+   - <Document> as the root tag
+   - Headings: <H1>, <H2>, <H3>, etc. used in proper nesting order
+   - Paragraphs: <P> tags for body text
+   - Tables: <Table>, <TR>, <TH>, <TD> tags with proper header associations
+   - Lists: <L>, <LI>, <Lbl>, <LBody> tags
+   - Figures/Images: <Figure> tags with Alt text
+   - Form fields: <Form> tags
+   Tags must reflect the logical reading order of the document.
+
+2. Accessible Form Fields
+   All interactive form fields must have accessible names so screen readers can announce the purpose of each field. In Adobe Acrobat Pro's form editor, this is set via the Tooltip field in each form field's properties dialog. The Tooltip becomes the accessible name read by assistive technology. Every text field, checkbox, radio button, dropdown, and button must have a descriptive, meaningful Tooltip/name.
+
+3. Alternative Text for Images
+   All meaningful images (figures, charts, logos, icons) must have alternative text (Alt text) set in the tag properties. In Acrobat Pro, this is done by opening the Tags panel, right-clicking the <Figure> tag, selecting "Properties," and entering descriptive Alt text. Decorative images should be marked as artifacts so screen readers skip them.
+
+4. Document Language
+   The primary language of the PDF must be specified in Document Properties. In Acrobat Pro: File > Properties > Advanced tab > Reading Options > Language. Setting the correct language (e.g., "EN-US") allows screen readers to use the correct pronunciation and speech engine.
+
+5. Logical Reading Order
+   The order of tags in the tag tree must match the intended reading order of the document. Use the Order panel or Tags panel in Acrobat Pro to verify and correct reading order.
+
+6. Color and Contrast
+   Text must meet minimum contrast ratios (4.5:1 for normal text, 3:1 for large text) per WCAG 2.1 SC 1.4.3. Information must not be conveyed by color alone.
+
+7. Bookmarks
+   PDFs with 21 or more pages must include bookmarks (an outline/navigation structure) to allow users to navigate without reading every page.
+
+8. Document Title
+   The document title must be set in Document Properties (File > Properties > Description tab > Title) and configured to display the title (rather than filename) in the title bar (Initial View tab > Show: Document Title).
+
+9. No Inaccessible Security Settings
+   Document security settings must not block screen reader access. Assistive technology access must be permitted.
+
+10. Tables: Headers and Scope
+    Data tables must use proper header cells (<TH>) with Scope attributes (Column, Row, Both) to associate headers with data cells.
+
+---
+
+REMEDIATION PROCESS FOR 200 PDF FORMS
+---------------------------------------
+
+Phase 1: Inventory and Prioritization
+- Catalog all 200 forms with metadata (form name, size, complexity, usage frequency).
+- Prioritize based on public usage volume — highest-traffic forms first.
+- Identify whether source files (Word, InDesign, etc.) are available, as remediating from the source is faster than remediating the PDF directly.
+
+Phase 2: Tooling Setup
+Required tools:
+- Adobe Acrobat Pro DC (or current version) — primary remediation tool
+- PAC 3 or PAC 2024 (PDF Accessibility Checker) — free tool for PDF/UA validation
+- NVDA (free) or JAWS screen reader — for manual testing
+- Microsoft Word or InDesign — if regenerating from source
+
+Phase 3: Automated Pre-Scan
+- Run Adobe Acrobat Pro's Full Accessibility Check (Tools > Accessibility > Full Check) on each PDF to identify categories of failures.
+- This check evaluates tagged structure, alt text, form field names, reading order, language, contrast, and more.
+- Use results to estimate remediation effort per document and group similar issues for batch fixing.
+
+Phase 4: Remediation (Per Document)
+For each PDF form, perform the following steps:
+
+Step 1 — Add/Repair Tags:
+  - If the PDF has no tags: Use Acrobat's "Add Tags to Document" auto-tagger (Tools > Accessibility > Add Tags to Document), then manually correct the resulting tag tree.
+  - Open the Tags panel to review the tag hierarchy.
+  - Correct heading levels, ensure paragraphs use <P>, tables use full table markup.
+
+Step 2 — Fix Reading Order:
+  - Use the Reading Order tool or Order panel to verify content flows logically.
+  - Reorder tags as needed by dragging in the Tags panel.
+
+Step 3 — Set Alt Text on Images:
+  - In the Tags panel, locate each <Figure> tag.
+  - Right-click > Properties > Alternate Text field — enter descriptive alt text.
+  - Mark purely decorative images as Artifacts (right-click > Change Tag to Artifact).
+
+Step 4 — Remediate Form Fields:
+  - Open the Forms editor (Tools > Prepare Form).
+  - Double-click each form field to open its properties.
+  - In the General tab, fill in the Tooltip field with a clear, descriptive label that matches the visible label on the form.
+  - Ensure tab order (Tab Order in the Pages panel) follows a logical sequence.
+  - Verify required fields are marked as required.
+
+Step 5 — Set Document Language:
+  - File > Properties > Advanced > Reading Options > Language — set to the appropriate language code (e.g., EN-US).
+
+Step 6 — Set Document Title and Metadata:
+  - File > Properties > Description — set Title, Author, Subject.
+  - File > Properties > Initial View — set "Show" to "Document Title."
+
+Step 7 — Add Bookmarks (if 21+ pages):
+  - Use the Bookmarks panel to create a navigable outline matching the heading structure.
+
+Step 8 — Fix Table Headers:
+  - In the Tags panel, right-click <TH> cells > Properties > set Scope attribute.
+  - Use the Table Editor (in the Reading Order tool) to assign header relationships.
+
+Phase 5: Verification and Testing
+- Run the Full Accessibility Check in Adobe Acrobat Pro (Tools > Accessibility > Full Check) — this must pass with zero errors for all accessibility categories.
+- Validate against PDF/UA standard using PAC 3 or PAC 2024 (free tool from PDF Association).
+- Perform manual testing with a screen reader (NVDA + Firefox or JAWS + Internet Explorer/Edge):
+  - Navigate headings, form fields, tables, and images.
+  - Confirm all form fields are announced with correct labels.
+  - Confirm images are announced with appropriate alt text.
+  - Confirm reading order is logical.
+- Conduct testing with a user with a disability if possible.
+
+Phase 6: Quality Assurance and Documentation
+- Document the remediation performed on each form.
+- Maintain a Voluntary Product Accessibility Template (VPAT) or Accessibility Conformance Report (ACR) for each form if required.
+- Establish a process so future forms are created accessibly from the start (accessible templates, author training).
+
+Phase 7: Publication and Monitoring
+- Replace inaccessible PDFs on the website with remediated versions.
+- Set up periodic re-checks (e.g., annually) to ensure PDFs remain accessible as content is updated.
+- Establish an accessibility feedback mechanism on the website so users can report barriers.
+
+---
+
+ESTIMATED EFFORT
+----------------
+- Simple text-heavy PDF (few images, no forms): 1-3 hours per document
+- Complex form with many fields, tables, images: 4-8+ hours per document
+- For 200 forms, consider engaging a Section 508 remediation vendor for volume efficiency.
+- Some vendors offer batch remediation using automated tools supplemented by manual review.
+
+---
+
+KEY STANDARDS AND REFERENCES
+------------------------------
+- Revised Section 508 Standards (36 CFR Part 1194), effective January 18, 2018
+- WCAG 2.0 Level AA (incorporated by reference in the Revised 508 Standards)
+- PDF/UA (ISO 14289-1) — the international standard for accessible PDFs
+- GSA's Section508.gov — provides guidance, training, and testing resources
+- HHS Section 508 Program Office guidance on PDF accessibility
