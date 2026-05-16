@@ -8,11 +8,12 @@ Expected layout for each plugin:
     plugins/<plugin-name>/
     ├── .claude-plugin/
     │   └── plugin.json          (valid JSON, required fields present)
-    └── skills/
-        └── <skill-name>/
-            ├── SKILL.md         (non-empty)
-            └── references/      (optional)
-                └── *.md
+    ├── skills/
+    │   └── <skill-name>/
+    │       ├── SKILL.md         (non-empty)
+    │       └── references/      (optional)
+    │           └── *.md
+    └── <plugin-name>.skill      (valid ZIP — bundled for direct download)
 
 Run with:
     pip install pytest
@@ -20,6 +21,7 @@ Run with:
 """
 
 import json
+import zipfile
 from pathlib import Path
 import pytest
 
@@ -29,22 +31,42 @@ import pytest
 
 REPO_ROOT = Path(__file__).parent.parent
 PLUGINS_DIR = REPO_ROOT / "plugins"
+MARKETPLACE_JSON = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 
 PLUGIN_DIRS = sorted([p for p in PLUGINS_DIR.iterdir() if p.is_dir()])
 
+# Single source of truth: all 27 expected plugin names derived from
+# marketplace.json at test time (see test_marketplace_lists_all_plugins).
+# Hardcoded set is used only as a cross-check — update this list whenever
+# a new skill is added.
 EXPECTED_PLUGINS = {
+    "ccpa",
+    "cis-controls",
+    "cmmc",
+    "csrd",
+    "dora",
+    "dpdpa",
+    "ear",
+    "eu-ai-act",
     "fedramp",
     "gdpr-compliance",
     "hipaa-compliance",
+    "ism",
     "iso27001",
     "iso27701",
-    "dora",
-    "dpdpa",
     "iso42001",
+    "itar",
+    "lgpd",
+    "nis2",
+    "nist-800-53",
+    "nist-ai-rmf",
     "nist-csf",
     "pci-compliance",
+    "section-508",
     "soc2",
+    "swift-csp",
     "tsa-compliance",
+    "wcag",
 }
 
 REQUIRED_PLUGIN_JSON_FIELDS = {"name", "version", "description"}
@@ -57,7 +79,7 @@ def pytest_generate_tests(metafunc):
 
 
 # ---------------------------------------------------------------------------
-# Tests
+# Per-plugin structural tests
 # ---------------------------------------------------------------------------
 
 class TestPluginDirectory:
@@ -153,6 +175,44 @@ class TestPluginDirectory:
             f"{plugin_dir.name}: SKILL.md is empty (0 bytes)"
         )
 
+    def test_skill_zip_exists(self, plugin_dir):
+        """
+        Every plugin must bundle a <plugin-name>.skill ZIP file at its root.
+        This allows direct download without going through the marketplace.
+        """
+        expected = plugin_dir / f"{plugin_dir.name}.skill"
+        assert expected.exists(), (
+            f"{plugin_dir.name}: missing bundled skill ZIP at "
+            f"plugins/{plugin_dir.name}/{plugin_dir.name}.skill — "
+            "add it by copying the standalone .skill file into the plugin folder"
+        )
+
+    def test_skill_zip_is_valid(self, plugin_dir):
+        """The bundled .skill file must be a valid ZIP archive."""
+        skill_zip = plugin_dir / f"{plugin_dir.name}.skill"
+        if not skill_zip.exists():
+            pytest.skip("skill ZIP missing — covered by test_skill_zip_exists")
+        assert zipfile.is_zipfile(skill_zip), (
+            f"{plugin_dir.name}: {plugin_dir.name}.skill is not a valid ZIP file"
+        )
+
+    def test_skill_zip_contains_skill_md(self, plugin_dir):
+        """The bundled .skill ZIP must contain exactly one SKILL.md one level deep."""
+        skill_zip = plugin_dir / f"{plugin_dir.name}.skill"
+        if not skill_zip.exists() or not zipfile.is_zipfile(skill_zip):
+            pytest.skip("skill ZIP missing or invalid")
+        with zipfile.ZipFile(skill_zip) as zf:
+            names = zf.namelist()
+        skill_mds = [n for n in names if n.upper().endswith("SKILL.MD")]
+        assert len(skill_mds) == 1, (
+            f"{plugin_dir.name}: expected 1 SKILL.md in ZIP, found {len(skill_mds)}: {skill_mds}"
+        )
+        depth = len(Path(skill_mds[0]).parts) - 1
+        assert depth == 1, (
+            f"{plugin_dir.name}: SKILL.md must be exactly one directory deep in the ZIP "
+            f"(e.g. {plugin_dir.name}/SKILL.md), found at: {skill_mds[0]!r}"
+        )
+
     def test_no_files_outside_skill_folder(self, plugin_dir):
         """No stray files should exist directly in the skills/ directory."""
         skills_dir = plugin_dir / "skills"
@@ -189,7 +249,7 @@ class TestPluginDirectory:
 # ---------------------------------------------------------------------------
 
 def test_all_expected_plugins_present():
-    """All 12 expected plugin directories must exist under plugins/."""
+    """All 27 expected plugin directories must exist under plugins/."""
     found = {p.name for p in PLUGIN_DIRS}
     missing = EXPECTED_PLUGINS - found
     assert not missing, (
@@ -198,16 +258,16 @@ def test_all_expected_plugins_present():
 
 
 def test_no_unexpected_plugins():
-    """Flag any plugin directories not in the expected set."""
+    """
+    Flag any plugin directories not in the expected set.
+    When adding a new skill, update EXPECTED_PLUGINS in this file.
+    """
     found = {p.name for p in PLUGIN_DIRS}
     extra = found - EXPECTED_PLUGINS
     assert not extra, (
         f"Found plugin directories not listed in EXPECTED_PLUGINS — "
-        f"please add them to the test: {extra}"
+        f"add them to the set at the top of this test file: {extra}"
     )
-
-
-MARKETPLACE_JSON = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 
 
 def test_marketplace_json_exists():
@@ -230,12 +290,10 @@ def test_marketplace_json_valid():
 
 def test_marketplace_lists_all_plugins():
     """Every plugin in plugins/ must be referenced in marketplace.json."""
-    marketplace = MARKETPLACE_JSON
-    if not marketplace.exists():
+    if not MARKETPLACE_JSON.exists():
         pytest.skip("marketplace.json missing")
-    data = json.loads(marketplace.read_text())
+    data = json.loads(MARKETPLACE_JSON.read_text())
 
-    # marketplace.json may be a list of plugin entries or a dict with a plugins key
     if isinstance(data, list):
         entries = data
     elif isinstance(data, dict):
@@ -243,7 +301,6 @@ def test_marketplace_lists_all_plugins():
     else:
         pytest.fail("marketplace.json has unexpected structure")
 
-    # Collect all plugin names/ids referenced
     referenced = set()
     for entry in entries:
         for key in ("name", "id", "plugin_id", "path"):
@@ -256,3 +313,18 @@ def test_marketplace_lists_all_plugins():
     assert not unlisted, (
         f"These plugins exist in plugins/ but are not referenced in marketplace.json: {unlisted}"
     )
+
+
+def test_all_marketplace_plugins_have_directories():
+    """Every plugin named in marketplace.json must have a directory in plugins/."""
+    if not MARKETPLACE_JSON.exists():
+        pytest.skip("marketplace.json missing")
+    data = json.loads(MARKETPLACE_JSON.read_text())
+    entries = data.get("plugins", []) if isinstance(data, dict) else data
+
+    found_plugin_names = {p.name for p in PLUGIN_DIRS}
+    for entry in entries:
+        name = entry.get("name", "")
+        assert name in found_plugin_names, (
+            f"marketplace.json references plugin '{name}' but plugins/{name}/ does not exist"
+        )

@@ -17,6 +17,10 @@ Rules enforced (mirrors the Claude skill installer):
      (path-traversal guard: no entry may start with / or contain ..)
   6. SKILL.md must not be empty (> 0 bytes).
 
+Two sets of .skill files are tested:
+  - Standalone: the <Name> - Claude Skill/<name>.skill files for direct download
+  - Plugin-bundled: plugins/<name>/<name>.skill files shipped with each plugin
+
 Run with:
     pip install pytest
     pytest tests/test_skill_installability.py -v
@@ -31,22 +35,97 @@ import pytest
 # ---------------------------------------------------------------------------
 
 REPO_ROOT = Path(__file__).parent.parent
+PLUGINS_DIR = REPO_ROOT / "plugins"
 
-SKILL_FILES = sorted(REPO_ROOT.rglob("*.skill"))
+# Standalone .skill files: live in "<Name> - Claude Skill/" folders
+STANDALONE_SKILL_FILES = sorted([
+    p for p in REPO_ROOT.rglob("*.skill")
+    if "plugins" not in p.parts and ".claude" not in p.parts
+])
 
-# Exclude any .skill files that live inside the plugins/ tree — those are
-# source directories, not the distributable ZIP archives.
-SKILL_FILES = [
-    p for p in SKILL_FILES
-    if "plugins" not in p.parts
-]
+# Plugin-bundled .skill files: live at plugins/<name>/<name>.skill
+PLUGIN_SKILL_FILES = sorted([
+    p for p in PLUGINS_DIR.rglob("*.skill")
+    if p.parent.name == p.stem  # e.g. plugins/iso27001/iso27001.skill
+])
+
+ALL_SKILL_FILES = sorted(set(STANDALONE_SKILL_FILES) | set(PLUGIN_SKILL_FILES))
+
+# ---------------------------------------------------------------------------
+# Expected inventory — update when adding a new skill
+# ---------------------------------------------------------------------------
+
+# Canonical lowercase kebab-case names for all 27 skills
+EXPECTED_SKILL_NAMES = {
+    "ccpa",
+    "cis-controls",
+    "cmmc",
+    "csrd",
+    "dora",
+    "dpdpa",
+    "ear",
+    "eu-ai-act",
+    "fedramp",
+    "gdpr-compliance",
+    "hipaa-compliance",
+    "ism",
+    "iso27001",
+    "iso27701",
+    "iso42001",
+    "itar",
+    "lgpd",
+    "nis2",
+    "nist-800-53",
+    "nist-ai-rmf",
+    "nist-csf",
+    "pci-compliance",
+    "section-508",
+    "soc2",
+    "swift-csp",
+    "tsa-compliance",
+    "wcag",
+}
+
+# Standalone filenames as they actually appear on disk (some legacy names differ)
+EXPECTED_STANDALONE_FILENAMES = {
+    "ccpa.skill",
+    "cis-controls.skill",
+    "cmmc.skill",
+    "csrd.skill",
+    "dora.skill",
+    "dpdpa.skill",
+    "ear.skill",
+    "eu-ai-act.skill",
+    "fedramp.skill",
+    "gdpr-compliance.skill",
+    "hipaa-compliance.skill",
+    "ism.skill",
+    "iso27001.skill",
+    "iso27701.skill",
+    "ISO-42001.skill",
+    "itar.skill",
+    "lgpd.skill",
+    "nis2.skill",
+    "nist-800-53.skill",
+    "nist-ai-rmf.skill",
+    "NIST Cybersecurity.skill",
+    "PCI-Compliance.skill",
+    "section-508.skill",
+    "soc2.skill",
+    "swift-csp.skill",
+    "TSA-Compliance.skill",
+    "wcag.skill",
+}
 
 
 def pytest_generate_tests(metafunc):
-    """Parameterise every test that accepts a `skill_path` fixture."""
+    """Parametrise every test that accepts a skill_path fixture."""
     if "skill_path" in metafunc.fixturenames:
-        ids = [p.name for p in SKILL_FILES]
-        metafunc.parametrize("skill_path", SKILL_FILES, ids=ids)
+        ids = [
+            f"{'plugin' if 'plugins' in p.parts else 'standalone'}::{p.name}"
+            for p in ALL_SKILL_FILES
+        ]
+        metafunc.parametrize("skill_path", ALL_SKILL_FILES, ids=ids)
 
 
 # ---------------------------------------------------------------------------
@@ -64,7 +143,7 @@ def _skill_md_entries(entries):
 
 
 # ---------------------------------------------------------------------------
-# Tests
+# Archive structure tests (parametrised over all .skill files)
 # ---------------------------------------------------------------------------
 
 class TestSkillArchiveStructure:
@@ -98,9 +177,8 @@ class TestSkillArchiveStructure:
         """
         entries = _entries(skill_path)
         skill_md_path = _skill_md_entries(entries)[0]
-
-        parts = Path(skill_md_path).parts  # e.g. ('iso27001', 'SKILL.md')
-        depth = len(parts) - 1  # number of parent directories
+        parts = Path(skill_md_path).parts
+        depth = len(parts) - 1
 
         assert depth == 1, (
             f"{skill_path.name}: SKILL.md must be exactly one directory deep "
@@ -124,16 +202,16 @@ class TestSkillArchiveStructure:
     def test_all_files_under_top_level_folder(self, skill_path):
         """
         Every file entry must live under the same top-level folder as SKILL.md.
-        This prevents partially-nested archives where some files escaped the
-        skill folder.
+        Prevents partially-nested archives where some files escaped the skill folder.
         """
         entries = _entries(skill_path)
         skill_md_path = _skill_md_entries(entries)[0]
-        top_folder = Path(skill_md_path).parts[0]  # e.g. 'iso27001'
+        top_folder = Path(skill_md_path).parts[0]
 
         bad = [
             name for name, _ in entries
-            if not name.startswith(top_folder + "/") and name != top_folder + "/"
+            if not name.startswith(top_folder + "/")
+            and name != top_folder + "/"
             and name != top_folder
         ]
         assert not bad, (
@@ -145,7 +223,6 @@ class TestSkillArchiveStructure:
         """SKILL.md must have content (> 0 bytes)."""
         entries = _entries(skill_path)
         skill_md_name = _skill_md_entries(entries)[0]
-
         size = next(sz for name, sz in entries if name == skill_md_name)
         assert size > 0, (
             f"{skill_path.name}: SKILL.md exists but is empty (0 bytes)"
@@ -175,39 +252,117 @@ class TestSkillArchiveStructure:
 
 
 # ---------------------------------------------------------------------------
-# Inventory sanity check
+# Standalone folder hygiene tests
 # ---------------------------------------------------------------------------
 
-EXPECTED_SKILLS = {
-    "fedramp.skill",
-    "gdpr-compliance.skill",
-    "hipaa-compliance.skill",
-    "iso27001.skill",
-    "iso27701.skill",
-    "dora.skill",
-    "dpdpa.skill",
-    "ISO-42001.skill",
-    "NIST Cybersecurity.skill",
-    "PCI-Compliance.skill",
-    "soc2.skill",
-    "TSA-Compliance.skill",
-}
+STANDALONE_DIRS = sorted([
+    d for d in REPO_ROOT.iterdir()
+    if d.is_dir() and d.name.endswith(" - Claude Skill")
+])
 
 
-def test_all_expected_skills_present():
-    """All 12 expected .skill files must exist in the repository."""
-    found = {p.name for p in SKILL_FILES}
-    missing = EXPECTED_SKILLS - found
-    assert not missing, (
-        f"The following expected .skill files were not found in the repo: {missing}"
+def test_standalone_dirs_contain_no_unexpected_file_types():
+    """
+    Every '<Name> - Claude Skill' folder may contain .skill files and README/
+    markdown files, but nothing else (e.g. no binaries, scripts, or config files).
+    """
+    ALLOWED_SUFFIXES = {".skill", ".md", ".txt"}
+    violations = {}
+    for skill_dir in STANDALONE_DIRS:
+        unexpected = [
+            f.name for f in skill_dir.iterdir()
+            if f.is_file() and f.suffix.lower() not in ALLOWED_SUFFIXES
+        ]
+        if unexpected:
+            violations[skill_dir.name] = unexpected
+
+    assert not violations, (
+        "Unexpected file types found in standalone skill folders:\n"
+        + "\n".join(f"  {folder}: {files}" for folder, files in violations.items())
     )
 
 
-def test_no_unexpected_skills():
-    """Warn if there are .skill files not in the expected set (new skill added without updating tests)."""
-    found = {p.name for p in SKILL_FILES}
-    extra = found - EXPECTED_SKILLS
+def test_standalone_dirs_contain_exactly_one_skill_file():
+    """Each '<Name> - Claude Skill' folder must contain exactly one .skill file."""
+    violations = {}
+    for skill_dir in STANDALONE_DIRS:
+        skill_files = [f for f in skill_dir.iterdir() if f.suffix.lower() == ".skill"]
+        if len(skill_files) != 1:
+            violations[skill_dir.name] = [f.name for f in skill_files]
+
+    assert not violations, (
+        "Expected exactly one .skill file per standalone folder:\n"
+        + "\n".join(f"  {folder}: {files}" for folder, files in violations.items())
+    )
+
+
+# ---------------------------------------------------------------------------
+# Plugin .skill completeness check
+# ---------------------------------------------------------------------------
+
+def test_every_plugin_has_bundled_skill_zip():
+    """
+    Every plugin directory must contain a <plugin-name>.skill ZIP file.
+    This is the bundled copy for direct download alongside the plugin source.
+    """
+    plugin_dirs = sorted([p for p in PLUGINS_DIR.iterdir() if p.is_dir()])
+    missing = []
+    for plugin_dir in plugin_dirs:
+        expected = plugin_dir / f"{plugin_dir.name}.skill"
+        if not expected.exists():
+            missing.append(f"plugins/{plugin_dir.name}/{plugin_dir.name}.skill")
+
+    assert not missing, (
+        "The following plugins are missing their bundled .skill ZIP.\n"
+        "Copy the standalone .skill file into the plugin folder to fix:\n"
+        + "\n".join(f"  {m}" for m in missing)
+    )
+
+
+# ---------------------------------------------------------------------------
+# Inventory sanity checks
+# ---------------------------------------------------------------------------
+
+def test_all_expected_standalone_skills_present():
+    """
+    All 27 expected standalone .skill files must exist.
+    When adding a new skill, add its filename to EXPECTED_STANDALONE_FILENAMES.
+    """
+    found = {p.name for p in STANDALONE_SKILL_FILES}
+    missing = EXPECTED_STANDALONE_FILENAMES - found
+    assert not missing, (
+        f"Expected standalone .skill files not found: {missing}"
+    )
+
+
+def test_no_unexpected_standalone_skills():
+    """
+    Warn if standalone .skill files appear that are not in the expected set.
+    This catches new skills added without updating the test inventory.
+    When adding a new skill, update EXPECTED_STANDALONE_FILENAMES above.
+    """
+    found = {p.name for p in STANDALONE_SKILL_FILES}
+    extra = found - EXPECTED_STANDALONE_FILENAMES
     assert not extra, (
-        f"Found .skill files not listed in EXPECTED_SKILLS — "
-        f"please add them to the test: {extra}"
+        f"Found standalone .skill files not listed in EXPECTED_STANDALONE_FILENAMES — "
+        f"add them to the set at the top of this test file: {extra}"
+    )
+
+
+def test_plugin_skill_names_match_canonical():
+    """
+    Every plugin-bundled .skill file must use the canonical lowercase kebab-case
+    name matching its plugin directory name.
+    """
+    wrong = []
+    for skill_file in PLUGIN_SKILL_FILES:
+        plugin_name = skill_file.parent.name
+        if skill_file.stem != plugin_name:
+            wrong.append(
+                f"plugins/{plugin_name}/{skill_file.name} "
+                f"(expected: {plugin_name}.skill)"
+            )
+    assert not wrong, (
+        "Plugin-bundled .skill files with incorrect names:\n"
+        + "\n".join(f"  {w}" for w in wrong)
     )
