@@ -268,11 +268,11 @@
 
 <div class="stat-cards">
   <div class="stat-card">
-    <div class="stat-value">95%</div>
+    <div class="stat-value">96%</div>
     <div class="stat-label">With Skill</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value neutral">80%</div>
+    <div class="stat-value neutral">81%</div>
     <div class="stat-label">Baseline (No Skill)</div>
   </div>
   <div class="stat-card">
@@ -280,11 +280,11 @@
     <div class="stat-label">Improvement</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">450</div>
+    <div class="stat-value">675</div>
     <div class="stat-label">Total Assertions</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value positive">+66</div>
+    <div class="stat-value positive">+104</div>
     <div class="stat-label">Extra Assertions Passed</div>
   </div>
 </div>
@@ -493,6 +493,27 @@
           <td class="stat-cell">89%</td>
           <td class="stat-cell delta-positive">+11%</td>
           <td class="stat-cell">27/27</td>
+        </tr>
+        <tr>
+          <td><a href="#skill-nzism" onclick="openSkill('nzism'); return false;" class="skill-link">NZISM</a></td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell">88%</td>
+          <td class="stat-cell delta-positive">+12%</td>
+          <td class="stat-cell">25/25</td>
+        </tr>
+        <tr>
+          <td><a href="#skill-vn-pdpl" onclick="openSkill('vn-pdpl'); return false;" class="skill-link">VN-PDPL</a></td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell">68%</td>
+          <td class="stat-cell delta-positive">+32%</td>
+          <td class="stat-cell">25/25</td>
+        </tr>
+        <tr>
+          <td><a href="#skill-eu-cra" onclick="openSkill('eu-cra'); return false;" class="skill-link">EU CRA</a></td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell">80%</td>
+          <td class="stat-cell delta-positive">+20%</td>
+          <td class="stat-cell">25/25</td>
         </tr>
       </tbody>
     </table>
@@ -53995,6 +54016,561 @@ This guidance is based on the Revised Section 508 Standards (2018) and the under
       </div>
     </div>
   </div>
+
+  <div class="skill-accordion" id="skill-nzism">
+    <button class="skill-toggle" onclick="toggleSkill('nzism')">
+      <span>🇳🇿 NZISM — New Zealand Information Security Manual</span>
+      <span class="skill-stats">
+        <span class="badge badge-pass">100% with skill</span>
+        <span class="badge badge-baseline">88% baseline</span>
+        <span class="badge badge-delta">+12% improvement</span>
+      </span>
+      <span class="toggle-icon">▼</span>
+    </button>
+    <div class="skill-content" style="display:none;">
+      <div class="eval-item">
+        <h4>Test 1: Restricted Case Management Gap Analysis</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We are a NZ government agency planning to deploy a case management system that will process Restricted information about individuals. Where do we start with NZISM compliance and what does a gap analysis look like?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With NZISM Skill</h5>
+            <div class="output-content"><p>Delivers a full Certification &amp; Accreditation (C&amp;A) readiness assessment. Covers mandatory C&amp;A process for Restricted systems in a 6-step table (SSP, SRA, Security Assessment, POA&amp;M, ATO, Ongoing Monitoring), 10 critical control domains with 34 specific gap items, a mandatory documents list (SSP, SRA, IRP, BCP, Access Control Policy, etc.), and a 6-phase remediation roadmap spanning 9 months. Explicitly references GCSB/NCSC NZ as the mandatory oversight body and embeds NCSC NZ contact details in the IRP requirement.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">C&amp;A is mandatory for Restricted systems — clearly stated with no exceptions</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">5+ control domains covered (Governance, Access Control, I&amp;A, Network Security, Cryptography, Audit &amp; Logging, Incident Management, Physical Security, Backup, Personnel Security, BCP, Software Dev)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Phased remediation roadmap provided (6 phases over 9 months)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mandatory documents listed: SSP, Security Risk Assessment, POA&amp;M, IRP, BCP, Access Control Policy</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">GCSB/NCSC NZ explicitly named as the mandatory government body for oversight and incident reporting</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Provides a comprehensive 10-section gap analysis covering all major NZISM control domains with priority ratings. Correctly identifies C&amp;A as mandatory, covers all 5+ control domains, provides phased remediation roadmap (immediate/short/medium-term), lists mandatory documents including SRMP and SSP, and explicitly names GCSB and NCSC as key contacts. Closely matches the skill response in depth and accuracy.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">C&amp;A is mandatory for Restricted systems — clearly stated with no exceptions</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">5+ control domains covered (Governance, Risk Management, IAM, Personnel Security, Physical Security, Network Security, System Security, Cryptography, Incident Management, Supply Chain)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Phased remediation roadmap provided (3 phases: 0-3m, 3-6m, 6-12m)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mandatory documents listed: SRMP, System Security Plan, risk assessment, IRP, BCP</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">GCSB and NCSC explicitly named as key government oversight bodies</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 2: AWS Sydney Hosting for Restricted Data</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> Our agency wants to host a Restricted-classified system on AWS Sydney. What NZISM obligations apply to offshore cloud hosting of Restricted data and what approvals do we need?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With NZISM Skill</h5>
+            <div class="output-content"><p>Clearly states that offshore hosting of Restricted data requires explicit Accrediting Authority approval and is not a unilateral agency decision. Explicitly references the NZ Government Cloud Computing Risk &amp; Resilience Guide as the primary reference document with a structured checklist of areas to address. Requires a documented Shared Responsibility Matrix (SRM) with annual review covering all NZISM control sections. Mandates a dedicated cloud-specific Security Risk Assessment. Addresses data sovereignty concerns including Australian Assistance and Access Act 2018 (TOLA) implications, legal jurisdiction risks, and contractual protections required.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Offshore hosting requires explicit Accrediting Authority approval — stated clearly as mandatory</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">NZ Government Cloud Computing Risk &amp; Resilience Guide explicitly referenced as the primary assessment framework</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Shared Responsibility Matrix required — explicitly named with annual review requirement</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Cloud-specific Security Risk Assessment required — mandatory dedicated assessment beyond system SRA</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data sovereignty concerns raised — Australian law (TOLA/Assistance and Access Act) and jurisdiction risks addressed</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Covers most key requirements: SRA and accreditation, data residency confirmation, cloud computing controls, access control, encryption, audit logging. Mentions offshore approval requirement. Does not reference the NZ Government Cloud Computing Risk &amp; Resilience Guide by name. Does not explicitly require a Shared Responsibility Matrix as a named document. Does address data sovereignty concerns including Australian jurisdiction and privacy implications.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐ 3/5 assertions passed (60%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Offshore hosting requires explicit Accrediting Authority approval — stated clearly as mandatory</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">NZ Government Cloud Computing Risk &amp; Resilience Guide explicitly referenced as the primary assessment framework</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Shared Responsibility Matrix required — not mentioned by name as a required document</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Cloud-specific Security Risk Assessment required — SRA mentioned as part of accreditation</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data sovereignty concerns raised — Australian jurisdiction, Privacy Act compliance addressed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 3: Access Control Policy for Restricted System</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> Write an NZISM-compliant Access Control Policy for our Restricted system. Include a document control block, classification marking, and reference the relevant NZISM controls.</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With NZISM Skill</h5>
+            <div class="output-content"><p>Produces a publication-ready 16-section Access Control Policy with full document control block (title, reference, version, classification, owner, authoriser, review cycle, next review date, status, version history). RESTRICTED classification marking appears at top and bottom of document. Policy covers least privilege (NZISM 16.4), separation of duties (NZISM 16.5), need-to-know, account lifecycle, MFA mandated for privileged accounts and remote access (NZISM 17.3/17.4), session management, and audit logging. Every section includes explicit NZISM control ID references throughout the document body.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Document control block includes version, owner, classification, and review cycle</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">RESTRICTED classification marking appears on the document</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Least privilege and separation of duties explicitly addressed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">MFA mandatory for privileged accounts and remote access</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Specific NZISM control IDs referenced (16.1–16.8, 17.1–17.4, 18.1)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Produces a well-structured Access Control Policy with a proper document control table (title, classification, version, status, date, review cycle, owner, approver). RESTRICTED classification marking appears. Covers least privilege, need-to-know, separation of duties, MFA for all users and remote access, privileged access management. References NZISM sections (16.1, 16.3, 16.6) in the reference table but does not embed specific NZISM control IDs in the body of individual policy sections.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Document control block includes version, owner, classification, and review cycle</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">RESTRICTED classification marking appears on the document</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Least privilege and separation of duties explicitly addressed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">MFA mandatory for privileged accounts and remote access</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Specific NZISM control IDs not embedded in individual policy section bodies</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 4: Ransomware Attack by Third-Party Supplier</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We just discovered that one of our IT suppliers had a ransomware attack and our Restricted data may have been compromised. What do we need to do under NZISM?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With NZISM Skill</h5>
+            <div class="output-content"><p>Comprehensive incident response guide covering all five key areas: (1) NCSC NZ mandatory notification with specific contact details (website, 24/7 phone, email) and guidance that suspicion alone triggers reporting; (2) Privacy Commissioner notification under Privacy Act 2020 with harm assessment guidance; (3) Detailed evidence preservation steps including supplier instructions, chain of custody, and what to request; (4) Nine mandatory contractual clauses that should have been in the supplier contract (notification timeframes, right to audit, evidence preservation, regulatory cooperation, post-incident reporting, subcontractor flow-down, termination rights); (5) Post-incident review as a mandatory NZISM requirement with 4-6 week timing and specific scope requirements.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">NCSC NZ mandatory notification required — stated as mandatory with contact details provided</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Privacy Commissioner notification required where personal information involved</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Evidence preservation steps provided — do not wipe systems, instruct supplier in writing, chain of custody</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Supplier notification clause identified as a gap — mandatory contractual clauses listed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Post-incident review stated as mandatory NZISM requirement with timing and scope</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Covers all key obligations: declares incident under NZISM Chapter 5, escalates to Head of Agency and GCISO (DPMC), notifies NCSC for technical assistance, addresses Privacy Act 2020 and Privacy Commissioner notification, requires evidence preservation and forensic investigation, reviews supplier contract obligations, mandates post-incident review. Comprehensive response hitting all five assertion areas with good detail on notification hierarchy and process.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">NCSC NZ mandatory notification required — stated as mandatory with contact website provided</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Privacy Commissioner notification required where personal information involved under Privacy Act 2020</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Evidence preservation steps provided — preserve logs, do not rebuild systems before forensic preservation</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Supplier contract reviewed for notification obligations — gaps identified</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Post-incident review stated as mandatory NZISM requirement with root cause analysis and remediation plan</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 5: SaaS Vendor Onboarding for In-Confidence HR Data</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We're onboarding a SaaS vendor to process In-Confidence HR data for our agency. What security due diligence and contractual requirements does NZISM require?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With NZISM Skill</h5>
+            <div class="output-content"><p>Comprehensive vendor onboarding guide covering: security due diligence against NZ Government Cloud Computing Risk &amp; Resilience Guide, documentation requests (ISO 27001, SOC 2 Type II, pen test results), data handling assessment, incident response capability evaluation, and formal risk classification with Accrediting Authority sign-off. Mandatory contractual clauses include security obligations, data residency restriction, right to audit (with 30-day notice and annual frequency), incident notification (24-hour initial, 72-hour detailed report), sub-processor approval, data return/deletion, compliance with NZ law, and personnel security. Specifies data residency requirements for In-Confidence data and 24/72-hour incident notification timeframes in the contract.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Security due diligence process required — structured assessment against NZ Government Cloud Risk &amp; Resilience Guide</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mandatory contractual clauses listed — security obligations, data residency, sub-processor controls, data deletion</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Right to audit required — explicitly named as mandatory with annual frequency and notice periods</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data residency requirements addressed for In-Confidence data with offshore assessment required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Incident notification timeframe in contract — 24-hour initial, 72-hour detailed report specified</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Excellent response covering all key areas: In-Confidence classification implications, vendor security assessment (ISO 27001, SOC 2 Type II, ASD Essential Eight, pen testing, access controls, encryption), supply chain and subprocessor review, contractual requirements (data ownership, security standards, right to audit, breach notification at 72 hours, data return/deletion, personnel security, subprocessor management, governing law), and ongoing assurance programme. Specifically includes right to audit, 72-hour breach notification, data residency, and Personnel vetting requirements.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Security due diligence process required — structured vendor security assessment with certifications and documentation review</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mandatory contractual clauses listed — data ownership, security standards, breach notification, deletion, subprocessors</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Right to audit required — explicitly named as mandatory with annual frequency</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data residency requirements addressed — Australia/NZ only commitment required in contract</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Incident notification timeframe in contract — 72-hour breach notification to agency specified</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="skill-accordion" id="skill-vn-pdpl">
+    <button class="skill-toggle" onclick="toggleSkill('vn-pdpl')">
+      <span>🇻🇳 VN-PDPL — Vietnam Personal Data Protection Law</span>
+      <span class="skill-stats">
+        <span class="badge badge-pass">100% with skill</span>
+        <span class="badge badge-baseline">68% baseline</span>
+        <span class="badge badge-delta">+32% improvement</span>
+      </span>
+      <span class="toggle-icon">▼</span>
+    </button>
+    <div class="skill-content" style="display:none;">
+      <div class="eval-item">
+        <h4>Test 1: Singapore SaaS Extraterritorial Scope</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> Our company is based in Singapore and we provide a SaaS HR platform to Vietnamese enterprise clients. Does Vietnam's new Personal Data Protection Law apply to us and what do we need to do?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With VN-PDPL Skill</h5>
+            <div class="output-content"><p>Confirms extraterritorial applicability under Law No. 91/2025/QH15 and Decree 356/2025/ND-CP (effective 1 January 2026). Specifies the 60-day cross-border impact assessment deadline to MPS with 6-month renewal cycle. States the 72-hour dual notification requirement (authority AND data subjects simultaneously). Lists all six data subject rights with specific response timeframes (2 working days to acknowledge, 10 days for access/correction, 20 days for deletion, 15 days for withdrawal). Explicitly classifies Vietnam Citizen Identification (CCCD) numbers as basic personal data, not sensitive data, with practical guidance on what triggers the sensitive data regime.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Extraterritorial applicability confirmed — Singapore SaaS processing Vietnamese data is squarely in scope</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Cross-border impact assessment required within 60 days with 6-month renewal cycle</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour breach notification to authority AND data subjects simultaneously</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data subject rights and timeframes listed (acknowledge 2 days; access/correction 10 days; deletion 20 days; withdrawal 15 days)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">National ID (CCCD) explicitly classified as basic personal data, not sensitive data</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Confirms extraterritorial applicability under Decree 13/2023/ND-CP. Covers cross-border transfer impact assessment and MPS filing requirement. States 72-hour breach notification to MPS. Lists eight data subject rights. Does not specifically address Vietnam's National ID (CCCD) classification as basic vs. sensitive data — discusses sensitive data categories broadly but does not confirm that national ID cards fall in the basic category.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Extraterritorial applicability confirmed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Cross-border impact assessment required and MPS filing mentioned</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour breach notification to authority mentioned</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Data subject rights listed (right to know, access, correct, delete, restrict, portability, object, automated decisions)</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">National ID (CCCD) not specifically confirmed as basic data — sensitive data categories discussed without classifying national IDs</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 2: Fintech Breach Notification</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We're a fintech company in Vietnam and we just detected a data breach affecting 50,000 customers' banking transaction records. Walk me through exactly what we need to do and when under the VN-PDPL.</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With VN-PDPL Skill</h5>
+            <div class="output-content"><p>Provides a structured breach response under Law No. 91/2025/QH15 and Decree 356/2025/ND-CP. Confirms 72-hour MPS notification deadline with simultaneous data subject notification. Explicitly invokes the dual notification obligation for the finance sector: Decree 356/2025/ND-CP Article 8 requires concurrent notification to the State Bank of Vietnam (SBV) as the sector regulator. Lists all 8 required notification content elements. Confirms banking transaction data as sensitive personal data requiring explicit consent. Requires an internal breach register documenting all incidents regardless of notifiability.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour deadline to notify MPS authority from awareness of breach</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Finance sector dual notification — State Bank of Vietnam required per Decree 356 Art. 8</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Required notification content listed (nature, categories, number of subjects, records, DPO contact, consequences, measures)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Banking/financial data confirmed as sensitive personal data under VN-PDPL</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Internal breach register required to document all breaches with full incident details</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Covers 72-hour MPS notification, notification to data subjects, SBV notification under Circular 09/2020 and Circular 16/2020, required notification content for MPS and SBV, confirms banking data as sensitive personal data under Article 9(d). Does not mention the requirement to maintain an internal breach register — focuses on external notification obligations and immediate response checklist without the internal recordkeeping requirement.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour deadline to notify MPS authority from awareness of breach</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Finance sector dual notification — SBV notification mentioned (though under different regulatory references)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Required notification content listed (nature, categories, number of subjects, DPO contact, consequences, measures)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Banking/financial data confirmed as sensitive personal data</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Internal breach register not mentioned — no reference to maintaining an internal register of all breaches</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 3: Telemedicine DPIA with AI Behavioural Analysis</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We run a telemedicine platform in Vietnam that collects patient health records, facial biometrics for identity verification, and uses AI to analyse patient behaviour patterns. What DPIA obligations apply and what are patients' rights regarding the AI processing?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With VN-PDPL Skill</h5>
+            <div class="output-content"><p>Identifies all three data categories (health records, facial biometrics, AI behavioural analysis) as sensitive personal data requiring three separate, explicit consent flows under Law No. 91/2025/QH15 and Decree 356/2025/ND-CP. States DPIA is mandatory within 60 days of first processing — SME exemption does not apply because sensitive data is processed. Covers the patient right to opt out of AI automated processing with requirement to provide human-reviewed alternative. Details all five required DPIA content elements (data categories, purpose, retention, security measures, risk assessment). Specifies ongoing periodic AI assessments required at least annually, triggered by model changes, bias findings, or new use cases.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Health, biometric, and behavioural data all classified as sensitive — three separate explicit consents required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPIA mandatory within 60 days of first processing — SME exemption does not apply to sensitive data</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">AI opt-out/object right — patients may opt out of AI behavioural analysis with human-reviewed alternative required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPIA content requirements specified: data categories, purpose, retention, security measures, risk assessment</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Periodic AI assessments required — at least annually or upon material changes to model or data</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Identifies all three data types as sensitive requiring explicit consent (separate for each). Covers DPIA obligation under Article 24 with MPS submission requirement. Addresses AI transparency, automated decision-making rights, and right to human review. Details security requirements and biometric-specific obligations. Does not mention the requirement for ongoing periodic AI assessments — discusses the one-time DPIA and initial AI assessment without specifying the ongoing reassessment obligation at regular intervals.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Health, biometric, and behavioural data all classified as sensitive — three separate explicit consents required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPIA mandatory before commencing processing with MPS submission</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">AI opt-out/object right — patients have right to human review of AI-generated health decisions</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPIA content requirements specified: processing activities, necessity, risks, risk measures</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Periodic AI assessments not mentioned — only one-time DPIA addressed without ongoing reassessment obligation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 4: Micro-Enterprise SME Exemptions</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We're a micro-enterprise with 8 employees running an e-commerce store in Vietnam. We collect customer names, email addresses, and purchase history. What VN-PDPL obligations apply to us and are there any exemptions?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With VN-PDPL Skill</h5>
+            <div class="output-content"><p>Confirms the 5-year SME/micro-enterprise exemption applies under Law No. 91/2025/QH15 and Decree 356/2025/ND-CP. Specifies the three exempted articles: Article 21 (DPIAs), Article 22 (mandatory security measures), Article 33(2) (certain processor obligations). States the exemption runs from 1 January 2026 to 31 December 2030. Clarifies that basic obligations still apply regardless of exemption: consent, privacy notice, data subject rights. Confirms DPO is not mandatory where only basic personal data is processed. Classifies names, emails, and purchase history as basic personal data (not sensitive), explaining what would trigger loss of the exemption.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">SME exemption exists — Articles 21, 22, and 33(2) are exempt for micro-enterprises processing basic data</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">5-year exemption period from 1 January 2026 (expires 31 December 2030) stated</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Basic obligations still apply: consent, privacy notice, data subject rights</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPO not mandatory where only basic personal data is processed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Names and email addresses classified as basic personal data</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>States that the PDPL applies to the business regardless of size and that no SME exemption exists (based on Decree 13/2023/ND-CP). Lists standard obligations: consent, privacy notice, data subject rights, data security, 72-hour breach notification, record-keeping. Correctly notes DPO is likely not mandatory for a small business processing only basic data. Classifies names and emails as basic personal data. Fundamentally incorrect on the SME exemption — the law it references predates the 2025 PDPL which introduced the exemption.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#ef4444;font-weight:600;margin-bottom:8px">⭐⭐ 2/5 assertions passed (40%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">SME exemption stated NOT to exist — baseline incorrectly says the PDPL has no small-business exemption</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">5-year exemption period not mentioned — baseline unaware of transitional exemption window</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Basic obligations described but not framed in context of what applies despite exemption</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">DPO not mandatory for small business processing basic data — correct</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Names and email addresses classified as basic personal data — correct</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 5: Pre-Ticked Consent and Withdrawal</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> Our website currently uses pre-ticked consent boxes and one master checkbox that covers marketing, analytics, and sharing data with partners. A user wants to withdraw consent for marketing only. What do we need to change and how long do we have to act on their withdrawal?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With VN-PDPL Skill</h5>
+            <div class="output-content"><p>Cites Decree 356/2025/ND-CP Article 6 explicitly — pre-ticked boxes and inaction do not constitute valid consent. Confirms bundled (master) consent is invalid and must be split into separate per-purpose unchecked checkboxes. States withdrawal must be honoured within 15 working days under Decree 356/2025/ND-CP. Clarifies that withdrawal does not affect prior lawful processing (retroactive lawfulness preserved). Requires three separate unchecked checkboxes for marketing, analytics, and partner sharing with each independently selectable.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Pre-ticked boxes invalid — Decree 356 Art. 6 cited: silence and inaction are not valid consent</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Bundled consent invalid — master checkbox covering multiple purposes does not meet specificity requirement</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Withdrawal must be honoured within 15 working days per Decree 356/2025/ND-CP</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Withdrawal does not retroactively affect prior lawful processing — prior processing remains valid</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Separate per-purpose unchecked checkboxes required (one each for marketing, analytics, partner sharing)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Correctly identifies pre-ticked boxes as invalid and bundled consent as non-compliant. Requires separate per-purpose unchecked checkboxes. States withdrawal must be acted on "without undue delay" and sets a 30-day outside limit (referencing GDPR standards, not Vietnam PDPL's specific 15 working days). Does not mention that withdrawal does not affect prior lawful processing — focuses on forward-looking obligations without clarifying the retroactive lawfulness preservation principle.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐ 3/5 assertions passed (60%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Pre-ticked boxes invalid — affirmative opt-in required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Bundled consent invalid — separate per-purpose checkboxes required</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Withdrawal timeframe stated as "30 days" — VN-PDPL requires 15 working days per Decree 356</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Withdrawal effect on prior processing not addressed — retroactive lawfulness preservation not mentioned</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Separate per-purpose unchecked checkboxes required for marketing, analytics, and partner sharing</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="skill-accordion" id="skill-eu-cra">
+    <button class="skill-toggle" onclick="toggleSkill('eu-cra')">
+      <span>🇪🇺 EU CRA — Cyber Resilience Act</span>
+      <span class="skill-stats">
+        <span class="badge badge-pass">100% with skill</span>
+        <span class="badge badge-baseline">80% baseline</span>
+        <span class="badge badge-delta">+20% improvement</span>
+      </span>
+      <span class="toggle-icon">▼</span>
+    </button>
+    <div class="skill-content" style="display:none;">
+      <div class="eval-item">
+        <h4>Test 1: Password Manager Classification</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We make a password manager sold as a subscription service in the EU. What product class does it fall into under the Cyber Resilience Act, what conformity assessment route do we need, and what are the key Annex I requirements we must meet?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With EU CRA Skill</h5>
+            <div class="output-content"><p>Confirms password managers are explicitly listed as Class I under Annex III of Regulation (EU) 2024/2847. States Class I allows manufacturer's choice of self-assessment (Module A) OR third-party Notified Body — self-certification is available. Covers all Annex I Part I requirements: no known exploitable vulnerabilities, encryption at rest and in transit (AES-256, TLS 1.2+, zero-knowledge architecture alignment), secure by default (auto-lock, clipboard clearing), MFA support, signed updates with integrity verification, minimal data processing, and exploit mitigation. Covers Annex I Part II requirements: VDP publication, SBOM on request, ENISA 24/72-hour reporting for actively exploited vulnerabilities, free security updates throughout minimum 5-year support period.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Class I under Annex III — password managers explicitly listed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Self-assessment OR Notified Body — manufacturer's choice for Class I products</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Encryption at rest and in transit required (AES-256, TLS 1.2+)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">No known exploitable vulnerabilities at market placement — ongoing obligation</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">VDP, SBOM on request, ENISA 24/72-hour reporting from Annex I Part II</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Confirms Class I classification and password managers explicitly listed in Annex III. States manufacturer's choice of self-assessment (with harmonised standards) or Notified Body. Covers security-by-design requirements, SSDLC, supported period (5 years minimum), technical documentation, CE marking, and user information requirements. Covers VDP, handling discovered vulnerabilities, ENISA 24/72-hour and 14-day reporting, and SBOM. Complete and accurate response.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Class I under Annex III — password managers explicitly listed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Self-assessment OR Notified Body — manufacturer's choice stated</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Encryption at rest and in transit required</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">No known exploitable vulnerabilities at market placement</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">VDP, SBOM, ENISA 24/72-hour and 14-day reporting covered</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 2: Industrial PLC Class II Classification</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We manufacture industrial PLCs (programmable logic controllers) used in factory automation. How does the EU CRA classify our product and what conformity assessment process must we follow?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With EU CRA Skill</h5>
+            <div class="output-content"><p>Confirms PLCs are explicitly Class II under Annex IV of Regulation (EU) 2024/2847 — the highest-risk category requiring mandatory Notified Body assessment with no self-assessment option. Details the 5-step Notified Body process (application, document review including threat model, technical evaluation, certificate issuance, ongoing surveillance). Covers 24/72-hour ENISA and national CSIRT reporting for actively exploited vulnerabilities plus 14-day final report. Technical documentation requirements include security risk assessment AND a specific threat model addressing OT/ICS adversaries, attack paths from IT to OT networks, physical access scenarios, supply chain compromise, firmware manipulation, and DoS affecting physical processes. States 5-year minimum support period. Specifies €15 million or 2.5% of global turnover penalty for Annex I violations.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Class II under Annex IV — mandatory Notified Body assessment, no self-assessment permitted</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">24-hour and 72-hour ENISA/CSIRT reporting for actively exploited vulnerabilities</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Technical documentation requires security risk assessment AND specific threat model for OT/ICS environments</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">5-year minimum support period for security updates</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">€15 million or 2.5% of global turnover penalty for Annex I essential requirement violations</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Confirms Class II classification and mandatory Notified Body involvement. Describes assessment module options (B+C, B+D, B+E, B+F, or H). Covers Annex I security-by-design and vulnerability handling requirements. Mentions SBOM, vulnerability disclosure, and ENISA/CSIRT 24/72-hour reporting. States 5-year minimum support period. Does not specifically mention that technical documentation must include a threat model as a distinct named element — covers security risk assessment and gap analysis but not the specific OT/ICS threat modelling requirement. Does not mention the €15 million/2.5% penalty figure.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐ 3/5 assertions passed (60%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Class II — mandatory Notified Body assessment confirmed</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">24-hour and 72-hour ENISA/CSIRT reporting for actively exploited vulnerabilities</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Threat model not specifically named as a required technical documentation element — only security risk assessment mentioned</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">5-year minimum support period stated</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">€15 million/2.5% penalty not mentioned — no penalty figures provided</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 3: Consumer IoT Vulnerability Reporting</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We sell connected consumer IoT devices and just discovered a vulnerability being actively exploited in the wild. Walk me through the exact reporting obligations and timeline under the EU CRA.</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With EU CRA Skill</h5>
+            <div class="output-content"><p>Provides a precise 5-step incident response walkthrough with exact timelines under Regulation (EU) 2024/2847 Annex I Part II: (1) 24-hour early warning to ENISA and national CSIRTs from moment of awareness; (2) 72-hour full report with detailed technical content requirements; (3) 14-day final detailed report with root cause analysis; (4) prompt user notification with interim mitigations and patch instructions; (5) free security update that cannot be disabled by users. Confirms default class for consumer IoT thermostats and specifies minimum 5-year support period for free security updates.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">24-hour early warning to ENISA and national CSIRT(s) from awareness of active exploitation</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour full report to ENISA and national CSIRT(s) with detailed technical content</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">14-day final detailed report with root cause analysis and remediation details</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Notify affected users promptly with interim mitigations and patch availability</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Free security update required — cannot be disabled by users, minimum 5-year support period</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Covers 24-hour early warning to ENISA and national CSIRT, 72-hour full incident notification, publishing a security advisory and coordinated disclosure, and a final report to ENISA/CSIRT. States the final report deadline as "no later than one month" after the 72-hour notification — which does not match the CRA's 14-day requirement. Covers user notification and free security update obligation. The "1 month" final report deadline is materially different from the actual 14-day requirement.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">24-hour early warning to ENISA and national CSIRT(s)</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">72-hour full incident notification to ENISA and national CSIRT(s)</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Final report stated as "1 month" — CRA requires 14 days from awareness, not 1 month from 72-hour notification</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Notify affected users — security advisory and user notification covered</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Free security update required — mandatory and free of charge</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 4: SBOM Requirements</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> What are our SBOM obligations under the EU CRA? What format should we use, what must it contain, and how long do we need to maintain it?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With EU CRA Skill</h5>
+            <div class="output-content"><p>Comprehensive SBOM guidance under Regulation (EU) 2024/2847: SBOMs are on-request to authorities and users, NOT mandatory public disclosure. Minimum content is top-level open-source dependencies (with encouragement to go further to transitive dependencies and commercial components). Recommends SPDX (ISO/IEC 5962:2021, Linux Foundation) and CycloneDX (OWASP, VEX-compatible) as the two CRA-aligned formats. Explicitly states SBOMs must be kept current throughout the support period — static one-time generation at release is insufficient. Retention for the full support period (minimum 5 years), with historical SBOM versions preserved for demonstration of due diligence. Recommends CI/CD integration for automated SBOM generation.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">On-request to authorities only — NOT mandatory public publication</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Minimum content: top-level open-source dependencies at minimum</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">SPDX and CycloneDX formats recommended — machine-readable, both CRA-aligned</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Must be kept current throughout support period — static generation insufficient</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Maintained for minimum 5-year support period — historical versions archived</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Correctly states SBOMs are not required to be publicly published — internal documentation available to market surveillance authorities on request. Minimum content covers top-level dependencies. Recommends SPDX and CycloneDX as CRA-compliant formats. States SBOMs must be "kept up to date" as part of ongoing technical documentation maintenance. However, does not explicitly state the SBOM must be maintained for the full 5-year minimum support period — mentions general retention without specifying the support-period-length retention obligation and does not note that historical SBOM versions must be preserved.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#f59e0b;font-weight:600;margin-bottom:8px">⭐⭐⭐ 3/5 assertions passed (60%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">On-request to authorities only — NOT mandatory public publication</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Minimum content: top-level dependencies covered</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">SPDX and CycloneDX formats recommended</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Currency obligation not explicitly stated — "kept up to date" mentioned without specifying ongoing requirement vs. static generation</span></div>
+                <div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">5-year minimum retention period not specifically stated — general documentation retention mentioned without the support-period-length obligation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="eval-item">
+        <h4>Test 5: Importer Obligations for Non-Compliant Security Cameras</h4>
+        <p class="eval-prompt"><strong>Prompt:</strong> We import connected security cameras from a Chinese manufacturer to sell in the EU. The cameras ship with a default 'admin/admin' password and have several unnecessary open ports. What are our obligations as an importer, and what's our liability?</p>
+        <div class="eval-outputs">
+          <div class="eval-output with-skill">
+            <h5>With EU CRA Skill</h5>
+            <div class="output-content"><p>Confirms that the default "admin/admin" password violates Annex I Part I secure-by-default requirement and unnecessary open ports violate the minimal attack surface requirement. Identifies importer obligations: verify manufacturer conformity assessment before market placement, do not place non-compliant product on market, notify manufacturer AND relevant competent authorities of non-compliance, cooperate with market surveillance authorities, withdraw or recall if already on market. States the maximum penalty for Annex I essential requirement violations: €15 million or 2.5% of global annual turnover (whichever is higher), with additional penalties for procedural violations. Notes that importer can be held directly liable regardless of manufacturer's China location.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Default admin password violates secure-by-default requirement under Annex I Part I</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Unnecessary open ports violate minimal attack surface requirement under Annex I Part I</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Importer must verify manufacturer compliance before placing product on EU market</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Must notify manufacturer AND competent authorities of identified non-compliance</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">€15 million or 2.5% of global annual turnover penalty for Annex I violations</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-output without-skill">
+            <h5>Baseline (No Skill)</h5>
+            <div class="output-content"><p>Confirms default "admin/admin" violates Annex I Essential Requirement 1.2(b) secure-by-default and unnecessary open ports violate 1.2(c) minimal attack surface. Details importer obligations under Article 19: pre-market due diligence, verification of CE marking and conformity assessment, and do not place non-compliant product on market. Covers notification to manufacturer and market surveillance authorities, corrective action, withdrawal and recall. States €15 million or 2.5% penalty for Annex I violations. Complete and accurate response.</p></div>
+            <div class="output-grading">
+              <div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div>
+              <div class="assertions">
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Default admin password violates secure-by-default requirement under Annex I</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Unnecessary open ports violate minimal attack surface requirement under Annex I</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Importer must verify manufacturer compliance before placing product on EU market</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Must notify manufacturer and market surveillance authorities of non-compliance</span></div>
+                <div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">€15 million or 2.5% of global annual turnover penalty for Annex I violations</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
