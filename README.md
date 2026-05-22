@@ -1,7 +1,7 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
 Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), EU AI Act (Regulation (EU) 2024/1689), Section 508 (US Federal ICT Accessibility), WCAG (Web Content Accessibility Guidelines), NZISM (New Zealand Information Security Manual), Vietnam PDPL (Law on Personal Data Protection No. 91/2025/QH15), and EU CRA (Cyber Resilience Act, Regulation (EU) 2024/2847) — powered by Claude Skills.
 
-Benchmarked across 125 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **82%** across 625 total assertions.
+Benchmarked across 150 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 675 total assertions.
 
 [![Release: v1.1.0](https://img.shields.io/badge/Release-v1.1.0-brightgreen.svg)](../../releases/tag/v1.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -826,6 +826,31 @@ The EU CRA skill turns Claude into an expert advisor on **Regulation (EU) 2024/2
 | Determining GPAI model obligations for an open-source LLM with 3×10²⁴ FLOPs training compute | EU AI Act |
 | Navigating dual regulation for an AI diagnostic imaging tool CE-marked under the EU Medical Devices Regulation | EU AI Act |
 | Understanding Art. 50(1) chatbot disclosure obligations and deployer vs GPAI provider obligations for an e-commerce AI | EU AI Act |
+| Completing a VPAT 2.x (ACR) for federal procurement of enterprise software — all three tables, testing methodology disclosure | Section 508 |
+| Auditing a public-facing web application for Section 508 compliance using keyboard-only and screen reader testing | Section 508 |
+| Remediating 200 legacy PDF documents for Section 508 — tagged structure, reading order, form field labels, Alt text | Section 508 |
+| Writing FAR 52.239-2 accessibility requirements into a federal procurement RFP and evaluating vendor VPAT submissions | Section 508 |
+| Preparing a formal undue burden determination and documenting the alternative means of access obligation | Section 508 |
+| Auditing a React application for WCAG 2.2 AA compliance — colour contrast, keyboard navigation, ARIA, focus management | WCAG |
+| Determining which WCAG version and conformance level is required for legal compliance across US, EU, and UK markets | WCAG |
+| Reviewing a design system's colour palette against SC 1.4.3 and identifying accessible replacement values | WCAG |
+| Drafting a full web accessibility statement for a public sector website meeting EU Web Accessibility Directive requirements | WCAG |
+| Understanding what new success criteria must be met to upgrade a WCAG 2.1 AA conformance claim to WCAG 2.2 AA | WCAG |
+| Conducting a gap analysis for a NZ government agency deploying a Restricted-classified case management system | NZISM |
+| Preparing a Certification & Accreditation (C&A) submission for a Restricted system — SSP, SRA, POA&M, and ATO sign-off | NZISM |
+| Assessing whether hosting Restricted data on AWS Sydney meets NZISM obligations and what Accrediting Authority approvals are needed | NZISM |
+| Drafting an NZISM-compliant Access Control Policy with embedded NZISM control IDs and a document classification block | NZISM |
+| Advising on SaaS vendor due diligence and mandatory contractual security requirements under NZISM for In-Confidence data | NZISM |
+| Running a VN-PDPL gap analysis for a foreign company processing Vietnamese personal data ahead of the 1 January 2026 effective date | VN-PDPL |
+| Designing a valid consent mechanism under Vietnam Law 91/2025 — standalone notice, permitted formats, and withdrawal workflows | VN-PDPL |
+| Building a 72-hour Ministry of Public Security breach notification workflow for a Vietnamese fintech after a data incident | VN-PDPL |
+| Mapping an existing GDPR compliance programme to VN-PDPL — identifying gaps in lawful basis, DPO, and cross-border transfer rules | VN-PDPL + GDPR |
+| Assessing cross-border data transfer obligations and preparing the impact assessment dossier under Article 20 for offshore cloud processing | VN-PDPL |
+| Classifying a connected IoT product under EU CRA — Default, Class I, or Class II — and understanding the applicable conformity assessment route | EU CRA |
+| Running an Annex I gap assessment for a software product placed on the EU market — all 10 Part I security properties and 9 Part II vulnerability obligations | EU CRA |
+| Building a CRA-compliant vulnerability disclosure programme with coordinated disclosure, 24h/72h ENISA reporting, and CSIRT notification | EU CRA |
+| Preparing technical documentation per Annex VII for a Class I product mandatory Notified Body conformity assessment | EU CRA |
+| Implementing an SBOM programme in SPDX or CycloneDX format meeting EU CRA minimum content requirements and CI/CD integration | EU CRA |
 
 ---
 
@@ -862,6 +887,9 @@ The EU CRA skill turns Claude into an expert advisor on **Regulation (EU) 2024/2
    | 🤖 EU AI Act — Regulation (EU) 2024/1689 | [eu-ai-act.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20AI%20Act%20-%20Claude%20Skill/eu-ai-act.skill) |
    | ♿ Section 508 [US] — Federal ICT Accessibility | [section-508.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Section%20508%20-%20Claude%20Skill/section-508.skill) |
    | ♿ WCAG — Web Content Accessibility Guidelines | [wcag.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/WCAG%20-%20Claude%20Skill/wcag.skill) |
+   | 🇳🇿 NZISM [New Zealand] — Information Security Manual | [nzism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NZISM%20-%20Claude%20Skill/nzism.skill) |
+   | 🇻🇳 Vietnam PDPL — Law on Personal Data Protection | [vn-pdpl.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Vietnam%20PDPL%20-%20Claude%20Skill/vn-pdpl.skill) |
+   | 🇪🇺 EU CRA — Cyber Resilience Act | [eu-cra.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20CRA%20-%20Claude%20Skill/eu-cra.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -881,7 +909,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills nist-800-53@grc-skills eu-ai-act@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills nist-800-53@grc-skills eu-ai-act@grc-skills section-508@grc-skills wcag@grc-skills nzism@grc-skills vn-pdpl@grc-skills eu-cra@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -896,9 +924,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **96%** | **626 / 650** |
-| Without skills (baseline Claude) | 83% | 538 / 650 |
-| **Delta** | **+13 points** | **+88 assertions** |
+| **With GRC Skills installed** | **96%** | **651 / 675** |
+| Without skills (baseline Claude) | 81% | 547 / 675 |
+| **Delta** | **+15 points** | **+104 assertions** |
 
 ### Per-Skill Results
 
@@ -931,6 +959,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | EU AI Act | 5 | **100%** | 88% | +12% | CV screening tool high-risk classification under Annex III Area 4; Predictive policing Art. 5 prohibition analysis; Open-source GPAI model obligations with 3×10²⁴ FLOPs; AI diagnostic imaging tool dual MDR/AI Act regulation; E-commerce chatbot Art. 50(1) disclosure obligations |
 | Section 508 [US] | 5 | **100%** | 100% | 0% | VPAT 2.x ACR completion and testing methodology; Keyboard-only navigation failures and WCAG remediation; PDF forms accessibility remediation (200 PDFs); Federal procurement RFP requirements and VPAT evaluation; Undue burden exception process and alternative access obligations |
 | WCAG [International] | 5 | **100%** | 89% | +11% | Colour contrast audit (SC 1.4.3) with replacement suggestions; WCAG 2.2 upgrade criteria from 2.1 AA; React modal ARIA code review with corrected implementation; Legal compliance mapping across US/EU/UK; Accessibility statement for e-commerce site |
+| NZISM [New Zealand] | 5 | **100%** | 88% | +12% | Restricted system C&A gap analysis; AWS Sydney offshore hosting obligations; Access Control Policy with NZISM control IDs; Ransomware supplier incident response; SaaS vendor due diligence and contractual requirements |
+| VN-PDPL [Vietnam] | 5 | **100%** | 68% | +32% | Gap analysis for SaaS company with Vietnamese customers; Fintech breach notification 72-hour workflow; Micro-enterprise exemptions; Consent mechanism design; Consent withdrawal timeframes under Decree 356 |
+| EU CRA [EU] | 5 | **100%** | 80% | +20% | PDE scope and classification (Default/Class I/Class II); Annex I gap assessment for consumer IoT router; Vulnerability and ENISA reporting timelines; SBOM programme design; Manufacturer vs importer/distributor obligations |
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 
