@@ -3,9 +3,9 @@ Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIS
 
 Benchmarked across 125 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **82%** across 625 total assertions.
 
-[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg)](../../releases/tag/v1.0.0)
+[![Release: v1.1.0](https://img.shields.io/badge/Release-v1.1.0-brightgreen.svg)](../../releases/tag/v1.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 27](https://img.shields.io/badge/Skills-27-green.svg)](#the-skills)
+[![Skills: 30](https://img.shields.io/badge/Skills-30-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
