@@ -35,13 +35,14 @@ MARKETPLACE_JSON = REPO_ROOT / ".claude-plugin" / "marketplace.json"
 
 PLUGIN_DIRS = sorted([p for p in PLUGINS_DIR.iterdir() if p.is_dir()])
 
-# Single source of truth: all 29 expected plugin names derived from
+# Single source of truth: all 30 expected plugin names derived from
 # marketplace.json at test time (see test_marketplace_lists_all_plugins).
 # Hardcoded set is used only as a cross-check — update this list whenever
 # a new skill is added.
 EXPECTED_PLUGINS = {
     "ccpa",
     "cis-controls",
+    "eu-cra",
     "cmmc",
     "csrd",
     "dora",
@@ -251,7 +252,7 @@ class TestPluginDirectory:
 # ---------------------------------------------------------------------------
 
 def test_all_expected_plugins_present():
-    """All 29 expected plugin directories must exist under plugins/."""
+    """All 30 expected plugin directories must exist under plugins/."""
     found = {p.name for p in PLUGIN_DIRS}
     missing = EXPECTED_PLUGINS - found
     assert not missing, (

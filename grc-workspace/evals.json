@@ -1852,6 +1852,76 @@
         "Clarifies that withdrawal of consent does not affect the lawfulness of prior processing",
         "Recommends separate, purpose-specific, unchecked consent mechanisms as the compliant fix"
       ]
+    },
+    {
+      "id": 146,
+      "skill": "eu-cra",
+      "skill_path": "plugins/eu-cra/skills/eu-cra",
+      "prompt": "We make a commercial password manager application (desktop and mobile) sold in the EU. It stores users credentials locally and syncs via our cloud service. What CRA product class does it fall into, what conformity assessment route applies, and what are the top Annex I requirements we need to address?",
+      "expected_output": "Classification as Class I (Annex III \u2014 password managers are explicitly listed), conformity assessment route is self-assessment or third-party (manufacturer chooses), key Annex I Part I requirements: no known exploitable vulnerabilities, secure by default (no common default credentials), strong authentication, encryption of credentials at rest and in transit, signed software updates, data minimisation. Plus vulnerability handling obligations.",
+      "assertions": [
+        "Correctly classifies the password manager as Class I under Annex III",
+        "States that Class I allows either self-assessment (Module A) or Notified Body (manufacturer chooses)",
+        "Identifies encryption of credentials at rest and in transit as a key Annex I Part I requirement",
+        "Mentions the requirement for no known exploitable vulnerabilities at time of market placement",
+        "References vulnerability handling obligations (VDP, SBOM, ENISA reporting) from Annex I Part II"
+      ]
+    },
+    {
+      "id": 147,
+      "skill": "eu-cra",
+      "skill_path": "plugins/eu-cra/skills/eu-cra",
+      "prompt": "We manufacture industrial PLCs (Programmable Logic Controllers) used in water treatment plants across Europe. Our PLCs have Ethernet and serial (Modbus) connectivity. What CRA class are they, what conformity assessment is required, and what are our specific security obligations given their use in critical infrastructure?",
+      "expected_output": "Industrial ICS/SCADA controllers for critical infrastructure are Class II (Annex IV) \u2014 requiring mandatory Notified Body assessment. Key obligations: all Annex I Part I security properties (secure by default, authentication, encryption, signed firmware updates, exploit mitigation), plus full vulnerability handling programme (CVD, SBOM, 24/72-hour ENISA reporting). Technical documentation including threat model and risk assessment required. Support period minimum 5 years.",
+      "assertions": [
+        "Correctly classifies industrial ICS/SCADA/PLC components for critical infrastructure as Class II (Annex IV)",
+        "States that Class II requires mandatory Notified Body assessment (cannot self-certify)",
+        "Mentions the 24-hour early warning and 72-hour full report obligations to ENISA/CSIRTs for actively exploited vulnerabilities",
+        "Identifies the need for technical documentation including a cybersecurity risk assessment and threat model",
+        "References the minimum 5-year support period obligation"
+      ]
+    },
+    {
+      "id": 148,
+      "skill": "eu-cra",
+      "skill_path": "plugins/eu-cra/skills/eu-cra",
+      "prompt": "We are a US-based consumer IoT manufacturer. Our smart thermostat (Default class) has been on sale in Germany since 2025. We just discovered that a vulnerability in our firmware is being actively exploited in the wild \u2014 attackers are using it to gain admin access to thermostats. Walk us through our CRA reporting obligations step by step.",
+      "expected_output": "Step-by-step: (1) Within 24 hours \u2014 early warning to ENISA and national CSIRT (BSI in Germany): product identity, vulnerability identifier, brief description; (2) Within 72 hours \u2014 full notification: nature of vulnerability, CVSS/severity, affected versions, workarounds/mitigations available; (3) Within 14 days of fix \u2014 final report with fix details; (4) Notify affected users promptly; (5) Deploy security update free of charge.",
+      "assertions": [
+        "States the 24-hour deadline for early warning notification to ENISA and national CSIRT",
+        "States the 72-hour deadline for full vulnerability notification",
+        "Mentions the final report requirement within 14 days of fix availability",
+        "Advises notifying affected users (thermostats owners) promptly",
+        "Confirms security updates must be provided free of charge"
+      ]
+    },
+    {
+      "id": 149,
+      "skill": "eu-cra",
+      "skill_path": "plugins/eu-cra/skills/eu-cra",
+      "prompt": "We are a small EU startup building a consumer smart home hub (Default class). We want to understand what SBOM we need to produce under the CRA \u2014 what format, what content, and when do we need to provide it?",
+      "expected_output": "SBOM required on request to national market surveillance authorities (not proactively published). Minimum content: product name/version, component name, version, supplier, licence for each top-level dependency. Recommended machine-readable formats: SPDX (ISO/IEC 5962:2021) or CycloneDX. Must be kept current throughout the 5-year support period. VEX documents recommended alongside SBOM to communicate vulnerability exploitability status.",
+      "assertions": [
+        "States SBOM is provided on request to market surveillance authorities (not mandatory public disclosure)",
+        "Specifies minimum SBOM content: component name, version, supplier/author, licence for top-level dependencies",
+        "Recommends SPDX or CycloneDX as machine-readable formats",
+        "States SBOM must be kept current throughout the support period",
+        "Notes the minimum 5-year support period during which SBOM must be maintained"
+      ]
+    },
+    {
+      "id": 150,
+      "skill": "eu-cra",
+      "skill_path": "plugins/eu-cra/skills/eu-cra",
+      "prompt": "We import Wi-Fi routers for home use from a Chinese manufacturer and sell them across the EU. The routers come with a default admin password of \"admin\" across all units and have several open ports enabled by default. What are our obligations as importer and what specific Annex I violations exist with the current product design?",
+      "expected_output": "As importer: verify manufacturer CRA compliance before placing on market; verify CE marking and DoC; add own name and address; not knowingly distribute non-compliant products; notify manufacturer and MSA of identified risks. Annex I violations: (1) default password \"admin\" across all units violates secure by default (Annex I Part I \u00a72 \u2014 no common, easily-guessable factory credentials); (2) unnecessary open ports violate minimal attack surface requirement; both are Annex I Part I essential requirement violations exposing the importer to up to \u20ac15M/2.5% turnover.",
+      "assertions": [
+        "Identifies the default \"admin\" password as a violation of Annex I Part I essential requirement for secure by default configuration",
+        "Identifies unnecessary open ports enabled by default as a violation of the minimal attack surface requirement",
+        "States that as importer the company must verify manufacturer CRA compliance and not knowingly distribute non-compliant products",
+        "Notes the importer obligation to notify the manufacturer and market surveillance authority of identified risks",
+        "References the penalty exposure for Annex I violations (\u20ac15 million or 2.5% global turnover)"
+      ]
     }
   ]
 }

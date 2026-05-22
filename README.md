@@ -1,5 +1,5 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), EU AI Act (Regulation (EU) 2024/1689), Section 508 (US Federal ICT Accessibility), WCAG (Web Content Accessibility Guidelines), NZISM (New Zealand Information Security Manual), and Vietnam PDPL (Law on Personal Data Protection No. 91/2025/QH15) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), EU AI Act (Regulation (EU) 2024/1689), Section 508 (US Federal ICT Accessibility), WCAG (Web Content Accessibility Guidelines), NZISM (New Zealand Information Security Manual), Vietnam PDPL (Law on Personal Data Protection No. 91/2025/QH15), and EU CRA (Cyber Resilience Act, Regulation (EU) 2024/2847) — powered by Claude Skills.
 
 Benchmarked across 125 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **82%** across 625 total assertions.
 
@@ -45,6 +45,7 @@ Benchmarked across 125 test cases (5 per framework) using the eval framework —
   - [WCAG — Web Content Accessibility Guidelines](#-wcag--web-content-accessibility-guidelines)
   - [NZISM — New Zealand Information Security Manual](#-nzism--new-zealand-information-security-manual)
   - [Vietnam PDPL — Law on Personal Data Protection](#-vietnam-pdpl--law-on-personal-data-protection)
+  - [EU CRA — Cyber Resilience Act](#-eu-cra--cyber-resilience-act)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -654,6 +655,24 @@ The Vietnam PDPL skill turns Claude into an expert advisor on **Vietnam's Law on
 
 ---
 
+### 30. 🇪🇺 EU CRA — Cyber Resilience Act
+
+**File:** `EU CRA - Claude Skill/eu-cra.skill`
+
+The EU CRA skill turns Claude into an expert advisor on **Regulation (EU) 2024/2847 — the EU Cyber Resilience Act**, published 20 November 2024 and fully applicable from **11 December 2027**. This landmark regulation mandates cybersecurity requirements for all **Products with Digital Elements (PDEs)** — connected hardware and software — sold in the EU market, covering manufacturers, importers, and distributors.
+
+**Key capabilities:**
+- **Scope and classification** — determines whether a product is in scope and which class applies: Default (self-assessment), Class I (Annex III, 35 categories including password managers, VPNs, identity management, network monitoring), or Class II (Annex IV, 12 categories including hypervisors, HSMs, TPMs, industrial ICS/SCADA)
+- **Annex I gap analysis** — assesses all 10 Part I security properties (secure by default, no default passwords, encryption, signed updates, exploit mitigations) and all 9 Part II vulnerability handling obligations (CVD, SBOM, 24/72-hour ENISA reporting, free security updates)
+- **Conformity assessment and CE marking** — guides Module A self-assessment vs. mandatory Notified Body routes, technical documentation (Annex VII) preparation, EU Declaration of Conformity, and CE marking placement
+- **SBOM programme** — SPDX/CycloneDX format guidance, minimum content requirements, CI/CD integration, VEX documents, maintenance throughout support period
+- **Vulnerability and incident reporting** — step-by-step 24-hour early warning and 72-hour full report workflows to ENISA/national CSIRTs; final report at 14 days; user notification
+- **Support period and EOL** — minimum 5-year support commitment, end-of-life notification obligations (1-year notice), final cumulative update
+
+**Trigger phrases:** `EU CRA`, `Cyber Resilience Act`, `CRA compliance`, `product with digital elements`, `PDE`, `Annex I requirements`, `CRA conformity assessment`, `CE marking cybersecurity`, `SBOM EU regulation`, `ENISA vulnerability reporting`, `Class I CRA`, `Class II CRA`, `connected product security EU`, `IoT security regulation EU`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -873,7 +892,7 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **145 realistic test cases** were run across all 29 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **150 realistic test cases** were run across all 30 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|

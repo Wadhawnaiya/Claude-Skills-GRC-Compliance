@@ -620,6 +620,29 @@
         "southeast-asia",
         "apac"
       ]
+    },
+    {
+      "name": "eu-cra",
+      "source": "./plugins/eu-cra",
+      "description": "Expert EU Cyber Resilience Act (CRA) advisor for Regulation (EU) 2024/2847. Covers product classification, Annex I essential requirements, conformity assessment, CE marking, SBOM, vulnerability handling, ENISA reporting, and support period obligations.",
+      "version": "1.0.0",
+      "author": "Hemant Naik",
+      "license": "MIT",
+      "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+      "repository": "https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance",
+      "keywords": [
+        "eu-cra",
+        "cyber-resilience-act",
+        "cybersecurity",
+        "product-security",
+        "iot-security",
+        "ce-marking",
+        "sbom",
+        "eu",
+        "enisa",
+        "compliance",
+        "grc"
+      ]
     }
   ]
 }
