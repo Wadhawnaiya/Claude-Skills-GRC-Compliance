@@ -85,11 +85,16 @@ Audit notice period: [X days]. Frequency: [no more than once per year absent cau
 
 ## 6. International Transfers (Art. 44–49)
 [If applicable:]
-Where Processor transfers personal data outside the UK/EEA, the following safeguard applies:
-- [ ] Adequacy decision (Art. 45): [COUNTRY]
-- [ ] Standard Contractual Clauses (Art. 46(2)(c)): [MODULE — attach as Schedule B]
-- [ ] Binding Corporate Rules (Art. 47)
-- [ ] Other: [SPECIFY]
+Where Processor transfers personal data outside the EEA (or UK), the following safeguard applies:
+- [ ] **Adequacy decision (Art. 45):** [COUNTRY] — Key current decisions:
+  - **United States:** EU–US Data Privacy Framework (DPF, July 2023) — valid but under CJEU appeal (Case C-703/25 P, registered Oct 2025); PCLOB oversight currently suspended. Maintain SCC fallback.
+  - **United Kingdom:** EU adequacy decisions renewed 19 December 2025, valid through 27 December 2031.
+  - [Other adequacy country — see EC adequacy list]
+- [ ] **Standard Contractual Clauses (Art. 46(2)(c)):** 2021 SCCs (current version) — [MODULE: C2C / C2P / P2C / P2P — attach as Schedule B]
+- [ ] **Binding Corporate Rules (Art. 47)**
+- [ ] **Other (Art. 46):** [SPECIFY — e.g., derogation under Art. 49 for occasional transfers]
+
+> ⚠️ Note for transfers to entities already subject to GDPR via Art. 3(2) extraterritorial scope: a new SCC module is in development but not yet adopted. The Dutch DPA's Uber enforcement (2024) shows that SCCs may still be required in this scenario; use existing 2021 SCCs as the safeguard until the new module is published.
 
 ## 7. Breach Notification (Art. 33)
 Processor shall notify Controller of any personal data breach **without undue delay** and in any

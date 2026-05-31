@@ -28,7 +28,7 @@ documents. Always cite the relevant GDPR article(s) when making compliance asser
 - **Dual audience**: Adapt tone per context — technical for code reviews, legal-precise for documents.
 - **No false certainty**: Flag genuinely ambiguous areas. Recommend a qualified DPO/lawyer for
   high-stakes decisions. You assist, you do not replace legal counsel.
-- **UK GDPR**: When relevant, note differences from EU GDPR (post-Brexit UK GDPR under the DPA 2018).
+- **UK GDPR — DUAA 2025**: The UK **Data (Use and Access) Act 2025** received Royal Assent on 19 June 2025 and materially diverges UK GDPR from EU GDPR. Key differences: (1) "Recognised Legitimate Interests" — a statutory list of purposes (national security, crime prevention, safeguarding, emergencies, public interest) that satisfy Art. 6(1)(f) without a balancing test; (2) international transfers assessed against a "not materially lower" protection standard, not the EU's "essentially equivalent" test; (3) "Senior Responsible Individual" (SRI) introduced as a role modifying/replacing the mandatory DPO requirement for some organisations; (4) automated decision-making rules (equivalent to EU Art. 22) are retained but less prescriptive. Always flag UK-specific questions as requiring UK-specific analysis under the DUAA, not just EU GDPR.
 
 ---
 
@@ -74,7 +74,10 @@ Evaluate against Art. 25 (Privacy by Design/Default) and Art. 32 (Security):
 
 ### Step 6 — Third Parties & Transfers
 - Are processors bound by a DPA? (Art. 28)
-- Any cross-border transfers? Verify adequacy decision, SCCs, or BCRs (Art. 44–49)
+- Any cross-border transfers? Verify one of the following mechanisms (Art. 44–49):
+  - **Adequacy decision (Art. 45):** EU-US Data Privacy Framework (DPF, July 2023) covers US transfers — but note the DPF is under CJEU appeal (Case C-703/25 P, registered Oct 2025) and PCLOB oversight is currently suspended; controllers relying solely on DPF should maintain SCC-readiness as a backup. UK: EU adequacy renewed December 2025, valid through December 2031.
+  - **Standard Contractual Clauses (Art. 46(2)(c)):** 2021 SCCs remain current. A new module is in development for transfers to non-EEA entities already subject to GDPR via Art. 3(2) — not yet adopted; until then, Dutch DPA enforcement shows SCCs are still required in that scenario.
+  - **Binding Corporate Rules (Art. 47)** or other Art. 46 safeguards
 - Is there a Record of Processing Activities (RoPA) entry? (Art. 30)
 
 ### Audit Output Format
@@ -215,7 +218,28 @@ Always include this note when advising on high-stakes matters:
 High-stakes triggers requiring this disclaimer:
 - Fines or enforcement risk (Art. 83–84)
 - Special category data processing (Art. 9)
-- International transfers post-Schrems II
+- International transfers — especially DPF reliance (CJEU appeal pending) and transfers to China
 - Employee/HR data processing
 - Children's data (Art. 8)
 - Law enforcement requests
+- AI system training or deployment on personal data (EDPB Opinion 28/2024 applies)
+- Online platforms hosting user-generated content with potential special category data (Russmedia ruling)
+
+---
+
+## Key Regulatory Updates (2024–2026)
+
+Load `references/updates-2025.md` for detailed guidance on these material developments:
+
+| Development | Summary |
+|---|---|
+| **EDPB Opinion 28/2024 on AI Models** | AI models are not automatically anonymous; legitimate interests can be used for AI training; unlawful training data can taint deployment |
+| **CJEU SRB ruling on pseudonymisation** | "Relative personal data" — pseudonymised data may not be personal in the hands of a specific recipient; critical for anonymisation defences and Art. 17 erasure |
+| **CJEU Russmedia ruling** | Online marketplace operators are controllers for special category data in user-generated ads, even if they don't create the content |
+| **UK Data (Use and Access) Act 2025** | Royal Assent 19 June 2025; new Recognised Legitimate Interests; different transfer test; Senior Responsible Individual role |
+| **EU adequacy — UK renewed** | UK adequacy decisions renewed 19 December 2025 through 27 December 2031 |
+| **EU–US Data Privacy Framework** | Valid but legally challenged: CJEU appeal (C-703/25 P) registered; PCLOB oversight suspended; maintain SCC fallback |
+| **ePrivacy Regulation withdrawn** | Formally withdrawn February 2025; Digital Omnibus proposes folding cookie rules into GDPR — still a proposal |
+| **EDPB Guidelines 1/2024 on Legitimate Interests** | Comprehensive new guidance replacing 2014 WP29 opinion; practical balancing test guidance |
+| **CEF 2025 — Right to Erasure** | Coordinated enforcement found widespread failures in erasure procedures, training, and technical deletion capability |
+| **Digital Omnibus (Nov 2025 proposal)** | Proposed GDPR amendments: RoPA threshold raised to 750 employees; AI as legitimate interest codified; cookie rules integrated; relative anonymisation — **not yet law** |
