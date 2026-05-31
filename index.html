@@ -2338,8 +2338,30 @@ layout: null
 
     <div>
       <h3>Responsible AI Model Evaluations for NIST AI Risk Management Framework</h3>
-      <p>An open-source, automated red-teaming study benchmarking frontier LLMs from Anthropic, OpenAI, and Google against the RedBench dataset (29,362 prompts across 37 sub-benchmarks and 22 safety risk categories). Scored via a dual-judge pipeline (deterministic regex + Claude Haiku neural judge) and mapped to the NIST AI Risk Management Framework. Findings are published weekly to a live public dashboard and compiled into a peer-reviewed research paper.</p>
-      <p>Across eight weekly evaluation runs, Claude Sonnet 4.6 averaged the lowest Attack Success Rate (3.9%), GPT-4o Mini showed a rising safety regression (9.5% in the latest run), and Election Interference emerged as a new top-5 risk category. A full eight-week analysis — covering ASR trends, drift coefficients, and NIST AI RMF alignment across all 6 models — is available in the published research paper.</p>
+      <p>An open-source, automated red-teaming study benchmarking frontier LLMs from Anthropic, OpenAI, and Google against the RedBench dataset (29,362 prompts across 37 sub-benchmarks and 22 safety risk categories). Scored via a dual-judge pipeline (deterministic regex + Claude Haiku neural judge) and mapped to the NIST AI Risk Management Framework. Findings are published to a live public dashboard and compiled into a peer-reviewed research paper.</p>
+      <p>Across nine weekly evaluation runs, the study produced five major findings:</p>
+      <ul style="margin:0.75rem 0 0.75rem 1.25rem; display:flex; flex-direction:column; gap:0.6rem;">
+        <li style="font-size:0.9rem; line-height:1.6; color:var(--text);">
+          <strong>Safety and utility are not in tension — but only Anthropic has proved it.</strong>
+          All three Anthropic Claude models averaged under 6% Attack Success Rate and under 1.2% false refusals simultaneously. Every other provider fails at least one threshold. On the final run, Claude Sonnet 4.6 achieved a 5.25% ASR with 0.00% false refusals — the only data point in 9 runs where a model hit a perfect false-refusal rate. GPT-4o Mini posted 8.42% ASR and 13.67% false refusals, failing both simultaneously.
+        </li>
+        <li style="font-size:0.9rem; line-height:1.6; color:var(--text);">
+          <strong>CBRN information is the most severe and universal safety failure.</strong>
+          Chemical, Biological, Radiological, and Nuclear prompts bypassed guardrails at an average of 35.41% across all 9 runs and all 7 models — more than 1.6× the second-highest category (Cybersecurity Threats Beyond Malware at 21.99%). This gap holds equally across all providers, confirming it is a structural limit of current AI alignment, not a single-provider weakness.
+        </li>
+        <li style="font-size:0.9rem; line-height:1.6; color:var(--text);">
+          <strong>Election Interference is a structural vulnerability — no provider has solved it.</strong>
+          Ranked 5th in risk with a 5.66% average bypass rate across 53 data points (7 models × up to 9 runs each). Consistent across every model, every provider, and every week — ruling out sampling noise. Given ongoing global electoral cycles, this carries the most immediate real-world policy urgency.
+        </li>
+        <li style="font-size:0.9rem; line-height:1.6; color:var(--text);">
+          <strong>Multi-turn safety is where providers diverge most sharply.</strong>
+          In the final run (22 May), GPT-4o Mini reached guardrail drift of +1.67 per conversation turn — the study's highest single-run reading — and 4 of 7 models simultaneously posted drift of +1.11 per turn or worse. Claude Sonnet 4.6 and Opus 4.6 averaged −0.12 per turn across all runs: their guardrails <em>tighten</em> under sustained adversarial pressure rather than eroding.
+        </li>
+        <li style="font-size:0.9rem; line-height:1.6; color:var(--text);">
+          <strong>Week-to-week variance is high, but structural rankings are stable.</strong>
+          GPT-4o Mini exceeded 8% ASR in 6 of its 9 runs with no improvement trend. Gemini 2.5 Pro never fell below 7.25% across any of its 6 evaluated runs. Gemini 2.5 Flash led on ASR in every multi-provider run it participated in. These are repeatable, structural safety differences across 27,000 evaluations — not statistical artefacts.
+        </li>
+      </ul>
       <p>
         <a href="https://sushegaad.github.io/Responsible-AI-Model-Evaluations/" target="_blank" rel="noopener">🔗 Live Dashboard</a>
         &nbsp;·&nbsp;
