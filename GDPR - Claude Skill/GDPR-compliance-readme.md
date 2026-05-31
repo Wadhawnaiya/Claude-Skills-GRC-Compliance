@@ -65,7 +65,7 @@ precise for compliance and legal professionals.
 | "Generate a DPIA for our new facial recognition feature" | Document Drafting |
 | "Do we need consent or can we use legitimate interests?" | Compliance Q&A |
 | "What are our obligations after a data breach?" | Compliance Q&A |
-| "Can we transfer user data to the US after Schrems II?" | Compliance Q&A |
+| "Can we use the EU-US Data Privacy Framework? Is it safe given CJEU appeal?" | Compliance Q&A |
 | "Map the personal data flows in our onboarding pipeline" | Data Flow & PII Review |
 | "Review our RoPA entries for completeness" | Data Flow & PII Review |
 | "What data do we need to delete when a user requests erasure?" | Compliance Q&A + Data Flow |
@@ -108,7 +108,7 @@ then explain exceptions and practical steps.
 goes, who can access it, and how long it's kept.
 
 ### Scope & Limitations
-- Covers **EU GDPR** and notes **UK GDPR** (DPA 2018) differences where relevant
+- Covers **EU GDPR** and **UK GDPR** — updated for the **Data (Use and Access) Act 2025** (DUAA), which introduced Recognised Legitimate Interests, a different international transfer test, and the Senior Responsible Individual (SRI) role; UK adequacy renewed December 2025 through December 2031
 - Does **not** cover ePrivacy Regulation, CCPA, or other non-EU privacy laws (though may note
   parallels)
 - Responses are **informational guidance**, not legal advice — high-stakes decisions should
@@ -128,7 +128,13 @@ gdpr-compliance/
     ├── documents.md            # Six document templates (Privacy Notice, DPA, Consent
     │                           #   Banner, DPIA, Retention Policy, DSR Procedure)
     ├── privacy-notice.md       # Standalone Art. 13/14 privacy notice reference
-    └── dpa-template.md         # Standalone Art. 28 DPA reference
+    ├── dpa-template.md         # Standalone Art. 28 DPA reference with current transfer
+    │                           #   mechanisms (EU-US DPF, 2021 SCCs, UK adequacy)
+    └── updates-2025.md         # Material regulatory updates 2024–2026: DPF + CJEU
+                                #   appeal, UK DUAA 2025, EDPB Opinion 28/2024 on AI,
+                                #   CJEU SRB pseudonymisation ruling, Russmedia platform
+                                #   controller ruling, EDPB Guidelines 1/2024 on LI,
+                                #   CEF 2025 erasure enforcement, ePrivacy withdrawal
 ```
 
 The skill uses **progressive disclosure** — `SKILL.md` is always in context, while reference
@@ -184,7 +190,7 @@ The skill covers the full regulation across these key areas:
 
 **Hemant Naik**
 [LinkedIn](https://www.linkedin.com/in/tanaji-naik/) · [hemant.naik@gmail.com](mailto:hemant.naik@gmail.com)
-Skill version: 0.4.0 — March 2026.
+Skill version: 1.1.0 — May 2026. Updated for: UK DUAA 2025; EU–US DPF with CJEU appeal guidance; EDPB Opinion 28/2024 on AI models; CJEU SRB pseudonymisation ruling; Russmedia platform controller ruling; EDPB Guidelines 1/2024 on legitimate interests; CEF 2025 erasure enforcement; ePrivacy Regulation withdrawal. Benchmark: 100% with skill vs 96% baseline (+4%).
 
 > ⚠️ **Disclaimer**: This skill provides informational guidance based on the GDPR text and
 > established regulatory guidance (EDPB/ICO). It does not constitute legal advice. For matters

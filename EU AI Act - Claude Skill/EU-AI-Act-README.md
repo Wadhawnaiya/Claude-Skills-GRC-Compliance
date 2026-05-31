@@ -13,19 +13,22 @@
 
 This skill gives Claude deep expertise in **Regulation (EU) 2024/1689** — the EU AI Act —
 the world's first comprehensive horizontal AI regulatory framework. Published in the EU Official
-Journal on 12 July 2024, the Act applies in phases from February 2025 through August 2027, with
-prohibited practices enforceable from 2 February 2025, GPAI model obligations from 2 August 2025,
-and high-risk system obligations from 2 August 2026 (Annex III) and 2 August 2027 (Annex I
-safety components).
+Journal on 12 July 2024. **Updated May 2026** with the following material changes:
+
+- **AI Omnibus (7 May 2026 political agreement):** Annex III high-risk deadline extended to **2 December 2027** (from 2 August 2026); Annex I embedded-product deadline extended to **2 August 2028** (from 2027)
+- **9th prohibited practice:** AI systems generating non-consensual sexually explicit imagery or CSAM, effective 2 December 2026 (with safe harbour for effective preventive safeguards)
+- **GPAI Code of Practice:** Final CoP published 10 July 2025; three chapters (Transparency, Copyright, Safety & Security); now the primary compliance pathway. Major signatories: Anthropic, Google, Microsoft, OpenAI, Mistral, Amazon, IBM
+- **GPAI classification threshold:** 10²³ FLOPs (Commission guidelines, July 2025) for GPAI obligations; 10²⁵ FLOPs for systemic risk presumption
+- **AI Office guidance:** Art. 5 guidelines (Feb 2025), AI system definition guidelines (Feb 2025), GPAI scope guidelines (Jul 2025), Art. 50 consultation (May 2026), classification guidelines consultation (May 2026)
 
 The skill implements an eight-step compliance workflow: identifying the user's role under the
 Act (provider, deployer, importer, distributor, authorised representative per Art. 3); classifying
-AI systems against the Art. 3(1) definition; screening against all eight prohibited practices
+AI systems against the Art. 3(1) definition; screening against all **nine** prohibited practices
 under Art. 5; determining the risk tier (prohibited, high-risk Path A under Art. 6(1), high-risk
 Path B under Art. 6(2)/Annex III, limited-risk under Art. 50, or minimal risk); walking through
 all mandatory high-risk obligations under Arts. 8–17 and 26; determining conformity assessment
 pathways and CE marking requirements under Arts. 43–48; assessing GPAI model obligations under
-Arts. 53–55 including the systemic risk threshold (≥10²⁵ FLOPs); and covering post-market
+Arts. 53–55 including the 10²³/10²⁵ FLOPs thresholds and GPAI CoP; and covering post-market
 monitoring and serious incident reporting obligations.
 
 Every response cites the governing Article, Annex, or Recital. The skill covers all eight Annex
@@ -242,4 +245,4 @@ eu-ai-act/
 **Hemant Naik**
 [LinkedIn](https://www.linkedin.com/in/tanaji-naik/) · [hemant.naik@gmail.com](mailto:hemant.naik@gmail.com)
 
-Skill version: 1.0.0 — May 2026
+Skill version: 1.1.0 — May 2026. Updated for: AI Omnibus (deadlines extended: Annex III → 2 Dec 2027, Annex I → 2 Aug 2028); 9th prohibited practice (nudification/CSAM, 2 Dec 2026); GPAI CoP (July 2025, 3 chapters, major signatories); GPAI classification threshold (10²³ FLOPs); AI Office guidance suite (Feb–May 2026). Benchmark: 100% with skill vs 76% baseline (+24%).
