@@ -1019,12 +1019,12 @@ Have a compliance framework not covered here? Open a GitHub issue with the tag `
 
 ---
 
-## Author
+## Author & Maintainer
 
-**Hemant Naik**
-[LinkedIn](https://www.linkedin.com/in/tanaji-naik/) · [hemant.naik@gmail.com](mailto:hemant.naik@gmail.com)
+**CA Shailesh S Wadhawaniya**  
+[Website](https://shaileshai.qzz.io/) · [Email](mailto:shailesh.genspark@gmail.com)
 
-Built March 2026
+Built March 2026 · Forked and maintained for India DPDPA compliance focus
 
 ---
 

@@ -15,7 +15,7 @@ The repository provides skills for 30 frameworks, including:
 
 If you identify a security issue in this repository (e.g., a guidance error that could lead to non-compliance, a broken link to regulatory text, or a missing notice requirement), please report it responsibly:
 
-1. Email: **security@example.com** (replace with maintainer contact).
+1. Email: **shailesh.genspark@gmail.com**.
 2. Do not open a public GitHub issue for security-sensitive findings.
 3. Include the skill name, the specific section or rule, and a citation to the correct authoritative source.
 
