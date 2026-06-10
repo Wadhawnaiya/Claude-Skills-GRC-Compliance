@@ -6,12 +6,12 @@ Expert-level compliance guidance for 30 frameworks — including **India DPDPA**
 
 Benchmarked across 150 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 675 total assertions.
 
-[![Release: v1.2.0](https://img.shields.io/badge/Release-v1.2.0-brightgreen.svg)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/releases/tag/v1.2.0)
+[![Release: v1.2.0](https://img.shields.io/badge/Release-v1.2.0-brightgreen.svg)](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/releases/tag/v1.2.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 30](https://img.shields.io/badge/Skills-30-green.svg)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
+[![Skills: 30](https://img.shields.io/badge/Skills-30-green.svg)](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![DPDPA India Compliant](https://img.shields.io/badge/DPDPA%20India-Compliant%20%F0%9F%87%AE%F0%9F%87%B3-darkblue.svg)](DPDPA%20-%20Claude%20Skill/DPDPA-README.md)
-[![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
+[![GitHub Stars](https://img.shields.io/github/stars/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance)
 
 ---
 
@@ -864,36 +864,36 @@ The EU CRA skill turns Claude into an expert advisor on **Regulation (EU) 2024/2
 
    | Framework | Download |
    |-----------|----------|
-   | <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27001 | [iso27001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
-   | <img src="assets/Logos/soc2.jpeg" alt="SOC 2" height="20" style="vertical-align:middle;object-fit:contain;"> SOC 2 | [soc2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
-   | <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP [US] | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
-   | 🇪🇺 GDPR [EU] | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
-   | <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA [US] | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
-   | <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" height="20" style="vertical-align:middle;object-fit:contain;"> NIST CSF | [NIST Cybersecurity.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
-   | <img src="assets/Logos/pci-dss.png" alt="PCI DSS" height="20" style="vertical-align:middle;object-fit:contain;"> PCI DSS | [PCI-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
-   | 🚨 TSA Cybersecurity [US] | [TSA-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/TSA%20Compliance%20-%20Claude%20Skill/TSA-Compliance.skill) |
-   | 🤖 ISO 42001 AI Management System | [ISO-42001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2042001%20-%20Claude%20Skill/ISO-42001.skill) |
-   | 🔒 ISO 27701 Privacy Information Management | [iso27701.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027701%20-%20Claude%20Skill/iso27701.skill) |
-   | 🏦 DORA Digital Operational Resilience | [dora.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DORA%20-%20Claude%20Skill/dora.skill) |
-   | 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act | [dpdpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
-   | 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification | [cmmc.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CMMC%20-%20Claude%20Skill/cmmc.skill) |
-   | 🤖 NIST AI Risk Management Framework | [nist-ai-rmf.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20AI%20RMF%20-%20Claude%20Skill/nist-ai-rmf.skill) |
-   | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
-   | 🇦🇺 ISM [Australia] — Australian Information Security Manual | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
-   | 🇪🇺 NIS2 [EU] Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
-   | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA [California] Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
-   | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations | [itar.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
-   | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law | [lgpd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
-   | <img src="assets/Logos/csrd-eu.svg" alt="EU" height="20" style="vertical-align:middle;object-fit:contain;"> CSRD [EU] — Corporate Sustainability Reporting Directive | [csrd.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CSRD%20-%20Claude%20Skill/csrd.skill) |
-   | 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene | [cis-controls.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CIS%20Controls%20-%20Claude%20Skill/cis-controls.skill) |
-   | 📦 EAR [US] — Export Administration Regulations | [ear.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EAR%20-%20Claude%20Skill/ear.skill) |
-   | 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems | [nist-800-53.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20800-53%20-%20Claude%20Skill/nist-800-53.skill) |
-   | 🤖 EU AI Act — Regulation (EU) 2024/1689 | [eu-ai-act.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20AI%20Act%20-%20Claude%20Skill/eu-ai-act.skill) |
-   | ♿ Section 508 [US] — Federal ICT Accessibility | [section-508.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Section%20508%20-%20Claude%20Skill/section-508.skill) |
-   | ♿ WCAG — Web Content Accessibility Guidelines | [wcag.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/WCAG%20-%20Claude%20Skill/wcag.skill) |
-   | 🇳🇿 NZISM [New Zealand] — Information Security Manual | [nzism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NZISM%20-%20Claude%20Skill/nzism.skill) |
-   | 🇻🇳 Vietnam PDPL — Law on Personal Data Protection | [vn-pdpl.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Vietnam%20PDPL%20-%20Claude%20Skill/vn-pdpl.skill) |
-   | 🇪🇺 EU CRA — Cyber Resilience Act | [eu-cra.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20CRA%20-%20Claude%20Skill/eu-cra.skill) |
+   | <img src="assets/Logos/iso27001.jpg" alt="ISO 27001" height="20" style="vertical-align:middle;object-fit:contain;"> ISO 27001 | [iso27001.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
+   | <img src="assets/Logos/soc2.jpeg" alt="SOC 2" height="20" style="vertical-align:middle;object-fit:contain;"> SOC 2 | [soc2.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
+   | <img src="assets/Logos/fedramp.svg" alt="FedRAMP" height="20" style="vertical-align:middle;object-fit:contain;"> FedRAMP [US] | [fedramp.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
+   | 🇪🇺 GDPR [EU] | [gdpr-compliance.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
+   | <img src="assets/Logos/hipaa.png" alt="HIPAA" height="20" style="vertical-align:middle;object-fit:contain;"> HIPAA [US] | [hipaa-compliance.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
+   | <img src="assets/Logos/nist-csf.jpeg" alt="NIST CSF" height="20" style="vertical-align:middle;object-fit:contain;"> NIST CSF | [NIST Cybersecurity.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
+   | <img src="assets/Logos/pci-dss.png" alt="PCI DSS" height="20" style="vertical-align:middle;object-fit:contain;"> PCI DSS | [PCI-Compliance.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
+   | 🚨 TSA Cybersecurity [US] | [TSA-Compliance.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/TSA%20Compliance%20-%20Claude%20Skill/TSA-Compliance.skill) |
+   | 🤖 ISO 42001 AI Management System | [ISO-42001.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2042001%20-%20Claude%20Skill/ISO-42001.skill) |
+   | 🔒 ISO 27701 Privacy Information Management | [iso27701.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027701%20-%20Claude%20Skill/iso27701.skill) |
+   | 🏦 DORA Digital Operational Resilience | [dora.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DORA%20-%20Claude%20Skill/dora.skill) |
+   | 🇮🇳 DPDPA [India] — Digital Personal Data Protection Act | [dpdpa.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
+   | 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification | [cmmc.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CMMC%20-%20Claude%20Skill/cmmc.skill) |
+   | 🤖 NIST AI Risk Management Framework | [nist-ai-rmf.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20AI%20RMF%20-%20Claude%20Skill/nist-ai-rmf.skill) |
+   | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
+   | 🇦🇺 ISM [Australia] — Australian Information Security Manual | [ism.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
+   | 🇪🇺 NIS2 [EU] Directive | [nis2.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
+   | <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg" alt="CA" height="16" style="vertical-align:middle;"> CCPA/CPRA [California] Privacy | [ccpa.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
+   | <img src="assets/Logos/itar.jpg" alt="ITAR" height="20" style="vertical-align:middle;object-fit:contain;"> ITAR [US] — International Traffic in Arms Regulations | [itar.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ITAR%20-%20Claude%20Skill/itar.skill) |
+   | <img src="assets/Logos/lgpd-brazil.svg" alt="Brazil" height="20" style="vertical-align:middle;object-fit:contain;"> LGPD [Brazil] — General Data Protection Law | [lgpd.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/LGPD%20-%20Claude%20Skill/lgpd.skill) |
+   | <img src="assets/Logos/csrd-eu.svg" alt="EU" height="20" style="vertical-align:middle;object-fit:contain;"> CSRD [EU] — Corporate Sustainability Reporting Directive | [csrd.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CSRD%20-%20Claude%20Skill/csrd.skill) |
+   | 🛡️ CIS Controls v8 — CIS Top 18 Cyber Hygiene | [cis-controls.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CIS%20Controls%20-%20Claude%20Skill/cis-controls.skill) |
+   | 📦 EAR [US] — Export Administration Regulations | [ear.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EAR%20-%20Claude%20Skill/ear.skill) |
+   | 🏛️ NIST SP 800-53 — Security and Privacy Controls for Federal Systems | [nist-800-53.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20800-53%20-%20Claude%20Skill/nist-800-53.skill) |
+   | 🤖 EU AI Act — Regulation (EU) 2024/1689 | [eu-ai-act.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20AI%20Act%20-%20Claude%20Skill/eu-ai-act.skill) |
+   | ♿ Section 508 [US] — Federal ICT Accessibility | [section-508.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Section%20508%20-%20Claude%20Skill/section-508.skill) |
+   | ♿ WCAG — Web Content Accessibility Guidelines | [wcag.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/WCAG%20-%20Claude%20Skill/wcag.skill) |
+   | 🇳🇿 NZISM [New Zealand] — Information Security Manual | [nzism.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NZISM%20-%20Claude%20Skill/nzism.skill) |
+   | 🇻🇳 Vietnam PDPL — Law on Personal Data Protection | [vn-pdpl.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/Vietnam%20PDPL%20-%20Claude%20Skill/vn-pdpl.skill) |
+   | 🇪🇺 EU CRA — Cyber Resilience Act | [eu-cra.skill](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/raw/main/EU%20CRA%20-%20Claude%20Skill/eu-cra.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -912,7 +912,7 @@ If you use Claude Code — the AI-powered CLI for developers — these skills ar
 Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
-/plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+/plugin marketplace add Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance
 /plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills itar@grc-skills lgpd@grc-skills csrd@grc-skills cis-controls@grc-skills ear@grc-skills nist-800-53@grc-skills eu-ai-act@grc-skills section-508@grc-skills wcag@grc-skills nzism@grc-skills vn-pdpl@grc-skills eu-cra@grc-skills
 ```
 

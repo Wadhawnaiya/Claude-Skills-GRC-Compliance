@@ -25,7 +25,7 @@ A **marketplace** is a catalog of plugins hosted in a Git repository. You add a 
 Register the GRC Skills marketplace with a single command. You only need to do this once per machine.
 
 ```shell
-/plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+/plugin marketplace add Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance
 ```
 
 Claude Code will clone the repository, read the `.claude-plugin/marketplace.json` catalog, and register it locally as `grc-skills`. Confirm it was added with:
@@ -126,7 +126,7 @@ Add the following to your project's `.claude/settings.json` (include only the sk
     "grc-skills": {
       "source": {
         "source": "github",
-        "repo": "Sushegaad/Claude-Skills-Governance-Risk-and-Compliance"
+        "repo": "Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance"
       }
     }
   },
@@ -246,7 +246,7 @@ To remove the marketplace entirely:
 Run `/plugin marketplace list` to confirm it was registered. If it's missing, check that your Git credentials allow access and retry.
 
 **Plugin installation fails**
-Verify you have network access to GitHub and that your Git version is current. You can also clone the repo manually to test: `git clone https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance.git`
+Verify you have network access to GitHub and that your Git version is current. You can also clone the repo manually to test: `git clone https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance.git`
 
 **Skills not activating in sessions**
 Restart Claude Code after installing plugins. Skills activate in new sessions, not mid-session.
@@ -257,7 +257,7 @@ Increase the timeout via environment variable before running Claude Code:
 export CLAUDE_CODE_PLUGIN_GIT_TIMEOUT_MS=300000
 ```
 
-For additional help, [open an issue](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/issues) on the repository.
+For additional help, [open an issue](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance/issues) on the repository.
 
 ---
 
@@ -266,4 +266,4 @@ For additional help, [open an issue](https://github.com/Sushegaad/Claude-Skills-
 - [Claude Code documentation](https://claude.ai/claude-code)
 - [Plugin marketplace docs](https://code.claude.com/docs/en/plugin-marketplaces)
 - [README](README.md) — full skill descriptions and use cases
-- [GitHub repository](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
+- [GitHub repository](https://github.com/Wadhawnaiya/Claude-Skills-Governance-Risk-and-Compliance)
