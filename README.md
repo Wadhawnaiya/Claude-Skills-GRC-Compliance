@@ -1,12 +1,16 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, CCPA/CPRA California Privacy, ITAR (International Traffic in Arms Regulations), Brazil's LGPD (Lei Geral de Proteção de Dados), EU CSRD (Corporate Sustainability Reporting Directive), CIS Controls v8 (CIS Top 18), EAR (Export Administration Regulations), NIST SP 800-53 (Security and Privacy Controls for Federal Systems), EU AI Act (Regulation (EU) 2024/1689), Section 508 (US Federal ICT Accessibility), WCAG (Web Content Accessibility Guidelines), NZISM (New Zealand Information Security Manual), Vietnam PDPL (Law on Personal Data Protection No. 91/2025/QH15), and EU CRA (Cyber Resilience Act, Regulation (EU) 2024/2847) — powered by Claude Skills.
+
+Expert-level compliance guidance for 30 frameworks — including **India DPDPA** — powered by Claude Skills.
+
+**🚀 India DPDPA Focus:** The Digital Personal Data Protection Act, 2023 skill is featured prominently. Full compliance support for Sections 1-44 and Rules 1-23, with guidance for Indian Data Fiduciaries and global companies handling Indian personal data. Compliance deadline: **13 May 2027**.
 
 Benchmarked across 150 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **96%** vs a baseline of **81%** across 675 total assertions.
 
-[![Release: v1.2.0](https://img.shields.io/badge/Release-v1.2.0-brightgreen.svg)](../../releases/tag/v1.2.0)
+[![Release: v1.2.0](https://img.shields.io/badge/Release-v1.2.0-brightgreen.svg)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/releases/tag/v1.2.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 30](https://img.shields.io/badge/Skills-30-green.svg)](#the-skills)
+[![Skills: 30](https://img.shields.io/badge/Skills-30-green.svg)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
+[![DPDPA India Compliant](https://img.shields.io/badge/DPDPA%20India-Compliant%20%F0%9F%87%AE%F0%9F%87%B3-darkblue.svg)](DPDPA%20-%20Claude%20Skill/DPDPA-README.md)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
 ---

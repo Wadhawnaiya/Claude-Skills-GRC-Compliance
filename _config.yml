@@ -2,8 +2,8 @@ theme: jekyll-theme-cayman
 
 title: Claude Skills for GRC
 description: >
-  Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR,
-  and HIPAA — powered by Claude Skills.
+  Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA,
+  NIST CSF, PCI DSS, DPDPA (India), and 25+ other frameworks — powered by Claude Skills.
 
 # So Jekyll doesn't try to process the skill folders as collections
 exclude:
@@ -12,6 +12,7 @@ exclude:
   - "HIPAA - Claude Skill"
   - "ISO 27001 - Claude Skill"
   - "SOC 2 - Claude Skill"
+  - "DPDPA - Claude Skill"
   - "*.skill"
 
 # Keep the eval HTML and images as static passthrough files
