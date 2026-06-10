@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `SECURITY.md` — Repository security policy with DPDPA India alignment section
 - `CONTRIBUTING.md` — Contribution guidelines including DPDPA-specific rules
 - `CHANGELOG.md` — Repository change tracking
+- Updated maintainer info to **CA Shailesh S Wadhawaniya** with website `https://shaileshai.qzz.io/`
 
 ### Changed
 - README.md — Added prominent India DPDPA badge and compliance callout
